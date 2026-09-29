@@ -63,6 +63,8 @@ namespace QHBASE
         public string UrlEMagazine { get; set; }
         public Nullable<int> TypeNewContent { get; set; }
         public Nullable<System.Guid> TypeNewId { get; set; }
+        public Nullable<System.Guid> QuyTrinhId { get; set; }
+        public Nullable<bool> HienThiInSlide { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }

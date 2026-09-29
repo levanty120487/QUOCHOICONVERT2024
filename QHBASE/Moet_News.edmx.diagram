@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="be9e65dc92204e2e89527e736a23fc69" Name="Diagram1">
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.Category" Width="1.5" PointX="6" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.CommentNew" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.Event" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.HotNew" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.HotNewLanhDao" Width="1.5" PointX="10" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.New" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewCategory" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewCoQuan" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewDBQH" Width="1.5" PointX="5.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewKyHop" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewPhienHop" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewRelate" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewTypeNew" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NewVersion" Width="1.5" PointX="5.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NhuanBut" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.NhuanButConfig" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.ReplyNew" Width="1.5" PointX="5.25" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.SettingSiteClone" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.SummaryNewss" Width="1.5" PointX="5.25" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_NewsServicesModel.TypeNew" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewCategory_Category_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_CommentNew_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_HotNewLanhDaos_HotNew_HotNewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_New_TypeNews_TypeNewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewCategory_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewCoQuans_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewDBQHs_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewKyHops_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewPhienHops_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_NewVersions_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_ReplyNew_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.FK_SummaryNewss_New_NewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_NewsServicesModel.NewEvent" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

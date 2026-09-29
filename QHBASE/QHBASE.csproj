@@ -119,6 +119,20 @@
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Moet_News.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Moet_News.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Moet_Files.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Moet_Files.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Moet_Files.edmx.diagram">
+      <DependentUpon>Moet_Files.edmx</DependentUpon>
+    </None>
+    <None Include="Moet_News.edmx.diagram">
+      <DependentUpon>Moet_News.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <EntityDeploy Include="QHCOMMON.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -195,7 +209,7 @@
       <DependentUpon>ApatitFiles.edmx</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="CDKCommonService.Context.cs">
       <AutoGen>True</AutoGen>
@@ -246,19 +260,19 @@
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSFile.cs">
-      <DependentUpon>ApatitFiles.tt</DependentUpon>
+      <DependentUpon>Moet_Files.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSFileAttachment.cs">
-      <DependentUpon>ApatitFiles.tt</DependentUpon>
+      <DependentUpon>Moet_Files.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSFileShared.cs">
-      <DependentUpon>ApatitFiles.tt</DependentUpon>
+      <DependentUpon>Moet_Files.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSInforUserByShared.cs">
-      <DependentUpon>ApatitFiles.tt</DependentUpon>
+      <DependentUpon>Moet_Files.tt</DependentUpon>
     </Compile>
     <Compile Include="CommentNew.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="ConfigWebsite.cs">
       <DependentUpon>ApatitCommons.tt</DependentUpon>
@@ -297,7 +311,7 @@
       <DependentUpon>ApatitCommons.tt</DependentUpon>
     </Compile>
     <Compile Include="Event.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="FormResult.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
@@ -321,10 +335,10 @@
       <DependentUpon>ApatitCommons.tt</DependentUpon>
     </Compile>
     <Compile Include="HotNew.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="HotNewLanhDao.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="Language.cs">
       <DependentUpon>ApatitCommons.tt</DependentUpon>
@@ -371,26 +385,56 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Moet_Files.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_Files.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_Files.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_Files.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_Files.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_Files.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_News.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_News.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_News.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_News.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_News.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_News.edmx</DependentUpon>
+    </Compile>
     <Compile Include="New.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewCategory.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewCoQuan.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewDBQH.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewKyHop.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewPhienHop.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewRelate.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="News.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
@@ -402,16 +446,16 @@
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
     <Compile Include="NewTypeNew.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NewVersion.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NhuanBut.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NhuanButConfig.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="NoiDung.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
@@ -478,7 +522,7 @@
       <DependentUpon>ApatitCommons.tt</DependentUpon>
     </Compile>
     <Compile Include="ReplyNew.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="ReplyNoiDung.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
@@ -487,13 +531,13 @@
       <DependentUpon>ApatitCommons.tt</DependentUpon>
     </Compile>
     <Compile Include="SettingSiteClone.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="SlideImage.cs">
       <DependentUpon>ApatitCommons.tt</DependentUpon>
     </Compile>
     <Compile Include="SummaryNewss.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
       <DependentUpon>ApatitCommons.tt</DependentUpon>
@@ -514,7 +558,7 @@
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
     <Compile Include="TypeNew.cs">
-      <DependentUpon>CDKNews.tt</DependentUpon>
+      <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="UserSurvey.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
@@ -610,6 +654,26 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_Files.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_Files.edmx</DependentUpon>
+      <LastGenOutput>Moet_Files.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_Files.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_Files.edmx</DependentUpon>
+      <LastGenOutput>Moet_Files.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_News.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_News.edmx</DependentUpon>
+      <LastGenOutput>Moet_News.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_News.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_News.edmx</DependentUpon>
+      <LastGenOutput>Moet_News.cs</LastGenOutput>
     </Content>
     <Content Include="QHCOMMON.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
