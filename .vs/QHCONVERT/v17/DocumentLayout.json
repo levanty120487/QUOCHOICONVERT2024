@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|solutionrelative:tool\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|d:\\tools\\quochoiconvert2024\\tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|D:\\Tools\\QUOCHOICONVERT2024\\tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|solutionrelative:tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|d:\\tools\\quochoiconvert2024\\tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|D:\\Tools\\QUOCHOICONVERT2024\\tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|solutionrelative:tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -91,8 +91,7 @@
               "RelativeToolTip": "TOOL\\TestAndDemo\\FormThongBao.cs",
               "ViewState": "AgIAAIIBAAAAAAAAAAAUwM4BAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T08:52:28.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T08:52:28.206Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "ToolTip": "D:\\Tools\\QUOCHOICONVERT2024\\TOOL\\TestAndDemo\\FormThongBao.cs [Design]",
               "RelativeToolTip": "TOOL\\TestAndDemo\\FormThongBao.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T08:52:23.615Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-29T08:52:23.615Z"
             }
           ]
         }
