@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QHCONVERT2024", "TOOL\QHCONVERT2024.csproj", "{6BF6386B-B046-428A-BB35-B78A0198BD3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QHBASE", "QHBASE\QHBASE.csproj", "{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QHBASEPHIENHOP", "QHBASEPHIENHOP\QHBASEPHIENHOP.csproj", "{F46417CA-2831-482F-989C-D4D2BFDE23A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CONVERTNEW|Any CPU = CONVERTNEW|Any CPU
+		CONVERTNEW|x64 = CONVERTNEW|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.CONVERTNEW|Any CPU.ActiveCfg = CONVERTNEW|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.CONVERTNEW|Any CPU.Build.0 = CONVERTNEW|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.CONVERTNEW|x64.ActiveCfg = CONVERTNEW|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.CONVERTNEW|x64.Build.0 = CONVERTNEW|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Debug|x64.ActiveCfg = Debug|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Debug|x64.Build.0 = Debug|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Release|x64.ActiveCfg = Release|x64
+		{6BF6386B-B046-428A-BB35-B78A0198BD3D}.Release|x64.Build.0 = Release|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.CONVERTNEW|Any CPU.ActiveCfg = CONVERTNEW|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.CONVERTNEW|x64.ActiveCfg = CONVERTNEW|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.CONVERTNEW|x64.Build.0 = CONVERTNEW|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Debug|x64.ActiveCfg = Debug|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Debug|x64.Build.0 = Debug|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Release|x64.ActiveCfg = Release|x64
+		{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}.Release|x64.Build.0 = Release|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.CONVERTNEW|Any CPU.ActiveCfg = CONVERTNEW|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.CONVERTNEW|x64.ActiveCfg = CONVERTNEW|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.CONVERTNEW|x64.Build.0 = CONVERTNEW|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Debug|x64.ActiveCfg = Debug|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Debug|x64.Build.0 = Debug|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Release|x64.ActiveCfg = Release|x64
+		{F46417CA-2831-482F-989C-D4D2BFDE23A4}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EA76700-E84A-4C93-929E-530B3F50CEFE}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.tinducsoftware.com/td_sources_2024
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = QHBASE\\QHBASE.csproj
+		SccProjectName1 = QHBASE
+		SccLocalPath1 = QHBASE
+		SccProjectUniqueName2 = TOOL\\QHCONVERT2024.csproj
+		SccProjectName2 = TOOL
+		SccLocalPath2 = TOOL
+		SccProjectUniqueName3 = QHBASEPHIENHOP\\QHBASEPHIENHOP.csproj
+		SccProjectName3 = QHBASEPHIENHOP
+		SccLocalPath3 = QHBASEPHIENHOP
+	EndGlobalSection
+EndGlobal

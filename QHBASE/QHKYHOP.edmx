@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Preview_QuocHoi_KyHopServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChuongTrinhLamViecs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="DMChuongTrinhLamViecId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="Source" Type="nvarchar" MaxLength="254" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ReadCount" Type="int" />
+          <Property Name="PublicDate" Type="datetime2" Precision="7" />
+          <Property Name="ShareSocial" Type="bit" />
+          <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+          <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsRead" Type="bit" />
+          <Property Name="StartDate" Type="datetime2" Precision="7" />
+          <Property Name="EndDate" Type="datetime2" Precision="7" />
+          <Property Name="Location" Type="nvarchar" MaxLength="254" />
+          <Property Name="Host" Type="nvarchar(max)" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DMChuongTrinhLamViecs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="DMKyHopId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Workday" Type="datetime2" Precision="7" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="Source" Type="nvarchar" MaxLength="254" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ReadCount" Type="int" />
+          <Property Name="PublicDate" Type="datetime2" Precision="7" />
+          <Property Name="ShareSocial" Type="bit" />
+          <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+          <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsRead" Type="bit" />
+          <Property Name="StartDate" Type="datetime2" Precision="7" />
+          <Property Name="EndDate" Type="datetime2" Precision="7" />
+          <Property Name="Location" Type="nvarchar" MaxLength="254" />
+          <Property Name="Host" Type="nvarchar(max)" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+          <Property Name="Type" Type="int" />
+          <Property Name="OldId" Type="int" />
+        </EntityType>
+        <EntityType Name="DMKyHops">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletedName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsShow" Type="bit" />
+          <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Order" Type="int" />
+          <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="500" />
+          <Property Name="TreeParentIds" Type="nvarchar" MaxLength="500" />
+          <Property Name="UrlLink" Type="nvarchar" MaxLength="500" />
+          <Property Name="LoaiKyHop" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="OldId" Type="int" />
+          <Property Name="ParentOldId" Type="int" />
+        </EntityType>
+        <EntityType Name="NoiDungs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="DMKyHopId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="Source" Type="nvarchar" MaxLength="254" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ReadCount" Type="int" />
+          <Property Name="PublicDate" Type="datetime2" Precision="7" />
+          <Property Name="ShareSocial" Type="bit" />
+          <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+          <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsRead" Type="bit" />
+          <Property Name="Image" Type="nvarchar" MaxLength="350" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+          <Property Name="OldId" Type="int" />
+        </EntityType>
+        <EntityType Name="ReplyNoiDungs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ReplyByContent" Type="nvarchar" MaxLength="3500" Nullable="false" />
+          <Property Name="ReplyByUserId" Type="uniqueidentifier" />
+          <Property Name="ReplyByUserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ReplyByUserTime" Type="datetime2" Precision="7" />
+          <Property Name="NoiDungId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VanKienMapCQBHs">
+          <Key>
+            <PropertyRef Name="VanKienTaiLieuId" />
+            <PropertyRef Name="CQBHId" />
+          </Key>
+          <Property Name="VanKienTaiLieuId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CQBHId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OldVanKienId" Type="int" />
+        </EntityType>
+        <EntityType Name="VanKienTaiLieus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="DMKyHopId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LoaiVanKienId" Type="uniqueidentifier" />
+          <Property Name="LinhVucId" Type="uniqueidentifier" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
+          <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+          <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="PublicDate" Type="datetime2" Precision="7" />
+          <Property Name="ReadCount" Type="int" />
+          <Property Name="ShareSocial" Type="bit" />
+          <Property Name="IsRead" Type="bit" />
+          <Property Name="Image" Type="nvarchar" MaxLength="350" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+          <Property Name="OldId" Type="int" />
+          <Property Name="AttachmentId" Type="int" />
+        </EntityType>
+        <Association Name="FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId">
+          <End Role="DMChuongTrinhLamViecs" Type="Self.DMChuongTrinhLamViecs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ChuongTrinhLamViecs" Type="Self.ChuongTrinhLamViecs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMChuongTrinhLamViecs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChuongTrinhLamViecs">
+              <PropertyRef Name="DMChuongTrinhLamViecId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId">
+          <End Role="DMKyHops" Type="Self.DMKyHops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DMChuongTrinhLamViecs" Type="Self.DMChuongTrinhLamViecs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMKyHops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DMChuongTrinhLamViecs">
+              <PropertyRef Name="DMKyHopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NoiDungs_DMKyHops_DMKyHopId">
+          <End Role="DMKyHops" Type="Self.DMKyHops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NoiDungs" Type="Self.NoiDungs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMKyHops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NoiDungs">
+              <PropertyRef Name="DMKyHopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId">
+          <End Role="VanKienTaiLieus" Type="Self.VanKienTaiLieus" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VanKienMapCQBHs" Type="Self.VanKienMapCQBHs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VanKienTaiLieus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VanKienMapCQBHs">
+              <PropertyRef Name="VanKienTaiLieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VanKienTaiLieus_DMKyHops_DMKyHopId">
+          <End Role="DMKyHops" Type="Self.DMKyHops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VanKienTaiLieus" Type="Self.VanKienTaiLieus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMKyHops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VanKienTaiLieus">
+              <PropertyRef Name="DMKyHopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Preview_QuocHoi_KyHopServiceModelStoreContainer">
+          <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChuongTrinhLamViecs" EntityType="Self.ChuongTrinhLamViecs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DMChuongTrinhLamViecs" EntityType="Self.DMChuongTrinhLamViecs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DMKyHops" EntityType="Self.DMKyHops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NoiDungs" EntityType="Self.NoiDungs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReplyNoiDungs" EntityType="Self.ReplyNoiDungs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VanKienMapCQBHs" EntityType="Self.VanKienMapCQBHs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VanKienTaiLieus" EntityType="Self.VanKienTaiLieus" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId" Association="Self.FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId">
+            <End Role="DMChuongTrinhLamViecs" EntitySet="DMChuongTrinhLamViecs" />
+            <End Role="ChuongTrinhLamViecs" EntitySet="ChuongTrinhLamViecs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId" Association="Self.FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId">
+            <End Role="DMKyHops" EntitySet="DMKyHops" />
+            <End Role="DMChuongTrinhLamViecs" EntitySet="DMChuongTrinhLamViecs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NoiDungs_DMKyHops_DMKyHopId" Association="Self.FK_NoiDungs_DMKyHops_DMKyHopId">
+            <End Role="DMKyHops" EntitySet="DMKyHops" />
+            <End Role="NoiDungs" EntitySet="NoiDungs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId" Association="Self.FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId">
+            <End Role="VanKienTaiLieus" EntitySet="VanKienTaiLieus" />
+            <End Role="VanKienMapCQBHs" EntitySet="VanKienMapCQBHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VanKienTaiLieus_DMKyHops_DMKyHopId" Association="Self.FK_VanKienTaiLieus_DMKyHops_DMKyHopId">
+            <End Role="DMKyHops" EntitySet="DMKyHops" />
+            <End Role="VanKienTaiLieus" EntitySet="VanKienTaiLieus" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Preview_QuocHoi_KyHopServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChuongTrinhLamViec">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="DMChuongTrinhLamViecId" Type="Guid" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ReadCount" Type="Int32" />
+          <Property Name="PublicDate" Type="DateTime" Precision="7" />
+          <Property Name="ShareSocial" Type="Boolean" />
+          <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsRead" Type="Boolean" />
+          <Property Name="StartDate" Type="DateTime" Precision="7" />
+          <Property Name="EndDate" Type="DateTime" Precision="7" />
+          <Property Name="Location" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Host" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DMChuongTrinhLamViec" Relationship="Self.FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId" FromRole="ChuongTrinhLamViecs" ToRole="DMChuongTrinhLamViecs" />
+        </EntityType>
+        <EntityType Name="DMChuongTrinhLamViec">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="DMKyHopId" Type="Guid" Nullable="false" />
+          <Property Name="Workday" Type="DateTime" Precision="7" />
+          <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ReadCount" Type="Int32" />
+          <Property Name="PublicDate" Type="DateTime" Precision="7" />
+          <Property Name="ShareSocial" Type="Boolean" />
+          <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsRead" Type="Boolean" />
+          <Property Name="StartDate" Type="DateTime" Precision="7" />
+          <Property Name="EndDate" Type="DateTime" Precision="7" />
+          <Property Name="Location" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Host" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="OldId" Type="Int32" />
+          <NavigationProperty Name="ChuongTrinhLamViecs" Relationship="Self.FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId" FromRole="DMChuongTrinhLamViecs" ToRole="ChuongTrinhLamViecs" />
+          <NavigationProperty Name="DMKyHop" Relationship="Self.FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId" FromRole="DMChuongTrinhLamViecs" ToRole="DMKyHops" />
+        </EntityType>
+        <EntityType Name="DMKyHop">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Boolean" />
+          <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KeyWordsSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TreeParentIds" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UrlLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LoaiKyHop" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="OldId" Type="Int32" />
+          <Property Name="ParentOldId" Type="Int32" />
+          <NavigationProperty Name="DMChuongTrinhLamViecs" Relationship="Self.FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId" FromRole="DMKyHops" ToRole="DMChuongTrinhLamViecs" />
+          <NavigationProperty Name="NoiDungs" Relationship="Self.FK_NoiDungs_DMKyHops_DMKyHopId" FromRole="DMKyHops" ToRole="NoiDungs" />
+          <NavigationProperty Name="VanKienTaiLieus" Relationship="Self.FK_VanKienTaiLieus_DMKyHops_DMKyHopId" FromRole="DMKyHops" ToRole="VanKienTaiLieus" />
+        </EntityType>
+        <EntityType Name="NoiDung">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="DMKyHopId" Type="Guid" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ReadCount" Type="Int32" />
+          <Property Name="PublicDate" Type="DateTime" Precision="7" />
+          <Property Name="ShareSocial" Type="Boolean" />
+          <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsRead" Type="Boolean" />
+          <Property Name="Image" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <Property Name="OldId" Type="Int32" />
+          <NavigationProperty Name="DMKyHop" Relationship="Self.FK_NoiDungs_DMKyHops_DMKyHopId" FromRole="NoiDungs" ToRole="DMKyHops" />
+        </EntityType>
+        <EntityType Name="ReplyNoiDung">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ReplyByContent" Type="String" MaxLength="3500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReplyByUserId" Type="Guid" />
+          <Property Name="ReplyByUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReplyByUserTime" Type="DateTime" Precision="7" />
+          <Property Name="NoiDungId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VanKienMapCQBH">
+          <Key>
+            <PropertyRef Name="VanKienTaiLieuId" />
+            <PropertyRef Name="CQBHId" />
+          </Key>
+          <Property Name="VanKienTaiLieuId" Type="Guid" Nullable="false" />
+          <Property Name="CQBHId" Type="Guid" Nullable="false" />
+          <Property Name="OldVanKienId" Type="Int32" />
+          <NavigationProperty Name="VanKienTaiLieu" Relationship="Self.FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId" FromRole="VanKienMapCQBHs" ToRole="VanKienTaiLieus" />
+        </EntityType>
+        <EntityType Name="VanKienTaiLieu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="DMKyHopId" Type="Guid" Nullable="false" />
+          <Property Name="LoaiVanKienId" Type="Guid" />
+          <Property Name="LinhVucId" Type="Guid" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicDate" Type="DateTime" Precision="7" />
+          <Property Name="ReadCount" Type="Int32" />
+          <Property Name="ShareSocial" Type="Boolean" />
+          <Property Name="IsRead" Type="Boolean" />
+          <Property Name="Image" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <Property Name="OldId" Type="Int32" />
+          <Property Name="AttachmentId" Type="Int32" />
+          <NavigationProperty Name="DMKyHop" Relationship="Self.FK_VanKienTaiLieus_DMKyHops_DMKyHopId" FromRole="VanKienTaiLieus" ToRole="DMKyHops" />
+          <NavigationProperty Name="VanKienMapCQBHs" Relationship="Self.FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId" FromRole="VanKienTaiLieus" ToRole="VanKienMapCQBHs" />
+        </EntityType>
+        <Association Name="FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId">
+          <End Role="DMChuongTrinhLamViecs" Type="Self.DMChuongTrinhLamViec" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ChuongTrinhLamViecs" Type="Self.ChuongTrinhLamViec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMChuongTrinhLamViecs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChuongTrinhLamViecs">
+              <PropertyRef Name="DMChuongTrinhLamViecId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId">
+          <End Role="DMKyHops" Type="Self.DMKyHop" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DMChuongTrinhLamViecs" Type="Self.DMChuongTrinhLamViec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMKyHops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DMChuongTrinhLamViecs">
+              <PropertyRef Name="DMKyHopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NoiDungs_DMKyHops_DMKyHopId">
+          <End Role="DMKyHops" Type="Self.DMKyHop" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NoiDungs" Type="Self.NoiDung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMKyHops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NoiDungs">
+              <PropertyRef Name="DMKyHopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VanKienTaiLieus_DMKyHops_DMKyHopId">
+          <End Role="DMKyHops" Type="Self.DMKyHop" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VanKienTaiLieus" Type="Self.VanKienTaiLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DMKyHops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VanKienTaiLieus">
+              <PropertyRef Name="DMKyHopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId">
+          <End Role="VanKienTaiLieus" Type="Self.VanKienTaiLieu" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VanKienMapCQBHs" Type="Self.VanKienMapCQBH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VanKienTaiLieus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VanKienMapCQBHs">
+              <PropertyRef Name="VanKienTaiLieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Preview_QuocHoi_KyHopServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+          <EntitySet Name="ChuongTrinhLamViecs" EntityType="Self.ChuongTrinhLamViec" />
+          <EntitySet Name="DMChuongTrinhLamViecs" EntityType="Self.DMChuongTrinhLamViec" />
+          <EntitySet Name="DMKyHops" EntityType="Self.DMKyHop" />
+          <EntitySet Name="NoiDungs" EntityType="Self.NoiDung" />
+          <EntitySet Name="ReplyNoiDungs" EntityType="Self.ReplyNoiDung" />
+          <EntitySet Name="VanKienMapCQBHs" EntityType="Self.VanKienMapCQBH" />
+          <EntitySet Name="VanKienTaiLieus" EntityType="Self.VanKienTaiLieu" />
+          <AssociationSet Name="FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId" Association="Self.FK_ChuongTrinhLamViecs_DMChuongTrinhLamViecs_DMChuongTrinhLamViecId">
+            <End Role="DMChuongTrinhLamViecs" EntitySet="DMChuongTrinhLamViecs" />
+            <End Role="ChuongTrinhLamViecs" EntitySet="ChuongTrinhLamViecs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId" Association="Self.FK_DMChuongTrinhLamViecs_DMKyHops_DMKyHopId">
+            <End Role="DMKyHops" EntitySet="DMKyHops" />
+            <End Role="DMChuongTrinhLamViecs" EntitySet="DMChuongTrinhLamViecs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NoiDungs_DMKyHops_DMKyHopId" Association="Self.FK_NoiDungs_DMKyHops_DMKyHopId">
+            <End Role="DMKyHops" EntitySet="DMKyHops" />
+            <End Role="NoiDungs" EntitySet="NoiDungs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VanKienTaiLieus_DMKyHops_DMKyHopId" Association="Self.FK_VanKienTaiLieus_DMKyHops_DMKyHopId">
+            <End Role="DMKyHops" EntitySet="DMKyHops" />
+            <End Role="VanKienTaiLieus" EntitySet="VanKienTaiLieus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId" Association="Self.FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId">
+            <End Role="VanKienTaiLieus" EntitySet="VanKienTaiLieus" />
+            <End Role="VanKienMapCQBHs" EntitySet="VanKienMapCQBHs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Preview_QuocHoi_KyHopServiceModelStoreContainer" CdmEntityContainer="Preview_QuocHoi_KyHopServiceEntities">
+          <EntitySetMapping Name="C__EFMigrationsHistory">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.C__EFMigrationsHistory">
+              <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChuongTrinhLamViecs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.ChuongTrinhLamViec">
+              <MappingFragment StoreEntitySet="ChuongTrinhLamViecs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="DMChuongTrinhLamViecId" ColumnName="DMChuongTrinhLamViecId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DMChuongTrinhLamViecs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.DMChuongTrinhLamViec">
+              <MappingFragment StoreEntitySet="DMChuongTrinhLamViecs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="DMKyHopId" ColumnName="DMKyHopId" />
+                <ScalarProperty Name="Workday" ColumnName="Workday" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DMKyHops">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.DMKyHop">
+              <MappingFragment StoreEntitySet="DMKyHops">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="DeletedName" ColumnName="DeletedName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="UrlLink" ColumnName="UrlLink" />
+                <ScalarProperty Name="LoaiKyHop" ColumnName="LoaiKyHop" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="ParentOldId" ColumnName="ParentOldId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoiDungs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.NoiDung">
+              <MappingFragment StoreEntitySet="NoiDungs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="DMKyHopId" ColumnName="DMKyHopId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReplyNoiDungs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.ReplyNoiDung">
+              <MappingFragment StoreEntitySet="ReplyNoiDungs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ReplyByContent" ColumnName="ReplyByContent" />
+                <ScalarProperty Name="ReplyByUserId" ColumnName="ReplyByUserId" />
+                <ScalarProperty Name="ReplyByUserName" ColumnName="ReplyByUserName" />
+                <ScalarProperty Name="ReplyByUserTime" ColumnName="ReplyByUserTime" />
+                <ScalarProperty Name="NoiDungId" ColumnName="NoiDungId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VanKienMapCQBHs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.VanKienMapCQBH">
+              <MappingFragment StoreEntitySet="VanKienMapCQBHs">
+                <ScalarProperty Name="VanKienTaiLieuId" ColumnName="VanKienTaiLieuId" />
+                <ScalarProperty Name="CQBHId" ColumnName="CQBHId" />
+                <ScalarProperty Name="OldVanKienId" ColumnName="OldVanKienId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VanKienTaiLieus">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.VanKienTaiLieu">
+              <MappingFragment StoreEntitySet="VanKienTaiLieus">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="DMKyHopId" ColumnName="DMKyHopId" />
+                <ScalarProperty Name="LoaiVanKienId" ColumnName="LoaiVanKienId" />
+                <ScalarProperty Name="LinhVucId" ColumnName="LinhVucId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

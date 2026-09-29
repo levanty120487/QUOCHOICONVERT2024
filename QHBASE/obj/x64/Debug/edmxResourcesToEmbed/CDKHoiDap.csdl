@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="portalcdk_QuestionsAnswersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="AnswerContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedTime" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="AnswersPrivate" Type="Boolean" Nullable="false" />
+    <Property Name="PublicTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="TotalLike" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="QuestionId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnswersId" Type="Guid" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="Answers1" Relationship="Self.FK_Answers_Answers_AnswersId" FromRole="Answers" ToRole="Answers1" />
+    <NavigationProperty Name="Answer1" Relationship="Self.FK_Answers_Answers_AnswersId" FromRole="Answers1" ToRole="Answers" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_Answers_Question_QuestionId" FromRole="Answers" ToRole="Question" />
+  </EntityType>
+  <EntityType Name="FormResult">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="FormSurveyQuestionId" Type="Guid" Nullable="false" />
+    <Property Name="AnswerResponseContent" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UserSurveyId" Type="Guid" />
+    <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FormSurveyQuestion" Relationship="Self.FK_FormResult_FormSurveyQuestion_FormSurveyQuestionId" FromRole="FormResult" ToRole="FormSurveyQuestion" />
+    <NavigationProperty Name="UserSurvey" Relationship="Self.FK_FormResult_UserSurvey_UserSurveyId" FromRole="FormResult" ToRole="UserSurvey" />
+  </EntityType>
+  <EntityType Name="FormSurvey">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="FormTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FormDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="TopicId" Type="Guid" />
+    <Property Name="BannerForm" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserInfoRequest" Type="Boolean" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" Precision="7" />
+    <Property Name="ToDate" Type="DateTime" Precision="7" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <NavigationProperty Name="Topic" Relationship="Self.FK_FormSurvey_Topics_TopicId" FromRole="FormSurvey" ToRole="Topics" />
+    <NavigationProperty Name="FormSurveyQuestions" Relationship="Self.FK_FormSurveyQuestion_FormSurvey_FormSurveyId" FromRole="FormSurvey" ToRole="FormSurveyQuestion" />
+    <NavigationProperty Name="UserSurveys" Relationship="Self.FK_UserSurvey_FormSurvey_FormSurveyId" FromRole="FormSurvey" ToRole="UserSurvey" />
+  </EntityType>
+  <EntityType Name="FormSurveyAnswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FormSurveyQuestionId" Type="Guid" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <NavigationProperty Name="FormSurveyQuestion" Relationship="Self.FK_FormSurveyAnswer_FormSurveyQuestion_FormSurveyQuestionId" FromRole="FormSurveyAnswer" ToRole="FormSurveyQuestion" />
+  </EntityType>
+  <EntityType Name="FormSurveyQuestion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="QuestionType" Type="Int32" Nullable="false" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FormSurveyId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <NavigationProperty Name="FormResults" Relationship="Self.FK_FormResult_FormSurveyQuestion_FormSurveyQuestionId" FromRole="FormSurveyQuestion" ToRole="FormResult" />
+    <NavigationProperty Name="FormSurvey" Relationship="Self.FK_FormSurveyQuestion_FormSurvey_FormSurveyId" FromRole="FormSurveyQuestion" ToRole="FormSurvey" />
+    <NavigationProperty Name="FormSurveyAnswers" Relationship="Self.FK_FormSurveyAnswer_FormSurveyQuestion_FormSurveyQuestionId" FromRole="FormSurveyQuestion" ToRole="FormSurveyAnswer" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="TopicId" Type="Guid" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="QuestionContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuestionTitle" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Name="Hot" Type="Boolean" Nullable="false" />
+    <Property Name="PublicQuestion" Type="Boolean" Nullable="false" />
+    <Property Name="ReplyStatus" Type="Boolean" Nullable="false" />
+    <Property Name="ViewCount" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedTime" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionTitleUnicode" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="NgayGuiCauHoi" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK_Answers_Question_QuestionId" FromRole="Question" ToRole="Answers" />
+    <NavigationProperty Name="Topic" Relationship="Self.FK_Question_Topics_TopicId" FromRole="Question" ToRole="Topics" />
+  </EntityType>
+  <EntityType Name="Topic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="TopicTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedTime" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <NavigationProperty Name="FormSurveys" Relationship="Self.FK_FormSurvey_Topics_TopicId" FromRole="Topics" ToRole="FormSurvey" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK_Question_Topics_TopicId" FromRole="Topics" ToRole="Question" />
+  </EntityType>
+  <EntityType Name="TopicSurvey">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="FormSurveyId" Type="Guid" Nullable="false" />
+    <Property Name="TopicId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSurvey">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="FullName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDay" Type="DateTime" Precision="7" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="FormSurveyId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FormResults" Relationship="Self.FK_FormResult_UserSurvey_UserSurveyId" FromRole="UserSurvey" ToRole="FormResult" />
+    <NavigationProperty Name="FormSurvey" Relationship="Self.FK_UserSurvey_FormSurvey_FormSurveyId" FromRole="UserSurvey" ToRole="FormSurvey" />
+  </EntityType>
+  <Association Name="FK_Answers_Answers_AnswersId">
+    <End Role="Answers" Type="Self.Answer" Multiplicity="0..1" />
+    <End Role="Answers1" Type="Self.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Answers1">
+        <PropertyRef Name="AnswersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Answers_Question_QuestionId">
+    <End Role="Question" Type="Self.Question" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Answers" Type="Self.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormResult_FormSurveyQuestion_FormSurveyQuestionId">
+    <End Role="FormSurveyQuestion" Type="Self.FormSurveyQuestion" Multiplicity="1" />
+    <End Role="FormResult" Type="Self.FormResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormSurveyQuestion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FormResult">
+        <PropertyRef Name="FormSurveyQuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormResult_UserSurvey_UserSurveyId">
+    <End Role="UserSurvey" Type="Self.UserSurvey" Multiplicity="0..1" />
+    <End Role="FormResult" Type="Self.FormResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSurvey">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FormResult">
+        <PropertyRef Name="UserSurveyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormSurvey_Topics_TopicId">
+    <End Role="Topics" Type="Self.Topic" Multiplicity="0..1" />
+    <End Role="FormSurvey" Type="Self.FormSurvey" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FormSurvey">
+        <PropertyRef Name="TopicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormSurveyQuestion_FormSurvey_FormSurveyId">
+    <End Role="FormSurvey" Type="Self.FormSurvey" Multiplicity="1" />
+    <End Role="FormSurveyQuestion" Type="Self.FormSurveyQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormSurvey">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FormSurveyQuestion">
+        <PropertyRef Name="FormSurveyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSurvey_FormSurvey_FormSurveyId">
+    <End Role="FormSurvey" Type="Self.FormSurvey" Multiplicity="0..1" />
+    <End Role="UserSurvey" Type="Self.UserSurvey" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormSurvey">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserSurvey">
+        <PropertyRef Name="FormSurveyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormSurveyAnswer_FormSurveyQuestion_FormSurveyQuestionId">
+    <End Role="FormSurveyQuestion" Type="Self.FormSurveyQuestion" Multiplicity="1" />
+    <End Role="FormSurveyAnswer" Type="Self.FormSurveyAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormSurveyQuestion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FormSurveyAnswer">
+        <PropertyRef Name="FormSurveyQuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question_Topics_TopicId">
+    <End Role="Topics" Type="Self.Topic" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Question" Type="Self.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="TopicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="portalcdk_QuestionsAnswersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="Answers" EntityType="Self.Answer" />
+    <EntitySet Name="FormResults" EntityType="Self.FormResult" />
+    <EntitySet Name="FormSurveys" EntityType="Self.FormSurvey" />
+    <EntitySet Name="FormSurveyAnswers" EntityType="Self.FormSurveyAnswer" />
+    <EntitySet Name="FormSurveyQuestions" EntityType="Self.FormSurveyQuestion" />
+    <EntitySet Name="Questions" EntityType="Self.Question" />
+    <EntitySet Name="Topics" EntityType="Self.Topic" />
+    <EntitySet Name="TopicSurveys" EntityType="Self.TopicSurvey" />
+    <EntitySet Name="UserSurveys" EntityType="Self.UserSurvey" />
+    <AssociationSet Name="FK_Answers_Answers_AnswersId" Association="Self.FK_Answers_Answers_AnswersId">
+      <End Role="Answers" EntitySet="Answers" />
+      <End Role="Answers1" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Answers_Question_QuestionId" Association="Self.FK_Answers_Question_QuestionId">
+      <End Role="Question" EntitySet="Questions" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormResult_FormSurveyQuestion_FormSurveyQuestionId" Association="Self.FK_FormResult_FormSurveyQuestion_FormSurveyQuestionId">
+      <End Role="FormSurveyQuestion" EntitySet="FormSurveyQuestions" />
+      <End Role="FormResult" EntitySet="FormResults" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormResult_UserSurvey_UserSurveyId" Association="Self.FK_FormResult_UserSurvey_UserSurveyId">
+      <End Role="UserSurvey" EntitySet="UserSurveys" />
+      <End Role="FormResult" EntitySet="FormResults" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormSurvey_Topics_TopicId" Association="Self.FK_FormSurvey_Topics_TopicId">
+      <End Role="Topics" EntitySet="Topics" />
+      <End Role="FormSurvey" EntitySet="FormSurveys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormSurveyQuestion_FormSurvey_FormSurveyId" Association="Self.FK_FormSurveyQuestion_FormSurvey_FormSurveyId">
+      <End Role="FormSurvey" EntitySet="FormSurveys" />
+      <End Role="FormSurveyQuestion" EntitySet="FormSurveyQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSurvey_FormSurvey_FormSurveyId" Association="Self.FK_UserSurvey_FormSurvey_FormSurveyId">
+      <End Role="FormSurvey" EntitySet="FormSurveys" />
+      <End Role="UserSurvey" EntitySet="UserSurveys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormSurveyAnswer_FormSurveyQuestion_FormSurveyQuestionId" Association="Self.FK_FormSurveyAnswer_FormSurveyQuestion_FormSurveyQuestionId">
+      <End Role="FormSurveyQuestion" EntitySet="FormSurveyQuestions" />
+      <End Role="FormSurveyAnswer" EntitySet="FormSurveyAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question_Topics_TopicId" Association="Self.FK_Question_Topics_TopicId">
+      <End Role="Topics" EntitySet="Topics" />
+      <End Role="Question" EntitySet="Questions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73E1FF9F-E85B-41CB-895D-6F04D7ABF1A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>QHBASE</RootNamespace>
+    <AssemblyName>QHBASE</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CONVERTNEW|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\CONVERTNEW\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CONVERTNEW|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\CONVERTNEW\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ApatitCommons.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ApatitCommons.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ApatitCommons.edmx.diagram">
+      <DependentUpon>ApatitCommons.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ApatitFiles.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ApatitFiles.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ApatitFiles.edmx.diagram">
+      <DependentUpon>ApatitFiles.edmx</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <EntityDeploy Include="CDKNews.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CDKNews.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="CDKCommonService.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CDKCommonService.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CDKCommonService.edmx.diagram">
+      <DependentUpon>CDKCommonService.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="CDKHoiDap.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CDKHoiDap.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CDKHoiDap.edmx.diagram">
+      <DependentUpon>CDKHoiDap.edmx</DependentUpon>
+    </None>
+    <None Include="CDKNews.edmx.diagram">
+      <DependentUpon>CDKNews.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="QHCOMMON.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QHCOMMON.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QHCOMMON.edmx.diagram">
+      <DependentUpon>QHCOMMON.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="QHKYHOP.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QHKYHOP.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QHKYHOP.edmx.diagram">
+      <DependentUpon>QHKYHOP.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="QHVN.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QHVN.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QHVN.edmx.diagram">
+      <DependentUpon>QHVN.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Answer.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApatitCommons.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApatitCommons.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApatitCommons.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApatitCommons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApatitCommons.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ApatitFiles.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApatitFiles.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApatitFiles.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApatitFiles.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApatitFiles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApatitFiles.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKCommonService.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKCommonService.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKCommonService.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKCommonService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKCommonService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKCommonService.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CDKHoiDap.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKHoiDap.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKHoiDap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKHoiDap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKHoiDap.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CDKNews.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKNews.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKNews.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDKNews.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDKNews.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuongTrinhLamViec.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSFile.cs">
+      <DependentUpon>ApatitFiles.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSFileAttachment.cs">
+      <DependentUpon>ApatitFiles.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSFileShared.cs">
+      <DependentUpon>ApatitFiles.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSInforUserByShared.cs">
+      <DependentUpon>ApatitFiles.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommentNew.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigWebsite.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactInfo.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoQuanBanHanh.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__EFMigrationsHistory.cs">
+      <DependentUpon>ApatitFiles.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DaiBieuQH.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachSanPham.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachThongBao.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataCloneService.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMChuongTrinhLamViec.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMKyHop.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoiTac.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailDangKy.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Event.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormResult.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormSurvey.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormSurveyAnswer.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormSurveyQuestion.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gopy.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryActionFlow.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryVersion.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotNew.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotNewLanhDao.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Language.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageMapText.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageText.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LienKetWebsite.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinhVuc.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinkVietLaw.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiThongBao.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiVanKien.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuLanhDao.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="New.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewCategory.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewCoQuan.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewDBQH.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewKyHop.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewPhienHop.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewRelate.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsCat.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsEvent.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewTypeNew.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewVersion.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhuanBut.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhuanButConfig.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NoiDung.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHoiSanPham.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHCOMMON.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHCOMMON.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHCOMMON.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHCOMMON.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHCOMMON.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHCOMMON.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QHCommons.cs" />
+    <Compile Include="QHKYHOP.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHKYHOP.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHKYHOP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHKYHOP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHKYHOP.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QHVN.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHVN.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHVN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QHVN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QHVN.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QuangCaoss.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Question.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReadCountLog.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReplyNew.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReplyNoiDung.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RSSChannel.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SettingSiteClone.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SlideImage.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryNewss.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TagInfo.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempCoQuanBanHanh.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempLinhVuc.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Topic.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TopicSurvey.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeNew.cs">
+      <DependentUpon>CDKNews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserSurvey.cs">
+      <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanKien.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanKienCat.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanKienMapCQBH.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanKienTaiLieu.cs">
+      <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VietLaw.cs">
+      <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViTriQuangCao.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViTriQuangCaoMapQuangCao.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowCategory.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowDefinition.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowInstance.cs">
+      <DependentUpon>ApatitCommons.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApatitCommons.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ApatitCommons.edmx</DependentUpon>
+      <LastGenOutput>ApatitCommons.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ApatitCommons.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ApatitCommons.edmx</DependentUpon>
+      <LastGenOutput>ApatitCommons.cs</LastGenOutput>
+    </Content>
+    <Content Include="ApatitFiles.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ApatitFiles.edmx</DependentUpon>
+      <LastGenOutput>ApatitFiles.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ApatitFiles.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ApatitFiles.edmx</DependentUpon>
+      <LastGenOutput>ApatitFiles.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDKCommonService.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDKCommonService.edmx</DependentUpon>
+      <LastGenOutput>CDKCommonService.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDKCommonService.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDKCommonService.edmx</DependentUpon>
+      <LastGenOutput>CDKCommonService.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDKHoiDap.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDKHoiDap.edmx</DependentUpon>
+      <LastGenOutput>CDKHoiDap.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDKHoiDap.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDKHoiDap.edmx</DependentUpon>
+      <LastGenOutput>CDKHoiDap.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDKNews.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDKNews.edmx</DependentUpon>
+      <LastGenOutput>CDKNews.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDKNews.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDKNews.edmx</DependentUpon>
+      <LastGenOutput>CDKNews.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="QHCOMMON.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QHCOMMON.edmx</DependentUpon>
+      <LastGenOutput>QHCOMMON.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QHCOMMON.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QHCOMMON.edmx</DependentUpon>
+      <LastGenOutput>QHCOMMON.cs</LastGenOutput>
+    </Content>
+    <Content Include="QHKYHOP.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QHKYHOP.edmx</DependentUpon>
+      <LastGenOutput>QHKYHOP.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QHKYHOP.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QHKYHOP.edmx</DependentUpon>
+      <LastGenOutput>QHKYHOP.cs</LastGenOutput>
+    </Content>
+    <Content Include="QHVN.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QHVN.edmx</DependentUpon>
+      <LastGenOutput>QHVN.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QHVN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QHVN.edmx</DependentUpon>
+      <LastGenOutput>QHVN.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

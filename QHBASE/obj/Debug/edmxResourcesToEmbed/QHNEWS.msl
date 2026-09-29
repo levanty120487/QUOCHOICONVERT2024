@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Preview_QuocHoi_NewsServiceModelStoreContainer" CdmEntityContainer="Preview_QuocHoi_NewsServiceEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CategoryOldId" ColumnName="CategoryOldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentNews">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.CommentNew">
+        <MappingFragment StoreEntitySet="CommentNew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationId" ColumnName="CreationId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="CreationName" ColumnName="CreationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+          <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+          <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="CategoryOldId" ColumnName="CategoryOldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotNews">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.HotNew">
+        <MappingFragment StoreEntitySet="HotNew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="EventDateTo" ColumnName="EventDateTo" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+          <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+          <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Gim" ColumnName="Gim" />
+          <ScalarProperty Name="IsHotUBTV" ColumnName="IsHotUBTV" />
+          <ScalarProperty Name="IsHome" ColumnName="IsHome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotNewLanhDaos">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.HotNewLanhDao">
+        <MappingFragment StoreEntitySet="HotNewLanhDaos">
+          <ScalarProperty Name="HotNewId" ColumnName="HotNewId" />
+          <ScalarProperty Name="LanhDaoId" ColumnName="LanhDaoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.New">
+        <MappingFragment StoreEntitySet="New">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="AllowComment" ColumnName="AllowComment" />
+          <ScalarProperty Name="Shared" ColumnName="Shared" />
+          <ScalarProperty Name="ShowDescription" ColumnName="ShowDescription" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="AllowAnswerComment" ColumnName="AllowAnswerComment" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+          <ScalarProperty Name="ApprovedByPublicId" ColumnName="ApprovedByPublicId" />
+          <ScalarProperty Name="ApprovedByPublicName" ColumnName="ApprovedByPublicName" />
+          <ScalarProperty Name="ApprovedByPublicTime" ColumnName="ApprovedByPublicTime" />
+          <ScalarProperty Name="ApprovedByPublicSendToTime" ColumnName="ApprovedByPublicSendToTime" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewCategories">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.NewCategory">
+        <MappingFragment StoreEntitySet="NewCategory">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OldNewId" ColumnName="OldNewId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewDBQHs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.NewDBQH">
+        <MappingFragment StoreEntitySet="NewDBQHs">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="DBQHId" ColumnName="DBQHId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewKyHops">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.NewKyHop">
+        <MappingFragment StoreEntitySet="NewKyHops">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="KyHopId" ColumnName="KyHopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewPhienHops">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.NewPhienHop">
+        <MappingFragment StoreEntitySet="NewPhienHops">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="PhienHopId" ColumnName="PhienHopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewRelates">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.NewRelate">
+        <MappingFragment StoreEntitySet="NewRelates">
+          <ScalarProperty Name="NewIdSource" ColumnName="NewIdSource" />
+          <ScalarProperty Name="NewIdRelate" ColumnName="NewIdRelate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewTypeNews">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.NewTypeNew">
+        <MappingFragment StoreEntitySet="NewTypeNews">
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="TypeNewId" ColumnName="TypeNewId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReplyNews">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.ReplyNew">
+        <MappingFragment StoreEntitySet="ReplyNew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ReplyByContent" ColumnName="ReplyByContent" />
+          <ScalarProperty Name="ReplyByUserId" ColumnName="ReplyByUserId" />
+          <ScalarProperty Name="ReplyByUserName" ColumnName="ReplyByUserName" />
+          <ScalarProperty Name="ReplyByUserTime" ColumnName="ReplyByUserTime" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SettingSiteClones">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.SettingSiteClone">
+        <MappingFragment StoreEntitySet="SettingSiteClones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="LinkWeb" ColumnName="LinkWeb" />
+          <ScalarProperty Name="PathCloneContent" ColumnName="PathCloneContent" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeNews">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.TypeNew">
+        <MappingFragment StoreEntitySet="TypeNews">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailTypeNewsRoot" ColumnName="DetailTypeNewsRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="CategoryOldId" ColumnName="CategoryOldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="NewEvent" TypeName="Preview_QuocHoi_NewsServiceModel.NewEvent" StoreEntitySet="NewEvent">
+      <EndProperty Name="Event">
+        <ScalarProperty Name="Id" ColumnName="EventId" />
+      </EndProperty>
+      <EndProperty Name="New">
+        <ScalarProperty Name="Id" ColumnName="NewId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Preview_QuocHoi_NewsServiceModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Preview_QuocHoi_NewsServiceModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

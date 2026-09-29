@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="APATIT_CommonsServicesModelStoreContainer" CdmEntityContainer="APATIT_CommonsServicesEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigWebsites">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.ConfigWebsite">
+        <MappingFragment StoreEntitySet="ConfigWebsites">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HomeNewShow" ColumnName="HomeNewShow" />
+          <ScalarProperty Name="HomeSlideShow" ColumnName="HomeSlideShow" />
+          <ScalarProperty Name="Top_HomeTinKhac" ColumnName="Top_HomeTinKhac" />
+          <ScalarProperty Name="NewList" ColumnName="NewList" />
+          <ScalarProperty Name="NewPageShow" ColumnName="NewPageShow" />
+          <ScalarProperty Name="NewRelatedDetail" ColumnName="NewRelatedDetail" />
+          <ScalarProperty Name="NewRelatedList" ColumnName="NewRelatedList" />
+          <ScalarProperty Name="Top_TinTucMoiNhat" ColumnName="Top_TinTucMoiNhat" />
+          <ScalarProperty Name="Top_TinXemNhieu" ColumnName="Top_TinXemNhieu" />
+          <ScalarProperty Name="CategoryMenuTinTuc" ColumnName="CategoryMenuTinTuc" />
+          <ScalarProperty Name="CategoryMenuGioiThieu" ColumnName="CategoryMenuGioiThieu" />
+          <ScalarProperty Name="NotifyNew" ColumnName="NotifyNew" />
+          <ScalarProperty Name="NotifyNew2" ColumnName="NotifyNew2" />
+          <ScalarProperty Name="NotifyQuestion" ColumnName="NotifyQuestion" />
+          <ScalarProperty Name="NotifyContact" ColumnName="NotifyContact" />
+          <ScalarProperty Name="NotifyTrain" ColumnName="NotifyTrain" />
+          <ScalarProperty Name="NotifyDoc" ColumnName="NotifyDoc" />
+          <ScalarProperty Name="LogoHeader" ColumnName="LogoHeader" />
+          <ScalarProperty Name="LogoFooter" ColumnName="LogoFooter" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="AutoSendEmailInContact" ColumnName="AutoSendEmailInContact" />
+          <ScalarProperty Name="AutoSendEmailInAnswerQuestion" ColumnName="AutoSendEmailInAnswerQuestion" />
+          <ScalarProperty Name="AutoSendEmailInTraningCoop" ColumnName="AutoSendEmailInTraningCoop" />
+          <ScalarProperty Name="GroupRoleIdToListEmails" ColumnName="GroupRoleIdToListEmails" />
+          <ScalarProperty Name="TagsList" ColumnName="TagsList" />
+          <ScalarProperty Name="TagsPageShow" ColumnName="TagsPageShow" />
+          <ScalarProperty Name="CategoryBox1" ColumnName="CategoryBox1" />
+          <ScalarProperty Name="Box1" ColumnName="Box1" />
+          <ScalarProperty Name="CategoryBox2" ColumnName="CategoryBox2" />
+          <ScalarProperty Name="Box2" ColumnName="Box2" />
+          <ScalarProperty Name="CategoryBox3" ColumnName="CategoryBox3" />
+          <ScalarProperty Name="Box3" ColumnName="Box3" />
+          <ScalarProperty Name="CategoryBox4" ColumnName="CategoryBox4" />
+          <ScalarProperty Name="Box4" ColumnName="Box4" />
+          <ScalarProperty Name="CategoryBox5" ColumnName="CategoryBox5" />
+          <ScalarProperty Name="Box5" ColumnName="Box5" />
+          <ScalarProperty Name="CategoryBox6" ColumnName="CategoryBox6" />
+          <ScalarProperty Name="Box6" ColumnName="Box6" />
+          <ScalarProperty Name="CategoryBox44" ColumnName="CategoryBox44" />
+          <ScalarProperty Name="Box44" ColumnName="Box44" />
+          <ScalarProperty Name="CategoryBox55" ColumnName="CategoryBox55" />
+          <ScalarProperty Name="Box55" ColumnName="Box55" />
+          <ScalarProperty Name="CategoryBox66" ColumnName="CategoryBox66" />
+          <ScalarProperty Name="Box66" ColumnName="Box66" />
+          <ScalarProperty Name="CategoryBox7" ColumnName="CategoryBox7" />
+          <ScalarProperty Name="Box7" ColumnName="Box7" />
+          <ScalarProperty Name="BoxPhienOrKy" ColumnName="BoxPhienOrKy" />
+          <ScalarProperty Name="CategoryKhoa" ColumnName="CategoryKhoa" />
+          <ScalarProperty Name="CategoryKyPhien" ColumnName="CategoryKyPhien" />
+          <ScalarProperty Name="Box8" ColumnName="Box8" />
+          <ScalarProperty Name="KyHopCategoryBox" ColumnName="KyHopCategoryBox" />
+          <ScalarProperty Name="KyHopBox" ColumnName="KyHopBox" />
+          <ScalarProperty Name="NoiDungKhShow" ColumnName="NoiDungKhShow" />
+          <ScalarProperty Name="VanKienKhShow" ColumnName="VanKienKhShow" />
+          <ScalarProperty Name="NoiDungKhList" ColumnName="NoiDungKhList" />
+          <ScalarProperty Name="NoiDungKhShowPage" ColumnName="NoiDungKhShowPage" />
+          <ScalarProperty Name="NoiDungKhRelatedDetail" ColumnName="NoiDungKhRelatedDetail" />
+          <ScalarProperty Name="PhienHopCategoryBox" ColumnName="PhienHopCategoryBox" />
+          <ScalarProperty Name="PhienHopBox" ColumnName="PhienHopBox" />
+          <ScalarProperty Name="NoiDungPhShow" ColumnName="NoiDungPhShow" />
+          <ScalarProperty Name="VanKienPhShow" ColumnName="VanKienPhShow" />
+          <ScalarProperty Name="NoiDungPhList" ColumnName="NoiDungPhList" />
+          <ScalarProperty Name="NoiDungPhShowPage" ColumnName="NoiDungPhShowPage" />
+          <ScalarProperty Name="NoiDungPhRelatedDetail" ColumnName="NoiDungPhRelatedDetail" />
+          <ScalarProperty Name="ETVCategoryId" ColumnName="ETVCategoryId" />
+          <ScalarProperty Name="ETVRowlimit" ColumnName="ETVRowlimit" />
+          <ScalarProperty Name="ETVLinkVideoLive" ColumnName="ETVLinkVideoLive" />
+          <ScalarProperty Name="ETVLinkService" ColumnName="ETVLinkService" />
+          <ScalarProperty Name="ETVLinkSource" ColumnName="ETVLinkSource" />
+          <ScalarProperty Name="ETVTitleTVLive" ColumnName="ETVTitleTVLive" />
+          <ScalarProperty Name="ETVTitleVideo" ColumnName="ETVTitleVideo" />
+          <ScalarProperty Name="LawCategory1" ColumnName="LawCategory1" />
+          <ScalarProperty Name="LawTitleCategory1" ColumnName="LawTitleCategory1" />
+          <ScalarProperty Name="LawLimitCategory1" ColumnName="LawLimitCategory1" />
+          <ScalarProperty Name="LawCategory2" ColumnName="LawCategory2" />
+          <ScalarProperty Name="LawTitleCategory2" ColumnName="LawTitleCategory2" />
+          <ScalarProperty Name="LawLimitCategory2" ColumnName="LawLimitCategory2" />
+          <ScalarProperty Name="LawPageList" ColumnName="LawPageList" />
+          <ScalarProperty Name="LawPageDetail" ColumnName="LawPageDetail" />
+          <ScalarProperty Name="LawLinkService" ColumnName="LawLinkService" />
+          <ScalarProperty Name="ETVUseNewCategory" ColumnName="ETVUseNewCategory" />
+          <ScalarProperty Name="ETVNewCategoryId" ColumnName="ETVNewCategoryId" />
+          <ScalarProperty Name="LawBox1UseNewCategory" ColumnName="LawBox1UseNewCategory" />
+          <ScalarProperty Name="LawBox1NewCategoryId" ColumnName="LawBox1NewCategoryId" />
+          <ScalarProperty Name="LawBox2UseNewCategory" ColumnName="LawBox2UseNewCategory" />
+          <ScalarProperty Name="LawBox2NewCategoryId" ColumnName="LawBox2NewCategoryId" />
+          <ScalarProperty Name="CategoryAtBoxDuThao" ColumnName="CategoryAtBoxDuThao" />
+          <ScalarProperty Name="LimitBoxDuThao" ColumnName="LimitBoxDuThao" />
+          <ScalarProperty Name="UseNewCategoryDuThao" ColumnName="UseNewCategoryDuThao" />
+          <ScalarProperty Name="LinkServiceDuThao" ColumnName="LinkServiceDuThao" />
+          <ScalarProperty Name="CategoryServiceDuThao" ColumnName="CategoryServiceDuThao" />
+          <ScalarProperty Name="PageDetailDuThao" ColumnName="PageDetailDuThao" />
+          <ScalarProperty Name="PageListDuThao" ColumnName="PageListDuThao" />
+          <ScalarProperty Name="TitleDuThao" ColumnName="TitleDuThao" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="QuangCaoBox1" ColumnName="QuangCaoBox1" />
+          <ScalarProperty Name="QuangCaoBox1Limit" ColumnName="QuangCaoBox1Limit" />
+          <ScalarProperty Name="QuangCaoBox2" ColumnName="QuangCaoBox2" />
+          <ScalarProperty Name="QuangCaoBox2Limit" ColumnName="QuangCaoBox2Limit" />
+          <ScalarProperty Name="QuangCaoBox3" ColumnName="QuangCaoBox3" />
+          <ScalarProperty Name="QuangCaoBox3Limit" ColumnName="QuangCaoBox3Limit" />
+          <ScalarProperty Name="QuangCaoBox4" ColumnName="QuangCaoBox4" />
+          <ScalarProperty Name="QuangCaoBox4Limit" ColumnName="QuangCaoBox4Limit" />
+          <ScalarProperty Name="QuangCaoBox5" ColumnName="QuangCaoBox5" />
+          <ScalarProperty Name="QuangCaoBox5Limit" ColumnName="QuangCaoBox5Limit" />
+          <ScalarProperty Name="QuangCaoBox6" ColumnName="QuangCaoBox6" />
+          <ScalarProperty Name="QuangCaoBox6Limit" ColumnName="QuangCaoBox6Limit" />
+          <ScalarProperty Name="QuangCaoBox7" ColumnName="QuangCaoBox7" />
+          <ScalarProperty Name="QuangCaoBox7Limit" ColumnName="QuangCaoBox7Limit" />
+          <ScalarProperty Name="QuangCaoBox8" ColumnName="QuangCaoBox8" />
+          <ScalarProperty Name="QuangCaoBox8Limit" ColumnName="QuangCaoBox8Limit" />
+          <ScalarProperty Name="QuangCaoBoxMid" ColumnName="QuangCaoBoxMid" />
+          <ScalarProperty Name="QuangCaoBoxMidLimit" ColumnName="QuangCaoBoxMidLimit" />
+          <ScalarProperty Name="QuangCaoBoxBottom" ColumnName="QuangCaoBoxBottom" />
+          <ScalarProperty Name="QuangCaoBoxBottomLimit" ColumnName="QuangCaoBoxBottomLimit" />
+          <ScalarProperty Name="QuangCaoBoxTop" ColumnName="QuangCaoBoxTop" />
+          <ScalarProperty Name="QuangCaoBoxTopLimit" ColumnName="QuangCaoBoxTopLimit" />
+          <ScalarProperty Name="QuangCaoBoxLeft" ColumnName="QuangCaoBoxLeft" />
+          <ScalarProperty Name="QuangCaoBoxLeftLimit" ColumnName="QuangCaoBoxLeftLimit" />
+          <ScalarProperty Name="QuangCaoBoxRight" ColumnName="QuangCaoBoxRight" />
+          <ScalarProperty Name="QuangCaoBoxRightLimit" ColumnName="QuangCaoBoxRightLimit" />
+          <ScalarProperty Name="QuangCaoBoxHome" ColumnName="QuangCaoBoxHome" />
+          <ScalarProperty Name="QuangCaoBoxHomeLimit" ColumnName="QuangCaoBoxHomeLimit" />
+          <ScalarProperty Name="QuangCaoBox9" ColumnName="QuangCaoBox9" />
+          <ScalarProperty Name="QuangCaoBox9Limit" ColumnName="QuangCaoBox9Limit" />
+          <ScalarProperty Name="CategoryMenuTinTucTitle" ColumnName="CategoryMenuTinTucTitle" />
+          <ScalarProperty Name="CategoryMenuGioiThieuTitle" ColumnName="CategoryMenuGioiThieuTitle" />
+          <ScalarProperty Name="CategoryMenuLDQH" ColumnName="CategoryMenuLDQH" />
+          <ScalarProperty Name="CategoryMenuLDQHTitle" ColumnName="CategoryMenuLDQHTitle" />
+          <ScalarProperty Name="CategoryMenuPH" ColumnName="CategoryMenuPH" />
+          <ScalarProperty Name="CategoryMenuPHTitle" ColumnName="CategoryMenuPHTitle" />
+          <ScalarProperty Name="DowLoadAppTitle" ColumnName="DowLoadAppTitle" />
+          <ScalarProperty Name="DowLoadAppIsShow" ColumnName="DowLoadAppIsShow" />
+          <ScalarProperty Name="DowLoadAppAppStoreTitle" ColumnName="DowLoadAppAppStoreTitle" />
+          <ScalarProperty Name="DowLoadAppAppStoreLink" ColumnName="DowLoadAppAppStoreLink" />
+          <ScalarProperty Name="DowLoadAppAppStoreImage" ColumnName="DowLoadAppAppStoreImage" />
+          <ScalarProperty Name="DowLoadAppGoogPlayTitle" ColumnName="DowLoadAppGoogPlayTitle" />
+          <ScalarProperty Name="DowLoadAppGoogPlayLink" ColumnName="DowLoadAppGoogPlayLink" />
+          <ScalarProperty Name="DowLoadAppGoogPlayImage" ColumnName="DowLoadAppGoogPlayImage" />
+          <ScalarProperty Name="DowLoadAppQRTitle" ColumnName="DowLoadAppQRTitle" />
+          <ScalarProperty Name="DowLoadAppQRImage" ColumnName="DowLoadAppQRImage" />
+          <ScalarProperty Name="DaiBieuQuocHoiShow" ColumnName="DaiBieuQuocHoiShow" />
+          <ScalarProperty Name="DaiBieuQuocHoiShowPage" ColumnName="DaiBieuQuocHoiShowPage" />
+          <ScalarProperty Name="NewByDaiBieuQuocHoi" ColumnName="NewByDaiBieuQuocHoi" />
+          <ScalarProperty Name="QuangCaoBoxChuyenTrangLanhDaoId" ColumnName="QuangCaoBoxChuyenTrangLanhDaoId" />
+          <ScalarProperty Name="QuangCaoBoxChuyenTrangLanhDaoTitle" ColumnName="QuangCaoBoxChuyenTrangLanhDaoTitle" />
+          <ScalarProperty Name="TopTieuSuLanhDao" ColumnName="TopTieuSuLanhDao" />
+          <ScalarProperty Name="SoTinHoatDong" ColumnName="SoTinHoatDong" />
+          <ScalarProperty Name="SoBaiPhatBieu" ColumnName="SoBaiPhatBieu" />
+          <ScalarProperty Name="SoTinAnh" ColumnName="SoTinAnh" />
+          <ScalarProperty Name="SoTinNoiBat" ColumnName="SoTinNoiBat" />
+          <ScalarProperty Name="SoBanGhi" ColumnName="SoBanGhi" />
+          <ScalarProperty Name="TypeManager" ColumnName="TypeManager" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="NgayCongTieuChuan" ColumnName="NgayCongTieuChuan" />
+          <ScalarProperty Name="SoTuTrenTrangA4" ColumnName="SoTuTrenTrangA4" />
+          <ScalarProperty Name="SoTuTrenNuaTrangA4" ColumnName="SoTuTrenNuaTrangA4" />
+          <ScalarProperty Name="MucLuongCoSo" ColumnName="MucLuongCoSo" />
+          <ScalarProperty Name="HeSoLuongCoBan" ColumnName="HeSoLuongCoBan" />
+          <ScalarProperty Name="CategoryVideoGalleryShow" ColumnName="CategoryVideoGalleryShow" />
+          <ScalarProperty Name="VideoGalleryShow" ColumnName="VideoGalleryShow" />
+          <ScalarProperty Name="QuestionList" ColumnName="QuestionList" />
+          <ScalarProperty Name="QuestionPageShow" ColumnName="QuestionPageShow" />
+          <ScalarProperty Name="Top_CauHoiXemNhieu" ColumnName="Top_CauHoiXemNhieu" />
+          <ScalarProperty Name="Top_Substring_Question" ColumnName="Top_Substring_Question" />
+          <ScalarProperty Name="Top_CauHoiQuanTam" ColumnName="Top_CauHoiQuanTam" />
+          <ScalarProperty Name="QuestionList_Substring_Question" ColumnName="QuestionList_Substring_Question" />
+          <ScalarProperty Name="QuestionRelatedDetail" ColumnName="QuestionRelatedDetail" />
+          <ScalarProperty Name="TinTucLimit" ColumnName="TinTucLimit" />
+          <ScalarProperty Name="DaoTaoLimit" ColumnName="DaoTaoLimit" />
+          <ScalarProperty Name="QuyTrinhVanBanId" ColumnName="QuyTrinhVanBanId" />
+          <ScalarProperty Name="QuyTrinhVanBanName" ColumnName="QuyTrinhVanBanName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="ProductList" ColumnName="ProductList" />
+          <ScalarProperty Name="ProductPageShow" ColumnName="ProductPageShow" />
+          <ScalarProperty Name="ProductRelatedDetail" ColumnName="ProductRelatedDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactInfos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.ContactInfo">
+        <MappingFragment StoreEntitySet="ContactInfos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="LogoHeader" ColumnName="LogoHeader" />
+          <ScalarProperty Name="LogoFooter" ColumnName="LogoFooter" />
+          <ScalarProperty Name="BannerHopTacDaoTao" ColumnName="BannerHopTacDaoTao" />
+          <ScalarProperty Name="ManagementAgency" ColumnName="ManagementAgency" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="NewsPageManager" ColumnName="NewsPageManager" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AddressMap" ColumnName="AddressMap" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="EmailMenuTop" ColumnName="EmailMenuTop" />
+          <ScalarProperty Name="EmailMenuFooter" ColumnName="EmailMenuFooter" />
+          <ScalarProperty Name="Copyright" ColumnName="Copyright" />
+          <ScalarProperty Name="UrlWebsite" ColumnName="UrlWebsite" />
+          <ScalarProperty Name="LinkFacebook" ColumnName="LinkFacebook" />
+          <ScalarProperty Name="LinkTwitter" ColumnName="LinkTwitter" />
+          <ScalarProperty Name="LinkSkype" ColumnName="LinkSkype" />
+          <ScalarProperty Name="LinkGoogle" ColumnName="LinkGoogle" />
+          <ScalarProperty Name="LinkYoutube" ColumnName="LinkYoutube" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="LinkInstagram" ColumnName="LinkInstagram" />
+          <ScalarProperty Name="LogoPartnership" ColumnName="LogoPartnership" />
+          <ScalarProperty Name="TitleWebsite" ColumnName="TitleWebsite" />
+          <ScalarProperty Name="TypeManager" ColumnName="TypeManager" />
+          <ScalarProperty Name="Messager" ColumnName="Messager" />
+          <ScalarProperty Name="Zalo" ColumnName="Zalo" />
+          <ScalarProperty Name="PhoneNumber2" ColumnName="PhoneNumber2" />
+          <ScalarProperty Name="BannerTuyenSinh" ColumnName="BannerTuyenSinh" />
+          <ScalarProperty Name="LinkPageBanner" ColumnName="LinkPageBanner" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoQuanBanHanhs">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.CoQuanBanHanh">
+        <MappingFragment StoreEntitySet="CoQuanBanHanhs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="OldID" ColumnName="OldID" />
+          <ScalarProperty Name="ParentOldID" ColumnName="ParentOldID" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhSachSanPhams">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.DanhSachSanPham">
+        <MappingFragment StoreEntitySet="DanhSachSanPham">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+          <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+          <ScalarProperty Name="NguoiXoa" ColumnName="NguoiXoa" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LuotView" ColumnName="LuotView" />
+          <ScalarProperty Name="IsHomePage" ColumnName="IsHomePage" />
+          <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="HinhAnhList" ColumnName="HinhAnhList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhSachThongBaos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.DanhSachThongBao">
+        <MappingFragment StoreEntitySet="DanhSachThongBao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+          <ScalarProperty Name="SoThongBao" ColumnName="SoThongBao" />
+          <ScalarProperty Name="IdLoaiThongBao" ColumnName="IdLoaiThongBao" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="NgayThongBao" ColumnName="NgayThongBao" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="TieuDeUnicode" ColumnName="TieuDeUnicode" />
+          <ScalarProperty Name="MoTaUnicode" ColumnName="MoTaUnicode" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataCloneServices">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.DataCloneService">
+        <MappingFragment StoreEntitySet="DataCloneServices">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="TypeCloneService" ColumnName="TypeCloneService" />
+          <ScalarProperty Name="CoQuanSoanThao" ColumnName="CoQuanSoanThao" />
+          <ScalarProperty Name="CoQuanThamTra" ColumnName="CoQuanThamTra" />
+          <ScalarProperty Name="CoQuanTrinhDuThao" ColumnName="CoQuanTrinhDuThao" />
+          <ScalarProperty Name="DaThongQua" ColumnName="DaThongQua" />
+          <ScalarProperty Name="LinhVuc" ColumnName="LinhVuc" />
+          <ScalarProperty Name="LuotXem" ColumnName="LuotXem" />
+          <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+          <ScalarProperty Name="PhamViDieuChinh" ColumnName="PhamViDieuChinh" />
+          <ScalarProperty Name="ThaoLuanTaiKhoa" ColumnName="ThaoLuanTaiKhoa" />
+          <ScalarProperty Name="ThaoLuanTaiKyHop" ColumnName="ThaoLuanTaiKyHop" />
+          <ScalarProperty Name="ThongQuaTaiKhoa" ColumnName="ThongQuaTaiKhoa" />
+          <ScalarProperty Name="ThongQuaTaiKyHop" ColumnName="ThongQuaTaiKyHop" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="LinkFileVideo" ColumnName="LinkFileVideo" />
+          <ScalarProperty Name="LinkDetail" ColumnName="LinkDetail" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoiTacs">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.DoiTac">
+        <MappingFragment StoreEntitySet="DoiTac">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UrlWebsite" ColumnName="UrlWebsite" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailDangKies">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.EmailDangKy">
+        <MappingFragment StoreEntitySet="EmailDangKy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GuiAllThongTin" ColumnName="GuiAllThongTin" />
+          <ScalarProperty Name="GuiThongTinSanPham" ColumnName="GuiThongTinSanPham" />
+          <ScalarProperty Name="GuiThongTinTinTuc" ColumnName="GuiThongTinTinTuc" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gopys">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.Gopy">
+        <MappingFragment StoreEntitySet="Gopys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="LastViewer" ColumnName="LastViewer" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+          <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+          <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="Workplace" ColumnName="Workplace" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoryActionFlows">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.HistoryActionFlow">
+        <MappingFragment StoreEntitySet="HistoryActionFlows">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WORKFLOW_INSTANCE_ID" ColumnName="WORKFLOW_INSTANCE_ID" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+          <ScalarProperty Name="NODE_NAME" ColumnName="NODE_NAME" />
+          <ScalarProperty Name="ACTION_NODE" ColumnName="ACTION_NODE" />
+          <ScalarProperty Name="FROM_USER_ID" ColumnName="FROM_USER_ID" />
+          <ScalarProperty Name="LIST_TO_USER_ID" ColumnName="LIST_TO_USER_ID" />
+          <ScalarProperty Name="LIST_TO_NODE_ID" ColumnName="LIST_TO_NODE_ID" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoryVersions">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.HistoryVersion">
+        <MappingFragment StoreEntitySet="HistoryVersions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatorIdBy" ColumnName="CreatorIdBy" />
+          <ScalarProperty Name="IsCreate" ColumnName="IsCreate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="VersionNo" ColumnName="VersionNo" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="TypeVersion" ColumnName="TypeVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IconFlag" ColumnName="IconFlag" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguageMapTexts">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.LanguageMapText">
+        <MappingFragment StoreEntitySet="LanguageMapText">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LanguageTextId" ColumnName="LanguageTextId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguageTexts">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.LanguageText">
+        <MappingFragment StoreEntitySet="LanguageText">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="MainKeyWord" ColumnName="MainKeyWord" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LienKetWebsites">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.LienKetWebsite">
+        <MappingFragment StoreEntitySet="LienKetWebsite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UrlWebsite" ColumnName="UrlWebsite" />
+          <ScalarProperty Name="LogoWebsite" ColumnName="LogoWebsite" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailMenuRoot" ColumnName="DetailMenuRoot" />
+          <ScalarProperty Name="LienKetWebsiteType" ColumnName="LienKetWebsiteType" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinhVucs">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.LinhVuc">
+        <MappingFragment StoreEntitySet="LinhVucs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="OldID" ColumnName="OldID" />
+          <ScalarProperty Name="ParentOldID" ColumnName="ParentOldID" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="IsHome" ColumnName="IsHome" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiThongBaos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.LoaiThongBao">
+        <MappingFragment StoreEntitySet="LoaiThongBao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiVanKiens">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.LoaiVanKien">
+        <MappingFragment StoreEntitySet="LoaiVanKiens">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="MenuHead" ColumnName="MenuHead" />
+          <ScalarProperty Name="MenuMain" ColumnName="MenuMain" />
+          <ScalarProperty Name="MenuFooter" ColumnName="MenuFooter" />
+          <ScalarProperty Name="MenuLeft" ColumnName="MenuLeft" />
+          <ScalarProperty Name="MenuRight" ColumnName="MenuRight" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailMenuRoot" ColumnName="DetailMenuRoot" />
+          <ScalarProperty Name="TextClass" ColumnName="TextClass" />
+          <ScalarProperty Name="LinkTaget" ColumnName="LinkTaget" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuLanhDaos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.MenuLanhDao">
+        <MappingFragment StoreEntitySet="MenuLanhDao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="IsMenuTinHoatDong" ColumnName="IsMenuTinHoatDong" />
+          <ScalarProperty Name="TitleMenuTinHoatDong" ColumnName="TitleMenuTinHoatDong" />
+          <ScalarProperty Name="CategoryIdMenuTinHoatDong" ColumnName="CategoryIdMenuTinHoatDong" />
+          <ScalarProperty Name="OrderMenuTinHoatDong" ColumnName="OrderMenuTinHoatDong" />
+          <ScalarProperty Name="IsMenuTieuSu" ColumnName="IsMenuTieuSu" />
+          <ScalarProperty Name="TitleMenuTieuSu" ColumnName="TitleMenuTieuSu" />
+          <ScalarProperty Name="CategoryIdMenuTieuSu" ColumnName="CategoryIdMenuTieuSu" />
+          <ScalarProperty Name="OrderMenuTieuSu" ColumnName="OrderMenuTieuSu" />
+          <ScalarProperty Name="IsMenuTinChiDao" ColumnName="IsMenuTinChiDao" />
+          <ScalarProperty Name="TitleMenuTinChiDao" ColumnName="TitleMenuTinChiDao" />
+          <ScalarProperty Name="CategoryIdMenuTinChiDao" ColumnName="CategoryIdMenuTinChiDao" />
+          <ScalarProperty Name="OrderMenuTinChiDao" ColumnName="OrderMenuTinChiDao" />
+          <ScalarProperty Name="IsMenuTinBaiPhatBieu" ColumnName="IsMenuTinBaiPhatBieu" />
+          <ScalarProperty Name="TitleMenuTinBaiPhatBieu" ColumnName="TitleMenuTinBaiPhatBieu" />
+          <ScalarProperty Name="CategoryIdMenuTinBaiPhatBieu" ColumnName="CategoryIdMenuTinBaiPhatBieu" />
+          <ScalarProperty Name="OrderMenuTinBaiPhatBieu" ColumnName="OrderMenuTinBaiPhatBieu" />
+          <ScalarProperty Name="IsShowMenuTrangChu" ColumnName="IsShowMenuTrangChu" />
+          <ScalarProperty Name="TitleMenuLienHe" ColumnName="TitleMenuLienHe" />
+          <ScalarProperty Name="IsShowMenuLienHe" ColumnName="IsShowMenuLienHe" />
+          <ScalarProperty Name="LinkMenuLienHe" ColumnName="LinkMenuLienHe" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsMenuTinAnhHoatDong" ColumnName="IsMenuTinAnhHoatDong" />
+          <ScalarProperty Name="TitleMenuTinAnhHoatDong" ColumnName="TitleMenuTinAnhHoatDong" />
+          <ScalarProperty Name="CategoryIdMenuTinAnhHoatDong" ColumnName="CategoryIdMenuTinAnhHoatDong" />
+          <ScalarProperty Name="OrderMenuTinAnhHoatDong" ColumnName="OrderMenuTinAnhHoatDong" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.Notification">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NAction" ColumnName="NAction" />
+          <ScalarProperty Name="NType" ColumnName="NType" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="OwnerUserName" ColumnName="OwnerUserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="Hidden" ColumnName="Hidden" />
+          <ScalarProperty Name="ReadByUserIds" ColumnName="ReadByUserIds" />
+          <ScalarProperty Name="OwnerCreateTime" ColumnName="OwnerCreateTime" />
+          <ScalarProperty Name="PhienOrKyId" ColumnName="PhienOrKyId" />
+          <ScalarProperty Name="PhienOrKy" ColumnName="PhienOrKy" />
+          <ScalarProperty Name="TypeOfND" ColumnName="TypeOfND" />
+          <ScalarProperty Name="PhienOrKyName" ColumnName="PhienOrKyName" />
+          <ScalarProperty Name="KhoaQuocHoiName" ColumnName="KhoaQuocHoiName" />
+          <ScalarProperty Name="KhoaQuocHoiID" ColumnName="KhoaQuocHoiID" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhanHoiSanPhams">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.PhanHoiSanPham">
+        <MappingFragment StoreEntitySet="PhanHoiSanPham">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdSanPham" ColumnName="IdSanPham" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="StarVote" ColumnName="StarVote" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuangCaosses">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.QuangCaoss">
+        <MappingFragment StoreEntitySet="QuangCaoss">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+          <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+          <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="IsTargetBlank" ColumnName="IsTargetBlank" />
+          <ScalarProperty Name="ListChuyenTinText" ColumnName="ListChuyenTinText" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReadCountLogs">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.ReadCountLog">
+        <MappingFragment StoreEntitySet="ReadCountLogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ViewTime" ColumnName="ViewTime" />
+          <ScalarProperty Name="TypeCategoryLog" ColumnName="TypeCategoryLog" />
+          <ScalarProperty Name="TypeSubCategoryLog" ColumnName="TypeSubCategoryLog" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="SubCategoryTitle" ColumnName="SubCategoryTitle" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="EntityTitle" ColumnName="EntityTitle" />
+          <ScalarProperty Name="CreatorEntityId" ColumnName="CreatorEntityId" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RSSChannels">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.RSSChannel">
+        <MappingFragment StoreEntitySet="RSSChannel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="TypeChannelRSS" ColumnName="TypeChannelRSS" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CategoryChannelId" ColumnName="CategoryChannelId" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SlideImages">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.SlideImage">
+        <MappingFragment StoreEntitySet="SlideImages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="IsVideo" ColumnName="IsVideo" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TagInfos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.TagInfo">
+        <MappingFragment StoreEntitySet="TagInfos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="TagEntityType" ColumnName="TagEntityType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TypeOfND" ColumnName="TypeOfND" />
+          <ScalarProperty Name="CreationTimeEntity" ColumnName="CreationTimeEntity" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.Tag">
+        <MappingFragment StoreEntitySet="Tags">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastModifierBy" ColumnName="LastModifierBy" />
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViTriQuangCaos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.ViTriQuangCao">
+        <MappingFragment StoreEntitySet="ViTriQuangCao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViTriQuangCaoMapQuangCaos">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.ViTriQuangCaoMapQuangCao">
+        <MappingFragment StoreEntitySet="ViTriQuangCaoMapQuangCao">
+          <ScalarProperty Name="QuangCaoId" ColumnName="QuangCaoId" />
+          <ScalarProperty Name="ViTriQuangCaoId" ColumnName="ViTriQuangCaoId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowCategories">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.WorkflowCategory">
+        <MappingFragment StoreEntitySet="WorkflowCategories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="MA" ColumnName="MA" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="UPDATE_BY" ColumnName="UPDATE_BY" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowDefinitions">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.WorkflowDefinition">
+        <MappingFragment StoreEntitySet="WorkflowDefinitions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WORKFLOW_NAME" ColumnName="WORKFLOW_NAME" />
+          <ScalarProperty Name="WORKFLOW_DATA" ColumnName="WORKFLOW_DATA" />
+          <ScalarProperty Name="LIST_UPGRADE_USER_ID" ColumnName="LIST_UPGRADE_USER_ID" />
+          <ScalarProperty Name="LIST_UPGRADE_USER_NAME" ColumnName="LIST_UPGRADE_USER_NAME" />
+          <ScalarProperty Name="LIST_UPGRADE_TIME" ColumnName="LIST_UPGRADE_TIME" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="UPDATE_BY" ColumnName="UPDATE_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="TYPE_WORKFLOW" ColumnName="TYPE_WORKFLOW" />
+          <ScalarProperty Name="LST_WORKFLOW_CHILD" ColumnName="LST_WORKFLOW_CHILD" />
+          <ScalarProperty Name="STATIC_STATUS" ColumnName="STATIC-STATUS" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkflowInstances">
+      <EntityTypeMapping TypeName="APATIT_CommonsServicesModel.WorkflowInstance">
+        <MappingFragment StoreEntitySet="WorkflowInstances">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TARGET_OBJECT_ID" ColumnName="TARGET_OBJECT_ID" />
+          <ScalarProperty Name="TARGET_OBJECT_TABLE" ColumnName="TARGET_OBJECT_TABLE" />
+          <ScalarProperty Name="WORKFLOW_DEFINITION_ID" ColumnName="WORKFLOW_DEFINITION_ID" />
+          <ScalarProperty Name="LIST_RELATED_OBJECT" ColumnName="LIST_RELATED_OBJECT" />
+          <ScalarProperty Name="WORKFLOW_DATA" ColumnName="WORKFLOW_DATA" />
+          <ScalarProperty Name="LIST_AVAILABLE_NODE_ID" ColumnName="LIST_AVAILABLE_NODE_ID" />
+          <ScalarProperty Name="LIST_VIEWER_ID" ColumnName="LIST_VIEWER_ID" />
+          <ScalarProperty Name="LIST_HANDLER_ID" ColumnName="LIST_HANDLER_ID" />
+          <ScalarProperty Name="TARGET_OBJECT_NAME" ColumnName="TARGET_OBJECT_NAME" />
+          <ScalarProperty Name="LIST_RELATED_OBJECT_NAME" ColumnName="LIST_RELATED_OBJECT_NAME" />
+          <ScalarProperty Name="FINISH_TIME" ColumnName="FINISH_TIME" />
+          <ScalarProperty Name="WORKFLOW_INSTANCE_STATUS" ColumnName="WORKFLOW_INSTANCE_STATUS" />
+          <ScalarProperty Name="WORKFLOW_INSTANCE_PARENT_ID" ColumnName="WORKFLOW_INSTANCE_PARENT_ID" />
+          <ScalarProperty Name="WORKFLOW_INSTANCE_PARENT_NODE_ID" ColumnName="WORKFLOW_INSTANCE_PARENT_NODE_ID" />
+          <ScalarProperty Name="TARGET_OBJECT_HANDLER" ColumnName="TARGET-OBJECT-HANDLER" />
+          <ScalarProperty Name="LIST_RELATED_OBJECT_ORIGINAL" ColumnName="LIST_RELATED_OBJECT_ORIGINAL" />
+          <ScalarProperty Name="TARGET_OBJECT_PARENT_ID" ColumnName="TARGET_OBJECT_PARENT_ID" />
+          <ScalarProperty Name="TARGET_OBJECT_PARENT_TABLE" ColumnName="TARGET_OBJECT_PARENT_TABLE" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APATIT_CommonsServicesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConfigWebsite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="HomeNewShow" Type="Int32" />
+    <Property Name="HomeSlideShow" Type="Int32" />
+    <Property Name="Top_HomeTinKhac" Type="Int32" />
+    <Property Name="NewList" Type="Int32" />
+    <Property Name="NewPageShow" Type="Int32" />
+    <Property Name="NewRelatedDetail" Type="Int32" />
+    <Property Name="NewRelatedList" Type="Int32" />
+    <Property Name="Top_TinTucMoiNhat" Type="Int32" />
+    <Property Name="Top_TinXemNhieu" Type="Int32" />
+    <Property Name="CategoryMenuTinTuc" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryMenuGioiThieu" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="NotifyNew" Type="Int32" />
+    <Property Name="NotifyNew2" Type="Int32" />
+    <Property Name="NotifyQuestion" Type="Int32" />
+    <Property Name="NotifyContact" Type="Int32" />
+    <Property Name="NotifyTrain" Type="Int32" />
+    <Property Name="NotifyDoc" Type="Int32" />
+    <Property Name="LogoHeader" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LogoFooter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AutoSendEmailInContact" Type="Boolean" />
+    <Property Name="AutoSendEmailInAnswerQuestion" Type="Boolean" />
+    <Property Name="AutoSendEmailInTraningCoop" Type="Boolean" />
+    <Property Name="GroupRoleIdToListEmails" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="TagsList" Type="Int32" />
+    <Property Name="TagsPageShow" Type="Int32" />
+    <Property Name="CategoryBox1" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box1" Type="Int32" />
+    <Property Name="CategoryBox2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box2" Type="Int32" />
+    <Property Name="CategoryBox3" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box3" Type="Int32" />
+    <Property Name="CategoryBox4" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box4" Type="Int32" />
+    <Property Name="CategoryBox5" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box5" Type="Int32" />
+    <Property Name="CategoryBox6" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box6" Type="Int32" />
+    <Property Name="CategoryBox44" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box44" Type="Int32" />
+    <Property Name="CategoryBox55" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box55" Type="Int32" />
+    <Property Name="CategoryBox66" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box66" Type="Int32" />
+    <Property Name="CategoryBox7" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box7" Type="Int32" />
+    <Property Name="BoxPhienOrKy" Type="Boolean" />
+    <Property Name="CategoryKhoa" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryKyPhien" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Box8" Type="Int32" />
+    <Property Name="KyHopCategoryBox" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="KyHopBox" Type="Int32" />
+    <Property Name="NoiDungKhShow" Type="Int32" />
+    <Property Name="VanKienKhShow" Type="Int32" />
+    <Property Name="NoiDungKhList" Type="Int32" />
+    <Property Name="NoiDungKhShowPage" Type="Int32" />
+    <Property Name="NoiDungKhRelatedDetail" Type="Int32" />
+    <Property Name="PhienHopCategoryBox" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PhienHopBox" Type="Int32" />
+    <Property Name="NoiDungPhShow" Type="Int32" />
+    <Property Name="VanKienPhShow" Type="Int32" />
+    <Property Name="NoiDungPhList" Type="Int32" />
+    <Property Name="NoiDungPhShowPage" Type="Int32" />
+    <Property Name="NoiDungPhRelatedDetail" Type="Int32" />
+    <Property Name="ETVCategoryId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="ETVRowlimit" Type="Int32" />
+    <Property Name="ETVLinkVideoLive" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+    <Property Name="ETVLinkService" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+    <Property Name="ETVLinkSource" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="ETVTitleTVLive" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="ETVTitleVideo" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawCategory1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LawTitleCategory1" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawLimitCategory1" Type="Int32" />
+    <Property Name="LawCategory2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LawTitleCategory2" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawLimitCategory2" Type="Int32" />
+    <Property Name="LawPageList" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawPageDetail" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawLinkService" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ETVUseNewCategory" Type="Boolean" />
+    <Property Name="ETVNewCategoryId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawBox1UseNewCategory" Type="Boolean" />
+    <Property Name="LawBox1NewCategoryId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LawBox2UseNewCategory" Type="Boolean" />
+    <Property Name="LawBox2NewCategoryId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryAtBoxDuThao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LimitBoxDuThao" Type="Int32" />
+    <Property Name="UseNewCategoryDuThao" Type="Boolean" />
+    <Property Name="LinkServiceDuThao" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryServiceDuThao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="PageDetailDuThao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="PageListDuThao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="TitleDuThao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="TimeOut" Type="Int32" />
+    <Property Name="QuangCaoBox1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox1Limit" Type="Int32" />
+    <Property Name="QuangCaoBox2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox2Limit" Type="Int32" />
+    <Property Name="QuangCaoBox3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox3Limit" Type="Int32" />
+    <Property Name="QuangCaoBox4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox4Limit" Type="Int32" />
+    <Property Name="QuangCaoBox5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox5Limit" Type="Int32" />
+    <Property Name="QuangCaoBox6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox6Limit" Type="Int32" />
+    <Property Name="QuangCaoBox7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox7Limit" Type="Int32" />
+    <Property Name="QuangCaoBox8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox8Limit" Type="Int32" />
+    <Property Name="QuangCaoBoxMid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxMidLimit" Type="Int32" />
+    <Property Name="QuangCaoBoxBottom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxBottomLimit" Type="Int32" />
+    <Property Name="QuangCaoBoxTop" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxTopLimit" Type="Int32" />
+    <Property Name="QuangCaoBoxLeft" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxLeftLimit" Type="Int32" />
+    <Property Name="QuangCaoBoxRight" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxRightLimit" Type="Int32" />
+    <Property Name="QuangCaoBoxHome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxHomeLimit" Type="Int32" />
+    <Property Name="QuangCaoBox9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBox9Limit" Type="Int32" />
+    <Property Name="CategoryMenuTinTucTitle" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryMenuGioiThieuTitle" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryMenuLDQH" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryMenuLDQHTitle" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryMenuPH" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryMenuPHTitle" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppIsShow" Type="Boolean" />
+    <Property Name="DowLoadAppAppStoreTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppAppStoreLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppAppStoreImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppGoogPlayTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppGoogPlayLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppGoogPlayImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppQRTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DowLoadAppQRImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DaiBieuQuocHoiShow" Type="Int32" />
+    <Property Name="DaiBieuQuocHoiShowPage" Type="Int32" />
+    <Property Name="NewByDaiBieuQuocHoi" Type="Int32" />
+    <Property Name="QuangCaoBoxChuyenTrangLanhDaoId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="QuangCaoBoxChuyenTrangLanhDaoTitle" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="TopTieuSuLanhDao" Type="Int32" />
+    <Property Name="SoTinHoatDong" Type="Int32" />
+    <Property Name="SoBaiPhatBieu" Type="Int32" />
+    <Property Name="SoTinAnh" Type="Int32" />
+    <Property Name="SoTinNoiBat" Type="Int32" />
+    <Property Name="SoBanGhi" Type="Int32" />
+    <Property Name="TypeManager" Type="Int32" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="NgayCongTieuChuan" Type="Int32" />
+    <Property Name="SoTuTrenTrangA4" Type="Int32" />
+    <Property Name="SoTuTrenNuaTrangA4" Type="Int32" />
+    <Property Name="MucLuongCoSo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HeSoLuongCoBan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CategoryVideoGalleryShow" Type="Int32" />
+    <Property Name="VideoGalleryShow" Type="Int32" />
+    <Property Name="QuestionList" Type="Int32" />
+    <Property Name="QuestionPageShow" Type="Int32" />
+    <Property Name="Top_CauHoiXemNhieu" Type="Int32" />
+    <Property Name="Top_Substring_Question" Type="Int32" />
+    <Property Name="Top_CauHoiQuanTam" Type="Int32" />
+    <Property Name="QuestionList_Substring_Question" Type="Int32" />
+    <Property Name="QuestionRelatedDetail" Type="Int32" />
+    <Property Name="TinTucLimit" Type="Int32" />
+    <Property Name="DaoTaoLimit" Type="Int32" />
+    <Property Name="QuyTrinhVanBanId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuyTrinhVanBanName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="ProductList" Type="Int32" />
+    <Property Name="ProductPageShow" Type="Int32" />
+    <Property Name="ProductRelatedDetail" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ContactInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LogoHeader" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LogoFooter" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BannerHopTacDaoTao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ManagementAgency" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NewsPageManager" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AddressMap" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmailMenuTop" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmailMenuFooter" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Copyright" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="UrlWebsite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LinkFacebook" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LinkTwitter" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LinkSkype" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LinkGoogle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LinkYoutube" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="LinkInstagram" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LogoPartnership" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TitleWebsite" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="TypeManager" Type="Int32" />
+    <Property Name="Messager" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Zalo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BannerTuyenSinh" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="LinkPageBanner" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="CoQuanBanHanh">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="OldID" Type="Int32" />
+    <Property Name="ParentOldID" Type="Int32" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="DetailCategoryRoot" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="DanhSachSanPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenSanPham" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="3500" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="NguoiTao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NguoiSua" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NguoiXoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="LuotView" Type="Int32" Nullable="false" />
+    <Property Name="IsHomePage" Type="Boolean" Nullable="false" />
+    <Property Name="IsShared" Type="Boolean" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="HinhAnhList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PhanHoiSanPhams" Relationship="Self.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" FromRole="DanhSachSanPham" ToRole="PhanHoiSanPham" />
+  </EntityType>
+  <EntityType Name="DanhSachThongBao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TieuDe" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoThongBao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="IdLoaiThongBao" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayThongBao" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TieuDeUnicode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MoTaUnicode" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LoaiThongBao" Relationship="Self.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" FromRole="DanhSachThongBao" ToRole="LoaiThongBao" />
+  </EntityType>
+  <EntityType Name="DataCloneService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PublicDate" Type="DateTime" Precision="7" />
+    <Property Name="StatusName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="TypeCloneService" Type="Int32" Nullable="false" />
+    <Property Name="CoQuanSoanThao" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CoQuanThamTra" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CoQuanTrinhDuThao" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DaThongQua" Type="Boolean" />
+    <Property Name="LinhVuc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LuotXem" Type="Int32" />
+    <Property Name="NgayCapNhat" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="PhamViDieuChinh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ThaoLuanTaiKhoa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ThaoLuanTaiKyHop" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ThongQuaTaiKhoa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ThongQuaTaiKyHop" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OldId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LinkFileVideo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LinkDetail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="DoiTac">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UrlWebsite" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="EmailDangKy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GuiAllThongTin" Type="Boolean" Nullable="false" />
+    <Property Name="GuiThongTinSanPham" Type="Boolean" Nullable="false" />
+    <Property Name="GuiThongTinTinTuc" Type="Boolean" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Gopy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastViewer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationUnitId" Type="Guid" />
+    <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Profession" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Workplace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="HistoryActionFlow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="WORKFLOW_INSTANCE_ID" Type="Guid" />
+    <Property Name="NODE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NODE_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ACTION_NODE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FROM_USER_ID" Type="Guid" />
+    <Property Name="LIST_TO_USER_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LIST_TO_NODE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="HistoryVersion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="EntityId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatorIdBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsCreate" Type="Boolean" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="VersionNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="TypeVersion" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="IconFlag" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="LanguageMapText">
+    <Key>
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="LanguageTextId" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LanguageTextId" Type="Guid" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LanguageText" Relationship="Self.FK_LanguageMapText_LanguageText_LanguageTextId" FromRole="LanguageMapText" ToRole="LanguageText" />
+  </EntityType>
+  <EntityType Name="LanguageText">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="MainKeyWord" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="LanguageMapTexts" Relationship="Self.FK_LanguageMapText_LanguageText_LanguageTextId" FromRole="LanguageText" ToRole="LanguageMapText" />
+  </EntityType>
+  <EntityType Name="LienKetWebsite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UrlWebsite" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LogoWebsite" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ParentID" Type="Guid" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DetailMenuRoot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LienKetWebsiteType" Type="Int32" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="LinhVuc">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="OldID" Type="Int32" />
+    <Property Name="ParentOldID" Type="Int32" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="DetailCategoryRoot" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsHome" Type="Boolean" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="LoaiThongBao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="DanhSachThongBaos" Relationship="Self.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" FromRole="LoaiThongBao" ToRole="DanhSachThongBao" />
+  </EntityType>
+  <EntityType Name="LoaiVanKien">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="DetailCategoryRoot" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentID" Type="Guid" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="MenuHead" Type="Boolean" Nullable="false" />
+    <Property Name="MenuMain" Type="Boolean" Nullable="false" />
+    <Property Name="MenuFooter" Type="Boolean" Nullable="false" />
+    <Property Name="MenuLeft" Type="Boolean" Nullable="false" />
+    <Property Name="MenuRight" Type="Boolean" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DetailMenuRoot" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="TextClass" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="LinkTaget" Type="Boolean" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MenuLanhDao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="PageUrl" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Position" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsMenuTinHoatDong" Type="Boolean" Nullable="false" />
+    <Property Name="TitleMenuTinHoatDong" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryIdMenuTinHoatDong" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderMenuTinHoatDong" Type="Int32" Nullable="false" />
+    <Property Name="IsMenuTieuSu" Type="Boolean" Nullable="false" />
+    <Property Name="TitleMenuTieuSu" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryIdMenuTieuSu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderMenuTieuSu" Type="Int32" Nullable="false" />
+    <Property Name="IsMenuTinChiDao" Type="Boolean" Nullable="false" />
+    <Property Name="TitleMenuTinChiDao" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryIdMenuTinChiDao" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderMenuTinChiDao" Type="Int32" Nullable="false" />
+    <Property Name="IsMenuTinBaiPhatBieu" Type="Boolean" Nullable="false" />
+    <Property Name="TitleMenuTinBaiPhatBieu" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryIdMenuTinBaiPhatBieu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderMenuTinBaiPhatBieu" Type="Int32" Nullable="false" />
+    <Property Name="IsShowMenuTrangChu" Type="Boolean" Nullable="false" />
+    <Property Name="TitleMenuLienHe" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="IsShowMenuLienHe" Type="Boolean" Nullable="false" />
+    <Property Name="LinkMenuLienHe" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="IsMenuTinAnhHoatDong" Type="Boolean" Nullable="false" />
+    <Property Name="TitleMenuTinAnhHoatDong" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryIdMenuTinAnhHoatDong" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderMenuTinAnhHoatDong" Type="Int32" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAction" Type="Int32" />
+    <Property Name="NType" Type="Int32" Nullable="false" />
+    <Property Name="EntityId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerId" Type="Guid" />
+    <Property Name="OwnerUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="Hidden" Type="Boolean" />
+    <Property Name="ReadByUserIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerCreateTime" Type="DateTime" Precision="7" />
+    <Property Name="PhienOrKyId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhienOrKy" Type="Int32" />
+    <Property Name="TypeOfND" Type="Int32" />
+    <Property Name="PhienOrKyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KhoaQuocHoiName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KhoaQuocHoiID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="PhanHoiSanPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="IdSanPham" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="3500" FixedLength="false" Unicode="true" />
+    <Property Name="StarVote" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <NavigationProperty Name="DanhSachSanPham" Relationship="Self.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" FromRole="PhanHoiSanPham" ToRole="DanhSachSanPham" />
+  </EntityType>
+  <EntityType Name="QuangCaoss">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LinkUrl" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Visibility" Type="Boolean" Nullable="false" />
+    <Property Name="PublishDate" Type="DateTime" Precision="7" />
+    <Property Name="EndDate" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationUnitCode" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationUnitId" Type="Guid" />
+    <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsTargetBlank" Type="Boolean" />
+    <Property Name="ListChuyenTinText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="ViTriQuangCaoMapQuangCaos" Relationship="Self.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" FromRole="QuangCaoss" ToRole="ViTriQuangCaoMapQuangCao" />
+  </EntityType>
+  <EntityType Name="ReadCountLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="ViewTime" Type="DateTime" Precision="7" />
+    <Property Name="TypeCategoryLog" Type="Int32" />
+    <Property Name="TypeSubCategoryLog" Type="Int32" />
+    <Property Name="IpAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SubCategoryID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="SubCategoryTitle" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="EntityId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EntityTitle" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="CreatorEntityId" Type="Guid" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="RSSChannel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="DatePublic" Type="DateTime" Precision="7" />
+    <Property Name="TypeChannelRSS" Type="Int32" Nullable="false" />
+    <Property Name="Limit" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CategoryChannelId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="SlideImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LinkUrl" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Visibility" Type="Boolean" Nullable="false" />
+    <Property Name="PublishDate" Type="DateTime" Precision="7" />
+    <Property Name="EndDate" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="IsVideo" Type="Boolean" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TagInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TagId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="EntityId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descriptions" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="DatePublic" Type="DateTime" Precision="7" />
+    <Property Name="TagEntityType" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeOfND" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTimeEntity" Type="DateTime" Precision="7" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Tag" Relationship="Self.FK_TagInfos_Tags_TagId" FromRole="TagInfos" ToRole="Tags" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Show" Type="Boolean" Nullable="false" />
+    <Property Name="Descriptions" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TagInfos" Relationship="Self.FK_TagInfos_Tags_TagId" FromRole="Tags" ToRole="TagInfos" />
+  </EntityType>
+  <EntityType Name="ViTriQuangCao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DetailCategoryRoot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="ViTriQuangCaoMapQuangCaos" Relationship="Self.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" FromRole="ViTriQuangCao" ToRole="ViTriQuangCaoMapQuangCao" />
+  </EntityType>
+  <EntityType Name="ViTriQuangCaoMapQuangCao">
+    <Key>
+      <PropertyRef Name="QuangCaoId" />
+      <PropertyRef Name="ViTriQuangCaoId" />
+    </Key>
+    <Property Name="QuangCaoId" Type="Guid" Nullable="false" />
+    <Property Name="ViTriQuangCaoId" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <NavigationProperty Name="QuangCaoss" Relationship="Self.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" FromRole="ViTriQuangCaoMapQuangCao" ToRole="QuangCaoss" />
+    <NavigationProperty Name="ViTriQuangCao" Relationship="Self.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" FromRole="ViTriQuangCaoMapQuangCao" ToRole="ViTriQuangCao" />
+  </EntityType>
+  <EntityType Name="WorkflowCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CREATE_BY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UPDATE_BY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="WorkflowDefinition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="WORKFLOW_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WORKFLOW_DATA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_UPGRADE_USER_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_UPGRADE_USER_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_UPGRADE_TIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CREATE_BY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UPDATE_BY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TYPE_WORKFLOW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LST_WORKFLOW_CHILD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATIC_STATUS" Type="Boolean" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="WorkflowInstance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TARGET_OBJECT_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TARGET_OBJECT_TABLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WORKFLOW_DEFINITION_ID" Type="Guid" Nullable="false" />
+    <Property Name="LIST_RELATED_OBJECT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WORKFLOW_DATA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_AVAILABLE_NODE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_VIEWER_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_HANDLER_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TARGET_OBJECT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_RELATED_OBJECT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FINISH_TIME" Type="DateTime" Precision="7" />
+    <Property Name="WORKFLOW_INSTANCE_STATUS" Type="Int32" Nullable="false" />
+    <Property Name="WORKFLOW_INSTANCE_PARENT_ID" Type="Guid" />
+    <Property Name="WORKFLOW_INSTANCE_PARENT_NODE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TARGET_OBJECT_HANDLER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LIST_RELATED_OBJECT_ORIGINAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TARGET_OBJECT_PARENT_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TARGET_OBJECT_PARENT_TABLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+  </EntityType>
+  <Association Name="FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham">
+    <End Role="DanhSachSanPham" Type="Self.DanhSachSanPham" Multiplicity="0..1" />
+    <End Role="PhanHoiSanPham" Type="Self.PhanHoiSanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DanhSachSanPham">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhanHoiSanPham">
+        <PropertyRef Name="IdSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao">
+    <End Role="LoaiThongBao" Type="Self.LoaiThongBao" Multiplicity="0..1" />
+    <End Role="DanhSachThongBao" Type="Self.DanhSachThongBao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiThongBao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DanhSachThongBao">
+        <PropertyRef Name="IdLoaiThongBao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LanguageMapText_LanguageText_LanguageTextId">
+    <End Role="LanguageText" Type="Self.LanguageText" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LanguageMapText" Type="Self.LanguageMapText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LanguageText">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LanguageMapText">
+        <PropertyRef Name="LanguageTextId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId">
+    <End Role="QuangCaoss" Type="Self.QuangCaoss" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ViTriQuangCaoMapQuangCao" Type="Self.ViTriQuangCaoMapQuangCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuangCaoss">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriQuangCaoMapQuangCao">
+        <PropertyRef Name="QuangCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TagInfos_Tags_TagId">
+    <End Role="Tags" Type="Self.Tag" Multiplicity="0..1" />
+    <End Role="TagInfos" Type="Self.TagInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tags">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TagInfos">
+        <PropertyRef Name="TagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId">
+    <End Role="ViTriQuangCao" Type="Self.ViTriQuangCao" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ViTriQuangCaoMapQuangCao" Type="Self.ViTriQuangCaoMapQuangCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViTriQuangCao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriQuangCaoMapQuangCao">
+        <PropertyRef Name="ViTriQuangCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="APATIT_CommonsServicesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="ConfigWebsites" EntityType="Self.ConfigWebsite" />
+    <EntitySet Name="ContactInfos" EntityType="Self.ContactInfo" />
+    <EntitySet Name="CoQuanBanHanhs" EntityType="Self.CoQuanBanHanh" />
+    <EntitySet Name="DanhSachSanPhams" EntityType="Self.DanhSachSanPham" />
+    <EntitySet Name="DanhSachThongBaos" EntityType="Self.DanhSachThongBao" />
+    <EntitySet Name="DataCloneServices" EntityType="Self.DataCloneService" />
+    <EntitySet Name="DoiTacs" EntityType="Self.DoiTac" />
+    <EntitySet Name="EmailDangKies" EntityType="Self.EmailDangKy" />
+    <EntitySet Name="Gopys" EntityType="Self.Gopy" />
+    <EntitySet Name="HistoryActionFlows" EntityType="Self.HistoryActionFlow" />
+    <EntitySet Name="HistoryVersions" EntityType="Self.HistoryVersion" />
+    <EntitySet Name="Languages" EntityType="Self.Language" />
+    <EntitySet Name="LanguageMapTexts" EntityType="Self.LanguageMapText" />
+    <EntitySet Name="LanguageTexts" EntityType="Self.LanguageText" />
+    <EntitySet Name="LienKetWebsites" EntityType="Self.LienKetWebsite" />
+    <EntitySet Name="LinhVucs" EntityType="Self.LinhVuc" />
+    <EntitySet Name="LoaiThongBaos" EntityType="Self.LoaiThongBao" />
+    <EntitySet Name="LoaiVanKiens" EntityType="Self.LoaiVanKien" />
+    <EntitySet Name="Menus" EntityType="Self.Menu" />
+    <EntitySet Name="MenuLanhDaos" EntityType="Self.MenuLanhDao" />
+    <EntitySet Name="Notifications" EntityType="Self.Notification" />
+    <EntitySet Name="PhanHoiSanPhams" EntityType="Self.PhanHoiSanPham" />
+    <EntitySet Name="QuangCaosses" EntityType="Self.QuangCaoss" />
+    <EntitySet Name="ReadCountLogs" EntityType="Self.ReadCountLog" />
+    <EntitySet Name="RSSChannels" EntityType="Self.RSSChannel" />
+    <EntitySet Name="SlideImages" EntityType="Self.SlideImage" />
+    <EntitySet Name="TagInfos" EntityType="Self.TagInfo" />
+    <EntitySet Name="Tags" EntityType="Self.Tag" />
+    <EntitySet Name="ViTriQuangCaos" EntityType="Self.ViTriQuangCao" />
+    <EntitySet Name="ViTriQuangCaoMapQuangCaos" EntityType="Self.ViTriQuangCaoMapQuangCao" />
+    <EntitySet Name="WorkflowCategories" EntityType="Self.WorkflowCategory" />
+    <EntitySet Name="WorkflowDefinitions" EntityType="Self.WorkflowDefinition" />
+    <EntitySet Name="WorkflowInstances" EntityType="Self.WorkflowInstance" />
+    <AssociationSet Name="FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" Association="Self.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham">
+      <End Role="DanhSachSanPham" EntitySet="DanhSachSanPhams" />
+      <End Role="PhanHoiSanPham" EntitySet="PhanHoiSanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" Association="Self.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao">
+      <End Role="LoaiThongBao" EntitySet="LoaiThongBaos" />
+      <End Role="DanhSachThongBao" EntitySet="DanhSachThongBaos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LanguageMapText_LanguageText_LanguageTextId" Association="Self.FK_LanguageMapText_LanguageText_LanguageTextId">
+      <End Role="LanguageText" EntitySet="LanguageTexts" />
+      <End Role="LanguageMapText" EntitySet="LanguageMapTexts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" Association="Self.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId">
+      <End Role="QuangCaoss" EntitySet="QuangCaosses" />
+      <End Role="ViTriQuangCaoMapQuangCao" EntitySet="ViTriQuangCaoMapQuangCaos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TagInfos_Tags_TagId" Association="Self.FK_TagInfos_Tags_TagId">
+      <End Role="Tags" EntitySet="Tags" />
+      <End Role="TagInfos" EntitySet="TagInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" Association="Self.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId">
+      <End Role="ViTriQuangCao" EntitySet="ViTriQuangCaos" />
+      <End Role="ViTriQuangCaoMapQuangCao" EntitySet="ViTriQuangCaoMapQuangCaos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

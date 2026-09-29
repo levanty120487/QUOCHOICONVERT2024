@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APATIT_CommonsServicesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConfigWebsites">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HomeNewShow" Type="int" />
+    <Property Name="HomeSlideShow" Type="int" />
+    <Property Name="Top_HomeTinKhac" Type="int" />
+    <Property Name="NewList" Type="int" />
+    <Property Name="NewPageShow" Type="int" />
+    <Property Name="NewRelatedDetail" Type="int" />
+    <Property Name="NewRelatedList" Type="int" />
+    <Property Name="Top_TinTucMoiNhat" Type="int" />
+    <Property Name="Top_TinXemNhieu" Type="int" />
+    <Property Name="CategoryMenuTinTuc" Type="varchar" MaxLength="1000" />
+    <Property Name="CategoryMenuGioiThieu" Type="varchar" MaxLength="1000" />
+    <Property Name="NotifyNew" Type="int" />
+    <Property Name="NotifyNew2" Type="int" />
+    <Property Name="NotifyQuestion" Type="int" />
+    <Property Name="NotifyContact" Type="int" />
+    <Property Name="NotifyTrain" Type="int" />
+    <Property Name="NotifyDoc" Type="int" />
+    <Property Name="LogoHeader" Type="nvarchar(max)" />
+    <Property Name="LogoFooter" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" />
+    <Property Name="AutoSendEmailInContact" Type="bit" />
+    <Property Name="AutoSendEmailInAnswerQuestion" Type="bit" />
+    <Property Name="AutoSendEmailInTraningCoop" Type="bit" />
+    <Property Name="GroupRoleIdToListEmails" Type="varchar" MaxLength="1000" />
+    <Property Name="TagsList" Type="int" />
+    <Property Name="TagsPageShow" Type="int" />
+    <Property Name="CategoryBox1" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box1" Type="int" />
+    <Property Name="CategoryBox2" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box2" Type="int" />
+    <Property Name="CategoryBox3" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box3" Type="int" />
+    <Property Name="CategoryBox4" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box4" Type="int" />
+    <Property Name="CategoryBox5" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box5" Type="int" />
+    <Property Name="CategoryBox6" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box6" Type="int" />
+    <Property Name="CategoryBox44" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box44" Type="int" />
+    <Property Name="CategoryBox55" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box55" Type="int" />
+    <Property Name="CategoryBox66" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box66" Type="int" />
+    <Property Name="CategoryBox7" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box7" Type="int" />
+    <Property Name="BoxPhienOrKy" Type="bit" />
+    <Property Name="CategoryKhoa" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CategoryKyPhien" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Box8" Type="int" />
+    <Property Name="KyHopCategoryBox" Type="nvarchar" MaxLength="1000" />
+    <Property Name="KyHopBox" Type="int" />
+    <Property Name="NoiDungKhShow" Type="int" />
+    <Property Name="VanKienKhShow" Type="int" />
+    <Property Name="NoiDungKhList" Type="int" />
+    <Property Name="NoiDungKhShowPage" Type="int" />
+    <Property Name="NoiDungKhRelatedDetail" Type="int" />
+    <Property Name="PhienHopCategoryBox" Type="nvarchar" MaxLength="1000" />
+    <Property Name="PhienHopBox" Type="int" />
+    <Property Name="NoiDungPhShow" Type="int" />
+    <Property Name="VanKienPhShow" Type="int" />
+    <Property Name="NoiDungPhList" Type="int" />
+    <Property Name="NoiDungPhShowPage" Type="int" />
+    <Property Name="NoiDungPhRelatedDetail" Type="int" />
+    <Property Name="ETVCategoryId" Type="nvarchar" MaxLength="254" />
+    <Property Name="ETVRowlimit" Type="int" />
+    <Property Name="ETVLinkVideoLive" Type="nvarchar" MaxLength="650" />
+    <Property Name="ETVLinkService" Type="nvarchar" MaxLength="650" />
+    <Property Name="ETVLinkSource" Type="nvarchar" MaxLength="254" />
+    <Property Name="ETVTitleTVLive" Type="nvarchar" MaxLength="254" />
+    <Property Name="ETVTitleVideo" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawCategory1" Type="nvarchar" MaxLength="50" />
+    <Property Name="LawTitleCategory1" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawLimitCategory1" Type="int" />
+    <Property Name="LawCategory2" Type="nvarchar" MaxLength="50" />
+    <Property Name="LawTitleCategory2" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawLimitCategory2" Type="int" />
+    <Property Name="LawPageList" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawPageDetail" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawLinkService" Type="nvarchar" MaxLength="350" />
+    <Property Name="ETVUseNewCategory" Type="bit" />
+    <Property Name="ETVNewCategoryId" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawBox1UseNewCategory" Type="bit" />
+    <Property Name="LawBox1NewCategoryId" Type="nvarchar" MaxLength="254" />
+    <Property Name="LawBox2UseNewCategory" Type="bit" />
+    <Property Name="LawBox2NewCategoryId" Type="nvarchar" MaxLength="254" />
+    <Property Name="CategoryAtBoxDuThao" Type="nvarchar" MaxLength="254" />
+    <Property Name="LimitBoxDuThao" Type="int" />
+    <Property Name="UseNewCategoryDuThao" Type="bit" />
+    <Property Name="LinkServiceDuThao" Type="nvarchar" MaxLength="350" />
+    <Property Name="CategoryServiceDuThao" Type="nvarchar" MaxLength="254" />
+    <Property Name="PageDetailDuThao" Type="nvarchar" MaxLength="254" />
+    <Property Name="PageListDuThao" Type="nvarchar" MaxLength="254" />
+    <Property Name="TitleDuThao" Type="nvarchar" MaxLength="254" />
+    <Property Name="TimeOut" Type="int" />
+    <Property Name="QuangCaoBox1" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox1Limit" Type="int" />
+    <Property Name="QuangCaoBox2" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox2Limit" Type="int" />
+    <Property Name="QuangCaoBox3" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox3Limit" Type="int" />
+    <Property Name="QuangCaoBox4" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox4Limit" Type="int" />
+    <Property Name="QuangCaoBox5" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox5Limit" Type="int" />
+    <Property Name="QuangCaoBox6" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox6Limit" Type="int" />
+    <Property Name="QuangCaoBox7" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox7Limit" Type="int" />
+    <Property Name="QuangCaoBox8" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox8Limit" Type="int" />
+    <Property Name="QuangCaoBoxMid" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBoxMidLimit" Type="int" />
+    <Property Name="QuangCaoBoxBottom" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBoxBottomLimit" Type="int" />
+    <Property Name="QuangCaoBoxTop" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBoxTopLimit" Type="int" />
+    <Property Name="QuangCaoBoxLeft" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBoxLeftLimit" Type="int" />
+    <Property Name="QuangCaoBoxRight" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBoxRightLimit" Type="int" />
+    <Property Name="QuangCaoBoxHome" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBoxHomeLimit" Type="int" />
+    <Property Name="QuangCaoBox9" Type="nvarchar(max)" />
+    <Property Name="QuangCaoBox9Limit" Type="int" />
+    <Property Name="CategoryMenuTinTucTitle" Type="nvarchar" MaxLength="254" />
+    <Property Name="CategoryMenuGioiThieuTitle" Type="nvarchar" MaxLength="254" />
+    <Property Name="CategoryMenuLDQH" Type="nvarchar" MaxLength="254" />
+    <Property Name="CategoryMenuLDQHTitle" Type="nvarchar" MaxLength="254" />
+    <Property Name="CategoryMenuPH" Type="nvarchar" MaxLength="254" />
+    <Property Name="CategoryMenuPHTitle" Type="nvarchar" MaxLength="254" />
+    <Property Name="DowLoadAppTitle" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppIsShow" Type="bit" />
+    <Property Name="DowLoadAppAppStoreTitle" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppAppStoreLink" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppAppStoreImage" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppGoogPlayTitle" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppGoogPlayLink" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppGoogPlayImage" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppQRTitle" Type="nvarchar(max)" />
+    <Property Name="DowLoadAppQRImage" Type="nvarchar(max)" />
+    <Property Name="DaiBieuQuocHoiShow" Type="int" />
+    <Property Name="DaiBieuQuocHoiShowPage" Type="int" />
+    <Property Name="NewByDaiBieuQuocHoi" Type="int" />
+    <Property Name="QuangCaoBoxChuyenTrangLanhDaoId" Type="nvarchar" MaxLength="254" />
+    <Property Name="QuangCaoBoxChuyenTrangLanhDaoTitle" Type="nvarchar" MaxLength="254" />
+    <Property Name="TopTieuSuLanhDao" Type="int" />
+    <Property Name="SoTinHoatDong" Type="int" />
+    <Property Name="SoBaiPhatBieu" Type="int" />
+    <Property Name="SoTinAnh" Type="int" />
+    <Property Name="SoTinNoiBat" Type="int" />
+    <Property Name="SoBanGhi" Type="int" />
+    <Property Name="TypeManager" Type="int" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="NgayCongTieuChuan" Type="int" />
+    <Property Name="SoTuTrenTrangA4" Type="int" />
+    <Property Name="SoTuTrenNuaTrangA4" Type="int" />
+    <Property Name="MucLuongCoSo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HeSoLuongCoBan" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CategoryVideoGalleryShow" Type="int" />
+    <Property Name="VideoGalleryShow" Type="int" />
+    <Property Name="QuestionList" Type="int" />
+    <Property Name="QuestionPageShow" Type="int" />
+    <Property Name="Top_CauHoiXemNhieu" Type="int" />
+    <Property Name="Top_Substring_Question" Type="int" />
+    <Property Name="Top_CauHoiQuanTam" Type="int" />
+    <Property Name="QuestionList_Substring_Question" Type="int" />
+    <Property Name="QuestionRelatedDetail" Type="int" />
+    <Property Name="TinTucLimit" Type="int" />
+    <Property Name="DaoTaoLimit" Type="int" />
+    <Property Name="QuyTrinhVanBanId" Type="nvarchar(max)" />
+    <Property Name="QuyTrinhVanBanName" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar(max)" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="ProductList" Type="int" />
+    <Property Name="ProductPageShow" Type="int" />
+    <Property Name="ProductRelatedDetail" Type="int" />
+  </EntityType>
+  <EntityType Name="ContactInfos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LogoHeader" Type="nvarchar" MaxLength="255" />
+    <Property Name="LogoFooter" Type="nvarchar" MaxLength="255" />
+    <Property Name="BannerHopTacDaoTao" Type="nvarchar(max)" />
+    <Property Name="ManagementAgency" Type="nvarchar" MaxLength="255" />
+    <Property Name="LicenseNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="NewsPageManager" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="AddressMap" Type="nvarchar" MaxLength="2500" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmailMenuTop" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmailMenuFooter" Type="nvarchar" MaxLength="255" />
+    <Property Name="Copyright" Type="nvarchar" MaxLength="2500" />
+    <Property Name="UrlWebsite" Type="nvarchar(max)" />
+    <Property Name="LinkFacebook" Type="nvarchar" MaxLength="255" />
+    <Property Name="LinkTwitter" Type="nvarchar" MaxLength="255" />
+    <Property Name="LinkSkype" Type="nvarchar" MaxLength="255" />
+    <Property Name="LinkGoogle" Type="nvarchar" MaxLength="255" />
+    <Property Name="LinkYoutube" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="LinkInstagram" Type="nvarchar" MaxLength="255" />
+    <Property Name="LogoPartnership" Type="nvarchar" MaxLength="350" />
+    <Property Name="TitleWebsite" Type="nvarchar" MaxLength="254" />
+    <Property Name="TypeManager" Type="int" />
+    <Property Name="Messager" Type="nvarchar" MaxLength="254" />
+    <Property Name="Zalo" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber2" Type="nvarchar" MaxLength="50" />
+    <Property Name="BannerTuyenSinh" Type="nvarchar" MaxLength="350" />
+    <Property Name="LinkPageBanner" Type="nvarchar" MaxLength="254" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="CoQuanBanHanhs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentId" Type="varchar" MaxLength="36" />
+    <Property Name="OldID" Type="int" />
+    <Property Name="ParentOldID" Type="int" />
+    <Property Name="TreeParentIds" Type="varchar" MaxLength="350" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="500" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DanhSachSanPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="TenSanPham" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="MaSanPham" Type="nvarchar" MaxLength="50" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="3500" />
+    <Property Name="NgayTao" Type="datetime2" Precision="7" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="350" />
+    <Property Name="NguoiTao" Type="nvarchar" MaxLength="100" />
+    <Property Name="NguoiSua" Type="nvarchar" MaxLength="100" />
+    <Property Name="NguoiXoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="int" />
+    <Property Name="LuotView" Type="int" Nullable="false" />
+    <Property Name="IsHomePage" Type="bit" Nullable="false" />
+    <Property Name="IsShared" Type="bit" Nullable="false" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="HinhAnhList" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DanhSachThongBao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="TieuDe" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="SoThongBao" Type="nvarchar" MaxLength="254" />
+    <Property Name="IdLoaiThongBao" Type="varchar" MaxLength="36" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="NgayThongBao" Type="datetime2" Precision="7" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="TieuDeUnicode" Type="varchar" MaxLength="500" />
+    <Property Name="MoTaUnicode" Type="varchar" MaxLength="5000" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="Image" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="DataCloneServices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="PublicDate" Type="datetime2" Precision="7" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="254" />
+    <Property Name="TypeCloneService" Type="int" Nullable="false" />
+    <Property Name="CoQuanSoanThao" Type="nvarchar" MaxLength="500" />
+    <Property Name="CoQuanThamTra" Type="nvarchar" MaxLength="500" />
+    <Property Name="CoQuanTrinhDuThao" Type="nvarchar" MaxLength="500" />
+    <Property Name="DaThongQua" Type="bit" />
+    <Property Name="LinhVuc" Type="nvarchar" MaxLength="500" />
+    <Property Name="LuotXem" Type="int" />
+    <Property Name="NgayCapNhat" Type="nvarchar" MaxLength="254" />
+    <Property Name="PhamViDieuChinh" Type="nvarchar" MaxLength="500" />
+    <Property Name="ThaoLuanTaiKhoa" Type="nvarchar" MaxLength="500" />
+    <Property Name="ThaoLuanTaiKyHop" Type="nvarchar" MaxLength="500" />
+    <Property Name="ThongQuaTaiKhoa" Type="nvarchar" MaxLength="500" />
+    <Property Name="ThongQuaTaiKyHop" Type="nvarchar" MaxLength="500" />
+    <Property Name="OldId" Type="nvarchar" MaxLength="254" />
+    <Property Name="Image" Type="nvarchar" MaxLength="500" />
+    <Property Name="LinkFileVideo" Type="nvarchar" MaxLength="500" />
+    <Property Name="LinkDetail" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DoiTac">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="UrlWebsite" Type="nvarchar" MaxLength="255" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="EmailDangKy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="GuiAllThongTin" Type="bit" Nullable="false" />
+    <Property Name="GuiThongTinSanPham" Type="bit" Nullable="false" />
+    <Property Name="GuiThongTinTinTuc" Type="bit" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Gopys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="LastViewer" Type="nvarchar" MaxLength="255" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+    <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="Profession" Type="nvarchar" MaxLength="255" />
+    <Property Name="Workplace" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="HistoryActionFlows">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WORKFLOW_INSTANCE_ID" Type="uniqueidentifier" />
+    <Property Name="NODE_ID" Type="nvarchar(max)" />
+    <Property Name="NODE_NAME" Type="nvarchar(max)" />
+    <Property Name="ACTION_NODE" Type="nvarchar(max)" />
+    <Property Name="FROM_USER_ID" Type="uniqueidentifier" />
+    <Property Name="LIST_TO_USER_ID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LIST_TO_NODE_ID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="HistoryVersions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="EntityId" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="CreatorIdBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsCreate" Type="bit" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="VersionNo" Type="varchar" MaxLength="50" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="TypeVersion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="IconFlag" Type="nvarchar" MaxLength="120" />
+    <Property Name="Order" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="120" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="120" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="LanguageMapText">
+    <Key>
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="LanguageTextId" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="LanguageTextId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LanguageText">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="MainKeyWord" Type="nvarchar" MaxLength="120" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="120" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="120" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="LienKetWebsite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="UrlWebsite" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LogoWebsite" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="ParentID" Type="uniqueidentifier" />
+    <Property Name="TreeParentIds" Type="nvarchar(max)" />
+    <Property Name="DetailMenuRoot" Type="nvarchar(max)" />
+    <Property Name="LienKetWebsiteType" Type="int" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="LinhVucs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentId" Type="varchar" MaxLength="36" />
+    <Property Name="OldID" Type="int" />
+    <Property Name="ParentOldID" Type="int" />
+    <Property Name="TreeParentIds" Type="varchar" MaxLength="350" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="500" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsHome" Type="bit" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="LoaiThongBao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="LoaiVanKiens">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentId" Type="varchar" MaxLength="36" />
+    <Property Name="TreeParentIds" Type="varchar" MaxLength="350" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="500" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ParentID" Type="uniqueidentifier" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="MenuHead" Type="bit" Nullable="false" />
+    <Property Name="MenuMain" Type="bit" Nullable="false" />
+    <Property Name="MenuFooter" Type="bit" Nullable="false" />
+    <Property Name="MenuLeft" Type="bit" Nullable="false" />
+    <Property Name="MenuRight" Type="bit" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="PageUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="TreeParentIds" Type="nvarchar" MaxLength="255" />
+    <Property Name="DetailMenuRoot" Type="nvarchar" MaxLength="254" />
+    <Property Name="TextClass" Type="nvarchar" MaxLength="254" />
+    <Property Name="LinkTaget" Type="bit" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="MenuLanhDao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="254" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="254" />
+    <Property Name="PageUrl" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="IsMenuTinHoatDong" Type="bit" Nullable="false" />
+    <Property Name="TitleMenuTinHoatDong" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="CategoryIdMenuTinHoatDong" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="OrderMenuTinHoatDong" Type="int" Nullable="false" />
+    <Property Name="IsMenuTieuSu" Type="bit" Nullable="false" />
+    <Property Name="TitleMenuTieuSu" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="CategoryIdMenuTieuSu" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="OrderMenuTieuSu" Type="int" Nullable="false" />
+    <Property Name="IsMenuTinChiDao" Type="bit" Nullable="false" />
+    <Property Name="TitleMenuTinChiDao" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="CategoryIdMenuTinChiDao" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="OrderMenuTinChiDao" Type="int" Nullable="false" />
+    <Property Name="IsMenuTinBaiPhatBieu" Type="bit" Nullable="false" />
+    <Property Name="TitleMenuTinBaiPhatBieu" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="CategoryIdMenuTinBaiPhatBieu" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="OrderMenuTinBaiPhatBieu" Type="int" Nullable="false" />
+    <Property Name="IsShowMenuTrangChu" Type="bit" Nullable="false" />
+    <Property Name="TitleMenuLienHe" Type="nvarchar" MaxLength="254" />
+    <Property Name="IsShowMenuLienHe" Type="bit" Nullable="false" />
+    <Property Name="LinkMenuLienHe" Type="nvarchar" MaxLength="254" />
+    <Property Name="IsDefault" Type="bit" Nullable="false" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="IsMenuTinAnhHoatDong" Type="bit" Nullable="false" />
+    <Property Name="TitleMenuTinAnhHoatDong" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="CategoryIdMenuTinAnhHoatDong" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="OrderMenuTinAnhHoatDong" Type="int" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="NAction" Type="int" />
+    <Property Name="NType" Type="int" Nullable="false" />
+    <Property Name="EntityId" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="254" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="OwnerUserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="254" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="254" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="Hidden" Type="bit" />
+    <Property Name="ReadByUserIds" Type="nvarchar(max)" />
+    <Property Name="OwnerCreateTime" Type="datetime2" Precision="7" />
+    <Property Name="PhienOrKyId" Type="nvarchar(max)" />
+    <Property Name="PhienOrKy" Type="int" />
+    <Property Name="TypeOfND" Type="int" />
+    <Property Name="PhienOrKyName" Type="nvarchar" MaxLength="200" />
+    <Property Name="KhoaQuocHoiName" Type="nvarchar" MaxLength="200" />
+    <Property Name="KhoaQuocHoiID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PhanHoiSanPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdSanPham" Type="varchar" MaxLength="36" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="254" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="3500" />
+    <Property Name="StarVote" Type="int" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="SoDienThoai" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="QuangCaoss">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="LinkUrl" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visibility" Type="bit" Nullable="false" />
+    <Property Name="PublishDate" Type="datetime2" Precision="7" />
+    <Property Name="EndDate" Type="datetime2" Precision="7" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="254" />
+    <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+    <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="Position" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsTargetBlank" Type="bit" />
+    <Property Name="ListChuyenTinText" Type="nvarchar(max)" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="ReadCountLogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="ViewTime" Type="datetime2" Precision="7" />
+    <Property Name="TypeCategoryLog" Type="int" />
+    <Property Name="TypeSubCategoryLog" Type="int" />
+    <Property Name="IpAddress" Type="varchar" MaxLength="300" />
+    <Property Name="SubCategoryID" Type="varchar" MaxLength="36" />
+    <Property Name="SubCategoryTitle" Type="nvarchar" MaxLength="300" />
+    <Property Name="EntityId" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="EntityTitle" Type="nvarchar" MaxLength="300" />
+    <Property Name="CreatorEntityId" Type="uniqueidentifier" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="RSSChannel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2500" />
+    <Property Name="DatePublic" Type="datetime2" Precision="7" />
+    <Property Name="TypeChannelRSS" Type="int" Nullable="false" />
+    <Property Name="Limit" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CategoryChannelId" Type="varchar" MaxLength="100" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SlideImages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="LinkUrl" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visibility" Type="bit" Nullable="false" />
+    <Property Name="PublishDate" Type="datetime2" Precision="7" />
+    <Property Name="EndDate" Type="datetime2" Precision="7" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="IsVideo" Type="bit" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TagInfos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="TagId" Type="varchar" MaxLength="36" />
+    <Property Name="EntityId" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="650" />
+    <Property Name="CategoryId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="350" />
+    <Property Name="DatePublic" Type="datetime2" Precision="7" />
+    <Property Name="TagEntityType" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeOfND" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreationTimeEntity" Type="datetime2" Precision="7" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="Show" Type="bit" Nullable="false" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="650" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ViTriQuangCao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Order" Type="int" Nullable="false" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="TreeParentIds" Type="nvarchar(max)" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Language" Type="varchar" MaxLength="6" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="ViTriQuangCaoMapQuangCao">
+    <Key>
+      <PropertyRef Name="QuangCaoId" />
+      <PropertyRef Name="ViTriQuangCaoId" />
+    </Key>
+    <Property Name="QuangCaoId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ViTriQuangCaoId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="WorkflowCategories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CREATE_BY" Type="nvarchar(max)" />
+    <Property Name="UPDATE_BY" Type="nvarchar(max)" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="WorkflowDefinitions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WORKFLOW_NAME" Type="nvarchar(max)" />
+    <Property Name="WORKFLOW_DATA" Type="nvarchar(max)" />
+    <Property Name="LIST_UPGRADE_USER_ID" Type="nvarchar(max)" />
+    <Property Name="LIST_UPGRADE_USER_NAME" Type="nvarchar(max)" />
+    <Property Name="LIST_UPGRADE_TIME" Type="nvarchar(max)" />
+    <Property Name="CREATE_BY" Type="nvarchar(max)" />
+    <Property Name="UPDATE_BY" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="TYPE_WORKFLOW" Type="nvarchar(max)" />
+    <Property Name="LST_WORKFLOW_CHILD" Type="nvarchar(max)" />
+    <Property Name="STATIC-STATUS" Type="bit" Nullable="false" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="WorkflowInstances">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TARGET_OBJECT_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TARGET_OBJECT_TABLE" Type="nvarchar(max)" />
+    <Property Name="WORKFLOW_DEFINITION_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LIST_RELATED_OBJECT" Type="nvarchar(max)" />
+    <Property Name="WORKFLOW_DATA" Type="nvarchar(max)" />
+    <Property Name="LIST_AVAILABLE_NODE_ID" Type="nvarchar(max)" />
+    <Property Name="LIST_VIEWER_ID" Type="nvarchar(max)" />
+    <Property Name="LIST_HANDLER_ID" Type="nvarchar(max)" />
+    <Property Name="TARGET_OBJECT_NAME" Type="nvarchar(max)" />
+    <Property Name="LIST_RELATED_OBJECT_NAME" Type="nvarchar(max)" />
+    <Property Name="FINISH_TIME" Type="datetime2" Precision="7" />
+    <Property Name="WORKFLOW_INSTANCE_STATUS" Type="int" Nullable="false" />
+    <Property Name="WORKFLOW_INSTANCE_PARENT_ID" Type="uniqueidentifier" />
+    <Property Name="WORKFLOW_INSTANCE_PARENT_NODE_ID" Type="nvarchar(max)" />
+    <Property Name="TARGET-OBJECT-HANDLER" Type="nvarchar(max)" />
+    <Property Name="LIST_RELATED_OBJECT_ORIGINAL" Type="nvarchar(max)" />
+    <Property Name="TARGET_OBJECT_PARENT_ID" Type="nvarchar(max)" />
+    <Property Name="TARGET_OBJECT_PARENT_TABLE" Type="nvarchar(max)" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+  </EntityType>
+  <Association Name="FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao">
+    <End Role="LoaiThongBao" Type="Self.LoaiThongBao" Multiplicity="0..1" />
+    <End Role="DanhSachThongBao" Type="Self.DanhSachThongBao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiThongBao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DanhSachThongBao">
+        <PropertyRef Name="IdLoaiThongBao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LanguageMapText_LanguageText_LanguageTextId">
+    <End Role="LanguageText" Type="Self.LanguageText" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LanguageMapText" Type="Self.LanguageMapText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LanguageText">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LanguageMapText">
+        <PropertyRef Name="LanguageTextId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham">
+    <End Role="DanhSachSanPham" Type="Self.DanhSachSanPham" Multiplicity="0..1" />
+    <End Role="PhanHoiSanPham" Type="Self.PhanHoiSanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DanhSachSanPham">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhanHoiSanPham">
+        <PropertyRef Name="IdSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TagInfos_Tags_TagId">
+    <End Role="Tags" Type="Self.Tags" Multiplicity="0..1" />
+    <End Role="TagInfos" Type="Self.TagInfos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tags">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TagInfos">
+        <PropertyRef Name="TagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId">
+    <End Role="QuangCaoss" Type="Self.QuangCaoss" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ViTriQuangCaoMapQuangCao" Type="Self.ViTriQuangCaoMapQuangCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuangCaoss">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriQuangCaoMapQuangCao">
+        <PropertyRef Name="QuangCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId">
+    <End Role="ViTriQuangCao" Type="Self.ViTriQuangCao" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ViTriQuangCaoMapQuangCao" Type="Self.ViTriQuangCaoMapQuangCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViTriQuangCao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriQuangCaoMapQuangCao">
+        <PropertyRef Name="ViTriQuangCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="APATIT_CommonsServicesModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConfigWebsites" EntityType="Self.ConfigWebsites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactInfos" EntityType="Self.ContactInfos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoQuanBanHanhs" EntityType="Self.CoQuanBanHanhs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhSachSanPham" EntityType="Self.DanhSachSanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhSachThongBao" EntityType="Self.DanhSachThongBao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataCloneServices" EntityType="Self.DataCloneServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoiTac" EntityType="Self.DoiTac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailDangKy" EntityType="Self.EmailDangKy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gopys" EntityType="Self.Gopys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryActionFlows" EntityType="Self.HistoryActionFlows" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryVersions" EntityType="Self.HistoryVersions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LanguageMapText" EntityType="Self.LanguageMapText" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LanguageText" EntityType="Self.LanguageText" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LienKetWebsite" EntityType="Self.LienKetWebsite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LinhVucs" EntityType="Self.LinhVucs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiThongBao" EntityType="Self.LoaiThongBao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiVanKiens" EntityType="Self.LoaiVanKiens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuLanhDao" EntityType="Self.MenuLanhDao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanHoiSanPham" EntityType="Self.PhanHoiSanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuangCaoss" EntityType="Self.QuangCaoss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReadCountLogs" EntityType="Self.ReadCountLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RSSChannel" EntityType="Self.RSSChannel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SlideImages" EntityType="Self.SlideImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TagInfos" EntityType="Self.TagInfos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tags" EntityType="Self.Tags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViTriQuangCao" EntityType="Self.ViTriQuangCao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViTriQuangCaoMapQuangCao" EntityType="Self.ViTriQuangCaoMapQuangCao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowCategories" EntityType="Self.WorkflowCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowDefinitions" EntityType="Self.WorkflowDefinitions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkflowInstances" EntityType="Self.WorkflowInstances" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" Association="Self.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao">
+      <End Role="LoaiThongBao" EntitySet="LoaiThongBao" />
+      <End Role="DanhSachThongBao" EntitySet="DanhSachThongBao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LanguageMapText_LanguageText_LanguageTextId" Association="Self.FK_LanguageMapText_LanguageText_LanguageTextId">
+      <End Role="LanguageText" EntitySet="LanguageText" />
+      <End Role="LanguageMapText" EntitySet="LanguageMapText" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" Association="Self.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham">
+      <End Role="DanhSachSanPham" EntitySet="DanhSachSanPham" />
+      <End Role="PhanHoiSanPham" EntitySet="PhanHoiSanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TagInfos_Tags_TagId" Association="Self.FK_TagInfos_Tags_TagId">
+      <End Role="Tags" EntitySet="Tags" />
+      <End Role="TagInfos" EntitySet="TagInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" Association="Self.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId">
+      <End Role="QuangCaoss" EntitySet="QuangCaoss" />
+      <End Role="ViTriQuangCaoMapQuangCao" EntitySet="ViTriQuangCaoMapQuangCao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" Association="Self.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId">
+      <End Role="ViTriQuangCao" EntitySet="ViTriQuangCao" />
+      <End Role="ViTriQuangCaoMapQuangCao" EntitySet="ViTriQuangCaoMapQuangCao" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

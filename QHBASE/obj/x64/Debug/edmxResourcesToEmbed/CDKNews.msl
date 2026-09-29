@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CTTDTCDK_NewsServicesModelStoreContainer" CdmEntityContainer="CTTDTCDK_NewsServicesEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CategoryOldId" ColumnName="CategoryOldId" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentNews">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.CommentNew">
+        <MappingFragment StoreEntitySet="CommentNew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationId" ColumnName="CreationId" />
+          <ScalarProperty Name="CreationName" ColumnName="CreationName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+          <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+          <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="CategoryOldId" ColumnName="CategoryOldId" />
+          <ScalarProperty Name="ActionStartTime" ColumnName="ActionStartTime" />
+          <ScalarProperty Name="ActionEndTime" ColumnName="ActionEndTime" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotNews">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.HotNew">
+        <MappingFragment StoreEntitySet="HotNew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="EventDateTo" ColumnName="EventDateTo" />
+          <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+          <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+          <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Gim" ColumnName="Gim" />
+          <ScalarProperty Name="IsHotUBTV" ColumnName="IsHotUBTV" />
+          <ScalarProperty Name="IsHome" ColumnName="IsHome" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotNewLanhDaos">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.HotNewLanhDao">
+        <MappingFragment StoreEntitySet="HotNewLanhDaos">
+          <ScalarProperty Name="HotNewId" ColumnName="HotNewId" />
+          <ScalarProperty Name="LanhDaoId" ColumnName="LanhDaoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.New">
+        <MappingFragment StoreEntitySet="New">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="ShowDescription" ColumnName="ShowDescription" />
+          <ScalarProperty Name="AllowComment" ColumnName="AllowComment" />
+          <ScalarProperty Name="Shared" ColumnName="Shared" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="ApprovedByPublicSendToTime" ColumnName="ApprovedByPublicSendToTime" />
+          <ScalarProperty Name="ApprovedByPublicId" ColumnName="ApprovedByPublicId" />
+          <ScalarProperty Name="ApprovedByPublicTime" ColumnName="ApprovedByPublicTime" />
+          <ScalarProperty Name="ApprovedByPublicName" ColumnName="ApprovedByPublicName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="StatusEndLive" ColumnName="StatusEndLive" />
+          <ScalarProperty Name="UrlEMagazine" ColumnName="UrlEMagazine" />
+          <ScalarProperty Name="TypeNewContent" ColumnName="TypeNewContent" />
+          <ScalarProperty Name="TypeNewId" ColumnName="TypeNewId" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewCategories">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewCategory">
+        <MappingFragment StoreEntitySet="NewCategory">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="OldNewId" ColumnName="OldNewId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewCoQuans">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewCoQuan">
+        <MappingFragment StoreEntitySet="NewCoQuans">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CoQuanId" ColumnName="CoQuanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewDBQHs">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewDBQH">
+        <MappingFragment StoreEntitySet="NewDBQHs">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="DBQHId" ColumnName="DBQHId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewKyHops">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewKyHop">
+        <MappingFragment StoreEntitySet="NewKyHops">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="KyHopId" ColumnName="KyHopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewPhienHops">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewPhienHop">
+        <MappingFragment StoreEntitySet="NewPhienHops">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="PhienHopId" ColumnName="PhienHopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewRelates">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewRelate">
+        <MappingFragment StoreEntitySet="NewRelates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewIdSource" ColumnName="NewIdSource" />
+          <ScalarProperty Name="NewIdRelate" ColumnName="NewIdRelate" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DatePublic" ColumnName="DatePublic" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewTypeNews">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewTypeNew">
+        <MappingFragment StoreEntitySet="NewTypeNews">
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="TypeNewId" ColumnName="TypeNewId" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="TypeNewContent" ColumnName="TypeNewContent" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewVersions">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NewVersion">
+        <MappingFragment StoreEntitySet="NewVersions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreatorIdBy" ColumnName="CreatorIdBy" />
+          <ScalarProperty Name="IsCreate" ColumnName="IsCreate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="VersionNo" ColumnName="VersionNo" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhuanButs">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NhuanBut">
+        <MappingFragment StoreEntitySet="NhuanBut">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="TieuDeBaiViet" ColumnName="TieuDeBaiViet" />
+          <ScalarProperty Name="IdBaiViet" ColumnName="IdBaiViet" />
+          <ScalarProperty Name="TheLoaiTinName" ColumnName="TheLoaiTinName" />
+          <ScalarProperty Name="NguoiNhuanButName" ColumnName="NguoiNhuanButName" />
+          <ScalarProperty Name="NguoiNhuanButId" ColumnName="NguoiNhuanButId" />
+          <ScalarProperty Name="MucLuongCoSo" ColumnName="MucLuongCoSo" />
+          <ScalarProperty Name="HeSoLuongCoBan" ColumnName="HeSoLuongCoBan" />
+          <ScalarProperty Name="NgayCongLamViec" ColumnName="NgayCongLamViec" />
+          <ScalarProperty Name="TheLoaiTinId" ColumnName="TheLoaiTinId" />
+          <ScalarProperty Name="DoDaiTinThucTe" ColumnName="DoDaiTinThucTe" />
+          <ScalarProperty Name="SoLuongDoDaiTin" ColumnName="SoLuongDoDaiTin" />
+          <ScalarProperty Name="HeSoNhuanBut" ColumnName="HeSoNhuanBut" />
+          <ScalarProperty Name="NhuanButDuocHuong" ColumnName="NhuanButDuocHuong" />
+          <ScalarProperty Name="DinhMucKhoanNhuanBut" ColumnName="DinhMucKhoanNhuanBut" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="LoaiNhuanBut" ColumnName="LoaiNhuanBut" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletedName" ColumnName="DeletedName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="TongNhuanBut" ColumnName="TongNhuanBut" />
+          <ScalarProperty Name="IsHeSoLuongConfig" ColumnName="IsHeSoLuongConfig" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhuanButConfigs">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.NhuanButConfig">
+        <MappingFragment StoreEntitySet="NhuanButConfig">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TheLoaiTinName" ColumnName="TheLoaiTinName" />
+          <ScalarProperty Name="DonViDoDaiTin" ColumnName="DonViDoDaiTin" />
+          <ScalarProperty Name="HeSoGiaTriTinBai" ColumnName="HeSoGiaTriTinBai" />
+          <ScalarProperty Name="HeSoNhuanButToiDa" ColumnName="HeSoNhuanButToiDa" />
+          <ScalarProperty Name="GiaTriDonViHeSoNhuanBut" ColumnName="GiaTriDonViHeSoNhuanBut" />
+          <ScalarProperty Name="LoaiNhuanBut" ColumnName="LoaiNhuanBut" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletedName" ColumnName="DeletedName" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReplyNews">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.ReplyNew">
+        <MappingFragment StoreEntitySet="ReplyNew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ReplyByContent" ColumnName="ReplyByContent" />
+          <ScalarProperty Name="ReplyByUserId" ColumnName="ReplyByUserId" />
+          <ScalarProperty Name="ReplyByUserName" ColumnName="ReplyByUserName" />
+          <ScalarProperty Name="ReplyByUserTime" ColumnName="ReplyByUserTime" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SettingSiteClones">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.SettingSiteClone">
+        <MappingFragment StoreEntitySet="SettingSiteClones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="LinkWeb" ColumnName="LinkWeb" />
+          <ScalarProperty Name="PathCloneContent" ColumnName="PathCloneContent" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SummaryNewsses">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.SummaryNewss">
+        <MappingFragment StoreEntitySet="SummaryNewss">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationId" ColumnName="CreationId" />
+          <ScalarProperty Name="CreationName" ColumnName="CreationName" />
+          <ScalarProperty Name="NewId" ColumnName="NewId" />
+          <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeNews">
+      <EntityTypeMapping TypeName="CTTDTCDK_NewsServicesModel.TypeNew">
+        <MappingFragment StoreEntitySet="TypeNews">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailTypeNewsRoot" ColumnName="DetailTypeNewsRoot" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CategoryOldId" ColumnName="CategoryOldId" />
+          <ScalarProperty Name="TypeNewContent" ColumnName="TypeNewContent" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="NewEvent" TypeName="CTTDTCDK_NewsServicesModel.NewEvent" StoreEntitySet="NewEvent">
+      <EndProperty Name="Event">
+        <ScalarProperty Name="Id" ColumnName="EventId" />
+      </EndProperty>
+      <EndProperty Name="New">
+        <ScalarProperty Name="Id" ColumnName="NewId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

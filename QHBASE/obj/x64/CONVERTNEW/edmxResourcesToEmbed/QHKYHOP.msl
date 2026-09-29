@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Preview_QuocHoi_KyHopServiceModelStoreContainer" CdmEntityContainer="Preview_QuocHoi_KyHopServiceEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChuongTrinhLamViecs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.ChuongTrinhLamViec">
+        <MappingFragment StoreEntitySet="ChuongTrinhLamViecs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="DMChuongTrinhLamViecId" ColumnName="DMChuongTrinhLamViecId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+          <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DMChuongTrinhLamViecs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.DMChuongTrinhLamViec">
+        <MappingFragment StoreEntitySet="DMChuongTrinhLamViecs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="DMKyHopId" ColumnName="DMKyHopId" />
+          <ScalarProperty Name="Workday" ColumnName="Workday" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+          <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DMKyHops">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.DMKyHop">
+        <MappingFragment StoreEntitySet="DMKyHops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="DeletedName" ColumnName="DeletedName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="UrlLink" ColumnName="UrlLink" />
+          <ScalarProperty Name="LoaiKyHop" ColumnName="LoaiKyHop" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="ParentOldId" ColumnName="ParentOldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NoiDungs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.NoiDung">
+        <MappingFragment StoreEntitySet="NoiDungs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="DMKyHopId" ColumnName="DMKyHopId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+          <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReplyNoiDungs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.ReplyNoiDung">
+        <MappingFragment StoreEntitySet="ReplyNoiDungs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReplyByContent" ColumnName="ReplyByContent" />
+          <ScalarProperty Name="ReplyByUserId" ColumnName="ReplyByUserId" />
+          <ScalarProperty Name="ReplyByUserName" ColumnName="ReplyByUserName" />
+          <ScalarProperty Name="ReplyByUserTime" ColumnName="ReplyByUserTime" />
+          <ScalarProperty Name="NoiDungId" ColumnName="NoiDungId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VanKienMapCQBHs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.VanKienMapCQBH">
+        <MappingFragment StoreEntitySet="VanKienMapCQBHs">
+          <ScalarProperty Name="VanKienTaiLieuId" ColumnName="VanKienTaiLieuId" />
+          <ScalarProperty Name="CQBHId" ColumnName="CQBHId" />
+          <ScalarProperty Name="OldVanKienId" ColumnName="OldVanKienId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VanKienTaiLieus">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_KyHopServiceModel.VanKienTaiLieu">
+        <MappingFragment StoreEntitySet="VanKienTaiLieus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="DMKyHopId" ColumnName="DMKyHopId" />
+          <ScalarProperty Name="LoaiVanKienId" ColumnName="LoaiVanKienId" />
+          <ScalarProperty Name="LinhVucId" ColumnName="LinhVucId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+          <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+          <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+          <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+          <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+          <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+          <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

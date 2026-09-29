@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QuocHoiVNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DaiBieuQH">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="DBQHKhoa" />
+            <PropertyRef Name="SourceUrl" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Ho" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenThuongGoi" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="GioiTinh" Type="bit" Nullable="false" />
+          <Property Name="DanToc" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TonGiao" Type="nvarchar" MaxLength="255" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="TrinhDoHocVan" Type="nvarchar" MaxLength="255" />
+          <Property Name="TrinhDoChinhTri" Type="nvarchar" MaxLength="255" />
+          <Property Name="TrinhDoChuyenMon" Type="nvarchar" MaxLength="255" />
+          <Property Name="NgheNghiepChucVu" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="NoiLamViec" Type="nvarchar" MaxLength="255" />
+          <Property Name="LaDangVienDang" Type="nvarchar" MaxLength="255" />
+          <Property Name="NgayVaoDang" Type="datetime" />
+          <Property Name="KyLuat" Type="nvarchar" MaxLength="255" />
+          <Property Name="NoiDungCu" Type="nvarchar" MaxLength="255" />
+          <Property Name="DaiBieuQuocHoiKhoa" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DaiBieuChuyenTrach" Type="nvarchar" MaxLength="255" />
+          <Property Name="DaiBieuHoiDongNhanDan" Type="nvarchar" MaxLength="255" />
+          <Property Name="TrinhDoVanHoa" Type="nvarchar" MaxLength="255" />
+          <Property Name="NgayVaoDangChinhThuc" Type="datetime" />
+          <Property Name="DTCoQuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="DTNhaRieng" Type="nvarchar" MaxLength="255" />
+          <Property Name="DTDiDong" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="255" />
+          <Property Name="NoiUngCu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="NoiCuTru" Type="nvarchar" MaxLength="255" />
+          <Property Name="KhenThuong" Type="nvarchar" MaxLength="500" />
+          <Property Name="DBQHKhoa" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SourceUrl" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="AnhDaiDien" Type="varbinary(max)" />
+          <Property Name="PhuChu" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CoQuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="TyLe" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrungCu" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LinkVietLaw">
+          <Key>
+            <PropertyRef Name="LinkID" />
+          </Key>
+          <Property Name="LinkID" Type="int" Nullable="false" />
+          <Property Name="LinkRead" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="400" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IdLoaiTin" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Event" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Image" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AllowComment" Type="int" />
+          <Property Name="ShowImage" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ContentNew" Type="ntext" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ShowDescription" Type="int" />
+          <Property Name="ReadCount" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AuthorNews" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SourceNews" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Created" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Author" Type="nvarchar" MaxLength="1000" />
+          <Property Name="NoiDungChinhSua" Type="nvarchar(max)" />
+          <Property Name="TrangThaiTin" Type="int" />
+          <Property Name="Hotnews" Type="int" />
+          <Property Name="IsLive" Type="int" />
+          <Property Name="IsShare" Type="int" />
+          <Property Name="IsShowView" Type="int" />
+          <Property Name="Keywords" Type="nvarchar" MaxLength="4000" />
+          <Property Name="ModerationStatus" Type="int" />
+          <Property Name="OldID" Type="int" />
+          <Property Name="Attachment" Type="int" />
+        </EntityType>
+        <EntityType Name="NewsCat">
+          <Key>
+            <PropertyRef Name="CatID" />
+          </Key>
+          <Property Name="CatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CatName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CatUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="CatParentId" Type="int" />
+          <Property Name="CatOldID" Type="int" />
+          <Property Name="CategoryAllID" Type="nvarchar(max)" />
+          <Property Name="IsShow" Type="int" />
+          <Property Name="IsDBQH" Type="int" />
+          <Property Name="IsTopMenu" Type="int" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="TitleSort" Type="nvarchar" MaxLength="255" />
+          <Property Name="IndexCat" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="NewsEvent">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="EventName" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'QuocHoiVN.dbo.NewsInCat' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NewsInCat">
+          <Property Name="NewsID" Type="int" />
+          <Property Name="CatsID" Type="int" />
+        </EntityType>-->
+        <EntityType Name="NewsInEvent">
+          <Key>
+            <PropertyRef Name="NewsID" />
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="NewsID" Type="int" Nullable="false" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TempCoQuanBanHanh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="TitleSort" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="IndexCoQuan" Type="int" />
+          <Property Name="PageUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="CategoryAllID" Type="nvarchar(max)" />
+          <Property Name="IsShow" Type="int" />
+          <Property Name="IsTopMenu" Type="int" />
+          <Property Name="IsDBQH" Type="int" />
+          <Property Name="OldId" Type="int" />
+        </EntityType>
+        <EntityType Name="TempLinhVuc">
+          <Key>
+            <PropertyRef Name="LinhVucId" />
+          </Key>
+          <Property Name="LinhVucId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="TitleSort" Type="nvarchar" MaxLength="255" />
+          <Property Name="IndexLinhVuc" Type="int" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="PageUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IsTopMenu" Type="int" />
+          <Property Name="IsShow" Type="int" />
+          <Property Name="IsDBQH" Type="int" />
+          <Property Name="CategoryAllID" Type="nvarchar(max)" />
+          <Property Name="LinhVucOldId" Type="int" />
+        </EntityType>
+        <EntityType Name="VanKien">
+          <Key>
+            <PropertyRef Name="VanKienID" />
+          </Key>
+          <Property Name="VanKienID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="DMCoQuan" Type="nvarchar(max)" />
+          <Property Name="NoiDungHTML" Type="nvarchar(max)" />
+          <Property Name="DMLinhVuc" Type="nvarchar(max)" />
+          <Property Name="VanKienOldId" Type="int" />
+          <Property Name="DMVanKien" Type="nvarchar(max)" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="Attachments" Type="int" />
+          <Property Name="ModerationStatus" Type="int" />
+        </EntityType>
+        <EntityType Name="VanKienCat">
+          <Key>
+            <PropertyRef Name="CatID" />
+          </Key>
+          <Property Name="CatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CatName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CatParentId" Type="int" />
+          <Property Name="IsShow" Type="int" />
+          <Property Name="IsTopMenu" Type="int" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="TitleSort" Type="nvarchar" MaxLength="255" />
+          <Property Name="CategoryAllID" Type="nvarchar(max)" />
+          <Property Name="CategoryIDTintuc" Type="int" />
+          <Property Name="IsDBQH" Type="int" />
+          <Property Name="CateID" Type="int" />
+          <Property Name="CateType" Type="int" />
+          <Property Name="CatOldID" Type="int" />
+          <Property Name="IndexCat" Type="int" />
+        </EntityType>
+        <EntityType Name="VietLaw">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SoHieu" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrichYeu" Type="nvarchar" MaxLength="500" />
+          <Property Name="NgayBanHanh" Type="datetime" />
+          <Property Name="CoQuanBanHanh" Type="nvarchar" MaxLength="500" />
+          <Property Name="NguoiKy" Type="nvarchar" MaxLength="500" />
+          <Property Name="NgayHieuLuc" Type="datetime" />
+          <Property Name="LoaiVanBan" Type="nvarchar" MaxLength="255" />
+          <Property Name="ToanVan" Type="ntext" />
+          <Property Name="FileData" Type="varbinary(max)" />
+          <Property Name="NgayHetHieuLuc" Type="datetime" />
+          <Property Name="VanBanLienQuan" Type="int" Nullable="false" />
+          <Property Name="OldID" Type="int" />
+          <Property Name="TuKhoa" Type="nvarchar" MaxLength="500" />
+          <Property Name="OldID_Index" Type="int" />
+        </EntityType>
+        <Association Name="FK_NewsInEvent_News">
+          <End Role="News" Type="Self.News" Multiplicity="1" />
+          <End Role="NewsInEvent" Type="Self.NewsInEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="News">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NewsInEvent">
+              <PropertyRef Name="NewsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewsInEvent_NewsEvent">
+          <End Role="NewsEvent" Type="Self.NewsEvent" Multiplicity="1" />
+          <End Role="NewsInEvent" Type="Self.NewsInEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewsEvent">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="NewsInEvent">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="QuocHoiVNModelStoreContainer">
+          <EntitySet Name="DaiBieuQH" EntityType="Self.DaiBieuQH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LinkVietLaw" EntityType="Self.LinkVietLaw" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewsCat" EntityType="Self.NewsCat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewsEvent" EntityType="Self.NewsEvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewsInEvent" EntityType="Self.NewsInEvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TempCoQuanBanHanh" EntityType="Self.TempCoQuanBanHanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TempLinhVuc" EntityType="Self.TempLinhVuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VanKien" EntityType="Self.VanKien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VanKienCat" EntityType="Self.VanKienCat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VietLaw" EntityType="Self.VietLaw" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NewsInEvent_News" Association="Self.FK_NewsInEvent_News">
+            <End Role="News" EntitySet="News" />
+            <End Role="NewsInEvent" EntitySet="NewsInEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewsInEvent_NewsEvent" Association="Self.FK_NewsInEvent_NewsEvent">
+            <End Role="NewsEvent" EntitySet="NewsEvent" />
+            <End Role="NewsInEvent" EntitySet="NewsInEvent" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuocHoiVNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QuocHoiVNEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QuocHoiVNModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QuocHoiVNModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="DaiBieuQHs" EntityType="QuocHoiVNModel.DaiBieuQH" />
+          <EntitySet Name="LinkVietLaws" EntityType="QuocHoiVNModel.LinkVietLaw" />
+          <EntitySet Name="News" EntityType="QuocHoiVNModel.News" />
+          <EntitySet Name="NewsCats" EntityType="QuocHoiVNModel.NewsCat" />
+          <EntitySet Name="NewsEvents" EntityType="QuocHoiVNModel.NewsEvent" />
+          <EntitySet Name="TempCoQuanBanHanhs" EntityType="QuocHoiVNModel.TempCoQuanBanHanh" />
+          <EntitySet Name="TempLinhVucs" EntityType="QuocHoiVNModel.TempLinhVuc" />
+          <EntitySet Name="VanKiens" EntityType="QuocHoiVNModel.VanKien" />
+          <EntitySet Name="VanKienCats" EntityType="QuocHoiVNModel.VanKienCat" />
+          <EntitySet Name="VietLaws" EntityType="QuocHoiVNModel.VietLaw" />
+          <AssociationSet Name="NewsInEvent" Association="QuocHoiVNModel.NewsInEvent">
+            <End Role="News" EntitySet="News" />
+            <End Role="NewsEvent" EntitySet="NewsEvents" />
+          </AssociationSet>
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="DaiBieuQH">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="DBQHKhoa" />
+            <PropertyRef Name="SourceUrl" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ho" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TenThuongGoi" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+          <Property Name="DanToc" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="QueQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TrinhDoHocVan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TrinhDoChinhTri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TrinhDoChuyenMon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NgheNghiepChucVu" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NoiLamViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LaDangVienDang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NgayVaoDang" Type="DateTime" Precision="3" />
+          <Property Name="KyLuat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDungCu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DaiBieuQuocHoiKhoa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DaiBieuChuyenTrach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DaiBieuHoiDongNhanDan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TrinhDoVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NgayVaoDangChinhThuc" Type="DateTime" Precision="3" />
+          <Property Name="DTCoQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DTNhaRieng" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DTDiDong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NoiUngCu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NoiCuTru" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KhenThuong" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DBQHKhoa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SourceUrl" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AnhDaiDien" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PhuChu" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CoQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TyLe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrungCu" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LinkVietLaw">
+          <Key>
+            <PropertyRef Name="LinkID" />
+          </Key>
+          <Property Name="LinkID" Type="Int32" Nullable="false" />
+          <Property Name="LinkRead" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IdLoaiTin" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Event" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AllowComment" Type="Int32" />
+          <Property Name="ShowImage" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContentNew" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ShowDescription" Type="Int32" />
+          <Property Name="ReadCount" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AuthorNews" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SourceNews" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDungChinhSua" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThaiTin" Type="Int32" />
+          <Property Name="Hotnews" Type="Int32" />
+          <Property Name="IsLive" Type="Int32" />
+          <Property Name="IsShare" Type="Int32" />
+          <Property Name="IsShowView" Type="Int32" />
+          <Property Name="Keywords" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="ModerationStatus" Type="Int32" />
+          <Property Name="OldID" Type="Int32" />
+          <Property Name="Attachment" Type="Int32" />
+          <NavigationProperty Name="NewsEvents" Relationship="QuocHoiVNModel.NewsInEvent" FromRole="News" ToRole="NewsEvent" />
+        </EntityType>
+        <EntityType Name="NewsCat">
+          <Key>
+            <PropertyRef Name="CatID" />
+          </Key>
+          <Property Name="CatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CatName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CatUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CatParentId" Type="Int32" />
+          <Property Name="CatOldID" Type="Int32" />
+          <Property Name="CategoryAllID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Int32" />
+          <Property Name="IsDBQH" Type="Int32" />
+          <Property Name="IsTopMenu" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TitleSort" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IndexCat" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NewsEvent">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="EventName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="News" Relationship="QuocHoiVNModel.NewsInEvent" FromRole="NewsEvent" ToRole="News" />
+        </EntityType>
+        <EntityType Name="TempCoQuanBanHanh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TitleSort" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="IndexCoQuan" Type="Int32" />
+          <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryAllID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Int32" />
+          <Property Name="IsTopMenu" Type="Int32" />
+          <Property Name="IsDBQH" Type="Int32" />
+          <Property Name="OldId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TempLinhVuc">
+          <Key>
+            <PropertyRef Name="LinhVucId" />
+          </Key>
+          <Property Name="LinhVucId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TitleSort" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IndexLinhVuc" Type="Int32" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsTopMenu" Type="Int32" />
+          <Property Name="IsShow" Type="Int32" />
+          <Property Name="IsDBQH" Type="Int32" />
+          <Property Name="CategoryAllID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinhVucOldId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VanKien">
+          <Key>
+            <PropertyRef Name="VanKienID" />
+          </Key>
+          <Property Name="VanKienID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DMCoQuan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDungHTML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DMLinhVuc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VanKienOldId" Type="Int32" />
+          <Property Name="DMVanKien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="Attachments" Type="Int32" />
+          <Property Name="ModerationStatus" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VanKienCat">
+          <Key>
+            <PropertyRef Name="CatID" />
+          </Key>
+          <Property Name="CatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CatName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CatParentId" Type="Int32" />
+          <Property Name="IsShow" Type="Int32" />
+          <Property Name="IsTopMenu" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TitleSort" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryAllID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryIDTintuc" Type="Int32" />
+          <Property Name="IsDBQH" Type="Int32" />
+          <Property Name="CateID" Type="Int32" />
+          <Property Name="CateType" Type="Int32" />
+          <Property Name="CatOldID" Type="Int32" />
+          <Property Name="IndexCat" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VietLaw">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SoHieu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrichYeu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NgayBanHanh" Type="DateTime" Precision="3" />
+          <Property Name="CoQuanBanHanh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiKy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NgayHieuLuc" Type="DateTime" Precision="3" />
+          <Property Name="LoaiVanBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ToanVan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="NgayHetHieuLuc" Type="DateTime" Precision="3" />
+          <Property Name="VanBanLienQuan" Type="Int32" Nullable="false" />
+          <Property Name="OldID" Type="Int32" />
+          <Property Name="TuKhoa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OldID_Index" Type="Int32" />
+        </EntityType>
+        <Association Name="NewsInEvent">
+          <End Type="QuocHoiVNModel.News" Role="News" Multiplicity="*" />
+          <End Type="QuocHoiVNModel.NewsEvent" Role="NewsEvent" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuocHoiVNModelStoreContainer" CdmEntityContainer="QuocHoiVNEntities">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QuocHoiVNModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QuocHoiVNModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QuocHoiVNModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QuocHoiVNModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuocHoiVNModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QuocHoiVNModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuocHoiVNModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QuocHoiVNModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QuocHoiVNModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="DaiBieuQHs">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.DaiBieuQH">
+              <MappingFragment StoreEntitySet="DaiBieuQH">
+                <ScalarProperty Name="TrungCu" ColumnName="TrungCu" />
+                <ScalarProperty Name="TyLe" ColumnName="TyLe" />
+                <ScalarProperty Name="CoQuan" ColumnName="CoQuan" />
+                <ScalarProperty Name="PhuChu" ColumnName="PhuChu" />
+                <ScalarProperty Name="AnhDaiDien" ColumnName="AnhDaiDien" />
+                <ScalarProperty Name="SourceUrl" ColumnName="SourceUrl" />
+                <ScalarProperty Name="DBQHKhoa" ColumnName="DBQHKhoa" />
+                <ScalarProperty Name="KhenThuong" ColumnName="KhenThuong" />
+                <ScalarProperty Name="NoiCuTru" ColumnName="NoiCuTru" />
+                <ScalarProperty Name="NoiUngCu" ColumnName="NoiUngCu" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DTDiDong" ColumnName="DTDiDong" />
+                <ScalarProperty Name="DTNhaRieng" ColumnName="DTNhaRieng" />
+                <ScalarProperty Name="DTCoQuan" ColumnName="DTCoQuan" />
+                <ScalarProperty Name="NgayVaoDangChinhThuc" ColumnName="NgayVaoDangChinhThuc" />
+                <ScalarProperty Name="TrinhDoVanHoa" ColumnName="TrinhDoVanHoa" />
+                <ScalarProperty Name="DaiBieuHoiDongNhanDan" ColumnName="DaiBieuHoiDongNhanDan" />
+                <ScalarProperty Name="DaiBieuChuyenTrach" ColumnName="DaiBieuChuyenTrach" />
+                <ScalarProperty Name="DaiBieuQuocHoiKhoa" ColumnName="DaiBieuQuocHoiKhoa" />
+                <ScalarProperty Name="NoiDungCu" ColumnName="NoiDungCu" />
+                <ScalarProperty Name="KyLuat" ColumnName="KyLuat" />
+                <ScalarProperty Name="NgayVaoDang" ColumnName="NgayVaoDang" />
+                <ScalarProperty Name="LaDangVienDang" ColumnName="LaDangVienDang" />
+                <ScalarProperty Name="NoiLamViec" ColumnName="NoiLamViec" />
+                <ScalarProperty Name="NgheNghiepChucVu" ColumnName="NgheNghiepChucVu" />
+                <ScalarProperty Name="TrinhDoChuyenMon" ColumnName="TrinhDoChuyenMon" />
+                <ScalarProperty Name="TrinhDoChinhTri" ColumnName="TrinhDoChinhTri" />
+                <ScalarProperty Name="TrinhDoHocVan" ColumnName="TrinhDoHocVan" />
+                <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+                <ScalarProperty Name="TonGiao" ColumnName="TonGiao" />
+                <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="TenThuongGoi" ColumnName="TenThuongGoi" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Ho" ColumnName="Ho" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LinkVietLaws">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.LinkVietLaw">
+              <MappingFragment StoreEntitySet="LinkVietLaw">
+                <ScalarProperty Name="LinkRead" ColumnName="LinkRead" />
+                <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+                <ScalarProperty Name="OldID" ColumnName="OldID" />
+                <ScalarProperty Name="ModerationStatus" ColumnName="ModerationStatus" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="IsShowView" ColumnName="IsShowView" />
+                <ScalarProperty Name="IsShare" ColumnName="IsShare" />
+                <ScalarProperty Name="IsLive" ColumnName="IsLive" />
+                <ScalarProperty Name="Hotnews" ColumnName="Hotnews" />
+                <ScalarProperty Name="TrangThaiTin" ColumnName="TrangThaiTin" />
+                <ScalarProperty Name="NoiDungChinhSua" ColumnName="NoiDungChinhSua" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="SourceNews" ColumnName="SourceNews" />
+                <ScalarProperty Name="AuthorNews" ColumnName="AuthorNews" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="ShowDescription" ColumnName="ShowDescription" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ContentNew" ColumnName="ContentNew" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ShowImage" ColumnName="ShowImage" />
+                <ScalarProperty Name="AllowComment" ColumnName="AllowComment" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="IdLoaiTin" ColumnName="IdLoaiTin" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsCats">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.NewsCat">
+              <MappingFragment StoreEntitySet="NewsCat">
+                <ScalarProperty Name="IndexCat" ColumnName="IndexCat" />
+                <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+                <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+                <ScalarProperty Name="CatOldID" ColumnName="CatOldID" />
+                <ScalarProperty Name="CatParentId" ColumnName="CatParentId" />
+                <ScalarProperty Name="CatUrl" ColumnName="CatUrl" />
+                <ScalarProperty Name="CatName" ColumnName="CatName" />
+                <ScalarProperty Name="CatID" ColumnName="CatID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsEvents">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.NewsEvent">
+              <MappingFragment StoreEntitySet="NewsEvent">
+                <ScalarProperty Name="EventName" ColumnName="EventName" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TempCoQuanBanHanhs">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.TempCoQuanBanHanh">
+              <MappingFragment StoreEntitySet="TempCoQuanBanHanh">
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+                <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="IndexCoQuan" ColumnName="IndexCoQuan" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TempLinhVucs">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.TempLinhVuc">
+              <MappingFragment StoreEntitySet="TempLinhVuc">
+                <ScalarProperty Name="LinhVucOldId" ColumnName="LinhVucOldId" />
+                <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+                <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="IndexLinhVuc" ColumnName="IndexLinhVuc" />
+                <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LinhVucId" ColumnName="LinhVucId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VanKiens">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.VanKien">
+              <MappingFragment StoreEntitySet="VanKien">
+                <ScalarProperty Name="ModerationStatus" ColumnName="ModerationStatus" />
+                <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="DMVanKien" ColumnName="DMVanKien" />
+                <ScalarProperty Name="VanKienOldId" ColumnName="VanKienOldId" />
+                <ScalarProperty Name="DMLinhVuc" ColumnName="DMLinhVuc" />
+                <ScalarProperty Name="NoiDungHTML" ColumnName="NoiDungHTML" />
+                <ScalarProperty Name="DMCoQuan" ColumnName="DMCoQuan" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="VanKienID" ColumnName="VanKienID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VanKienCats">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.VanKienCat">
+              <MappingFragment StoreEntitySet="VanKienCat">
+                <ScalarProperty Name="IndexCat" ColumnName="IndexCat" />
+                <ScalarProperty Name="CatOldID" ColumnName="CatOldID" />
+                <ScalarProperty Name="CateType" ColumnName="CateType" />
+                <ScalarProperty Name="CateID" ColumnName="CateID" />
+                <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+                <ScalarProperty Name="CategoryIDTintuc" ColumnName="CategoryIDTintuc" />
+                <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+                <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="CatParentId" ColumnName="CatParentId" />
+                <ScalarProperty Name="CatName" ColumnName="CatName" />
+                <ScalarProperty Name="CatID" ColumnName="CatID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VietLaws">
+            <EntityTypeMapping TypeName="QuocHoiVNModel.VietLaw">
+              <MappingFragment StoreEntitySet="VietLaw">
+                <ScalarProperty Name="OldID_Index" ColumnName="OldID_Index" />
+                <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+                <ScalarProperty Name="OldID" ColumnName="OldID" />
+                <ScalarProperty Name="VanBanLienQuan" ColumnName="VanBanLienQuan" />
+                <ScalarProperty Name="NgayHetHieuLuc" ColumnName="NgayHetHieuLuc" />
+                <ScalarProperty Name="FileData" ColumnName="FileData" />
+                <ScalarProperty Name="ToanVan" ColumnName="ToanVan" />
+                <ScalarProperty Name="LoaiVanBan" ColumnName="LoaiVanBan" />
+                <ScalarProperty Name="NgayHieuLuc" ColumnName="NgayHieuLuc" />
+                <ScalarProperty Name="NguoiKy" ColumnName="NguoiKy" />
+                <ScalarProperty Name="CoQuanBanHanh" ColumnName="CoQuanBanHanh" />
+                <ScalarProperty Name="NgayBanHanh" ColumnName="NgayBanHanh" />
+                <ScalarProperty Name="TrichYeu" ColumnName="TrichYeu" />
+                <ScalarProperty Name="SoHieu" ColumnName="SoHieu" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="NewsInEvent" TypeName="QuocHoiVNModel.NewsInEvent" StoreEntitySet="NewsInEvent">
+            <EndProperty Name="NewsEvent">
+              <ScalarProperty Name="EventID" ColumnName="EventID" />
+            </EndProperty>
+            <EndProperty Name="News">
+              <ScalarProperty Name="ID" ColumnName="NewsID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

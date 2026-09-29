@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuocHoiVNModelStoreContainer" CdmEntityContainer="QuocHoiVNEntities">
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QuocHoiVNModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QuocHoiVNModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QuocHoiVNModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QuocHoiVNModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuocHoiVNModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QuocHoiVNModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuocHoiVNModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QuocHoiVNModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QuocHoiVNModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="DaiBieuQHs">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.DaiBieuQH">
+        <MappingFragment StoreEntitySet="DaiBieuQH">
+          <ScalarProperty Name="TrungCu" ColumnName="TrungCu" />
+          <ScalarProperty Name="TyLe" ColumnName="TyLe" />
+          <ScalarProperty Name="CoQuan" ColumnName="CoQuan" />
+          <ScalarProperty Name="PhuChu" ColumnName="PhuChu" />
+          <ScalarProperty Name="AnhDaiDien" ColumnName="AnhDaiDien" />
+          <ScalarProperty Name="SourceUrl" ColumnName="SourceUrl" />
+          <ScalarProperty Name="DBQHKhoa" ColumnName="DBQHKhoa" />
+          <ScalarProperty Name="KhenThuong" ColumnName="KhenThuong" />
+          <ScalarProperty Name="NoiCuTru" ColumnName="NoiCuTru" />
+          <ScalarProperty Name="NoiUngCu" ColumnName="NoiUngCu" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DTDiDong" ColumnName="DTDiDong" />
+          <ScalarProperty Name="DTNhaRieng" ColumnName="DTNhaRieng" />
+          <ScalarProperty Name="DTCoQuan" ColumnName="DTCoQuan" />
+          <ScalarProperty Name="NgayVaoDangChinhThuc" ColumnName="NgayVaoDangChinhThuc" />
+          <ScalarProperty Name="TrinhDoVanHoa" ColumnName="TrinhDoVanHoa" />
+          <ScalarProperty Name="DaiBieuHoiDongNhanDan" ColumnName="DaiBieuHoiDongNhanDan" />
+          <ScalarProperty Name="DaiBieuChuyenTrach" ColumnName="DaiBieuChuyenTrach" />
+          <ScalarProperty Name="DaiBieuQuocHoiKhoa" ColumnName="DaiBieuQuocHoiKhoa" />
+          <ScalarProperty Name="NoiDungCu" ColumnName="NoiDungCu" />
+          <ScalarProperty Name="KyLuat" ColumnName="KyLuat" />
+          <ScalarProperty Name="NgayVaoDang" ColumnName="NgayVaoDang" />
+          <ScalarProperty Name="LaDangVienDang" ColumnName="LaDangVienDang" />
+          <ScalarProperty Name="NoiLamViec" ColumnName="NoiLamViec" />
+          <ScalarProperty Name="NgheNghiepChucVu" ColumnName="NgheNghiepChucVu" />
+          <ScalarProperty Name="TrinhDoChuyenMon" ColumnName="TrinhDoChuyenMon" />
+          <ScalarProperty Name="TrinhDoChinhTri" ColumnName="TrinhDoChinhTri" />
+          <ScalarProperty Name="TrinhDoHocVan" ColumnName="TrinhDoHocVan" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="TonGiao" ColumnName="TonGiao" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="TenThuongGoi" ColumnName="TenThuongGoi" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Ho" ColumnName="Ho" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinkVietLaws">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.LinkVietLaw">
+        <MappingFragment StoreEntitySet="LinkVietLaw">
+          <ScalarProperty Name="LinkRead" ColumnName="LinkRead" />
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="OldID" ColumnName="OldID" />
+          <ScalarProperty Name="ModerationStatus" ColumnName="ModerationStatus" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="IsShowView" ColumnName="IsShowView" />
+          <ScalarProperty Name="IsShare" ColumnName="IsShare" />
+          <ScalarProperty Name="IsLive" ColumnName="IsLive" />
+          <ScalarProperty Name="Hotnews" ColumnName="Hotnews" />
+          <ScalarProperty Name="TrangThaiTin" ColumnName="TrangThaiTin" />
+          <ScalarProperty Name="NoiDungChinhSua" ColumnName="NoiDungChinhSua" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="SourceNews" ColumnName="SourceNews" />
+          <ScalarProperty Name="AuthorNews" ColumnName="AuthorNews" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="ShowDescription" ColumnName="ShowDescription" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ContentNew" ColumnName="ContentNew" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ShowImage" ColumnName="ShowImage" />
+          <ScalarProperty Name="AllowComment" ColumnName="AllowComment" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="IdLoaiTin" ColumnName="IdLoaiTin" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsCats">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.NewsCat">
+        <MappingFragment StoreEntitySet="NewsCat">
+          <ScalarProperty Name="IndexCat" ColumnName="IndexCat" />
+          <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+          <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+          <ScalarProperty Name="CatOldID" ColumnName="CatOldID" />
+          <ScalarProperty Name="CatParentId" ColumnName="CatParentId" />
+          <ScalarProperty Name="CatUrl" ColumnName="CatUrl" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsEvents">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.NewsEvent">
+        <MappingFragment StoreEntitySet="NewsEvent">
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempCoQuanBanHanhs">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.TempCoQuanBanHanh">
+        <MappingFragment StoreEntitySet="TempCoQuanBanHanh">
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
+          <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+          <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="IndexCoQuan" ColumnName="IndexCoQuan" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempLinhVucs">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.TempLinhVuc">
+        <MappingFragment StoreEntitySet="TempLinhVuc">
+          <ScalarProperty Name="LinhVucOldId" ColumnName="LinhVucOldId" />
+          <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+          <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="IndexLinhVuc" ColumnName="IndexLinhVuc" />
+          <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="LinhVucId" ColumnName="LinhVucId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VanKiens">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.VanKien">
+        <MappingFragment StoreEntitySet="VanKien">
+          <ScalarProperty Name="ModerationStatus" ColumnName="ModerationStatus" />
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="DMVanKien" ColumnName="DMVanKien" />
+          <ScalarProperty Name="VanKienOldId" ColumnName="VanKienOldId" />
+          <ScalarProperty Name="DMLinhVuc" ColumnName="DMLinhVuc" />
+          <ScalarProperty Name="NoiDungHTML" ColumnName="NoiDungHTML" />
+          <ScalarProperty Name="DMCoQuan" ColumnName="DMCoQuan" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="VanKienID" ColumnName="VanKienID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VanKienCats">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.VanKienCat">
+        <MappingFragment StoreEntitySet="VanKienCat">
+          <ScalarProperty Name="IndexCat" ColumnName="IndexCat" />
+          <ScalarProperty Name="CatOldID" ColumnName="CatOldID" />
+          <ScalarProperty Name="CateType" ColumnName="CateType" />
+          <ScalarProperty Name="CateID" ColumnName="CateID" />
+          <ScalarProperty Name="IsDBQH" ColumnName="IsDBQH" />
+          <ScalarProperty Name="CategoryIDTintuc" ColumnName="CategoryIDTintuc" />
+          <ScalarProperty Name="CategoryAllID" ColumnName="CategoryAllID" />
+          <ScalarProperty Name="TitleSort" ColumnName="TitleSort" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsTopMenu" ColumnName="IsTopMenu" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="CatParentId" ColumnName="CatParentId" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VietLaws">
+      <EntityTypeMapping TypeName="QuocHoiVNModel.VietLaw">
+        <MappingFragment StoreEntitySet="VietLaw">
+          <ScalarProperty Name="OldID_Index" ColumnName="OldID_Index" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="OldID" ColumnName="OldID" />
+          <ScalarProperty Name="VanBanLienQuan" ColumnName="VanBanLienQuan" />
+          <ScalarProperty Name="NgayHetHieuLuc" ColumnName="NgayHetHieuLuc" />
+          <ScalarProperty Name="FileData" ColumnName="FileData" />
+          <ScalarProperty Name="ToanVan" ColumnName="ToanVan" />
+          <ScalarProperty Name="LoaiVanBan" ColumnName="LoaiVanBan" />
+          <ScalarProperty Name="NgayHieuLuc" ColumnName="NgayHieuLuc" />
+          <ScalarProperty Name="NguoiKy" ColumnName="NguoiKy" />
+          <ScalarProperty Name="CoQuanBanHanh" ColumnName="CoQuanBanHanh" />
+          <ScalarProperty Name="NgayBanHanh" ColumnName="NgayBanHanh" />
+          <ScalarProperty Name="TrichYeu" ColumnName="TrichYeu" />
+          <ScalarProperty Name="SoHieu" ColumnName="SoHieu" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="NewsInEvent" TypeName="QuocHoiVNModel.NewsInEvent" StoreEntitySet="NewsInEvent">
+      <EndProperty Name="NewsEvent">
+        <ScalarProperty Name="EventID" ColumnName="EventID" />
+      </EndProperty>
+      <EndProperty Name="News">
+        <ScalarProperty Name="ID" ColumnName="NewsID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

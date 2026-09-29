@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Preview_QuocHoi_CommonsServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoQuanBanHanhs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TreeParentIds" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OldID" Type="int" />
+    <Property Name="ParentOldID" Type="int" />
+  </EntityType>
+  <EntityType Name="LinhVucs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsShow" Type="bit" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TreeParentIds" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OldID" Type="int" />
+    <Property Name="ParentOldID" Type="int" />
+  </EntityType>
+  <EntityType Name="LoaiVanKiens">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsShow" Type="bit" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TreeParentIds" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Preview_QuocHoi_CommonsServiceModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoQuanBanHanhs" EntityType="Self.CoQuanBanHanhs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LinhVucs" EntityType="Self.LinhVucs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiVanKiens" EntityType="Self.LoaiVanKiens" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

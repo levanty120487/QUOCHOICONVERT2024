@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="955f45d68b434bc7a9501f6e5dd0206b" Name="Diagram1">
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.Answer" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.FormResult" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.FormSurvey" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.FormSurveyAnswer" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.FormSurveyQuestion" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.Question" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.Topic" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.TopicSurvey" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_QuestionsAnswersModel.UserSurvey" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_Answers_Answers_AnswersId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_Answers_Question_QuestionId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_FormResult_FormSurveyQuestion_FormSurveyQuestionId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_FormResult_UserSurvey_UserSurveyId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_FormSurvey_Topics_TopicId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_FormSurveyQuestion_FormSurvey_FormSurveyId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_UserSurvey_FormSurvey_FormSurveyId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_FormSurveyAnswer_FormSurveyQuestion_FormSurveyQuestionId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_QuestionsAnswersModel.FK_Question_Topics_TopicId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

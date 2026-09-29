@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APATIT_FilesServicesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSFileAttachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="FileId" Type="Guid" Nullable="false" />
+    <Property Name="EntityId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileAttachmentType" Type="Int32" Nullable="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <NavigationProperty Name="CMSFile" Relationship="Self.FK_CMSFileAttachment_CMSFiles_FileId" FromRole="CMSFileAttachment" ToRole="CMSFiles" />
+  </EntityType>
+  <EntityType Name="CMSFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="FileContainerName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="MimeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FileType" Type="Int32" Nullable="false" />
+    <Property Name="SubFilesQuantity" Type="Int32" Nullable="false" />
+    <Property Name="ByteSize" Type="Int64" Nullable="false" />
+    <Property Name="Hash" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="BlobName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerUserId" Type="Guid" />
+    <Property Name="Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FullPathServer" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+    <Property Name="FileExtention" Type="Int32" Nullable="false" />
+    <Property Name="ParentIdThumb" Type="Guid" />
+    <Property Name="SizeThumb" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Shared" Type="Boolean" />
+    <Property Name="FullPathServerThumb" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="DetailFolderRoot" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="SubFoldersQuantity" Type="Int32" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OldId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="CMSFileAttachments" Relationship="Self.FK_CMSFileAttachment_CMSFiles_FileId" FromRole="CMSFiles" ToRole="CMSFileAttachment" />
+    <NavigationProperty Name="CMSFileShareds" Relationship="Self.FK_CMSFileShared_CMSFiles_FileId" FromRole="CMSFiles" ToRole="CMSFileShared" />
+  </EntityType>
+  <EntityType Name="CMSFileShared">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantIdShareFrom" Type="Guid" />
+    <Property Name="TenantIdShareTo" Type="Guid" />
+    <Property Name="FileId" Type="Guid" />
+    <Property Name="CreatedByUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="FileContainerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <NavigationProperty Name="CMSFile" Relationship="Self.FK_CMSFileShared_CMSFiles_FileId" FromRole="CMSFileShared" ToRole="CMSFiles" />
+  </EntityType>
+  <EntityType Name="CMSInforUserByShared">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" Nullable="false" />
+    <Property Name="CreatedByUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_CMSFileAttachment_CMSFiles_FileId">
+    <End Role="CMSFiles" Type="Self.CMSFile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CMSFileAttachment" Type="Self.CMSFileAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CMSFiles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CMSFileAttachment">
+        <PropertyRef Name="FileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CMSFileShared_CMSFiles_FileId">
+    <End Role="CMSFiles" Type="Self.CMSFile" Multiplicity="0..1" />
+    <End Role="CMSFileShared" Type="Self.CMSFileShared" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CMSFiles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CMSFileShared">
+        <PropertyRef Name="FileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="APATIT_FilesServicesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="CMSFileAttachments" EntityType="Self.CMSFileAttachment" />
+    <EntitySet Name="CMSFiles" EntityType="Self.CMSFile" />
+    <EntitySet Name="CMSFileShareds" EntityType="Self.CMSFileShared" />
+    <EntitySet Name="CMSInforUserByShareds" EntityType="Self.CMSInforUserByShared" />
+    <AssociationSet Name="FK_CMSFileAttachment_CMSFiles_FileId" Association="Self.FK_CMSFileAttachment_CMSFiles_FileId">
+      <End Role="CMSFiles" EntitySet="CMSFiles" />
+      <End Role="CMSFileAttachment" EntitySet="CMSFileAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CMSFileShared_CMSFiles_FileId" Association="Self.FK_CMSFileShared_CMSFiles_FileId">
+      <End Role="CMSFiles" EntitySet="CMSFiles" />
+      <End Role="CMSFileShared" EntitySet="CMSFileShareds" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

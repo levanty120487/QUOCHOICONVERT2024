@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f5eafb62fd41468a848160b812789f5f" Name="Diagram1">
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.C__EFMigrationsHistory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.ConfigWebsite" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.ContactInfo" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.CoQuanBanHanh" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.DanhSachThongBao" Width="1.5" PointX="5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.DataCloneService" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.Gopy" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.HistoryActionFlow" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.HistoryVersion" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.Language" Width="1.5" PointX="13.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.LanguageMapText" Width="1.5" PointX="10" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.LanguageText" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.LienKetWebsite" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.LinhVuc" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.LoaiThongBao" Width="1.5" PointX="2.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.LoaiVanKien" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.Menu" Width="1.5" PointX="15.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.MenuLanhDao" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.Notification" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.QuangCaoss" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.ReadCountLog" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.SlideImage" Width="1.5" PointX="17.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.TagInfo" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.Tag" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.ViTriQuangCao" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.ViTriQuangCaoMapQuangCao" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.WorkflowCategory" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.WorkflowDefinition" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="portalcdk_CommonsServiceModel.WorkflowInstance" Width="1.5" PointX="19.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="portalcdk_CommonsServiceModel.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_CommonsServiceModel.FK_LanguageMapText_LanguageText_LanguageTextId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_CommonsServiceModel.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_CommonsServiceModel.FK_TagInfos_Tags_TagId" ManuallyRouted="false" />
+        <AssociationConnector Association="portalcdk_CommonsServiceModel.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

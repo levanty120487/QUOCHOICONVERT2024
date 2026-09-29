@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Preview_QuocHoi_CommonsServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoQuanBanHanhs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" />
+          <Property Name="IsShow" Type="bit" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OldID" Type="int" />
+          <Property Name="ParentOldID" Type="int" />
+        </EntityType>
+        <EntityType Name="LinhVucs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" />
+          <Property Name="IsShow" Type="bit" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OldID" Type="int" />
+          <Property Name="ParentOldID" Type="int" />
+        </EntityType>
+        <EntityType Name="LoaiVanKiens">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsShow" Type="bit" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Preview_QuocHoi_CommonsServiceModelStoreContainer">
+          <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CoQuanBanHanhs" EntityType="Self.CoQuanBanHanhs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LinhVucs" EntityType="Self.LinhVucs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiVanKiens" EntityType="Self.LoaiVanKiens" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Preview_QuocHoi_CommonsServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Preview_QuocHoi_CommonsServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__EFMigrationsHistory" EntityType="Preview_QuocHoi_CommonsServiceModel.C__EFMigrationsHistory" />
+          <EntitySet Name="CoQuanBanHanhs" EntityType="Preview_QuocHoi_CommonsServiceModel.CoQuanBanHanh" />
+          <EntitySet Name="LinhVucs" EntityType="Preview_QuocHoi_CommonsServiceModel.LinhVuc" />
+          <EntitySet Name="LoaiVanKiens" EntityType="Preview_QuocHoi_CommonsServiceModel.LoaiVanKien" />
+        </EntityContainer>
+        <EntityType Name="C__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CoQuanBanHanh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="IsShow" Type="Boolean" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="DetailCategoryRoot" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TreeParentIds" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OldID" Type="Int32" />
+          <Property Name="ParentOldID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LinhVuc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="IsShow" Type="Boolean" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="DetailCategoryRoot" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TreeParentIds" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OldID" Type="Int32" />
+          <Property Name="ParentOldID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LoaiVanKien">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Boolean" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="DetailCategoryRoot" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TreeParentIds" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Preview_QuocHoi_CommonsServiceModelStoreContainer" CdmEntityContainer="Preview_QuocHoi_CommonsServiceEntities">
+          <EntitySetMapping Name="C__EFMigrationsHistory">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.C__EFMigrationsHistory">
+              <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoQuanBanHanhs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.CoQuanBanHanh">
+              <MappingFragment StoreEntitySet="CoQuanBanHanhs">
+                <ScalarProperty Name="ParentOldID" ColumnName="ParentOldID" />
+                <ScalarProperty Name="OldID" ColumnName="OldID" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LinhVucs">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.LinhVuc">
+              <MappingFragment StoreEntitySet="LinhVucs">
+                <ScalarProperty Name="ParentOldID" ColumnName="ParentOldID" />
+                <ScalarProperty Name="OldID" ColumnName="OldID" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiVanKiens">
+            <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.LoaiVanKien">
+              <MappingFragment StoreEntitySet="LoaiVanKiens">
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Preview_QuocHoi_NewsServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Preview_QuocHoi_NewsServiceEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Preview_QuocHoi_NewsServiceModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Preview_QuocHoi_NewsServiceModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Preview_QuocHoi_NewsServiceModel.C__EFMigrationsHistory" />
+    <EntitySet Name="Categories" EntityType="Preview_QuocHoi_NewsServiceModel.Category" />
+    <EntitySet Name="CommentNews" EntityType="Preview_QuocHoi_NewsServiceModel.CommentNew" />
+    <EntitySet Name="Events" EntityType="Preview_QuocHoi_NewsServiceModel.Event" />
+    <EntitySet Name="HotNews" EntityType="Preview_QuocHoi_NewsServiceModel.HotNew" />
+    <EntitySet Name="HotNewLanhDaos" EntityType="Preview_QuocHoi_NewsServiceModel.HotNewLanhDao" />
+    <EntitySet Name="News" EntityType="Preview_QuocHoi_NewsServiceModel.New" />
+    <EntitySet Name="NewCategories" EntityType="Preview_QuocHoi_NewsServiceModel.NewCategory" />
+    <EntitySet Name="NewDBQHs" EntityType="Preview_QuocHoi_NewsServiceModel.NewDBQH" />
+    <EntitySet Name="NewKyHops" EntityType="Preview_QuocHoi_NewsServiceModel.NewKyHop" />
+    <EntitySet Name="NewPhienHops" EntityType="Preview_QuocHoi_NewsServiceModel.NewPhienHop" />
+    <EntitySet Name="NewRelates" EntityType="Preview_QuocHoi_NewsServiceModel.NewRelate" />
+    <EntitySet Name="NewTypeNews" EntityType="Preview_QuocHoi_NewsServiceModel.NewTypeNew" />
+    <EntitySet Name="ReplyNews" EntityType="Preview_QuocHoi_NewsServiceModel.ReplyNew" />
+    <EntitySet Name="SettingSiteClones" EntityType="Preview_QuocHoi_NewsServiceModel.SettingSiteClone" />
+    <EntitySet Name="TypeNews" EntityType="Preview_QuocHoi_NewsServiceModel.TypeNew" />
+    <AssociationSet Name="FK_NewCategory_Category_CategoryId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewCategory_Category_CategoryId">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="NewCategory" EntitySet="NewCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommentNew_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_CommentNew_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="CommentNew" EntitySet="CommentNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HotNewLanhDaos_HotNew_HotNewId" Association="Preview_QuocHoi_NewsServiceModel.FK_HotNewLanhDaos_HotNew_HotNewId">
+      <End Role="HotNew" EntitySet="HotNews" />
+      <End Role="HotNewLanhDao" EntitySet="HotNewLanhDaos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewCategory_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewCategory_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="NewCategory" EntitySet="NewCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewDBQHs_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewDBQHs_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="NewDBQH" EntitySet="NewDBQHs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewKyHops_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewKyHops_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="NewKyHop" EntitySet="NewKyHops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewPhienHops_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewPhienHops_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="NewPhienHop" EntitySet="NewPhienHops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewTypeNews_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewTypeNews_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="NewTypeNew" EntitySet="NewTypeNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReplyNew_New_NewId" Association="Preview_QuocHoi_NewsServiceModel.FK_ReplyNew_New_NewId">
+      <End Role="New" EntitySet="News" />
+      <End Role="ReplyNew" EntitySet="ReplyNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewTypeNews_TypeNews_TypeNewId" Association="Preview_QuocHoi_NewsServiceModel.FK_NewTypeNews_TypeNews_TypeNewId">
+      <End Role="TypeNew" EntitySet="TypeNews" />
+      <End Role="NewTypeNew" EntitySet="NewTypeNews" />
+    </AssociationSet>
+    <AssociationSet Name="NewEvent" Association="Preview_QuocHoi_NewsServiceModel.NewEvent">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="New" EntitySet="News" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Guid" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PageUrl" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageTitleSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="DetailCategoryRoot" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryOldId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NewCategories" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewCategory_Category_CategoryId" FromRole="Category" ToRole="NewCategory" />
+  </EntityType>
+  <EntityType Name="CommentNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Precision="7" />
+    <Property Name="CreationId" Type="Guid" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="CreationName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_CommentNew_New_NewId" FromRole="CommentNew" ToRole="New" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="7" />
+    <Property Name="EndDate" Type="DateTime" Precision="7" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageTitleSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationUnitId" Type="Guid" />
+    <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Hot" Type="Boolean" />
+    <Property Name="CategoryOldId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="News" Relationship="Preview_QuocHoi_NewsServiceModel.NewEvent" FromRole="Event" ToRole="New" />
+  </EntityType>
+  <EntityType Name="HotNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="DatePublic" Type="DateTime" Precision="7" />
+    <Property Name="NewId" Type="Guid" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EventDateTo" Type="DateTime" Precision="7" />
+    <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationUnitId" Type="Guid" />
+    <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryId" Type="Guid" />
+    <Property Name="Gim" Type="Boolean" />
+    <Property Name="IsHotUBTV" Type="Boolean" />
+    <Property Name="IsHome" Type="Boolean" />
+    <NavigationProperty Name="HotNewLanhDaos" Relationship="Preview_QuocHoi_NewsServiceModel.FK_HotNewLanhDaos_HotNew_HotNewId" FromRole="HotNew" ToRole="HotNewLanhDao" />
+  </EntityType>
+  <EntityType Name="HotNewLanhDao">
+    <Key>
+      <PropertyRef Name="HotNewId" />
+      <PropertyRef Name="LanhDaoId" />
+    </Key>
+    <Property Name="HotNewId" Type="Guid" Nullable="false" />
+    <Property Name="LanhDaoId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="HotNew" Relationship="Preview_QuocHoi_NewsServiceModel.FK_HotNewLanhDaos_HotNew_HotNewId" FromRole="HotNewLanhDao" ToRole="HotNew" />
+  </EntityType>
+  <EntityType Name="New">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Source" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="ReadCount" Type="Int32" />
+    <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="AllowComment" Type="Boolean" />
+    <Property Name="Shared" Type="Boolean" />
+    <Property Name="ShowDescription" Type="Boolean" />
+    <Property Name="Hot" Type="Boolean" />
+    <Property Name="DatePublic" Type="DateTime" Precision="7" />
+    <Property Name="AllowAnswerComment" Type="Boolean" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="DescriptionSEO" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageTitleSEO" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="PageUrlSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedByPublicId" Type="Guid" />
+    <Property Name="ApprovedByPublicName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedByPublicTime" Type="DateTime" Precision="7" />
+    <Property Name="ApprovedByPublicSendToTime" Type="DateTime" Precision="7" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IsPublished" Type="Boolean" />
+    <Property Name="OldId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CommentNews" Relationship="Preview_QuocHoi_NewsServiceModel.FK_CommentNew_New_NewId" FromRole="New" ToRole="CommentNew" />
+    <NavigationProperty Name="NewCategories" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewCategory_New_NewId" FromRole="New" ToRole="NewCategory" />
+    <NavigationProperty Name="NewDBQHs" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewDBQHs_New_NewId" FromRole="New" ToRole="NewDBQH" />
+    <NavigationProperty Name="NewKyHops" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewKyHops_New_NewId" FromRole="New" ToRole="NewKyHop" />
+    <NavigationProperty Name="NewPhienHops" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewPhienHops_New_NewId" FromRole="New" ToRole="NewPhienHop" />
+    <NavigationProperty Name="NewTypeNews" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewTypeNews_New_NewId" FromRole="New" ToRole="NewTypeNew" />
+    <NavigationProperty Name="ReplyNews" Relationship="Preview_QuocHoi_NewsServiceModel.FK_ReplyNew_New_NewId" FromRole="New" ToRole="ReplyNew" />
+    <NavigationProperty Name="Events" Relationship="Preview_QuocHoi_NewsServiceModel.NewEvent" FromRole="New" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="NewCategory">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="CategoryId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="OldNewId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Category" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewCategory_Category_CategoryId" FromRole="NewCategory" ToRole="Category" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewCategory_New_NewId" FromRole="NewCategory" ToRole="New" />
+  </EntityType>
+  <EntityType Name="NewDBQH">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="DBQHId" />
+    </Key>
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="DBQHId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewDBQHs_New_NewId" FromRole="NewDBQH" ToRole="New" />
+  </EntityType>
+  <EntityType Name="NewKyHop">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="KyHopId" />
+    </Key>
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="KyHopId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewKyHops_New_NewId" FromRole="NewKyHop" ToRole="New" />
+  </EntityType>
+  <EntityType Name="NewPhienHop">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="PhienHopId" />
+    </Key>
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="PhienHopId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewPhienHops_New_NewId" FromRole="NewPhienHop" ToRole="New" />
+  </EntityType>
+  <EntityType Name="NewRelate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="NewIdSource" Type="Guid" Nullable="false" />
+    <Property Name="NewIdRelate" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="CategoryId" Type="Guid" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="DatePublic" Type="DateTime" Precision="7" />
+    <Property Name="Description" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NewTypeNew">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="TypeNewId" />
+    </Key>
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="TypeNewId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="OldId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewTypeNews_New_NewId" FromRole="NewTypeNew" ToRole="New" />
+    <NavigationProperty Name="TypeNew" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewTypeNews_TypeNews_TypeNewId" FromRole="NewTypeNew" ToRole="TypeNew" />
+  </EntityType>
+  <EntityType Name="ReplyNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="ReplyByContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReplyByUserId" Type="Guid" />
+    <Property Name="ReplyByUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReplyByUserTime" Type="DateTime" Precision="7" />
+    <Property Name="NewId" Type="Guid" Nullable="false" />
+    <Property Name="CreatorId" Type="Guid" />
+    <NavigationProperty Name="New" Relationship="Preview_QuocHoi_NewsServiceModel.FK_ReplyNew_New_NewId" FromRole="ReplyNew" ToRole="New" />
+  </EntityType>
+  <EntityType Name="SettingSiteClone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Show" Type="Boolean" />
+    <Property Name="LinkWeb" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="PathCloneContent" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="TypeNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="TenantId" Type="Guid" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Guid" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TreeParentIds" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="DetailTypeNewsRoot" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatorId" Type="Guid" />
+    <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+    <Property Name="LastModifierId" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeleterId" Type="Guid" />
+    <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+    <Property Name="PageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryOldId" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NewTypeNews" Relationship="Preview_QuocHoi_NewsServiceModel.FK_NewTypeNews_TypeNews_TypeNewId" FromRole="TypeNew" ToRole="NewTypeNew" />
+  </EntityType>
+  <Association Name="FK_NewCategory_Category_CategoryId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.Category" Role="Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewCategory" Role="NewCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewCategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommentNew_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.CommentNew" Role="CommentNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentNew">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HotNewLanhDaos_HotNew_HotNewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.HotNew" Role="HotNew" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.HotNewLanhDao" Role="HotNewLanhDao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HotNew">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HotNewLanhDao">
+        <PropertyRef Name="HotNewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewCategory_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewCategory" Role="NewCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewCategory">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewDBQHs_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewDBQH" Role="NewDBQH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewDBQH">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewKyHops_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewKyHop" Role="NewKyHop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewKyHop">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewPhienHops_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewPhienHop" Role="NewPhienHop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewPhienHop">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewTypeNews_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewTypeNew" Role="NewTypeNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewTypeNew">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReplyNew_New_NewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.ReplyNew" Role="ReplyNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReplyNew">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewTypeNews_TypeNews_TypeNewId">
+    <End Type="Preview_QuocHoi_NewsServiceModel.TypeNew" Role="TypeNew" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Preview_QuocHoi_NewsServiceModel.NewTypeNew" Role="NewTypeNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeNew">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewTypeNew">
+        <PropertyRef Name="TypeNewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewEvent">
+    <End Type="Preview_QuocHoi_NewsServiceModel.Event" Role="Event" Multiplicity="*" />
+    <End Type="Preview_QuocHoi_NewsServiceModel.New" Role="New" Multiplicity="*" />
+  </Association>
+</Schema>

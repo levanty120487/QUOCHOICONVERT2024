@@ -1,0 +1,159 @@
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\bin\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\bin\Debug\FontAwesome.Sharp.dll
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.Properties.Resources.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.RJForms.Private.RJMessageForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.RJForms.RJPrintForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.csproj.GenerateResource.Cache
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.csprojResolveAssemblyReference.cache
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.RJForms.RJSettingsForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.LoginForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.MainForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomer.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDashboard.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProducts.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSalesOrder.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserProfile.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCommonControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormMenuControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormContainerControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDataControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormComponentControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSpecialControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\bin\Debug\RJCodeUI_M1.exe.config
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\bin\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProductMaintenance.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJModernUI-M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomerMaintenance.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe.config
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\FontAwesome.Sharp.dll
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csprojResolveAssemblyReference.cache
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.LoginForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.MainForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.Properties.Resources.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.Private.RJMessageForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJPrintForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJSettingsForm.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCommonControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormComponentControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormContainerControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomer.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomerMaintenance.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDashboard.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDataControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormMenuControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProducts.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSalesOrder.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSpecialControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserControls.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserProfile.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProductMaintenance.resources
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.GenerateResource.Cache
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\Documentation.pdf
+D:\RJ Code Advance\Source Code for Sale\C# RJCode ModernUI-M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\License.pdf
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe.config
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.LoginForm.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.MainForm.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.Properties.Resources.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.Private.RJMessageForm.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJPrintForm.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJSettingsForm.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCommonControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormComponentControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormContainerControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomer.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomerMaintenance.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDashboard.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDataControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormMenuControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProducts.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJBaseFormDoc.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJChildFormDoc.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJMainFormDoc.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSalesOrder.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSpecialControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserControls.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserProfile.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProductMaintenance.resources
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.GenerateResource.Cache
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\Documentation.pdf
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\License.pdf
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\FontAwesome.Sharp.dll
+D:\RJ Code Advance\Store\CS- RJCode ModernUI -M1 - Rev2\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csprojResolveAssemblyReference.cache
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csprojResolveAssemblyReference.cache
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.LoginForm.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.MainForm.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.Properties.Resources.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.Private.RJMessageForm.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJPrintForm.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJSettingsForm.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCommonControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormComponentControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormContainerControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomer.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomerMaintenance.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDashboard.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDataControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormMenuControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProducts.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJBaseFormDoc.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJChildFormDoc.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJMainFormDoc.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSalesOrder.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSpecialControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserControls.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserProfile.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProductMaintenance.resources
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.GenerateResource.Cache
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\Documentation.pdf
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\License.pdf
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe.config
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.pdb
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\FontAwesome.Sharp.dll
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.exe
+D:\RJ Code Advance\Store\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.pdb
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\Documentation.pdf
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\Files\License.pdf
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe.config
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.exe
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\RJCodeUI_M1.pdb
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.LoginForm.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.MainForm.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.Properties.Resources.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.Private.RJMessageForm.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJPrintForm.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.RJForms.RJSettingsForm.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCommonControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormComponentControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormContainerControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomer.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCustomerMaintenance.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDashboard.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormDataControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormMenuControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProducts.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJBaseFormDoc.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJChildFormDoc.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormRJMainFormDoc.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSalesOrder.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormSpecialControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserControls.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormUserProfile.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.TestAndDemo.FormProductMaintenance.resources
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.csproj.CopyComplete
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.exe
+C:\Users\Administrator\Desktop\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1-main\CS-RJCode-ModernUI_M1\English\RJ Modern UI-CSWF-EN-M1\RJCodeUI_M1\obj\Debug\RJCodeUI_M1.pdb

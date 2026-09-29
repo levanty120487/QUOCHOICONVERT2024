@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d61ed61644ee47a9bbc8de30924b93a9" Name="Diagram1">
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.C__EFMigrationsHistory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.ConfigWebsite" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.ContactInfo" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.CoQuanBanHanh" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.DanhSachSanPham" Width="1.5" PointX="2.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.DanhSachThongBao" Width="1.5" PointX="10" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.DataCloneService" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.DoiTac" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.EmailDangKy" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.Gopy" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.HistoryActionFlow" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.HistoryVersion" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.Language" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.LanguageMapText" Width="1.5" PointX="13" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.LanguageText" Width="1.5" PointX="10.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.LienKetWebsite" Width="1.5" PointX="16.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.LinhVuc" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.LoaiThongBao" Width="1.5" PointX="7.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.LoaiVanKien" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.Menu" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.MenuLanhDao" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.Notification" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.PhanHoiSanPham" Width="1.5" PointX="5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.QuangCaoss" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.ReadCountLog" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.RSSChannel" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.SlideImage" Width="1.5" PointX="8.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.TagInfo" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.Tag" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.ViTriQuangCao" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.ViTriQuangCaoMapQuangCao" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.WorkflowCategory" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.WorkflowDefinition" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APATIT_CommonsServicesModel.WorkflowInstance" Width="1.5" PointX="0.75" PointY="21.75" IsExpanded="true" />
+        <AssociationConnector Association="APATIT_CommonsServicesModel.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="APATIT_CommonsServicesModel.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" ManuallyRouted="false" />
+        <AssociationConnector Association="APATIT_CommonsServicesModel.FK_LanguageMapText_LanguageText_LanguageTextId" ManuallyRouted="false" />
+        <AssociationConnector Association="APATIT_CommonsServicesModel.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" ManuallyRouted="false" />
+        <AssociationConnector Association="APATIT_CommonsServicesModel.FK_TagInfos_Tags_TagId" ManuallyRouted="false" />
+        <AssociationConnector Association="APATIT_CommonsServicesModel.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

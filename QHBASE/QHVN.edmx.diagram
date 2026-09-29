@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8095e2fce9094c2d9c9b96beb9ca3ad4" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="QuocHoiVNModel.DaiBieuQH" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.LinkVietLaw" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.News" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.NewsCat" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.NewsEvent" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.TempCoQuanBanHanh" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.TempLinhVuc" Width="1.5" PointX="7.75" PointY="5.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.VanKien" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.VanKienCat" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="QuocHoiVNModel.VietLaw" Width="1.5" PointX="9.75" PointY="9.75" />
+        <AssociationConnector Association="QuocHoiVNModel.NewsInEvent" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

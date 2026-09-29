@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Tools\\QUOCHOICONVERT2024\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|d:\\tools\\quochoiconvert2024\\tool\\testanddemo\\formhoidap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|solutionrelative:tool\\testanddemo\\formhoidap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|d:\\tools\\quochoiconvert2024\\tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BF6386B-B046-428A-BB35-B78A0198BD3D}|TOOL\\QHCONVERT2024.csproj|solutionrelative:tool\\testanddemo\\formthongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormHoiDap.cs [Design]",
+              "DocumentMoniker": "D:\\Tools\\QUOCHOICONVERT2024\\TOOL\\TestAndDemo\\FormHoiDap.cs",
+              "RelativeDocumentMoniker": "TOOL\\TestAndDemo\\FormHoiDap.cs",
+              "ToolTip": "D:\\Tools\\QUOCHOICONVERT2024\\TOOL\\TestAndDemo\\FormHoiDap.cs [Design]",
+              "RelativeToolTip": "TOOL\\TestAndDemo\\FormHoiDap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T06:35:47.937Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormThongBao.cs [Design]",
+              "DocumentMoniker": "D:\\Tools\\QUOCHOICONVERT2024\\TOOL\\TestAndDemo\\FormThongBao.cs",
+              "RelativeDocumentMoniker": "TOOL\\TestAndDemo\\FormThongBao.cs",
+              "ToolTip": "D:\\Tools\\QUOCHOICONVERT2024\\TOOL\\TestAndDemo\\FormThongBao.cs [Design]",
+              "RelativeToolTip": "TOOL\\TestAndDemo\\FormThongBao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T06:35:33.175Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

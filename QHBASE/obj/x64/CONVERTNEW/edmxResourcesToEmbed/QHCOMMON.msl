@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Preview_QuocHoi_CommonsServiceModelStoreContainer" CdmEntityContainer="Preview_QuocHoi_CommonsServiceEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoQuanBanHanhs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.CoQuanBanHanh">
+        <MappingFragment StoreEntitySet="CoQuanBanHanhs">
+          <ScalarProperty Name="ParentOldID" ColumnName="ParentOldID" />
+          <ScalarProperty Name="OldID" ColumnName="OldID" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinhVucs">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.LinhVuc">
+        <MappingFragment StoreEntitySet="LinhVucs">
+          <ScalarProperty Name="ParentOldID" ColumnName="ParentOldID" />
+          <ScalarProperty Name="OldID" ColumnName="OldID" />
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiVanKiens">
+      <EntityTypeMapping TypeName="Preview_QuocHoi_CommonsServiceModel.LoaiVanKien">
+        <MappingFragment StoreEntitySet="LoaiVanKiens">
+          <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+          <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+          <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RJCodeUI_M1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RJCodeUI_M1_SPAuthentication_Authentication" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://quochoi.erpuni.vn/_vti_bin/Authentication.asmx</Value>
+    </Setting>
+    <Setting Name="RJCodeUI_M1_SPService_Lists" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://quochoi.erpuni.vn/_vti_bin/Lists.asmx</Value>
+    </Setting>
+    <Setting Name="RJCodeUI_M1_SPImage_Imaging" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://quochoi.erpuni.vn/_vti_bin/Imaging.asmx</Value>
+    </Setting>
+    <Setting Name="RJCodeUI_M1_SPFolder_Dws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://quochoi.erpuni.vn/_vti_bin/Dws.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Preview_QuocHoi_NewsServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="PageUrl" Type="nvarchar" MaxLength="350" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="TreeParentIds" Type="nvarchar" MaxLength="254" />
+    <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="254" />
+    <Property Name="Language" Type="varchar" MaxLength="20" />
+    <Property Name="CategoryOldId" Type="nvarchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="CommentNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="25" />
+    <Property Name="Name" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" />
+    <Property Name="CreationId" Type="uniqueidentifier" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="CreationName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Image" Type="nvarchar" MaxLength="254" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PageUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="StartDate" Type="datetime2" Precision="7" />
+    <Property Name="EndDate" Type="datetime2" Precision="7" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="Language" Type="varchar" MaxLength="20" />
+    <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+    <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+    <Property Name="Hot" Type="bit" />
+    <Property Name="CategoryOldId" Type="nvarchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="HotNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Image" Type="nvarchar" MaxLength="254" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PageUrl" Type="nvarchar" MaxLength="254" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="DatePublic" Type="datetime2" Precision="7" />
+    <Property Name="NewId" Type="uniqueidentifier" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="EventDateTo" Type="datetime2" Precision="7" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+    <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+    <Property Name="Language" Type="varchar" MaxLength="20" />
+    <Property Name="CategoryId" Type="uniqueidentifier" />
+    <Property Name="Gim" Type="bit" />
+    <Property Name="IsHotUBTV" Type="bit" />
+    <Property Name="IsHome" Type="bit" />
+  </EntityType>
+  <EntityType Name="HotNewLanhDaos">
+    <Key>
+      <PropertyRef Name="HotNewId" />
+      <PropertyRef Name="LanhDaoId" />
+    </Key>
+    <Property Name="HotNewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanhDaoId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="New">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2500" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Image" Type="nvarchar" MaxLength="254" />
+    <Property Name="Author" Type="nvarchar" MaxLength="500" />
+    <Property Name="Source" Type="nvarchar" MaxLength="254" />
+    <Property Name="ReadCount" Type="int" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="AllowComment" Type="bit" />
+    <Property Name="Shared" Type="bit" />
+    <Property Name="ShowDescription" Type="bit" />
+    <Property Name="Hot" Type="bit" />
+    <Property Name="DatePublic" Type="datetime2" Precision="7" />
+    <Property Name="AllowAnswerComment" Type="bit" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="1500" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="350" />
+    <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="ApprovedByPublicId" Type="uniqueidentifier" />
+    <Property Name="ApprovedByPublicName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ApprovedByPublicTime" Type="datetime2" Precision="7" />
+    <Property Name="ApprovedByPublicSendToTime" Type="datetime2" Precision="7" />
+    <Property Name="Language" Type="varchar" MaxLength="20" />
+    <Property Name="IsPublished" Type="bit" />
+    <Property Name="OldId" Type="nvarchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="NewCategory">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OldNewId" Type="nvarchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="NewDBQHs">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="DBQHId" />
+    </Key>
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DBQHId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewEvent">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EventId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewKyHops">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="KyHopId" />
+    </Key>
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="KyHopId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewPhienHops">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="PhienHopId" />
+    </Key>
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PhienHopId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewRelates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="NewIdSource" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NewIdRelate" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="DatePublic" Type="datetime2" Precision="7" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2500" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="254" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="350" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewTypeNews">
+    <Key>
+      <PropertyRef Name="NewId" />
+      <PropertyRef Name="TypeNewId" />
+    </Key>
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeNewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OldId" Type="nvarchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="ReplyNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="ReplyByContent" Type="nvarchar(max)" />
+    <Property Name="ReplyByUserId" Type="uniqueidentifier" />
+    <Property Name="ReplyByUserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReplyByUserTime" Type="datetime2" Precision="7" />
+    <Property Name="NewId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SettingSiteClones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Show" Type="bit" />
+    <Property Name="LinkWeb" Type="nvarchar" MaxLength="1500" />
+    <Property Name="PathCloneContent" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TypeNews">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TenantId" Type="uniqueidentifier" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="TreeParentIds" Type="nvarchar" MaxLength="254" />
+    <Property Name="DetailTypeNewsRoot" Type="nvarchar" MaxLength="254" />
+    <Property Name="Language" Type="varchar" MaxLength="20" />
+    <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatorId" Type="uniqueidentifier" />
+    <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+    <Property Name="LastModifierId" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeleterId" Type="uniqueidentifier" />
+    <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="PageUrl" Type="nvarchar(max)" />
+    <Property Name="CategoryOldId" Type="nvarchar" MaxLength="254" />
+  </EntityType>
+  <Association Name="FK_CommentNew_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CommentNew" Type="Self.CommentNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentNew">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HotNewLanhDaos_HotNew_HotNewId">
+    <End Role="HotNew" Type="Self.HotNew" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HotNewLanhDaos" Type="Self.HotNewLanhDaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HotNew">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HotNewLanhDaos">
+        <PropertyRef Name="HotNewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewCategory_Category_CategoryId">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewCategory" Type="Self.NewCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewCategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewCategory_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewCategory" Type="Self.NewCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewCategory">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewDBQHs_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewDBQHs" Type="Self.NewDBQHs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewDBQHs">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewEvent_Event_EventId">
+    <End Role="Event" Type="Self.Event" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewEvent" Type="Self.NewEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewEvent_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewEvent" Type="Self.NewEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewEvent">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewKyHops_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewKyHops" Type="Self.NewKyHops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewKyHops">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewPhienHops_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewPhienHops" Type="Self.NewPhienHops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewPhienHops">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewTypeNews_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewTypeNews" Type="Self.NewTypeNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewTypeNews">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewTypeNews_TypeNews_TypeNewId">
+    <End Role="TypeNews" Type="Self.TypeNews" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NewTypeNews" Type="Self.NewTypeNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeNews">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewTypeNews">
+        <PropertyRef Name="TypeNewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReplyNew_New_NewId">
+    <End Role="New" Type="Self.New" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReplyNew" Type="Self.ReplyNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReplyNew">
+        <PropertyRef Name="NewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Preview_QuocHoi_NewsServiceModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentNew" EntityType="Self.CommentNew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HotNew" EntityType="Self.HotNew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HotNewLanhDaos" EntityType="Self.HotNewLanhDaos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="New" EntityType="Self.New" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewCategory" EntityType="Self.NewCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewDBQHs" EntityType="Self.NewDBQHs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewEvent" EntityType="Self.NewEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewKyHops" EntityType="Self.NewKyHops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewPhienHops" EntityType="Self.NewPhienHops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewRelates" EntityType="Self.NewRelates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewTypeNews" EntityType="Self.NewTypeNews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReplyNew" EntityType="Self.ReplyNew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SettingSiteClones" EntityType="Self.SettingSiteClones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeNews" EntityType="Self.TypeNews" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CommentNew_New_NewId" Association="Self.FK_CommentNew_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="CommentNew" EntitySet="CommentNew" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HotNewLanhDaos_HotNew_HotNewId" Association="Self.FK_HotNewLanhDaos_HotNew_HotNewId">
+      <End Role="HotNew" EntitySet="HotNew" />
+      <End Role="HotNewLanhDaos" EntitySet="HotNewLanhDaos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewCategory_Category_CategoryId" Association="Self.FK_NewCategory_Category_CategoryId">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="NewCategory" EntitySet="NewCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewCategory_New_NewId" Association="Self.FK_NewCategory_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="NewCategory" EntitySet="NewCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewDBQHs_New_NewId" Association="Self.FK_NewDBQHs_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="NewDBQHs" EntitySet="NewDBQHs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewEvent_Event_EventId" Association="Self.FK_NewEvent_Event_EventId">
+      <End Role="Event" EntitySet="Event" />
+      <End Role="NewEvent" EntitySet="NewEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewEvent_New_NewId" Association="Self.FK_NewEvent_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="NewEvent" EntitySet="NewEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewKyHops_New_NewId" Association="Self.FK_NewKyHops_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="NewKyHops" EntitySet="NewKyHops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewPhienHops_New_NewId" Association="Self.FK_NewPhienHops_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="NewPhienHops" EntitySet="NewPhienHops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewTypeNews_New_NewId" Association="Self.FK_NewTypeNews_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="NewTypeNews" EntitySet="NewTypeNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewTypeNews_TypeNews_TypeNewId" Association="Self.FK_NewTypeNews_TypeNews_TypeNewId">
+      <End Role="TypeNews" EntitySet="TypeNews" />
+      <End Role="NewTypeNews" EntitySet="NewTypeNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReplyNew_New_NewId" Association="Self.FK_ReplyNew_New_NewId">
+      <End Role="New" EntitySet="New" />
+      <End Role="ReplyNew" EntitySet="ReplyNew" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

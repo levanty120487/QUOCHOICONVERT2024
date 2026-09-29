@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4ddfef6bb9e8416e96af0997aedc6e92" Name="Diagram1" ZoomLevel="68">
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.ChuongTrinhLamViec" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.DMChuongTrinhLamViec" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.DMPhienHop" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.NoiDung" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.ReplyNoiDung" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.VanKienMapCQBH" Width="1.5" PointX="5.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Preview_QuocHoi_PhienHopServiceModel.VanKienTaiLieu" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <AssociationConnector Association="Preview_QuocHoi_PhienHopServiceModel.FK_ChuongTrinhLamViecs_DMChuongTrinhLamViec_DMChuongTrinhLamViecId" ManuallyRouted="false" />
+        <AssociationConnector Association="Preview_QuocHoi_PhienHopServiceModel.FK_DMChuongTrinhLamViec_DMPhienHops_DMPhienHopId" ManuallyRouted="false" />
+        <AssociationConnector Association="Preview_QuocHoi_PhienHopServiceModel.FK_NoiDungs_DMPhienHops_DMPhienHopId" ManuallyRouted="false" />
+        <AssociationConnector Association="Preview_QuocHoi_PhienHopServiceModel.FK_VanKienTaiLieus_DMPhienHops_DMPhienHopId" ManuallyRouted="false" />
+        <AssociationConnector Association="Preview_QuocHoi_PhienHopServiceModel.FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
