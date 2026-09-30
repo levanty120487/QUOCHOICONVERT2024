@@ -64,7 +64,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // Lấy danh sách con dựa trên ParentID (chú ý: nếu parentIdStr rỗng thì lấy những Category không có ParentID)
             var children = allCategories.Where(c =>
                 string.Equals(c.ParentID ?? "", parentIdStr ?? "", StringComparison.OrdinalIgnoreCase)
-            ).ToList();
+            ).OrderBy(a => a.Order).ToList();
 
             foreach (var child in children)
             {
@@ -191,7 +191,7 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
-                        if (!detailUrl.Equals("https://moet.gov.vn/thong-ke/Pages/thong-ke-giao-duc-tieu-hoc.aspx%3FItemID=6631")) continue;
+                        //if (!detailUrl.Equals("https://moet.gov.vn/thong-ke/Pages/thong-ke-giao-duc-tieu-hoc.aspx%3FItemID=6631")) continue;
 
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;
@@ -370,7 +370,7 @@ namespace RJCodeUI_M1.TestAndDemo
                     int currentIndex = 0;
                     int totalItems = parsedData.Count;
 
-                    foreach (var item in parsedData)
+                    foreach (var item in parsedData.OrderByDescending(a=>a.CreateAt))
                     {
                         currentIndex++;
                         lblStatus.Text = $"Đang lưu bản ghi thứ {currentIndex}/{totalItems}...";
@@ -419,7 +419,8 @@ namespace RJCodeUI_M1.TestAndDemo
                             TypeNewId = Guid.Parse("69E83D8B-3C4B-43AA-B554-B6B23C935718"), //=> tin bai
                             CreatorName = "admin",
                             ShowDescription = true,
-                            AllowComment = false
+                            AllowComment = false,
+                            PageUrlSEO = GenerateSlug(item.Title)
                         };
                         // Tải ảnh bất đồng bộ
                         if (!string.IsNullOrEmpty(item.AvatarUrl))
@@ -470,7 +471,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                         MimeType = GetMimeType(attach.FileName),
                                         FileExtention = 2,
                                         Language = "vi",
-                                        FullPathServer = localFilePath,
+                                        FullPathServer = localFilePath.Replace("C:\\", "/").Replace("\\", "/"),
                                         FileName = attach.FileName
                                     };
                                     files.CMSFiles.Add(file);
@@ -614,6 +615,19 @@ namespace RJCodeUI_M1.TestAndDemo
                     return "application/octet-stream";
             }
         }
+
+        private static string GenerateSlug(string title)
+        {
+            if (string.IsNullOrWhiteSpace(title)) return "bai-viet";
+            string str = title.ToLowerInvariant();
+            str = str.Replace("đ", "d");
+            var withoutMarks = new string(str
+                .Normalize(System.Text.NormalizationForm.FormD)
+                .Where(ch => System.Globalization.CharUnicodeInfo.GetUnicodeCategory(ch) != System.Globalization.UnicodeCategory.NonSpacingMark)
+                .ToArray());
+            var slug = System.Text.RegularExpressions.Regex.Replace(withoutMarks, "[^a-z0-9]+", "-").Trim('-');
+            return string.IsNullOrWhiteSpace(slug) ? "bai-viet" : slug;
+        }
     }
 
     public class CategoryDisplayItem
@@ -643,6 +657,9 @@ namespace RJCodeUI_M1.TestAndDemo
         public string FilesDisplay => Attachments != null && Attachments.Count > 0 ? string.Join(", ", Attachments.Select(x => x.FileName)) : "";
 
         public DateTime? CreateDate { get; set; }
+
         public string OldId { get; set; }
+
+        public DateTime CreateAt { get; set; } = DateTime.Now;
     }
 }

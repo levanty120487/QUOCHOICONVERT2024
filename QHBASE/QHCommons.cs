@@ -9,5 +9,6 @@ namespace QHBASE
             return Guid.NewGuid().ToString("N").Substring(0, 6).ToLower();
         }
 
+
     }
 }
