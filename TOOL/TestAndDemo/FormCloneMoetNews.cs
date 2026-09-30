@@ -191,7 +191,7 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
-                        //if (!detailUrl.Equals("https://moet.gov.vn/thong-ke/Pages/thong-ke-giao-duc-tieu-hoc.aspx%3FItemID=6631")) continue;
+                        //if (!detailUrl.Equals("https://moet.gov.vn/tin-tuc/ban-tin-giao-duc-va-dao-tao-hang-quy/ban-tin-quy-ii-2026.html?categoryId=101914889")) continue;
 
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;
@@ -546,13 +546,28 @@ namespace RJCodeUI_M1.TestAndDemo
                 {
                     if (!response.IsSuccessStatusCode) return string.Empty;
 
-                    fileName = Regex.Replace(fileName, @"[^a-zA-Z0-9.\s]", "").Replace(" ", "_");
+                    fileName = Regex.Replace(fileName ?? "", @"[^a-zA-Z0-9.\s]", "").Replace(" ", "_");
+                    string ext = Path.GetExtension(fileName);
+                    if (string.IsNullOrEmpty(ext) && !string.IsNullOrEmpty(fileUrl))
+                    {
+                        string cleanUrl = fileUrl.Contains("?") ? fileUrl.Substring(0, fileUrl.IndexOf("?")) : fileUrl;
+                        ext = Path.GetExtension(cleanUrl);
+                        if (!string.IsNullOrEmpty(ext))
+                        {
+                            fileName += ext;
+                        }
+                    }
+
+                    if (string.IsNullOrEmpty(fileName) || fileName == ext)
+                    {
+                        fileName = Guid.NewGuid().ToString("N") + ext;
+                    }
+
                     string fullPath = Path.Combine(folder, fileName);
 
                     // Handle exist file
                     int count = 1;
                     string nameOnly = Path.GetFileNameWithoutExtension(fileName);
-                    string ext = Path.GetExtension(fileName);
                     while (File.Exists(fullPath))
                     {
                         fullPath = Path.Combine(folder, $"{nameOnly}_{count++}{ext}");
