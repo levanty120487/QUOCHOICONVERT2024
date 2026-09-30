@@ -191,6 +191,8 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
+                        if (!detailUrl.Equals("https://moet.gov.vn/thong-ke/Pages/thong-ke-giao-duc-tieu-hoc.aspx%3FItemID=10545")) continue;
+
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;
                         item.Title = CleanText(titleNode.InnerText);
@@ -203,7 +205,10 @@ namespace RJCodeUI_M1.TestAndDemo
                             var match = Regex.Match(dateText, @"\d{2}/\d{2}/\d{4}");
                             if (match.Success)
                             {
-                                // Không có property PublishDate trong model tạm, có thể thêm vào BaiVietMoetItem
+                                if (DateTime.TryParseExact(match.Value, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out var dt))
+                                {
+                                    item.CreateDate = dt;
+                                }
                             }
                         }
 
@@ -230,6 +235,14 @@ namespace RJCodeUI_M1.TestAndDemo
                 string html = await httpClient.GetStringAsync(detailUrl);
                 var doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(html);
+
+                // Lấy ItemID từ detailUrl (hỗ trợ cả trường hợp bị mã hóa %3F thay vì ?)
+                string decodedUrl = System.Net.WebUtility.UrlDecode(detailUrl);
+                var matchItemId = Regex.Match(decodedUrl, @"[?&]ItemID=([^&]+)", RegexOptions.IgnoreCase);
+                if (matchItemId.Success)
+                {
+                    item.OldId = matchItemId.Groups[1].Value;
+                }
 
                 // Bóc tiêu đề (có thể dùng class title truyền vào) - giữ lại nếu titleNode = null ở ngoài
                 var titleNode = doc.DocumentNode.SelectSingleNode("//h1 | //h2[contains(@class,'title')]");
@@ -268,18 +281,37 @@ namespace RJCodeUI_M1.TestAndDemo
                 var fileAttachNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'ul-fileattach')]");
                 if (fileAttachNode != null)
                 {
-                    var fileLinks = fileAttachNode.SelectNodes(".//a[@href]");
-                    if (fileLinks != null)
+                    var pNodes = fileAttachNode.SelectNodes(".//p");
+                    if (pNodes != null)
                     {
-                        foreach (var fNode in fileLinks)
+                        foreach (var pNode in pNodes)
                         {
-                            var href = fNode.GetAttributeValue("href", "");
-                            if (string.IsNullOrWhiteSpace(href)
-                                || href.ToLower().StartsWith("javascript:"))
+                            var spanName = pNode.SelectSingleNode(".//span[contains(@class, 'click-show')]");
+                            var aDownload = pNode.SelectSingleNode(".//a[@href and contains(@class, 'btn-action-info')]") ?? pNode.SelectSingleNode(".//a[@download]") ?? pNode.SelectSingleNode(".//a[@href]");
+
+                            if (aDownload != null)
                             {
-                                continue;
+                                var href = aDownload.GetAttributeValue("href", "");
+                                if (!string.IsNullOrWhiteSpace(href) && !href.ToLower().StartsWith("javascript:"))
+                                {
+                                    string fileName = spanName != null ? CleanText(spanName.InnerText) : GetFileNameFromUrl(href);
+                                    item.Attachments.Add(new AttachmentFile { FileName = fileName, Url = ToAbsoluteUrl(detailUrl, href) });
+                                }
                             }
-                            item.AttachmentUrls.Add(ToAbsoluteUrl(detailUrl, href));
+                        }
+                    }
+                    else
+                    {
+                        // Fallback
+                        var fileLinks = fileAttachNode.SelectNodes(".//a[@href]");
+                        if (fileLinks != null)
+                        {
+                            foreach (var fNode in fileLinks)
+                            {
+                                var href = fNode.GetAttributeValue("href", "");
+                                if (string.IsNullOrWhiteSpace(href) || href.ToLower().StartsWith("javascript:")) continue;
+                                item.Attachments.Add(new AttachmentFile { FileName = CleanText(fNode.InnerText), Url = ToAbsoluteUrl(detailUrl, href) });
+                            }
                         }
                     }
                 }
@@ -335,12 +367,12 @@ namespace RJCodeUI_M1.TestAndDemo
                         Application.DoEvents();
 
                         // Tải file avatar nếu có
-                        string localAvatarUrl = string.Empty;
-                        if (!string.IsNullOrEmpty(item.AvatarUrl))
-                        {
-                            string fileName = GetFileNameFromUrl(item.AvatarUrl);
-                            localAvatarUrl = await DownloadFileAsync(httpClient, item.AvatarUrl, downloadFolderImg, fileName);
-                        }
+                        //string localAvatarUrl = string.Empty;
+                        //if (!string.IsNullOrEmpty(item.AvatarUrl))
+                        //{
+                        //    string fileName = GetFileNameFromUrl(item.AvatarUrl);
+                        //    localAvatarUrl = await DownloadFileAsync(httpClient, item.AvatarUrl, downloadFolderImg, fileName);
+                        //}
 
                         // Insert vào bảng New
                         var newEntity = new New()
@@ -372,7 +404,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             Shared = true,
                             Language = "vi",
                             ExtraProperties = "{}",
-                            OldId = string.Empty,
+                            OldId = string.IsNullOrEmpty(item.OldId) ? string.Empty : item.OldId,
                             TypeNewContent = 3, //=> tin bai
                             TypeNewId = Guid.Parse("69E83D8B-3C4B-43AA-B554-B6B23C935718"), //=> tin bai
                             CreatorName = "admin",
@@ -385,10 +417,10 @@ namespace RJCodeUI_M1.TestAndDemo
                             newEntity.Image = await ImageDownloader.DownloadImageAsyncurl(item.AvatarUrl.Trim());
                         }
                         // Xử lý ảnh trong nội dung tin
-                        if (!string.IsNullOrEmpty(newEntity.Content))
+                        if (!string.IsNullOrEmpty(item.Content))
                         {
                             HtmlAgilityPack.HtmlDocument newsDocument = new HtmlAgilityPack.HtmlDocument();
-                            newsDocument.LoadHtml(newEntity.Content);
+                            newsDocument.LoadHtml(item.Content);
                             var imagesNode = newsDocument.DocumentNode.SelectNodes(".//img");
                             if (imagesNode != null)
                             {
@@ -398,7 +430,6 @@ namespace RJCodeUI_M1.TestAndDemo
                                     {
                                         img.Attributes["src"].Value = img.Attributes["src"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://");
                                         img.Attributes["src"].Value = await ImageDownloader.DownloadImageAsyncurl(img.Attributes["src"].Value.Trim());
-
                                     }
                                 }
                             }
@@ -408,21 +439,13 @@ namespace RJCodeUI_M1.TestAndDemo
                         dbNews.SaveChanges();
 
                         // Tải file đính kèm & Insert vào Moet_Files
-                        foreach (var attachUrl in item.AttachmentUrls)
+                        foreach (var attach in item.Attachments)
                         {
-                            string fileName = GetFileNameFromUrl(attachUrl);
-                            string localFilePath = await DownloadFileAsync(httpClient, attachUrl, downloadFolderImg, fileName);
+                            string fileNameToDownload = string.IsNullOrWhiteSpace(attach.FileName) ? GetFileNameFromUrl(attach.Url) : attach.FileName;
+                            string localFilePath = await DownloadFileAsync(httpClient, attach.Url, downloadFolderImg, fileNameToDownload);
 
                             if (!string.IsNullOrEmpty(localFilePath))
                             {
-                                var fileEntity = new Portal_Moet_FilesServicesEntities() // Tên entity có thể là Moet_File
-                                {
-                                    //Id = Guid.NewGuid(),
-                                    //NewId = newEntity.Id,
-                                    //FileName = Path.GetFileName(localFilePath),
-                                    //FilePath = $"/uploadFckFiles/news/{Path.GetFileName(localFilePath)}",
-                                    //CreatedDate = DateTime.Now
-                                };
                                 //dbFiles.Moet_Files.Add(fileEntity); // Điều chỉnh tên DbSet nếu khác
                                 using (var files = new Portal_Moet_FilesServicesEntities())
                                 {
@@ -434,11 +457,11 @@ namespace RJCodeUI_M1.TestAndDemo
                                         FileContainerName = "CMSContainerPublic",
                                         ConcurrencyStamp = Guid.NewGuid().ToString(),
                                         ExtraProperties = "{}",
-                                        //MimeType = GetMimeType(item.FileUrl),
+                                        MimeType = GetMimeType(attach.FileName),
                                         FileExtention = 2,
                                         Language = "vi",
-                                        //FullPathServer = string.Concat("/uploadFckFiles/fileThongBao/", item.FileName),
-                                        //FileName = item.FileName
+                                        FullPathServer = string.Concat("/uploadFckFiles/news/", attach.FileName),
+                                        FileName = attach.FileName
                                     };
                                     files.CMSFiles.Add(file);
                                     files.SaveChanges();
@@ -446,7 +469,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                     var fileAttach = new CMSFileAttachment()
                                     {
                                         Id = Guid.NewGuid(),
-                                        //EntityId = dsThongBao.Id,
+                                        EntityId = newEntity.Id,
                                         FileId = file.Id,
                                         ExtraProperties = "{}",
                                         ConcurrencyStamp = Guid.NewGuid().ToString(),
@@ -589,6 +612,12 @@ namespace RJCodeUI_M1.TestAndDemo
         public string Title { get; set; }
     }
 
+    public class AttachmentFile
+    {
+        public string FileName { get; set; }
+        public string Url { get; set; }
+    }
+
     public class BaiVietMoetItem
     {
         public string Title { get; set; } = "";
@@ -598,11 +627,12 @@ namespace RJCodeUI_M1.TestAndDemo
         public string Content { get; set; } = "";
         public string Author { get; set; } = "";
         public int ViewCount { get; set; } = 0;
-        public List<string> AttachmentUrls { get; set; } = new List<string>();
+        public List<AttachmentFile> Attachments { get; set; } = new List<AttachmentFile>();
 
         // Thuộc tính để DataGridView tự động bind và hiển thị thông tin các file đính kèm
-        public string FilesDisplay => AttachmentUrls != null && AttachmentUrls.Count > 0 ? string.Join(", ", AttachmentUrls) : "";
+        public string FilesDisplay => Attachments != null && Attachments.Count > 0 ? string.Join(", ", Attachments.Select(x => x.FileName)) : "";
 
         public DateTime? CreateDate { get; set; }
+        public string OldId { get; set; }
     }
 }
