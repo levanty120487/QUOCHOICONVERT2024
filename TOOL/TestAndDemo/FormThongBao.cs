@@ -106,7 +106,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                         ExtraProperties = "{}",
                                         ConcurrencyStamp = Guid.NewGuid().ToString(),
                                         CreationTime = DateTime.Now,
-                                        FileAttachmentType = 8,
+                                        FileAttachmentType = 8
                                     };
                                     files.CMSFileAttachments.Add(fileAttach);
                                     files.SaveChanges();

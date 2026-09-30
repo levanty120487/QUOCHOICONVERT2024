@@ -191,7 +191,7 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
-                        if (!detailUrl.Equals("https://moet.gov.vn/thong-ke/Pages/thong-ke-giao-duc-tieu-hoc.aspx%3FItemID=10545")) continue;
+                        if (!detailUrl.Equals("https://moet.gov.vn/thong-ke/Pages/thong-ke-giao-duc-tieu-hoc.aspx%3FItemID=6631")) continue;
 
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;
@@ -253,7 +253,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 string xpathDesc = ConvertToXPath(classDesc, true);
                 var briefNode = doc.DocumentNode.SelectSingleNode(xpathDesc);
                 if (briefNode != null)
-                    item.Description = briefNode.InnerHtml.Trim();
+                    item.Description = briefNode.InnerText.Trim();
 
                 // Nội dung
                 var contentNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'content-detail')]");
@@ -266,7 +266,7 @@ namespace RJCodeUI_M1.TestAndDemo
                     item.Author = CleanText(authorNode.InnerText);
 
                 // Lượt xem
-                var viewNode = doc.DocumentNode.SelectSingleNode("//i[contains(@class, 'vi vi-eye')]/..");
+                var viewNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'mt-10')]//i[contains(@class, 'vi vi-eye')]/..");
                 if (viewNode == null)
                     viewNode = doc.DocumentNode.SelectSingleNode("//*[contains(@class, 'vi vi-eye')]");
 
@@ -281,20 +281,30 @@ namespace RJCodeUI_M1.TestAndDemo
                 var fileAttachNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'ul-fileattach')]");
                 if (fileAttachNode != null)
                 {
-                    var pNodes = fileAttachNode.SelectNodes(".//p");
-                    if (pNodes != null)
+                    var itemNodes = fileAttachNode.SelectNodes(".//div[contains(@class, 'items')]");
+                    if (itemNodes != null)
                     {
-                        foreach (var pNode in pNodes)
+                        foreach (var iNode in itemNodes)
                         {
-                            var spanName = pNode.SelectSingleNode(".//span[contains(@class, 'click-show')]");
-                            var aDownload = pNode.SelectSingleNode(".//a[@href and contains(@class, 'btn-action-info')]") ?? pNode.SelectSingleNode(".//a[@download]") ?? pNode.SelectSingleNode(".//a[@href]");
+                            var spanName = iNode.SelectSingleNode(".//span[contains(@class, 'click-show')]");
+                            var aDownload = iNode.SelectSingleNode(".//a[@download]") ?? iNode.SelectSingleNode(".//a[@href and not(starts-with(@href, 'javascript:'))]");
 
                             if (aDownload != null)
                             {
                                 var href = aDownload.GetAttributeValue("href", "");
                                 if (!string.IsNullOrWhiteSpace(href) && !href.ToLower().StartsWith("javascript:"))
                                 {
-                                    string fileName = spanName != null ? CleanText(spanName.InnerText) : GetFileNameFromUrl(href);
+                                    string fileName = "";
+                                    if (spanName != null)
+                                    {
+                                        fileName = CleanText(spanName.InnerText).Replace("&nbsp;", " ").Replace("\u00A0", " ").Trim();
+                                    }
+                                    
+                                    if (string.IsNullOrWhiteSpace(fileName))
+                                    {
+                                        fileName = GetFileNameFromUrl(href);
+                                    }
+                                    
                                     item.Attachments.Add(new AttachmentFile { FileName = fileName, Url = ToAbsoluteUrl(detailUrl, href) });
                                 }
                             }
@@ -302,7 +312,7 @@ namespace RJCodeUI_M1.TestAndDemo
                     }
                     else
                     {
-                        // Fallback
+                        // Fallback cũ nếu không có cấu trúc div.items
                         var fileLinks = fileAttachNode.SelectNodes(".//a[@href]");
                         if (fileLinks != null)
                         {
@@ -310,7 +320,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             {
                                 var href = fNode.GetAttributeValue("href", "");
                                 if (string.IsNullOrWhiteSpace(href) || href.ToLower().StartsWith("javascript:")) continue;
-                                item.Attachments.Add(new AttachmentFile { FileName = CleanText(fNode.InnerText), Url = ToAbsoluteUrl(detailUrl, href) });
+                                item.Attachments.Add(new AttachmentFile { FileName = CleanText(fNode.InnerText).Replace("\u00A0", " ").Trim(), Url = ToAbsoluteUrl(detailUrl, href) });
                             }
                         }
                     }
@@ -460,7 +470,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                         MimeType = GetMimeType(attach.FileName),
                                         FileExtention = 2,
                                         Language = "vi",
-                                        FullPathServer = string.Concat("/uploadFckFiles/news/", attach.FileName),
+                                        FullPathServer = localFilePath,
                                         FileName = attach.FileName
                                     };
                                     files.CMSFiles.Add(file);
@@ -474,7 +484,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                         ExtraProperties = "{}",
                                         ConcurrencyStamp = Guid.NewGuid().ToString(),
                                         CreationTime = DateTime.Now,
-                                        FileAttachmentType = 8,
+                                        FileAttachmentType = 1
                                     };
                                     files.CMSFileAttachments.Add(fileAttach);
                                     files.SaveChanges();

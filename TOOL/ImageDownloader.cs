@@ -1,4 +1,4 @@
-﻿using QHBASE;
+using QHBASE;
 using RJCodeUI_M1.SPService;
 using System;
 using System.Collections;
@@ -109,6 +109,16 @@ namespace RJCodeUI_M1
                 }
                 relativePath = relativePath.Replace("%20", "");
                 fileName = fileName.Replace("%20", "");
+
+                if (fileName.Contains("_RenditionID"))
+                {
+                    fileName = fileName.Substring(0, fileName.IndexOf("_RenditionID"));
+                }
+                
+                if (relativePath.Contains("_RenditionID"))
+                {
+                    relativePath = relativePath.Substring(0, relativePath.IndexOf("_RenditionID"));
+                }
                 // Tạo đường dẫn đầy đủ để lưu ảnh trên máy chủ
                 string fullDirectoryPath = Path.Combine(rootDirectory, Path.GetDirectoryName(relativePath) ?? string.Empty);
 
@@ -122,7 +132,7 @@ namespace RJCodeUI_M1
 
                 // Đường dẫn đầy đủ của file
 
-                string fullFilePathReturn = "/uploadFckFiles/" + relativePath.Trim();
+                string fullFilePathReturn = "/uploadFckFiles/news/" + relativePath.Trim();
 
                 // Kiểm tra nếu file đã tồn tại
                 if (File.Exists(fullFilePath))
@@ -171,7 +181,7 @@ namespace RJCodeUI_M1
                 }
 
                 string fullFilePath = Path.Combine(fullDirectoryPath, fileName);
-                string fullFilePathReturn = "/uploadFckFiles/" + relativePath.Trim();
+                string fullFilePathReturn = "/uploadFckFiles/news/" + relativePath.Trim();
 
                 if (File.Exists(fullFilePath))
                 {
