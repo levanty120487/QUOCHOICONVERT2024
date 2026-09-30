@@ -44,6 +44,7 @@
     <EntitySetMapping Name="DMChuongTrinhLamViecs">
       <EntityTypeMapping TypeName="Preview_QuocHoi_PhienHopServiceModel.DMChuongTrinhLamViec">
         <MappingFragment StoreEntitySet="DMChuongTrinhLamViec">
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TenantId" ColumnName="TenantId" />
           <ScalarProperty Name="DMPhienHopId" ColumnName="DMPhienHopId" />
@@ -120,6 +121,7 @@
     <EntitySetMapping Name="NoiDungs">
       <EntityTypeMapping TypeName="Preview_QuocHoi_PhienHopServiceModel.NoiDung">
         <MappingFragment StoreEntitySet="NoiDungs">
+          <ScalarProperty Name="OldId" ColumnName="OldId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TenantId" ColumnName="TenantId" />
           <ScalarProperty Name="DMPhienHopId" ColumnName="DMPhienHopId" />
@@ -178,6 +180,7 @@
     <EntitySetMapping Name="VanKienTaiLieus">
       <EntityTypeMapping TypeName="Preview_QuocHoi_PhienHopServiceModel.VanKienTaiLieu">
         <MappingFragment StoreEntitySet="VanKienTaiLieus">
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TenantId" ColumnName="TenantId" />
           <ScalarProperty Name="DMPhienHopId" ColumnName="DMPhienHopId" />

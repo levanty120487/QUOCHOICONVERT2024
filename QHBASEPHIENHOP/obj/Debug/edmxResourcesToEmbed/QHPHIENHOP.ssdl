@@ -19,8 +19,8 @@
     <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
-    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
-    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="254" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
     <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
     <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
     <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
@@ -59,8 +59,8 @@
     <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
-    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
-    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="254" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
     <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
     <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
     <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
@@ -79,6 +79,7 @@
     <Property Name="DeleterId" Type="uniqueidentifier" />
     <Property Name="DeletionTime" Type="datetime2" Precision="7" />
     <Property Name="Type" Type="int" />
+    <Property Name="OldId" Type="int" />
   </EntityType>
   <EntityType Name="DMPhienHops">
     <Key>
@@ -132,8 +133,8 @@
     <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
-    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
-    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="254" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
     <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
     <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
     <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
@@ -148,6 +149,7 @@
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="DeleterId" Type="uniqueidentifier" />
     <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+    <Property Name="OldId" Type="int" />
   </EntityType>
   <EntityType Name="ReplyNoiDungs">
     <Key>
@@ -185,15 +187,15 @@
     <Property Name="PageTitleSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="PageUrlSEO" Type="nvarchar" MaxLength="254" />
     <Property Name="DescriptionSEO" Type="nvarchar" MaxLength="500" />
-    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="50" />
-    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="254" />
+    <Property Name="KeyMainSEO" Type="nvarchar" MaxLength="255" />
+    <Property Name="KeyWordsSEO" Type="nvarchar" MaxLength="255" />
     <Property Name="Content" Type="nvarchar(max)" />
     <Property Name="PublicDate" Type="datetime2" Precision="7" />
     <Property Name="ReadCount" Type="int" />
     <Property Name="ShareSocial" Type="bit" />
     <Property Name="IsRead" Type="bit" />
     <Property Name="Image" Type="nvarchar" MaxLength="350" />
-    <Property Name="Title" Type="nvarchar" MaxLength="254" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="500" />
     <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
@@ -205,6 +207,7 @@
     <Property Name="DeleterId" Type="uniqueidentifier" />
     <Property Name="DeletionTime" Type="datetime2" Precision="7" />
     <Property Name="OldId" Type="int" />
+    <Property Name="AttachmentId" Type="int" />
   </EntityType>
   <Association Name="FK_ChuongTrinhLamViecs_DMChuongTrinhLamViec_DMChuongTrinhLamViecId">
     <End Role="DMChuongTrinhLamViec" Type="Self.DMChuongTrinhLamViec" Multiplicity="1">

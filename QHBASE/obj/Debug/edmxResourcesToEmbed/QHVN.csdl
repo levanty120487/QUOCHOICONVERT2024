@@ -1,5 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuocHoiVNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuocHoiVNEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QuocHoiVNModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QuocHoiVNModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="DaiBieuQHs" EntityType="QuocHoiVNModel.DaiBieuQH" />
+    <EntitySet Name="LinkVietLaws" EntityType="QuocHoiVNModel.LinkVietLaw" />
+    <EntitySet Name="News" EntityType="QuocHoiVNModel.News" />
+    <EntitySet Name="NewsCats" EntityType="QuocHoiVNModel.NewsCat" />
+    <EntitySet Name="NewsEvents" EntityType="QuocHoiVNModel.NewsEvent" />
+    <EntitySet Name="TempCoQuanBanHanhs" EntityType="QuocHoiVNModel.TempCoQuanBanHanh" />
+    <EntitySet Name="TempLinhVucs" EntityType="QuocHoiVNModel.TempLinhVuc" />
+    <EntitySet Name="VanKiens" EntityType="QuocHoiVNModel.VanKien" />
+    <EntitySet Name="VanKienCats" EntityType="QuocHoiVNModel.VanKienCat" />
+    <EntitySet Name="VietLaws" EntityType="QuocHoiVNModel.VietLaw" />
+    <AssociationSet Name="NewsInEvent" Association="QuocHoiVNModel.NewsInEvent">
+      <End Role="News" EntitySet="News" />
+      <End Role="NewsEvent" EntitySet="NewsEvents" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
   <EntityType Name="DaiBieuQH">
     <Key>
       <PropertyRef Name="ID" />
@@ -7,25 +64,25 @@
       <PropertyRef Name="SourceUrl" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="HoTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Ho" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Ten" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TenThuongGoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HoTen" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ho" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ten" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TenThuongGoi" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NgaySinh" Type="DateTime" Precision="3" />
     <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
-    <Property Name="DanToc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DanToc" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="TonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="QueQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="TrinhDoHocVan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="TrinhDoChinhTri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="TrinhDoChuyenMon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="NgheNghiepChucVu" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgheNghiepChucVu" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="NoiLamViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="LaDangVienDang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NgayVaoDang" Type="DateTime" Precision="3" />
     <Property Name="KyLuat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NoiDungCu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="DaiBieuQuocHoiKhoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DaiBieuQuocHoiKhoa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="DaiBieuChuyenTrach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="DaiBieuHoiDongNhanDan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="TrinhDoVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -35,11 +92,11 @@
     <Property Name="DTDiDong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Fax" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="NoiUngCu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NoiUngCu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NoiCuTru" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="KhenThuong" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="DBQHKhoa" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="SourceUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DBQHKhoa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SourceUrl" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="AnhDaiDien" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="PhuChu" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="CoQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -83,8 +140,8 @@
     <Property Name="Keywords" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
     <Property Name="ModerationStatus" Type="Int32" />
     <Property Name="OldID" Type="Int32" />
-    <NavigationProperty Name="NewsEvents" Relationship="Self.NewsInEvent" FromRole="News" ToRole="NewsEvent" />
     <Property Name="Attachment" Type="Int32" />
+    <NavigationProperty Name="NewsEvents" Relationship="QuocHoiVNModel.NewsInEvent" FromRole="News" ToRole="NewsEvent" />
   </EntityType>
   <EntityType Name="NewsCat">
     <Key>
@@ -108,18 +165,8 @@
       <PropertyRef Name="EventID" />
     </Key>
     <Property Name="EventID" Type="Int32" Nullable="false" />
-    <Property Name="EventName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="News" Relationship="Self.NewsInEvent" FromRole="NewsEvent" ToRole="News" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="EventName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="News" Relationship="QuocHoiVNModel.NewsInEvent" FromRole="NewsEvent" ToRole="News" />
   </EntityType>
   <EntityType Name="TempCoQuanBanHanh">
     <Key>
@@ -168,6 +215,7 @@
     <Property Name="DMVanKien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="NgayTao" Type="DateTime" Precision="3" />
     <Property Name="Attachments" Type="Int32" />
+    <Property Name="ModerationStatus" Type="Int32" />
   </EntityType>
   <EntityType Name="VanKienCat">
     <Key>
@@ -209,65 +257,7 @@
     <Property Name="OldID_Index" Type="Int32" />
   </EntityType>
   <Association Name="NewsInEvent">
-    <End Role="News" Type="Self.News" Multiplicity="*" />
-    <End Role="NewsEvent" Type="Self.NewsEvent" Multiplicity="*" />
+    <End Type="QuocHoiVNModel.News" Role="News" Multiplicity="*" />
+    <End Type="QuocHoiVNModel.NewsEvent" Role="NewsEvent" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="QuocHoiVNEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="DaiBieuQHs" EntityType="Self.DaiBieuQH" />
-    <EntitySet Name="LinkVietLaws" EntityType="Self.LinkVietLaw" />
-    <EntitySet Name="News" EntityType="Self.News" />
-    <EntitySet Name="NewsCats" EntityType="Self.NewsCat" />
-    <EntitySet Name="NewsEvents" EntityType="Self.NewsEvent" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="TempCoQuanBanHanhs" EntityType="Self.TempCoQuanBanHanh" />
-    <EntitySet Name="TempLinhVucs" EntityType="Self.TempLinhVuc" />
-    <EntitySet Name="VanKiens" EntityType="Self.VanKien" />
-    <EntitySet Name="VanKienCats" EntityType="Self.VanKienCat" />
-    <EntitySet Name="VietLaws" EntityType="Self.VietLaw" />
-    <AssociationSet Name="NewsInEvent" Association="Self.NewsInEvent">
-      <End Role="News" EntitySet="News" />
-      <End Role="NewsEvent" EntitySet="NewsEvents" />
-    </AssociationSet>
-    <FunctionImport Name="sp_alterdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_creatediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_dropdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QuocHoiVNModel.sp_helpdiagramdefinition_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QuocHoiVNModel.sp_helpdiagrams_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_renamediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="new_diagramname" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="sp_upgraddiagrams" />
-  </EntityContainer>
-  <ComplexType Name="sp_helpdiagramdefinition_Result">
-    <Property Type="Int32" Name="version" Nullable="true" />
-    <Property Type="Binary" Name="definition" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagrams_Result">
-    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-    <Property Type="Int32" Name="OwnerID" Nullable="false" />
-  </ComplexType>
 </Schema>

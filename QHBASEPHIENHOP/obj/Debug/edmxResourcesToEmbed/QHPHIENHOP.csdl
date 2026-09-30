@@ -19,8 +19,8 @@
     <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="KeyWordsSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -60,8 +60,8 @@
     <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="KeyWordsSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -82,6 +82,7 @@
     <Property Name="Type" Type="Int32" />
     <NavigationProperty Name="ChuongTrinhLamViecs" Relationship="Self.FK_ChuongTrinhLamViecs_DMChuongTrinhLamViec_DMChuongTrinhLamViecId" FromRole="DMChuongTrinhLamViec" ToRole="ChuongTrinhLamViecs" />
     <NavigationProperty Name="DMPhienHop" Relationship="Self.FK_DMChuongTrinhLamViec_DMPhienHops_DMPhienHopId" FromRole="DMChuongTrinhLamViec" ToRole="DMPhienHops" />
+    <Property Name="OldId" Type="Int32" />
   </EntityType>
   <EntityType Name="DMPhienHop">
     <Key>
@@ -138,8 +139,8 @@
     <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="KeyWordsSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -155,6 +156,7 @@
     <Property Name="DeleterId" Type="Guid" />
     <Property Name="DeletionTime" Type="DateTime" Precision="7" />
     <NavigationProperty Name="DMPhienHop" Relationship="Self.FK_NoiDungs_DMPhienHops_DMPhienHopId" FromRole="NoiDungs" ToRole="DMPhienHops" />
+    <Property Name="OldId" Type="Int32" />
   </EntityType>
   <EntityType Name="ReplyNoiDung">
     <Key>
@@ -193,15 +195,15 @@
     <Property Name="PageTitleSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="PageUrlSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
     <Property Name="DescriptionSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="KeyMainSEO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="KeyWordsSEO" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="KeyMainSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KeyWordsSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="PublicDate" Type="DateTime" Precision="7" />
     <Property Name="ReadCount" Type="Int32" />
     <Property Name="ShareSocial" Type="Boolean" />
     <Property Name="IsRead" Type="Boolean" />
     <Property Name="Image" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-    <Property Name="Title" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
@@ -215,6 +217,7 @@
     <Property Name="OldId" Type="Int32" />
     <NavigationProperty Name="DMPhienHop" Relationship="Self.FK_VanKienTaiLieus_DMPhienHops_DMPhienHopId" FromRole="VanKienTaiLieus" ToRole="DMPhienHops" />
     <NavigationProperty Name="VanKienMapCQBHs" Relationship="Self.FK_VanKienMapCQBHs_VanKienTaiLieus_VanKienTaiLieuId" FromRole="VanKienTaiLieus" ToRole="VanKienMapCQBHs" />
+    <Property Name="AttachmentId" Type="Int32" />
   </EntityType>
   <Association Name="FK_ChuongTrinhLamViecs_DMChuongTrinhLamViec_DMChuongTrinhLamViecId">
     <End Role="DMChuongTrinhLamViec" Type="Self.DMChuongTrinhLamViec" Multiplicity="1">

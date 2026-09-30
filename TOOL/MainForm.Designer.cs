@@ -71,6 +71,7 @@
             this.rjBtnCoQuanBanHanh = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.rptMenuThongBao = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.rjMenuButton1 = new RJCodeUI_M1.RJControls.RJMenuButton();
+            this.rjMenuButton2 = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.pnlSideMenu.SuspendLayout();
             this.pnlSideMenuHeader.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // pnlSideMenu
             // 
+            this.pnlSideMenu.Controls.Add(this.rjMenuButton2);
             this.pnlSideMenu.Controls.Add(this.rjMenuButton1);
             this.pnlSideMenu.Controls.Add(this.rptMenuThongBao);
             this.pnlSideMenu.Controls.Add(this.rjBtnCoQuanBanHanh);
@@ -106,6 +108,7 @@
             this.pnlSideMenu.Controls.SetChildIndex(this.rjBtnCoQuanBanHanh, 0);
             this.pnlSideMenu.Controls.SetChildIndex(this.rptMenuThongBao, 0);
             this.pnlSideMenu.Controls.SetChildIndex(this.rjMenuButton1, 0);
+            this.pnlSideMenu.Controls.SetChildIndex(this.rjMenuButton2, 0);
             // 
             // pnlSideMenuHeader
             // 
@@ -657,6 +660,31 @@
             this.rjMenuButton1.UseVisualStyleBackColor = false;
             this.rjMenuButton1.Click += new System.EventHandler(this.rjMenuButton1_Click_1);
             // 
+            // rjMenuButton2
+            // 
+            this.rjMenuButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
+            this.rjMenuButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rjMenuButton2.DropdownMenu = null;
+            this.rjMenuButton2.FlatAppearance.BorderSize = 0;
+            this.rjMenuButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjMenuButton2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjMenuButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.rjMenuButton2.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
+            this.rjMenuButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.rjMenuButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.rjMenuButton2.IconSize = 28;
+            this.rjMenuButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjMenuButton2.Location = new System.Drawing.Point(0, 615);
+            this.rjMenuButton2.Name = "rjMenuButton2";
+            this.rjMenuButton2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.rjMenuButton2.Size = new System.Drawing.Size(220, 55);
+            this.rjMenuButton2.TabIndex = 15;
+            this.rjMenuButton2.Text = "   Danh sách bài viết Moet";
+            this.rjMenuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjMenuButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rjMenuButton2.UseVisualStyleBackColor = false;
+            this.rjMenuButton2.Click += new System.EventHandler(this.rjMenuButton2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -732,5 +760,6 @@
         private RJControls.RJMenuButton rjBtnCoQuanBanHanh;
         private RJControls.RJMenuButton rptMenuThongBao;
         private RJControls.RJMenuButton rjMenuButton1;
+        private RJControls.RJMenuButton rjMenuButton2;
     }
 }

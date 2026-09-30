@@ -109,6 +109,12 @@
     <Property Name="EventID" Type="int" Nullable="false" />
     <Property Name="EventName" Type="nvarchar" MaxLength="500" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QuocHoiVN.dbo.NewsInCat' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NewsInCat">
+          <Property Name="NewsID" Type="int" />
+          <Property Name="CatsID" Type="int" />
+        </EntityType>-->
   <EntityType Name="NewsInEvent">
     <Key>
       <PropertyRef Name="NewsID" />
@@ -116,16 +122,6 @@
     </Key>
     <Property Name="NewsID" Type="int" Nullable="false" />
     <Property Name="EventID" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TempCoQuanBanHanh">
     <Key>
@@ -174,6 +170,7 @@
     <Property Name="DMVanKien" Type="nvarchar(max)" />
     <Property Name="NgayTao" Type="datetime" />
     <Property Name="Attachments" Type="int" />
+    <Property Name="ModerationStatus" Type="int" />
   </EntityType>
   <EntityType Name="VanKienCat">
     <Key>
@@ -276,7 +273,6 @@
     <EntitySet Name="NewsCat" EntityType="Self.NewsCat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NewsEvent" EntityType="Self.NewsEvent" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NewsInEvent" EntityType="Self.NewsInEvent" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TempCoQuanBanHanh" EntityType="Self.TempCoQuanBanHanh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TempLinhVuc" EntityType="Self.TempLinhVuc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VanKien" EntityType="Self.VanKien" Schema="dbo" store:Type="Tables" />

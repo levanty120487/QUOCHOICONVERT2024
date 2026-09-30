@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -276,6 +276,16 @@ namespace RJCodeUI_M1
         private void rjMenuButton1_Click_1(object sender, EventArgs e)
         {
             this.OpenChildForm(() => new FormHoiDap(), sender);
+        }
+
+        private void btnCloneMoetNews_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetNews(), sender);
+        }
+
+        private void rjMenuButton2_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetNews(), sender);
         }
     }
 }
