@@ -23,8 +23,18 @@ namespace RJCodeUI_M1.TestAndDemo
             InitializeComponent();
         }
 
+        private Label lblStatus;
+
         private void FormCloneMoetNews_Load(object sender, EventArgs e)
         {
+            lblStatus = new Label();
+            lblStatus.AutoSize = true;
+            lblStatus.ForeColor = System.Drawing.Color.Red;
+            lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            lblStatus.Location = new System.Drawing.Point(20, 168);
+            lblStatus.Text = "";
+            pnlClientArea.Controls.Add(lblStatus);
+
             LoadCategories();
         }
 
@@ -34,17 +44,42 @@ namespace RJCodeUI_M1.TestAndDemo
             {
                 using (var db = new Portal_Moet_NewsServicesEntities()) // Giả sử tên context là Moet_NewsEntities, đổi lại nếu sai
                 {
-                    // Lấy danh mục, nếu có phân cấp có thể format lại chuỗi hiển thị
                     var categories = db.Categories.ToList();
-                    cboCategory.DataSource = categories;
-                    cboCategory.DisplayMember = "Title"; // Cần map đúng cột tên danh mục
+                    var flatList = new List<CategoryDisplayItem>();
+                    BuildCategoryTree(categories, "", "", flatList);
+                    
+                    cboCategory.DataSource = flatList;
+                    cboCategory.DisplayMember = "Title"; 
                     cboCategory.ValueMember = "Id";
                 }
             }
             catch (Exception ex)
             {
-                // Nếu chưa build project hoặc tên Entities chưa đúng sẽ lỗi. Tạm bắt lỗi.
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void BuildCategoryTree(IEnumerable<Category> allCategories, string parentIdStr, string prefix, List<CategoryDisplayItem> result)
+        {
+            // Lấy danh sách con dựa trên ParentID (chú ý: nếu parentIdStr rỗng thì lấy những Category không có ParentID)
+            var children = allCategories.Where(c => 
+                string.Equals(c.ParentID ?? "", parentIdStr ?? "", StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+
+            foreach (var child in children)
+            {
+                result.Add(new CategoryDisplayItem { Id = child.Id, Title = prefix + child.Title });
+                BuildCategoryTree(allCategories, child.Id ?? "", prefix + "--- ", result);
+            }
+            
+            // Fallback: Nếu không tìm thấy node gốc nào (do dữ liệu rác, không có ParentID rỗng), 
+            // đẩy tất cả vào danh sách phẳng để không bị mất dữ liệu.
+            if (string.IsNullOrEmpty(parentIdStr) && result.Count == 0)
+            {
+                foreach(var c in allCategories)
+                {
+                    result.Add(new CategoryDisplayItem { Id = c.Id, Title = c.Title });
+                }
             }
         }
 
@@ -64,6 +99,10 @@ namespace RJCodeUI_M1.TestAndDemo
                 string classAvatar = string.IsNullOrWhiteSpace(txtClassAvatar.Text) ? ".//div[contains(@class, 'left-type2')]//div[contains(@class, 'post-image')]//img" : txtClassAvatar.Text.Trim();
                 string classDesc = string.IsNullOrWhiteSpace(txtClassDescription.Text) ? "//div[contains(@class, 'article-brief')]" : txtClassDescription.Text.Trim();
 
+                string originalBtnText = btnReadData.Text;
+                btnReadData.Enabled = false;
+                lblStatus.Text = "Bắt đầu đọc dữ liệu...";
+
                 for (int i = 1; i <= totalPages; i++)
                 {
                     string pageUrl = baseUrl; 
@@ -72,10 +111,14 @@ namespace RJCodeUI_M1.TestAndDemo
                         pageUrl = $"{baseUrl}?&orderBy=publishTime DESC&itemsPerPage=10&pageNo={i}";
                     }
                     
-                    var items = await ReadListPageAsync(pageUrl, classList, classItem, classTitle, classDate, classAvatar, classDesc);
+                    var items = await ReadListPageAsync(pageUrl, classList, classItem, classTitle, classDate, classAvatar, classDesc, i);
                     if (items != null)
                         parsedData.AddRange(items);
                 }
+
+                btnReadData.Text = originalBtnText;
+                btnReadData.Enabled = true;
+                lblStatus.Text = $"Hoàn tất! Đã đọc {parsedData.Count} bản ghi.";
 
                 dgvData.DataSource = null;
                 dgvData.DataSource = parsedData;
@@ -83,6 +126,8 @@ namespace RJCodeUI_M1.TestAndDemo
             }
             catch (Exception ex)
             {
+                btnReadData.Enabled = true;
+                btnReadData.Text = "Đọc dữ liệu";
                 MessageBox.Show("Lỗi đọc dữ liệu: " + ex.Message);
             }
         }
@@ -105,7 +150,7 @@ namespace RJCodeUI_M1.TestAndDemo
             return xpath;
         }
 
-        private async Task<List<BaiVietMoetItem>> ReadListPageAsync(string pageUrl, string classList, string classItem, string classTitle, string classDate, string classAvatar, string classDesc)
+        private async Task<List<BaiVietMoetItem>> ReadListPageAsync(string pageUrl, string classList, string classItem, string classTitle, string classDate, string classAvatar, string classDesc, int currentPageIndex)
         {
             var result = new List<BaiVietMoetItem>();
             using (var httpClient = new HttpClient())
@@ -124,18 +169,22 @@ namespace RJCodeUI_M1.TestAndDemo
                 string xPathDate = ConvertToXPath(classDate, false);
                 string xPathAvatar = ConvertToXPath(classAvatar, false);
 
+                int itemIndex = 0;
                 foreach (var listNode in listNodes)
                 {
                     var itemNodes = listNode.SelectNodes(xPathItem);
                     if (itemNodes == null)
                     {
-                        // Fallback nếu không bóc được item
                         itemNodes = new HtmlAgilityPack.HtmlNodeCollection(listNode);
                         itemNodes.Add(listNode);
                     }
 
                     foreach (var itemNode in itemNodes)
                     {
+                        itemIndex++;
+                        lblStatus.Text = $"Đã đọc trang {currentPageIndex}/ bản ghi thứ {itemIndex}";
+                        Application.DoEvents();
+
                         var titleNode = itemNode.SelectSingleNode(xPathTitle);
                         if (titleNode == null) continue;
 
@@ -264,14 +313,25 @@ namespace RJCodeUI_M1.TestAndDemo
             string downloadFolderImg = @"C:\uploadFckFiles\news";
             Directory.CreateDirectory(downloadFolderImg);
 
+            string originalBtnText = btnSaveData.Text;
+            btnSaveData.Enabled = false;
+            lblStatus.Text = "Bắt đầu lưu dữ liệu...";
+
             try
             {
                 using (var dbNews = new Portal_Moet_NewsServicesEntities())
                 using (var dbFiles = new Portal_Moet_FilesServicesEntities())
                 using (var httpClient = new HttpClient())
                 {
+                    int currentIndex = 0;
+                    int totalItems = parsedData.Count;
+
                     foreach (var item in parsedData)
                     {
+                        currentIndex++;
+                        lblStatus.Text = $"Đang lưu bản ghi thứ {currentIndex}/{totalItems}...";
+                        Application.DoEvents();
+
                         // Tải file avatar nếu có
                         string localAvatarUrl = string.Empty;
                         if (!string.IsNullOrEmpty(item.AvatarUrl))
@@ -294,6 +354,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             //CreatedDate = DateTime.Now,
                             //CreatedBy = "Admin"
                         };
+
                         dbNews.News.Add(newEntity);
                         dbNews.SaveChanges();
 
@@ -320,10 +381,14 @@ namespace RJCodeUI_M1.TestAndDemo
                     }
                 }
 
+                btnSaveData.Text = originalBtnText;
+                btnSaveData.Enabled = true;
                 MessageBox.Show("Lưu dữ liệu thành công!");
             }
             catch (Exception ex)
             {
+                btnSaveData.Enabled = true;
+                btnSaveData.Text = "Lưu dữ liệu";
                 MessageBox.Show("Lỗi lưu dữ liệu: " + ex.Message);
             }
         }
@@ -393,6 +458,12 @@ namespace RJCodeUI_M1.TestAndDemo
         }
     }
 
+    public class CategoryDisplayItem
+    {
+        public object Id { get; set; }
+        public string Title { get; set; }
+    }
+
     public class BaiVietMoetItem
     {
         public string Title { get; set; } = "";
@@ -403,5 +474,8 @@ namespace RJCodeUI_M1.TestAndDemo
         public string Author { get; set; } = "";
         public int ViewCount { get; set; } = 0;
         public List<string> AttachmentUrls { get; set; } = new List<string>();
+        
+        // Thuộc tính để DataGridView tự động bind và hiển thị thông tin các file đính kèm
+        public string FilesDisplay => AttachmentUrls != null && AttachmentUrls.Count > 0 ? string.Join(", ", AttachmentUrls) : "";
     }
 }
