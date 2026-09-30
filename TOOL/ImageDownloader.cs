@@ -71,8 +71,8 @@ namespace RJCodeUI_M1
         {
             try
             {
-                string hosturl = "https://www.vr.org.vn";
-                string rootDirectory = "D:\\uploadFckFiles";
+                string hosturl = "https://moet.gov.vn";
+                string rootDirectory = "C:\\uploadFckFiles\\news";
                 #region tên file/ đường dẫn
                 var fileName = string.Empty;
                 var fileUrl = imageUrl;
@@ -154,7 +154,7 @@ namespace RJCodeUI_M1
         {
             try
             {
-                string rootDirectory = "E:\\uploadFckFiles";
+                string rootDirectory = "C:\\uploadFckFiles\\news";
                 string relativePath = imageUrl.TrimStart('/');
                 string fileName = Path.GetFileName(imageUrl);
                 Uri uri = new Uri(imageUrl);

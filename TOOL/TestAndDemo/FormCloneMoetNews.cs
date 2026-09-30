@@ -47,9 +47,9 @@ namespace RJCodeUI_M1.TestAndDemo
                     var categories = db.Categories.ToList();
                     var flatList = new List<CategoryDisplayItem>();
                     BuildCategoryTree(categories, "", "", flatList);
-                    
+
                     cboCategory.DataSource = flatList;
-                    cboCategory.DisplayMember = "Title"; 
+                    cboCategory.DisplayMember = "Title";
                     cboCategory.ValueMember = "Id";
                 }
             }
@@ -62,7 +62,7 @@ namespace RJCodeUI_M1.TestAndDemo
         private void BuildCategoryTree(IEnumerable<Category> allCategories, string parentIdStr, string prefix, List<CategoryDisplayItem> result)
         {
             // Lấy danh sách con dựa trên ParentID (chú ý: nếu parentIdStr rỗng thì lấy những Category không có ParentID)
-            var children = allCategories.Where(c => 
+            var children = allCategories.Where(c =>
                 string.Equals(c.ParentID ?? "", parentIdStr ?? "", StringComparison.OrdinalIgnoreCase)
             ).ToList();
 
@@ -71,12 +71,12 @@ namespace RJCodeUI_M1.TestAndDemo
                 result.Add(new CategoryDisplayItem { Id = child.Id, Title = prefix + child.Title });
                 BuildCategoryTree(allCategories, child.Id ?? "", prefix + "--- ", result);
             }
-            
+
             // Fallback: Nếu không tìm thấy node gốc nào (do dữ liệu rác, không có ParentID rỗng), 
             // đẩy tất cả vào danh sách phẳng để không bị mất dữ liệu.
             if (string.IsNullOrEmpty(parentIdStr) && result.Count == 0)
             {
-                foreach(var c in allCategories)
+                foreach (var c in allCategories)
                 {
                     result.Add(new CategoryDisplayItem { Id = c.Id, Title = c.Title });
                 }
@@ -91,7 +91,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 int totalPages = 1;
                 int.TryParse(txtTotalPages.Text, out totalPages);
                 string baseUrl = txtWebUrl.Text.Trim();
-                
+
                 string classList = string.IsNullOrWhiteSpace(txtClassList.Text) ? "//div[contains(@class, 'nav-item list-news-one')]//div[contains(@class, 'list-new')]" : txtClassList.Text.Trim();
                 string classItem = string.IsNullOrWhiteSpace(txtClassItem.Text) ? ".//div[contains(@class, 'article-item')]" : txtClassItem.Text.Trim();
                 string classTitle = string.IsNullOrWhiteSpace(txtClassTitle.Text) ? ".//div[contains(@class, 'right-type2')]//a" : txtClassTitle.Text.Trim();
@@ -105,12 +105,12 @@ namespace RJCodeUI_M1.TestAndDemo
 
                 for (int i = 1; i <= totalPages; i++)
                 {
-                    string pageUrl = baseUrl; 
-                    if (totalPages > 1 && i > 1) 
+                    string pageUrl = baseUrl;
+                    if (totalPages > 1 && i > 1)
                     {
                         pageUrl = $"{baseUrl}?&orderBy=publishTime DESC&itemsPerPage=10&pageNo={i}";
                     }
-                    
+
                     var items = await ReadListPageAsync(pageUrl, classList, classItem, classTitle, classDate, classAvatar, classDesc, i);
                     if (items != null)
                         parsedData.AddRange(items);
@@ -136,7 +136,7 @@ namespace RJCodeUI_M1.TestAndDemo
         {
             if (string.IsNullOrWhiteSpace(input)) return "";
             if (input.StartsWith("/") || input.StartsWith("./")) return input;
-            
+
             // Xử lý cú pháp pseudo (ví dụ: div[class='article-item'])
             string xpath = input.Replace("[class=", "[@class=");
             if (isRoot)
@@ -215,7 +215,7 @@ namespace RJCodeUI_M1.TestAndDemo
 
                         // Tải trang chi tiết để bóc thông tin Description và các thông tin khác
                         await ParseDetailAsync(httpClient, item, detailUrl, classDesc);
-                        
+
                         result.Add(item);
                     }
                 }
@@ -254,7 +254,7 @@ namespace RJCodeUI_M1.TestAndDemo
 
                 // Lượt xem
                 var viewNode = doc.DocumentNode.SelectSingleNode("//i[contains(@class, 'vi vi-eye')]/..");
-                if (viewNode == null) 
+                if (viewNode == null)
                     viewNode = doc.DocumentNode.SelectSingleNode("//*[contains(@class, 'vi vi-eye')]");
 
                 if (viewNode != null)
@@ -304,11 +304,13 @@ namespace RJCodeUI_M1.TestAndDemo
                 return;
             }
 
-            Guid categoryId;
-            if (!Guid.TryParse(cboCategory.SelectedValue.ToString(), out categoryId))
+            var categoryId = cboCategory.SelectedValue.ToString();
+            if (string.IsNullOrWhiteSpace(categoryId))
             {
-                // Nếu ID kiểu int thì chỉnh sửa lại ở đây
+                MessageBox.Show("Vui lòng chọn danh mục!");
+                return;
             }
+                
 
             string downloadFolderImg = @"C:\uploadFckFiles\news";
             Directory.CreateDirectory(downloadFolderImg);
@@ -345,16 +347,63 @@ namespace RJCodeUI_M1.TestAndDemo
                         {
                             //Id = Guid.NewGuid(), // Nếu auto generate thì không cần
                             //CategoryId = categoryId, // Điều chỉnh kiểu nếu cần
-                            Title = item.Title,
-                            Description = item.Description,
-                            Content = item.Content,
-                            Author = item.Author,
+                            //Title = item.Title,
+                            //Description = item.Description,
+                            //Content = item.Content,
+                            //Author = item.Author,
                             //ViewCount = item.ViewCount,
                             //ImageUrl = string.IsNullOrEmpty(localAvatarUrl) ? "" : $"/uploadFckFiles/news/{Path.GetFileName(localAvatarUrl)}",
                             //CreatedDate = DateTime.Now,
                             //CreatedBy = "Admin"
-                        };
 
+                            Id = QHCommons.GenAutoId(),
+                            Title = item.Title,
+                            ConcurrencyStamp = Guid.NewGuid().ToString(),
+                            DatePublic = item.CreateDate,
+                            Status = 6,
+                            Author = item.Author,
+                            ReadCount = item.ViewCount,
+                            CreationTime = DateTime.Now,
+                            Description = item.Description,
+                            DescriptionSEO = item.Description,
+                            PageTitleSEO = item.Title,
+                            Hot = false,
+                            Source = string.Empty,
+                            Shared = true,
+                            Language = "vi",
+                            ExtraProperties = "{}",
+                            OldId = string.Empty,
+                            TypeNewContent = 3, //=> tin bai
+                            TypeNewId = Guid.Parse("69E83D8B-3C4B-43AA-B554-B6B23C935718"), //=> tin bai
+                            CreatorName = "admin",
+                            ShowDescription = true,
+                            AllowComment = false
+                        };
+                        // Tải ảnh bất đồng bộ
+                        if (!string.IsNullOrEmpty(item.AvatarUrl))
+                        {
+                            newEntity.Image = await ImageDownloader.DownloadImageAsyncurl(item.AvatarUrl.Trim());
+                        }
+                        // Xử lý ảnh trong nội dung tin
+                        if (!string.IsNullOrEmpty(newEntity.Content))
+                        {
+                            HtmlAgilityPack.HtmlDocument newsDocument = new HtmlAgilityPack.HtmlDocument();
+                            newsDocument.LoadHtml(newEntity.Content);
+                            var imagesNode = newsDocument.DocumentNode.SelectNodes(".//img");
+                            if (imagesNode != null)
+                            {
+                                foreach (var img in imagesNode)
+                                {
+                                    if (img.Attributes["src"] != null)
+                                    {
+                                        img.Attributes["src"].Value = img.Attributes["src"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://");
+                                        img.Attributes["src"].Value = await ImageDownloader.DownloadImageAsyncurl(img.Attributes["src"].Value.Trim());
+
+                                    }
+                                }
+                            }
+                            newEntity.Content = newsDocument.DocumentNode.OuterHtml;
+                        }
                         dbNews.News.Add(newEntity);
                         dbNews.SaveChanges();
 
@@ -375,9 +424,53 @@ namespace RJCodeUI_M1.TestAndDemo
                                     //CreatedDate = DateTime.Now
                                 };
                                 //dbFiles.Moet_Files.Add(fileEntity); // Điều chỉnh tên DbSet nếu khác
+                                using (var files = new Portal_Moet_FilesServicesEntities())
+                                {
+                                    var file = new CMSFile()
+                                    {
+                                        Id = Guid.NewGuid(),
+                                        FileType = 2,
+                                        CreationTime = DateTime.Now,
+                                        FileContainerName = "CMSContainerPublic",
+                                        ConcurrencyStamp = Guid.NewGuid().ToString(),
+                                        ExtraProperties = "{}",
+                                        //MimeType = GetMimeType(item.FileUrl),
+                                        FileExtention = 2,
+                                        Language = "vi",
+                                        //FullPathServer = string.Concat("/uploadFckFiles/fileThongBao/", item.FileName),
+                                        //FileName = item.FileName
+                                    };
+                                    files.CMSFiles.Add(file);
+                                    files.SaveChanges();
+                                    #region Insert fileAttachment
+                                    var fileAttach = new CMSFileAttachment()
+                                    {
+                                        Id = Guid.NewGuid(),
+                                        //EntityId = dsThongBao.Id,
+                                        FileId = file.Id,
+                                        ExtraProperties = "{}",
+                                        ConcurrencyStamp = Guid.NewGuid().ToString(),
+                                        CreationTime = DateTime.Now,
+                                        FileAttachmentType = 8,
+                                    };
+                                    files.CMSFileAttachments.Add(fileAttach);
+                                    files.SaveChanges();
+                                    #endregion
+                                }
                             }
                         }
                         dbFiles.SaveChanges();
+
+                        #region NewCategory
+                        var newCategory = new NewCategory()
+                        {
+                            CategoryId = categoryId,
+                            Id = Guid.NewGuid(),
+                            NewId = newEntity.Id
+                        };
+                        dbNews.NewCategories.Add(newCategory);
+                        dbNews.SaveChanges();
+                        #endregion
                     }
                 }
 
@@ -418,7 +511,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 using (var response = await httpClient.GetAsync(fileUrl))
                 {
                     if (!response.IsSuccessStatusCode) return string.Empty;
-                    
+
                     fileName = Regex.Replace(fileName, @"[^a-zA-Z0-9.\s]", "").Replace(" ", "_");
                     string fullPath = Path.Combine(folder, fileName);
 
@@ -456,6 +549,38 @@ namespace RJCodeUI_M1.TestAndDemo
         {
 
         }
+
+        public static string GetMimeType(string fileName)
+        {
+            string ext = Path.GetExtension(fileName).ToLower();
+
+            switch (ext)
+            {
+                case ".pdf":
+                    return "application/pdf";
+                case ".doc":
+                    return "application/msword";
+                case ".docx":
+                    return "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+                case ".xls":
+                    return "application/vnd.ms-excel";
+                case ".xlsx":
+                    return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                case ".png":
+                    return "image/png";
+                case ".jpg":
+                case ".jpeg":
+                    return "image/jpeg";
+                case ".gif":
+                    return "image/gif";
+                case ".txt":
+                    return "text/plain";
+                case ".zip":
+                    return "application/zip";
+                default:
+                    return "application/octet-stream";
+            }
+        }
     }
 
     public class CategoryDisplayItem
@@ -474,8 +599,10 @@ namespace RJCodeUI_M1.TestAndDemo
         public string Author { get; set; } = "";
         public int ViewCount { get; set; } = 0;
         public List<string> AttachmentUrls { get; set; } = new List<string>();
-        
+
         // Thuộc tính để DataGridView tự động bind và hiển thị thông tin các file đính kèm
         public string FilesDisplay => AttachmentUrls != null && AttachmentUrls.Count > 0 ? string.Join(", ", AttachmentUrls) : "";
+
+        public DateTime? CreateDate { get; set; }
     }
 }
