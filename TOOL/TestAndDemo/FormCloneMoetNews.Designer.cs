@@ -34,6 +34,8 @@ namespace RJCodeUI_M1.TestAndDemo
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtClassItem = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtClassDescription = new System.Windows.Forms.TextBox();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +43,8 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.label9);
+            this.pnlClientArea.Controls.Add(this.txtClassDescription);
             this.pnlClientArea.Controls.Add(this.label8);
             this.pnlClientArea.Controls.Add(this.txtClassItem);
             this.pnlClientArea.Controls.Add(this.label7);
@@ -85,30 +89,27 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtClassList.Name = "txtClassList";
             this.txtClassList.Size = new System.Drawing.Size(250, 25);
             this.txtClassList.TabIndex = 2;
-            this.txtClassList.Text = "nav-item list-news-one";
             // 
             // txtClassTitle
             // 
-            this.txtClassTitle.Location = new System.Drawing.Point(550, 60);
+            this.txtClassTitle.Location = new System.Drawing.Point(634, 60);
             this.txtClassTitle.Name = "txtClassTitle";
             this.txtClassTitle.Size = new System.Drawing.Size(250, 25);
             this.txtClassTitle.TabIndex = 3;
             // 
             // txtClassDate
             // 
-            this.txtClassDate.Location = new System.Drawing.Point(550, 100);
+            this.txtClassDate.Location = new System.Drawing.Point(634, 142);
             this.txtClassDate.Name = "txtClassDate";
             this.txtClassDate.Size = new System.Drawing.Size(250, 25);
             this.txtClassDate.TabIndex = 4;
-            this.txtClassDate.Text = "article-date";
             // 
             // txtClassAvatar
             // 
-            this.txtClassAvatar.Location = new System.Drawing.Point(550, 140);
+            this.txtClassAvatar.Location = new System.Drawing.Point(634, 182);
             this.txtClassAvatar.Name = "txtClassAvatar";
             this.txtClassAvatar.Size = new System.Drawing.Size(250, 25);
             this.txtClassAvatar.TabIndex = 5;
-            this.txtClassAvatar.Text = "post-image";
             // 
             // txtTotalPages
             // 
@@ -141,11 +142,11 @@ namespace RJCodeUI_M1.TestAndDemo
             // dgvData
             // 
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(20, 190);
+            this.dgvData.Location = new System.Drawing.Point(20, 235);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(780, 372);
+            this.dgvData.Size = new System.Drawing.Size(864, 327);
             this.dgvData.TabIndex = 9;
             // 
             // label1
@@ -187,7 +188,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(430, 103);
+            this.label5.Location = new System.Drawing.Point(430, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 4;
@@ -196,7 +197,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(430, 143);
+            this.label6.Location = new System.Drawing.Point(430, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 20);
             this.label6.TabIndex = 3;
@@ -222,11 +223,26 @@ namespace RJCodeUI_M1.TestAndDemo
             // 
             // txtClassItem
             // 
-            this.txtClassItem.Location = new System.Drawing.Point(550, 18);
+            this.txtClassItem.Location = new System.Drawing.Point(634, 18);
             this.txtClassItem.Name = "txtClassItem";
             this.txtClassItem.Size = new System.Drawing.Size(250, 25);
             this.txtClassItem.TabIndex = 10;
-            this.txtClassItem.Text = "article-item";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(430, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(136, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Class Description:";
+            // 
+            // txtClassDescription
+            // 
+            this.txtClassDescription.Location = new System.Drawing.Point(634, 103);
+            this.txtClassDescription.Name = "txtClassDescription";
+            this.txtClassDescription.Size = new System.Drawing.Size(250, 25);
+            this.txtClassDescription.TabIndex = 12;
             // 
             // FormCloneMoetNews
             // 
@@ -266,5 +282,7 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtClassItem;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtClassDescription;
     }
 }

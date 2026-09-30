@@ -57,19 +57,22 @@ namespace RJCodeUI_M1.TestAndDemo
                 int.TryParse(txtTotalPages.Text, out totalPages);
                 string baseUrl = txtWebUrl.Text.Trim();
                 
-                string classList = string.IsNullOrWhiteSpace(txtClassList.Text) ? "nav-item list-news-one" : txtClassList.Text.Trim();
+                string classList = string.IsNullOrWhiteSpace(txtClassList.Text) ? "//div[contains(@class, 'nav-item list-news-one')]//div[contains(@class, 'list-new')]" : txtClassList.Text.Trim();
+                string classItem = string.IsNullOrWhiteSpace(txtClassItem.Text) ? ".//div[contains(@class, 'article-item')]" : txtClassItem.Text.Trim();
+                string classTitle = string.IsNullOrWhiteSpace(txtClassTitle.Text) ? ".//div[contains(@class, 'right-type2')]//a" : txtClassTitle.Text.Trim();
+                string classDate = string.IsNullOrWhiteSpace(txtClassDate.Text) ? ".//div[contains(@class, 'right-type2')]//div[contains(@class, 'article-date')]" : txtClassDate.Text.Trim();
+                string classAvatar = string.IsNullOrWhiteSpace(txtClassAvatar.Text) ? ".//div[contains(@class, 'left-type2')]//div[contains(@class, 'post-image')]//img" : txtClassAvatar.Text.Trim();
+                string classDesc = string.IsNullOrWhiteSpace(txtClassDescription.Text) ? "//div[contains(@class, 'article-brief')]" : txtClassDescription.Text.Trim();
 
                 for (int i = 1; i <= totalPages; i++)
                 {
-                    // Giả sử phân trang theo param page hoặc url. Tùy trang web. Ở đây ví dụ append url.
                     string pageUrl = baseUrl; 
                     if (totalPages > 1 && i > 1) 
                     {
-                        // TODO: Adjust paging logic if needed.
-                        pageUrl = pageUrl.EndsWith("/") ? $"{pageUrl}page/{i}" : $"{pageUrl}/page/{i}";
+                        pageUrl = $"{baseUrl}?&orderBy=publishTime DESC&itemsPerPage=10&pageNo={i}";
                     }
                     
-                    var items = await ReadListPageAsync(pageUrl, classList);
+                    var items = await ReadListPageAsync(pageUrl, classList, classItem, classTitle, classDate, classAvatar, classDesc);
                     if (items != null)
                         parsedData.AddRange(items);
                 }
@@ -84,7 +87,25 @@ namespace RJCodeUI_M1.TestAndDemo
             }
         }
 
-        private async Task<List<BaiVietMoetItem>> ReadListPageAsync(string pageUrl, string classList)
+        private string ConvertToXPath(string input, bool isRoot)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return "";
+            if (input.StartsWith("/") || input.StartsWith("./")) return input;
+            
+            // Xử lý cú pháp pseudo (ví dụ: div[class='article-item'])
+            string xpath = input.Replace("[class=", "[@class=");
+            if (isRoot)
+            {
+                if (!xpath.StartsWith("//")) xpath = "//" + xpath;
+            }
+            else
+            {
+                if (!xpath.StartsWith(".//")) xpath = ".//" + xpath;
+            }
+            return xpath;
+        }
+
+        private async Task<List<BaiVietMoetItem>> ReadListPageAsync(string pageUrl, string classList, string classItem, string classTitle, string classDate, string classAvatar, string classDesc)
         {
             var result = new List<BaiVietMoetItem>();
             using (var httpClient = new HttpClient())
@@ -94,40 +115,66 @@ namespace RJCodeUI_M1.TestAndDemo
                 var doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(html);
 
-                // Tạo XPath động dựa vào class người dùng nhập
-                string xPathList = $"//div[contains(@class, '{classList.Split(' ')[0]}')] | //li[contains(@class, '{classList.Split(' ')[0]}')]";
-                
-                var nodes = doc.DocumentNode.SelectNodes(xPathList);
-                if (nodes == null) return result;
+                string xPathList = ConvertToXPath(classList, true);
+                var listNodes = doc.DocumentNode.SelectNodes(xPathList);
+                if (listNodes == null) return result;
 
-                foreach (var node in nodes)
+                string xPathItem = ConvertToXPath(classItem, false);
+                string xPathTitle = ConvertToXPath(classTitle, false);
+                string xPathDate = ConvertToXPath(classDate, false);
+                string xPathAvatar = ConvertToXPath(classAvatar, false);
+
+                foreach (var listNode in listNodes)
                 {
-                    var aNode = node.SelectSingleNode(".//a[@href]");
-                    if (aNode == null) continue;
-
-                    string detailHref = aNode.GetAttributeValue("href", "");
-                    string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
-
-                    var item = new BaiVietMoetItem();
-                    item.DetailUrl = detailUrl;
-
-                    // Parse avatar
-                    var imgNode = node.SelectSingleNode(".//img");
-                    if (imgNode != null)
+                    var itemNodes = listNode.SelectNodes(xPathItem);
+                    if (itemNodes == null)
                     {
-                        item.AvatarUrl = ToAbsoluteUrl(pageUrl, imgNode.GetAttributeValue("src", ""));
+                        // Fallback nếu không bóc được item
+                        itemNodes = new HtmlAgilityPack.HtmlNodeCollection(listNode);
+                        itemNodes.Add(listNode);
                     }
 
-                    // Tải trang chi tiết để bóc thông tin
-                    await ParseDetailAsync(httpClient, item, detailUrl);
-                    
-                    result.Add(item);
+                    foreach (var itemNode in itemNodes)
+                    {
+                        var titleNode = itemNode.SelectSingleNode(xPathTitle);
+                        if (titleNode == null) continue;
+
+                        string detailHref = titleNode.GetAttributeValue("href", "");
+                        string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
+
+                        var item = new BaiVietMoetItem();
+                        item.DetailUrl = detailUrl;
+                        item.Title = CleanText(titleNode.InnerText);
+
+                        var dateNode = itemNode.SelectSingleNode(xPathDate);
+                        if (dateNode != null)
+                        {
+                            // Có thể xử lý Regex để lấy đúng dd/MM/yyyy ở đây
+                            string dateText = CleanText(dateNode.InnerText);
+                            var match = Regex.Match(dateText, @"\d{2}/\d{2}/\d{4}");
+                            if (match.Success)
+                            {
+                                // Không có property PublishDate trong model tạm, có thể thêm vào BaiVietMoetItem
+                            }
+                        }
+
+                        var imgNode = itemNode.SelectSingleNode(xPathAvatar);
+                        if (imgNode != null)
+                        {
+                            item.AvatarUrl = ToAbsoluteUrl(pageUrl, imgNode.GetAttributeValue("src", ""));
+                        }
+
+                        // Tải trang chi tiết để bóc thông tin Description và các thông tin khác
+                        await ParseDetailAsync(httpClient, item, detailUrl, classDesc);
+                        
+                        result.Add(item);
+                    }
                 }
             }
             return result;
         }
 
-        private async Task ParseDetailAsync(HttpClient httpClient, BaiVietMoetItem item, string detailUrl)
+        private async Task ParseDetailAsync(HttpClient httpClient, BaiVietMoetItem item, string detailUrl, string classDesc)
         {
             try
             {
@@ -135,13 +182,14 @@ namespace RJCodeUI_M1.TestAndDemo
                 var doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(html);
 
-                // Bóc tiêu đề (có thể dùng class title truyền vào)
+                // Bóc tiêu đề (có thể dùng class title truyền vào) - giữ lại nếu titleNode = null ở ngoài
                 var titleNode = doc.DocumentNode.SelectSingleNode("//h1 | //h2[contains(@class,'title')]");
-                if (titleNode != null)
+                if (titleNode != null && string.IsNullOrWhiteSpace(item.Title))
                     item.Title = CleanText(titleNode.InnerText);
 
                 // Mô tả
-                var briefNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'article-brief')]");
+                string xpathDesc = ConvertToXPath(classDesc, true);
+                var briefNode = doc.DocumentNode.SelectSingleNode(xpathDesc);
                 if (briefNode != null)
                     item.Description = briefNode.InnerHtml.Trim();
 
@@ -156,7 +204,10 @@ namespace RJCodeUI_M1.TestAndDemo
                     item.Author = CleanText(authorNode.InnerText);
 
                 // Lượt xem
-                var viewNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'vi vi-eye')]");
+                var viewNode = doc.DocumentNode.SelectSingleNode("//i[contains(@class, 'vi vi-eye')]/..");
+                if (viewNode == null) 
+                    viewNode = doc.DocumentNode.SelectSingleNode("//*[contains(@class, 'vi vi-eye')]");
+
                 if (viewNode != null)
                 {
                     string viewText = Regex.Replace(viewNode.InnerText, @"[^\d]", "");
