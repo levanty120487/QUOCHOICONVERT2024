@@ -201,7 +201,7 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
-                        //if (!detailUrl.Equals("https://moet.gov.vn/tin-tuc/ban-tin-giao-duc-va-dao-tao-hang-quy/ban-tin-quy-ii-2026.html?categoryId=101914889")) continue;
+                        if (!detailUrl.Equals("https://moet.gov.vn/tintuc/Pages/tin-tong-hop.aspx%3FItemID=4012?categoryId=101914884")) continue;
 
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;

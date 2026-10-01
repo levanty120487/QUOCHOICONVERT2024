@@ -121,7 +121,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // 
             // txtTotalPages
             // 
-            this.txtTotalPages.Location = new System.Drawing.Point(127, 175);
+            this.txtTotalPages.Location = new System.Drawing.Point(127, 234);
             this.txtTotalPages.Name = "txtTotalPages";
             this.txtTotalPages.Size = new System.Drawing.Size(250, 25);
             this.txtTotalPages.TabIndex = 6;
@@ -129,7 +129,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // 
             // btnReadData
             // 
-            this.btnReadData.Location = new System.Drawing.Point(20, 585);
+            this.btnReadData.Location = new System.Drawing.Point(20, 633);
             this.btnReadData.Name = "btnReadData";
             this.btnReadData.Size = new System.Drawing.Size(100, 30);
             this.btnReadData.TabIndex = 7;
@@ -139,7 +139,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // 
             // btnSaveData
             // 
-            this.btnSaveData.Location = new System.Drawing.Point(136, 585);
+            this.btnSaveData.Location = new System.Drawing.Point(136, 633);
             this.btnSaveData.Name = "btnSaveData";
             this.btnSaveData.Size = new System.Drawing.Size(100, 30);
             this.btnSaveData.TabIndex = 8;
@@ -150,7 +150,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // dgvData
             // 
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(20, 235);
+            this.dgvData.Location = new System.Drawing.Point(20, 283);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
@@ -214,7 +214,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 178);
+            this.label7.Location = new System.Drawing.Point(27, 237);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 2;

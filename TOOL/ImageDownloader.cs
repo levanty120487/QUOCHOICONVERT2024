@@ -108,7 +108,17 @@ namespace RJCodeUI_M1
 
                 }
                 relativePath = relativePath.Replace("%20", "");
-                fileName = fileName.Replace("%20", "");
+
+                // Giải mã URL (ví dụ: %C3%AD -> í)
+                fileName = Uri.UnescapeDataString(fileName).Replace("%20", "");
+                
+                // Chuyển tiếng Việt có dấu thành không dấu
+                string normalizedStr = fileName.Normalize(System.Text.NormalizationForm.FormD);
+                fileName = new System.Text.RegularExpressions.Regex("\\p{IsCombiningDiacriticalMarks}+").Replace(normalizedStr, string.Empty);
+                fileName = fileName.Replace('đ', 'd').Replace('Đ', 'D');
+
+                // Thay thế các ký tự không phải chữ, số, dấu chấm, gạch ngang thành dấu _
+                fileName = System.Text.RegularExpressions.Regex.Replace(fileName, "[^a-zA-Z0-9.\\-_]", "_");
 
                 if (fileName.Contains("_RenditionID"))
                 {
