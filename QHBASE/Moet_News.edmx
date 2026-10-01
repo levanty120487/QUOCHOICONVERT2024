@@ -185,6 +185,7 @@
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="DeleterId" Type="uniqueidentifier" />
           <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+          <Property Name="DetailUrlClone" Type="nvarchar" MaxLength="2500" />
         </EntityType>
         <EntityType Name="NewCategory">
           <Key>
@@ -892,6 +893,7 @@
           <NavigationProperty Name="ReplyNews" Relationship="Self.FK_ReplyNew_New_NewId" FromRole="New" ToRole="ReplyNew" />
           <NavigationProperty Name="SummaryNewsses" Relationship="Self.FK_SummaryNewss_New_NewId" FromRole="New" ToRole="SummaryNewss" />
           <NavigationProperty Name="Events" Relationship="Self.NewEvent" FromRole="New" ToRole="Event" />
+          <Property Name="DetailUrlClone" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="NewCategory">
           <Key>
@@ -1518,6 +1520,7 @@
           <EntitySetMapping Name="News">
             <EntityTypeMapping TypeName="Portal_Moet_NewsServicesModel.New">
               <MappingFragment StoreEntitySet="New">
+                <ScalarProperty Name="DetailUrlClone" ColumnName="DetailUrlClone" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TenantId" ColumnName="TenantId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />

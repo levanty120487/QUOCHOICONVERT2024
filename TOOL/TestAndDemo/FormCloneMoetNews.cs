@@ -2,6 +2,7 @@ using HtmlAgilityPack;
 using QHBASE;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -201,7 +202,7 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
-                        //if (!detailUrl.Equals("https://moet.gov.vn/tintuc/Pages/tin-tong-hop.aspx%3FItemID=4012?categoryId=101914884")) continue;
+                        //if (!detailUrl.Equals("https://moet.gov.vn/tintuc/Pages/tin-tong-hop.aspx%3FItemID=7393?categoryId=101914884")) continue;
 
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;
@@ -246,12 +247,12 @@ namespace RJCodeUI_M1.TestAndDemo
                 var doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(html);
 
-                // Lấy ItemID từ detailUrl (hỗ trợ cả trường hợp bị mã hóa %3F thay vì ?)
+                // Lấy toàn bộ tham số từ dấu ? trở đi
                 string decodedUrl = System.Net.WebUtility.UrlDecode(detailUrl);
-                var matchItemId = Regex.Match(decodedUrl, @"[?&]ItemID=([^&]+)", RegexOptions.IgnoreCase);
-                if (matchItemId.Success)
+                int queryIndex = decodedUrl.IndexOf('?');
+                if (queryIndex >= 0)
                 {
-                    item.OldId = matchItemId.Groups[1].Value;
+                    item.OldId = decodedUrl.Substring(queryIndex);
                 }
 
                 // Bóc tiêu đề (có thể dùng class title truyền vào) - giữ lại nếu titleNode = null ở ngoài
@@ -389,28 +390,19 @@ namespace RJCodeUI_M1.TestAndDemo
                             lblStatus.Text = $"Đang lưu bản ghi thứ {currentIndex}/{totalItems}...";
                             Application.DoEvents();
 
-                            // Tải file avatar nếu có
-                            //string localAvatarUrl = string.Empty;
-                            //if (!string.IsNullOrEmpty(item.AvatarUrl))
-                            //{
-                            //    string fileName = GetFileNameFromUrl(item.AvatarUrl);
-                            //    localAvatarUrl = await DownloadFileAsync(httpClient, item.AvatarUrl, downloadFolderImg, fileName);
-                            //}
+                            // nếu tồn tại thì không lưu mà tiếp bản ghi khác
+                            var findItem = await dbNews.News
+                                                    .Where(a => a.DetailUrlClone.Equals(item.DetailUrl))
+                                                    .FirstOrDefaultAsync();
+                            if(findItem != null 
+                                && !string.IsNullOrWhiteSpace(findItem.Id))
+                            {
+                                continue;
+                            }    
 
                             // Insert vào bảng New
                             var newEntity = new New()
                             {
-                                //Id = Guid.NewGuid(), // Nếu auto generate thì không cần
-                                //CategoryId = categoryId, // Điều chỉnh kiểu nếu cần
-                                //Title = item.Title,
-                                //Description = item.Description,
-                                //Content = item.Content,
-                                //Author = item.Author,
-                                //ViewCount = item.ViewCount,
-                                //ImageUrl = string.IsNullOrEmpty(localAvatarUrl) ? "" : $"/uploadFckFiles/news/{Path.GetFileName(localAvatarUrl)}",
-                                //CreatedDate = DateTime.Now,
-                                //CreatedBy = "Admin"
-
                                 Id = QHCommons.GenAutoId(),
                                 Title = item.Title,
                                 ConcurrencyStamp = Guid.NewGuid().ToString(),
@@ -433,7 +425,8 @@ namespace RJCodeUI_M1.TestAndDemo
                                 CreatorName = "admin",
                                 ShowDescription = true,
                                 AllowComment = false,
-                                PageUrlSEO = GenerateSlug(item.Title)
+                                PageUrlSEO = GenerateSlug(item.Title),
+                                DetailUrlClone = item.DetailUrl
                             };
                             // Tải ảnh bất đồng bộ
                             if (!string.IsNullOrEmpty(item.AvatarUrl))
