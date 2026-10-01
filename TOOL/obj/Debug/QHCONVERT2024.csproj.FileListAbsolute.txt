@@ -88,7 +88,6 @@ D:\Tools\QUOCHOICONVERT2024\TOOL\bin\Debug\System.Numerics.Vectors.xml
 D:\Tools\QUOCHOICONVERT2024\TOOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Tools\QUOCHOICONVERT2024\TOOL\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\QHCONVERT2024.csproj.AssemblyReference.cache
-D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.exe.config
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormConvertVanKienSP.resources
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormHoiDap.resources
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormThongBao.resources

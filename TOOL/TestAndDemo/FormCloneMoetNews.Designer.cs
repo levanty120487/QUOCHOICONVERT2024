@@ -36,6 +36,10 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtClassItem = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtClassDescription = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTuPage = new System.Windows.Forms.TextBox();
+            this.txtDenPage = new System.Windows.Forms.TextBox();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +47,10 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.txtDenPage);
+            this.pnlClientArea.Controls.Add(this.txtTuPage);
+            this.pnlClientArea.Controls.Add(this.label11);
+            this.pnlClientArea.Controls.Add(this.label10);
             this.pnlClientArea.Controls.Add(this.label9);
             this.pnlClientArea.Controls.Add(this.txtClassDescription);
             this.pnlClientArea.Controls.Add(this.label8);
@@ -71,21 +79,21 @@ namespace RJCodeUI_M1.TestAndDemo
             // cboCategory
             // 
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(120, 20);
+            this.cboCategory.Location = new System.Drawing.Point(127, 55);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(250, 28);
             this.cboCategory.TabIndex = 0;
             // 
             // txtWebUrl
             // 
-            this.txtWebUrl.Location = new System.Drawing.Point(120, 60);
+            this.txtWebUrl.Location = new System.Drawing.Point(127, 95);
             this.txtWebUrl.Name = "txtWebUrl";
             this.txtWebUrl.Size = new System.Drawing.Size(250, 25);
             this.txtWebUrl.TabIndex = 1;
             // 
             // txtClassList
             // 
-            this.txtClassList.Location = new System.Drawing.Point(120, 100);
+            this.txtClassList.Location = new System.Drawing.Point(127, 135);
             this.txtClassList.Name = "txtClassList";
             this.txtClassList.Size = new System.Drawing.Size(250, 25);
             this.txtClassList.TabIndex = 2;
@@ -113,7 +121,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // 
             // txtTotalPages
             // 
-            this.txtTotalPages.Location = new System.Drawing.Point(120, 140);
+            this.txtTotalPages.Location = new System.Drawing.Point(127, 175);
             this.txtTotalPages.Name = "txtTotalPages";
             this.txtTotalPages.Size = new System.Drawing.Size(250, 25);
             this.txtTotalPages.TabIndex = 6;
@@ -152,7 +160,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 23);
+            this.label1.Location = new System.Drawing.Point(27, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 8;
@@ -161,7 +169,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 63);
+            this.label2.Location = new System.Drawing.Point(27, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 7;
@@ -170,7 +178,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 103);
+            this.label3.Location = new System.Drawing.Point(27, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 6;
@@ -206,7 +214,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 143);
+            this.label7.Location = new System.Drawing.Point(27, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 2;
@@ -243,6 +251,40 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtClassDescription.Name = "txtClassDescription";
             this.txtClassDescription.Size = new System.Drawing.Size(250, 25);
             this.txtClassDescription.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(31, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Từ page:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(223, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 20);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Đến page:";
+            // 
+            // txtTuPage
+            // 
+            this.txtTuPage.Location = new System.Drawing.Point(127, 21);
+            this.txtTuPage.Name = "txtTuPage";
+            this.txtTuPage.Size = new System.Drawing.Size(90, 25);
+            this.txtTuPage.TabIndex = 16;
+            this.txtTuPage.Text = "1";
+            // 
+            // txtDenPage
+            // 
+            this.txtDenPage.Location = new System.Drawing.Point(303, 18);
+            this.txtDenPage.Name = "txtDenPage";
+            this.txtDenPage.Size = new System.Drawing.Size(74, 25);
+            this.txtDenPage.TabIndex = 17;
+            this.txtDenPage.Text = "1";
             // 
             // FormCloneMoetNews
             // 
@@ -284,5 +326,9 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.TextBox txtClassItem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtClassDescription;
+        private System.Windows.Forms.TextBox txtDenPage;
+        private System.Windows.Forms.TextBox txtTuPage;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }

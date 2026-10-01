@@ -103,10 +103,20 @@ namespace RJCodeUI_M1.TestAndDemo
                 btnReadData.Enabled = false;
                 lblStatus.Text = "Bắt đầu đọc dữ liệu...";
 
-                for (int i = 1; i <= totalPages; i++)
+                int startPage = 1;
+                int endPage = totalPages;
+
+                if (!string.IsNullOrWhiteSpace(txtTuPage.Text) && !string.IsNullOrWhiteSpace(txtDenPage.Text) &&
+                    int.TryParse(txtTuPage.Text, out int tuPage) && int.TryParse(txtDenPage.Text, out int denPage))
+                {
+                    startPage = tuPage;
+                    endPage = denPage;
+                }
+
+                for (int i = startPage; i <= endPage; i++)
                 {
                     string pageUrl = baseUrl;
-                    if (totalPages > 1 && i > 1)
+                    if (i > 1)
                     {
                         pageUrl = $"{baseUrl}?&orderBy=publishTime DESC&itemsPerPage=10&pageNo={i}";
                     }
@@ -299,12 +309,12 @@ namespace RJCodeUI_M1.TestAndDemo
                                     {
                                         fileName = CleanText(spanName.InnerText).Replace("&nbsp;", " ").Replace("\u00A0", " ").Trim();
                                     }
-                                    
+
                                     if (string.IsNullOrWhiteSpace(fileName))
                                     {
                                         fileName = GetFileNameFromUrl(href);
                                     }
-                                    
+
                                     item.Attachments.Add(new AttachmentFile { FileName = fileName, Url = ToAbsoluteUrl(detailUrl, href) });
                                 }
                             }
@@ -352,7 +362,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 MessageBox.Show("Vui lòng chọn danh mục!");
                 return;
             }
-                
+
 
             string downloadFolderImg = @"C:\uploadFckFiles\tinth";
             Directory.CreateDirectory(downloadFolderImg);
@@ -369,142 +379,171 @@ namespace RJCodeUI_M1.TestAndDemo
                 {
                     int currentIndex = 0;
                     int totalItems = parsedData.Count;
+                    var errorList = new List<string>();
 
-                    foreach (var item in parsedData.OrderByDescending(a=>a.CreateAt))
+                    foreach (var item in parsedData.OrderByDescending(a => a.CreateAt))
                     {
-                        currentIndex++;
-                        lblStatus.Text = $"Đang lưu bản ghi thứ {currentIndex}/{totalItems}...";
-                        Application.DoEvents();
-
-                        // Tải file avatar nếu có
-                        //string localAvatarUrl = string.Empty;
-                        //if (!string.IsNullOrEmpty(item.AvatarUrl))
-                        //{
-                        //    string fileName = GetFileNameFromUrl(item.AvatarUrl);
-                        //    localAvatarUrl = await DownloadFileAsync(httpClient, item.AvatarUrl, downloadFolderImg, fileName);
-                        //}
-
-                        // Insert vào bảng New
-                        var newEntity = new New()
+                        try
                         {
-                            //Id = Guid.NewGuid(), // Nếu auto generate thì không cần
-                            //CategoryId = categoryId, // Điều chỉnh kiểu nếu cần
-                            //Title = item.Title,
-                            //Description = item.Description,
-                            //Content = item.Content,
-                            //Author = item.Author,
-                            //ViewCount = item.ViewCount,
-                            //ImageUrl = string.IsNullOrEmpty(localAvatarUrl) ? "" : $"/uploadFckFiles/news/{Path.GetFileName(localAvatarUrl)}",
-                            //CreatedDate = DateTime.Now,
-                            //CreatedBy = "Admin"
+                            currentIndex++;
+                            lblStatus.Text = $"Đang lưu bản ghi thứ {currentIndex}/{totalItems}...";
+                            Application.DoEvents();
 
-                            Id = QHCommons.GenAutoId(),
-                            Title = item.Title,
-                            ConcurrencyStamp = Guid.NewGuid().ToString(),
-                            DatePublic = item.CreateDate,
-                            Status = 6,
-                            Author = item.Author,
-                            ReadCount = item.ViewCount,
-                            CreationTime = DateTime.Now,
-                            Description = item.Description,
-                            DescriptionSEO = item.Description,
-                            PageTitleSEO = item.Title,
-                            Hot = false,
-                            Source = string.Empty,
-                            Shared = true,
-                            Language = "vi",
-                            ExtraProperties = "{}",
-                            OldId = string.IsNullOrEmpty(item.OldId) ? string.Empty : item.OldId,
-                            TypeNewContent = 3, //=> tin bai
-                            TypeNewId = Guid.Parse("69E83D8B-3C4B-43AA-B554-B6B23C935718"), //=> tin bai
-                            CreatorName = "admin",
-                            ShowDescription = true,
-                            AllowComment = false,
-                            PageUrlSEO = GenerateSlug(item.Title)
-                        };
-                        // Tải ảnh bất đồng bộ
-                        if (!string.IsNullOrEmpty(item.AvatarUrl))
-                        {
-                            newEntity.Image = await ImageDownloader.DownloadImageAsyncurl(item.AvatarUrl.Trim());
-                        }
-                        // Xử lý ảnh trong nội dung tin
-                        if (!string.IsNullOrEmpty(item.Content))
-                        {
-                            HtmlAgilityPack.HtmlDocument newsDocument = new HtmlAgilityPack.HtmlDocument();
-                            newsDocument.LoadHtml(item.Content);
-                            var imagesNode = newsDocument.DocumentNode.SelectNodes(".//img");
-                            if (imagesNode != null)
+                            // Tải file avatar nếu có
+                            //string localAvatarUrl = string.Empty;
+                            //if (!string.IsNullOrEmpty(item.AvatarUrl))
+                            //{
+                            //    string fileName = GetFileNameFromUrl(item.AvatarUrl);
+                            //    localAvatarUrl = await DownloadFileAsync(httpClient, item.AvatarUrl, downloadFolderImg, fileName);
+                            //}
+
+                            // Insert vào bảng New
+                            var newEntity = new New()
                             {
-                                foreach (var img in imagesNode)
+                                //Id = Guid.NewGuid(), // Nếu auto generate thì không cần
+                                //CategoryId = categoryId, // Điều chỉnh kiểu nếu cần
+                                //Title = item.Title,
+                                //Description = item.Description,
+                                //Content = item.Content,
+                                //Author = item.Author,
+                                //ViewCount = item.ViewCount,
+                                //ImageUrl = string.IsNullOrEmpty(localAvatarUrl) ? "" : $"/uploadFckFiles/news/{Path.GetFileName(localAvatarUrl)}",
+                                //CreatedDate = DateTime.Now,
+                                //CreatedBy = "Admin"
+
+                                Id = QHCommons.GenAutoId(),
+                                Title = item.Title,
+                                ConcurrencyStamp = Guid.NewGuid().ToString(),
+                                DatePublic = item.CreateDate,
+                                Status = 6,
+                                Author = item.Author,
+                                ReadCount = item.ViewCount,
+                                CreationTime = DateTime.Now,
+                                Description = item.Description,
+                                DescriptionSEO = item.Description,
+                                PageTitleSEO = item.Title,
+                                Hot = false,
+                                Source = string.Empty,
+                                Shared = true,
+                                Language = "vi",
+                                ExtraProperties = "{}",
+                                OldId = string.IsNullOrEmpty(item.OldId) ? string.Empty : item.OldId,
+                                TypeNewContent = 3, //=> tin bai
+                                TypeNewId = Guid.Parse("69E83D8B-3C4B-43AA-B554-B6B23C935718"), //=> tin bai
+                                CreatorName = "admin",
+                                ShowDescription = true,
+                                AllowComment = false,
+                                PageUrlSEO = GenerateSlug(item.Title)
+                            };
+                            // Tải ảnh bất đồng bộ
+                            if (!string.IsNullOrEmpty(item.AvatarUrl))
+                            {
+                                newEntity.Image = await ImageDownloader.DownloadImageAsyncurl(item.AvatarUrl.Trim());
+                            }
+                            // Xử lý ảnh trong nội dung tin
+                            if (!string.IsNullOrEmpty(item.Content))
+                            {
+                                HtmlAgilityPack.HtmlDocument newsDocument = new HtmlAgilityPack.HtmlDocument();
+                                newsDocument.LoadHtml(item.Content);
+                                var imagesNode = newsDocument.DocumentNode.SelectNodes(".//img");
+                                if (imagesNode != null)
                                 {
-                                    if (img.Attributes["src"] != null)
+                                    foreach (var img in imagesNode)
                                     {
-                                        img.Attributes["src"].Value = img.Attributes["src"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://");
-                                        img.Attributes["src"].Value = await ImageDownloader.DownloadImageAsyncurl(img.Attributes["src"].Value.Trim());
+                                        if (img.Attributes["src"] != null)
+                                        {
+                                            img.Attributes["src"].Value = img.Attributes["src"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://");
+                                            img.Attributes["src"].Value = await ImageDownloader.DownloadImageAsyncurl(img.Attributes["src"].Value.Trim());
+                                        }
+                                    }
+                                }
+                                newEntity.Content = newsDocument.DocumentNode.OuterHtml;
+                            }
+                            dbNews.News.Add(newEntity);
+                            dbNews.SaveChanges();
+
+                            // Tải file đính kèm & Insert vào Moet_Files
+                            foreach (var attach in item.Attachments)
+                            {
+                                string fileNameToDownload = string.IsNullOrWhiteSpace(attach.FileName) ? GetFileNameFromUrl(attach.Url) : attach.FileName;
+                                string localFilePath = await DownloadFileAsync(httpClient, attach.Url, downloadFolderImg, fileNameToDownload);
+
+                                if (!string.IsNullOrEmpty(localFilePath))
+                                {
+                                    //dbFiles.Moet_Files.Add(fileEntity); // Điều chỉnh tên DbSet nếu khác
+                                    using (var files = new Portal_Moet_FilesServicesEntities())
+                                    {
+                                        var file = new CMSFile()
+                                        {
+                                            Id = Guid.NewGuid(),
+                                            FileType = 2,
+                                            CreationTime = DateTime.Now,
+                                            FileContainerName = "CMSContainerPublic",
+                                            ConcurrencyStamp = Guid.NewGuid().ToString(),
+                                            ExtraProperties = "{}",
+                                            MimeType = GetMimeType(attach.FileName),
+                                            FileExtention = 2,
+                                            Language = "vi",
+                                            FullPathServer = localFilePath.Replace("C:\\", "/").Replace("\\", "/"),
+                                            FileName = attach.FileName
+                                        };
+                                        files.CMSFiles.Add(file);
+                                        files.SaveChanges();
+                                        #region Insert fileAttachment
+                                        var fileAttach = new CMSFileAttachment()
+                                        {
+                                            Id = Guid.NewGuid(),
+                                            EntityId = newEntity.Id,
+                                            FileId = file.Id,
+                                            ExtraProperties = "{}",
+                                            ConcurrencyStamp = Guid.NewGuid().ToString(),
+                                            CreationTime = DateTime.Now,
+                                            FileAttachmentType = 1
+                                        };
+                                        files.CMSFileAttachments.Add(fileAttach);
+                                        files.SaveChanges();
+                                        #endregion
                                     }
                                 }
                             }
-                            newEntity.Content = newsDocument.DocumentNode.OuterHtml;
-                        }
-                        dbNews.News.Add(newEntity);
-                        dbNews.SaveChanges();
+                            dbFiles.SaveChanges();
 
-                        // Tải file đính kèm & Insert vào Moet_Files
-                        foreach (var attach in item.Attachments)
-                        {
-                            string fileNameToDownload = string.IsNullOrWhiteSpace(attach.FileName) ? GetFileNameFromUrl(attach.Url) : attach.FileName;
-                            string localFilePath = await DownloadFileAsync(httpClient, attach.Url, downloadFolderImg, fileNameToDownload);
-
-                            if (!string.IsNullOrEmpty(localFilePath))
+                            #region NewCategory
+                            var newCategory = new NewCategory()
                             {
-                                //dbFiles.Moet_Files.Add(fileEntity); // Điều chỉnh tên DbSet nếu khác
-                                using (var files = new Portal_Moet_FilesServicesEntities())
-                                {
-                                    var file = new CMSFile()
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        FileType = 2,
-                                        CreationTime = DateTime.Now,
-                                        FileContainerName = "CMSContainerPublic",
-                                        ConcurrencyStamp = Guid.NewGuid().ToString(),
-                                        ExtraProperties = "{}",
-                                        MimeType = GetMimeType(attach.FileName),
-                                        FileExtention = 2,
-                                        Language = "vi",
-                                        FullPathServer = localFilePath.Replace("C:\\", "/").Replace("\\", "/"),
-                                        FileName = attach.FileName
-                                    };
-                                    files.CMSFiles.Add(file);
-                                    files.SaveChanges();
-                                    #region Insert fileAttachment
-                                    var fileAttach = new CMSFileAttachment()
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        EntityId = newEntity.Id,
-                                        FileId = file.Id,
-                                        ExtraProperties = "{}",
-                                        ConcurrencyStamp = Guid.NewGuid().ToString(),
-                                        CreationTime = DateTime.Now,
-                                        FileAttachmentType = 1
-                                    };
-                                    files.CMSFileAttachments.Add(fileAttach);
-                                    files.SaveChanges();
-                                    #endregion
-                                }
-                            }
+                                CategoryId = categoryId,
+                                Id = Guid.NewGuid(),
+                                NewId = newEntity.Id
+                            };
+                            dbNews.NewCategories.Add(newCategory);
+                            dbNews.SaveChanges();
+                            #endregion
                         }
-                        dbFiles.SaveChanges();
-
-                        #region NewCategory
-                        var newCategory = new NewCategory()
+                        catch (Exception ex)
                         {
-                            CategoryId = categoryId,
-                            Id = Guid.NewGuid(),
-                            NewId = newEntity.Id
-                        };
-                        dbNews.NewCategories.Add(newCategory);
-                        dbNews.SaveChanges();
-                        #endregion
+                            errorList.Add($"- Tên (Title): {item.Title}\n  Link (DetailUrl): {item.DetailUrl}\n  Lỗi: {ex.Message}");
+                        }
+                    }
+
+                    if (errorList.Count > 0)
+                    {
+                        string errorMsg = string.Join("\r\n\r\n", errorList);
+                        using (Form errorForm = new Form())
+                        {
+                            errorForm.Text = $"Có lỗi xảy ra khi lưu {errorList.Count} bản ghi";
+                            errorForm.Size = new System.Drawing.Size(800, 600);
+                            errorForm.StartPosition = FormStartPosition.CenterScreen;
+
+                            TextBox txtErrors = new TextBox();
+                            txtErrors.Multiline = true;
+                            txtErrors.ReadOnly = true;
+                            txtErrors.ScrollBars = ScrollBars.Vertical;
+                            txtErrors.Dock = DockStyle.Fill;
+                            txtErrors.Text = errorMsg;
+
+                            errorForm.Controls.Add(txtErrors);
+                            errorForm.ShowDialog();
+                        }
                     }
                 }
 
