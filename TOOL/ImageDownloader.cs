@@ -72,7 +72,7 @@ namespace RJCodeUI_M1
             try
             {
                 string hosturl = "https://moet.gov.vn";
-                string rootDirectory = "C:\\uploadFckFiles\\news";
+                string rootDirectory = "C:\\uploadFckFiles\\tinth";
                 #region tên file/ đường dẫn
                 var fileName = string.Empty;
                 var fileUrl = imageUrl;
@@ -132,7 +132,7 @@ namespace RJCodeUI_M1
 
                 // Đường dẫn đầy đủ của file
 
-                string fullFilePathReturn = "/uploadFckFiles/news/" + relativePath.Trim();
+                string fullFilePathReturn = "/uploadFckFiles/tinth/" + relativePath.Trim();
 
                 // Kiểm tra nếu file đã tồn tại
                 if (File.Exists(fullFilePath))
@@ -164,7 +164,7 @@ namespace RJCodeUI_M1
         {
             try
             {
-                string rootDirectory = "C:\\uploadFckFiles\\news";
+                string rootDirectory = "C:\\uploadFckFiles\\tinth";
                 string relativePath = imageUrl.TrimStart('/');
                 string fileName = Path.GetFileName(imageUrl);
                 Uri uri = new Uri(imageUrl);
@@ -181,7 +181,7 @@ namespace RJCodeUI_M1
                 }
 
                 string fullFilePath = Path.Combine(fullDirectoryPath, fileName);
-                string fullFilePathReturn = "/uploadFckFiles/news/" + relativePath.Trim();
+                string fullFilePathReturn = "/uploadFckFiles/tinth/" + relativePath.Trim();
 
                 if (File.Exists(fullFilePath))
                 {
