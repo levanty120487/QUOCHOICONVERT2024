@@ -179,6 +179,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 string xPathTitle = ConvertToXPath(classTitle, false);
                 string xPathDate = ConvertToXPath(classDate, false);
                 string xPathAvatar = ConvertToXPath(classAvatar, false);
+                string xPathDesc = ConvertToXPath(classDesc, false);
 
                 int itemIndex = 0;
                 foreach (var listNode in listNodes)
@@ -229,6 +230,11 @@ namespace RJCodeUI_M1.TestAndDemo
                             item.AvatarUrl = ToAbsoluteUrl(pageUrl, imgNode.GetAttributeValue("src", ""));
                         }
 
+                        var desc = itemNode.SelectSingleNode(xPathDesc);
+                        if (desc != null)
+                        {
+                            item.Description = CleanText(desc.InnerText);
+                        }
                         // Tải trang chi tiết để bóc thông tin Description và các thông tin khác
                         await ParseDetailAsync(httpClient, item, detailUrl, classDesc);
 
@@ -365,7 +371,11 @@ namespace RJCodeUI_M1.TestAndDemo
             }
 
 
-            string downloadFolderImg = @"C:\uploadFckFiles\tinhdBGD";
+            string downloadFolderImg = @"C:\uploadFckFiles\news";
+            if(!string.IsNullOrWhiteSpace(txtFolderChua.Text))
+            {
+                downloadFolderImg = string.Concat(downloadFolderImg, "\\", txtFolderChua.Text.Trim());
+            }    
             Directory.CreateDirectory(downloadFolderImg);
 
             string originalBtnText = btnSaveData.Text;
@@ -433,7 +443,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             // Tải ảnh bất đồng bộ
                             if (!string.IsNullOrEmpty(item.AvatarUrl))
                             {
-                                newEntity.Image = await ImageDownloader.DownloadImageAsyncurl(item.AvatarUrl.Trim());
+                                newEntity.Image = await ImageDownloader.DownloadImageAsyncurl(item.AvatarUrl.Trim(), folder: txtFolderChua.Text);
                             }
                             // Xử lý ảnh trong nội dung tin
                             if (!string.IsNullOrEmpty(item.Content))
@@ -448,7 +458,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                         if (img.Attributes["src"] != null)
                                         {
                                             img.Attributes["src"].Value = img.Attributes["src"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://");
-                                            img.Attributes["src"].Value = await ImageDownloader.DownloadImageAsyncurl(img.Attributes["src"].Value.Trim());
+                                            img.Attributes["src"].Value = await ImageDownloader.DownloadImageAsyncurl(img.Attributes["src"].Value.Trim(), folder: txtFolderChua.Text);
                                         }
                                     }
                                 }

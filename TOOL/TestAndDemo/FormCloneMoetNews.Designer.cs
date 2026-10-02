@@ -40,6 +40,8 @@ namespace RJCodeUI_M1.TestAndDemo
             this.label11 = new System.Windows.Forms.Label();
             this.txtTuPage = new System.Windows.Forms.TextBox();
             this.txtDenPage = new System.Windows.Forms.TextBox();
+            this.txtFolderChua = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +49,8 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.label12);
+            this.pnlClientArea.Controls.Add(this.txtFolderChua);
             this.pnlClientArea.Controls.Add(this.txtDenPage);
             this.pnlClientArea.Controls.Add(this.txtTuPage);
             this.pnlClientArea.Controls.Add(this.label11);
@@ -286,6 +290,22 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtDenPage.TabIndex = 17;
             this.txtDenPage.Text = "1";
             // 
+            // txtFolderChua
+            // 
+            this.txtFolderChua.Location = new System.Drawing.Point(634, 222);
+            this.txtFolderChua.Name = "txtFolderChua";
+            this.txtFolderChua.Size = new System.Drawing.Size(250, 25);
+            this.txtFolderChua.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(430, 222);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 20);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Folder chứa:";
+            // 
             // FormCloneMoetNews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -330,5 +350,7 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.TextBox txtTuPage;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtFolderChua;
     }
 }

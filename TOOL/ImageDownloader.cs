@@ -67,12 +67,16 @@ namespace RJCodeUI_M1
         }
 
 
-        public static async Task<string> DownloadImageAsyncurl(string imageUrl)
+        public static async Task<string> DownloadImageAsyncurl(string imageUrl, string folder = "")
         {
             try
             {
                 string hosturl = "https://moet.gov.vn";
-                string rootDirectory = "C:\\uploadFckFiles\\tinhdBGD";
+                string rootDirectory = "C:\\uploadFckFiles\\news";
+                if(!string.IsNullOrWhiteSpace(folder))
+                {
+                    rootDirectory = string.Concat(rootDirectory, "\\", folder.Trim());
+                }    
                 #region tên file/ đường dẫn
                 var fileName = string.Empty;
                 var fileUrl = imageUrl;
@@ -142,13 +146,11 @@ namespace RJCodeUI_M1
 
                 // Đường dẫn đầy đủ của file
 
-                string fullFilePathReturn = "/uploadFckFiles/tinhdBGD/" + relativePath.Trim();
-
                 // Kiểm tra nếu file đã tồn tại
                 if (File.Exists(fullFilePath))
                 {
                     Console.WriteLine($"File đã tồn tại: {fullFilePath}");
-                    return fullFilePathReturn; // Trả về nếu file đã tồn tại
+                    return fullFilePath.Replace("C:\\", "/").Replace("\\", "/"); // Trả về nếu file đã tồn tại
                 }
 
                 // Gửi yêu cầu tải ảnh
@@ -160,7 +162,7 @@ namespace RJCodeUI_M1
                 Console.WriteLine($"Đã tải và lưu ảnh vào: {fullFilePath}");
 
                 // Trả về đường dẫn đầy đủ của file sau khi lưu
-                return fullFilePath;
+                return fullFilePath.Replace("C:\\", "/").Replace("\\", "/");
             }
             catch (Exception ex)
             {
