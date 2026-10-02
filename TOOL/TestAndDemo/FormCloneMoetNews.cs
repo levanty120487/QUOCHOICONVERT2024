@@ -381,6 +381,7 @@ namespace RJCodeUI_M1.TestAndDemo
                     int currentIndex = 0;
                     int totalItems = parsedData.Count;
                     var errorList = new List<string>();
+                    var duplicateList = new List<string>();
 
                     foreach (var item in parsedData.OrderByDescending(a => a.CreateAt))
                     {
@@ -397,6 +398,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             if(findItem != null 
                                 && !string.IsNullOrWhiteSpace(findItem.Id))
                             {
+                                duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}");
                                 continue;
                             }    
 
@@ -518,24 +520,35 @@ namespace RJCodeUI_M1.TestAndDemo
                         }
                     }
 
-                    if (errorList.Count > 0)
+                    if (errorList.Count > 0 || duplicateList.Count > 0)
                     {
-                        string errorMsg = string.Join("\r\n\r\n", errorList);
-                        using (Form errorForm = new Form())
+                        string msg = "";
+                        if (errorList.Count > 0)
                         {
-                            errorForm.Text = $"Có lỗi xảy ra khi lưu {errorList.Count} bản ghi";
-                            errorForm.Size = new System.Drawing.Size(800, 600);
-                            errorForm.StartPosition = FormStartPosition.CenterScreen;
+                            msg += $"--- DANH SÁCH LỖI ({errorList.Count} bản ghi) ---\r\n";
+                            msg += string.Join("\r\n\r\n", errorList) + "\r\n\r\n";
+                        }
+                        if (duplicateList.Count > 0)
+                        {
+                            msg += $"--- DANH SÁCH TRÙNG ({duplicateList.Count} bản ghi) ---\r\n";
+                            msg += string.Join("\r\n\r\n", duplicateList);
+                        }
 
-                            TextBox txtErrors = new TextBox();
-                            txtErrors.Multiline = true;
-                            txtErrors.ReadOnly = true;
-                            txtErrors.ScrollBars = ScrollBars.Vertical;
-                            txtErrors.Dock = DockStyle.Fill;
-                            txtErrors.Text = errorMsg;
+                        using (Form msgForm = new Form())
+                        {
+                            msgForm.Text = $"Kết quả lưu: {errorList.Count} lỗi, {duplicateList.Count} trùng";
+                            msgForm.Size = new System.Drawing.Size(800, 600);
+                            msgForm.StartPosition = FormStartPosition.CenterScreen;
 
-                            errorForm.Controls.Add(txtErrors);
-                            errorForm.ShowDialog();
+                            TextBox txtMsg = new TextBox();
+                            txtMsg.Multiline = true;
+                            txtMsg.ReadOnly = true;
+                            txtMsg.ScrollBars = ScrollBars.Vertical;
+                            txtMsg.Dock = DockStyle.Fill;
+                            txtMsg.Text = msg;
+
+                            msgForm.Controls.Add(txtMsg);
+                            msgForm.ShowDialog();
                         }
                     }
                 }
