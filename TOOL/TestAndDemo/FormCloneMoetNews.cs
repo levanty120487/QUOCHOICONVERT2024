@@ -365,7 +365,7 @@ namespace RJCodeUI_M1.TestAndDemo
             }
 
 
-            string downloadFolderImg = @"C:\uploadFckFiles\tinth";
+            string downloadFolderImg = @"C:\uploadFckFiles\tinhdBGD";
             Directory.CreateDirectory(downloadFolderImg);
 
             string originalBtnText = btnSaveData.Text;
