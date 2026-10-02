@@ -465,7 +465,6 @@ namespace RJCodeUI_M1.TestAndDemo
 
                                 if (!string.IsNullOrEmpty(localFilePath))
                                 {
-                                    //dbFiles.Moet_Files.Add(fileEntity); // Điều chỉnh tên DbSet nếu khác
                                     using (var files = new Portal_Moet_FilesServicesEntities())
                                     {
                                         var file = new CMSFile()

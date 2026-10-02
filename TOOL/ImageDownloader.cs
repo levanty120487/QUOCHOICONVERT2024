@@ -160,7 +160,7 @@ namespace RJCodeUI_M1
                 Console.WriteLine($"Đã tải và lưu ảnh vào: {fullFilePath}");
 
                 // Trả về đường dẫn đầy đủ của file sau khi lưu
-                return fullFilePathReturn;
+                return fullFilePath;
             }
             catch (Exception ex)
             {
