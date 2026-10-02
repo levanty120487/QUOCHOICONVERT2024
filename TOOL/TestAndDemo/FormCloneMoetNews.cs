@@ -462,6 +462,63 @@ namespace RJCodeUI_M1.TestAndDemo
                                         }
                                     }
                                 }
+
+                                // Xử lý thẻ a có link tài liệu (không chỉ mp4)
+                                var aNodes = newsDocument.DocumentNode.SelectNodes(".//a");
+                                if (aNodes != null)
+                                {
+                                    string[] documentExtensions = { ".mp4", ".mp3", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".zip", ".rar", ".7z", ".txt", ".csv" };
+                                    foreach (var a in aNodes)
+                                    {
+                                        if (a.Attributes["href"] != null)
+                                        {
+                                            string fileUrl = a.Attributes["href"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://").Trim();
+                                            string cleanUrl = fileUrl.Split('?')[0].ToLower();
+                                            
+                                            bool isDocument = false;
+                                            foreach (var ext in documentExtensions)
+                                            {
+                                                if (cleanUrl.EndsWith(ext))
+                                                {
+                                                    isDocument = true;
+                                                    break;
+                                                }
+                                            }
+
+                                            if (isDocument)
+                                            {
+                                                fileUrl = ToAbsoluteUrl(item.DetailUrl, fileUrl);
+                                                string fileNameToDownload = GetFileNameFromUrl(fileUrl);
+                                                string localFilePath = await DownloadFileAsync(httpClient, fileUrl, downloadFolderImg, fileNameToDownload);
+                                                if (!string.IsNullOrEmpty(localFilePath))
+                                                {
+                                                    a.Attributes["href"].Value = localFilePath.Replace("C:\\", "/").Replace("\\", "/");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // Xử lý thẻ source có link mp4
+                                var sourceNodes = newsDocument.DocumentNode.SelectNodes(".//source");
+                                if (sourceNodes != null)
+                                {
+                                    foreach (var source in sourceNodes)
+                                    {
+                                        if (source.Attributes["src"] != null && source.Attributes["src"].Value.ToLower().Contains(".mp4"))
+                                        {
+                                            string fileUrl = source.Attributes["src"].Value.Replace("https&#58;//", "https://").Replace("http&#58;//", "http://").Trim();
+                                            fileUrl = ToAbsoluteUrl(item.DetailUrl, fileUrl);
+                                            string fileNameToDownload = GetFileNameFromUrl(fileUrl);
+                                            string localFilePath = await DownloadFileAsync(httpClient, fileUrl, downloadFolderImg, fileNameToDownload);
+                                            if (!string.IsNullOrEmpty(localFilePath))
+                                            {
+                                                source.Attributes["src"].Value = localFilePath.Replace("C:\\", "/").Replace("\\", "/");
+                                            }
+                                        }
+                                    }
+                                }
+
                                 newEntity.Content = newsDocument.DocumentNode.OuterHtml;
                             }
                             dbNews.News.Add(newEntity);
