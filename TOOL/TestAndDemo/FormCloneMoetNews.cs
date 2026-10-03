@@ -676,12 +676,9 @@ namespace RJCodeUI_M1.TestAndDemo
 
                     string fullPath = Path.Combine(folder, fileName);
 
-                    // Handle exist file
-                    int count = 1;
-                    string nameOnly = Path.GetFileNameWithoutExtension(fileName);
-                    while (File.Exists(fullPath))
+                    if (File.Exists(fullPath))
                     {
-                        fullPath = Path.Combine(folder, $"{nameOnly}_{count++}{ext}");
+                        return fullPath;
                     }
 
                     using (var fs = new FileStream(fullPath, FileMode.Create, FileAccess.Write, FileShare.None))
