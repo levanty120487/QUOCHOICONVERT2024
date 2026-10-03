@@ -83,9 +83,9 @@ namespace RJCodeUI_M1.TestAndDemo
             // cboCategory
             // 
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(127, 55);
+            this.cboCategory.Location = new System.Drawing.Point(127, 273);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(250, 28);
+            this.cboCategory.Size = new System.Drawing.Size(757, 28);
             this.cboCategory.TabIndex = 0;
             // 
             // txtWebUrl
@@ -154,17 +154,17 @@ namespace RJCodeUI_M1.TestAndDemo
             // dgvData
             // 
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(20, 283);
+            this.dgvData.Location = new System.Drawing.Point(20, 314);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(864, 327);
+            this.dgvData.Size = new System.Drawing.Size(864, 296);
             this.dgvData.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 58);
+            this.label1.Location = new System.Drawing.Point(30, 281);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 8;
