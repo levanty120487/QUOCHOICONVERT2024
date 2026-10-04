@@ -752,10 +752,209 @@ namespace RJCodeUI_M1.TestAndDemo
             return string.IsNullOrWhiteSpace(slug) ? "bai-viet" : slug;
         }
 
-        private void btnUpdateContent_Click(object sender, EventArgs e)
+        private async void btnPreview_Click(object sender, EventArgs e)
         {
+            try
+            {
+                lblStatus.Text = "Đang duyệt tìm các bài viết cần sửa link...";
+                var previewList = new List<PreviewUpdateItem>();
+                var groupedUpdates = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
 
+                using (var dbNews = new Portal_Moet_NewsServicesEntities())
+                {
+                    var allNews = await dbNews.News
+                                        .Where(a => a.NewCategories.Any(c => c.CategoryId == "70a899"))
+                                        .ToListAsync();
+                    int count = 0;
+                    foreach (var item in allNews)
+                    {
+                        if (string.IsNullOrEmpty(item.Content)) continue;
+                        
+                        bool needsUpdate = false;
+                        HashSet<string> extFound = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                        HtmlAgilityPack.HtmlDocument newsDocument = new HtmlAgilityPack.HtmlDocument();
+                        newsDocument.LoadHtml(item.Content);
+
+                        var aNodes = newsDocument.DocumentNode.SelectNodes(".//a");
+                        if (aNodes != null)
+                        {
+                            foreach (var a in aNodes)
+                            {
+                                if (a.Attributes["href"] != null)
+                                {
+                                    string href = a.Attributes["href"].Value;
+                                    var match = Regex.Match(href, @"_\d+(\.mp4|\.mp3|\.pdf|\.docx|\.doc)", RegexOptions.IgnoreCase);
+                                    if (match.Success)
+                                    {
+                                        extFound.Add(match.Groups[1].Value.ToUpper());
+                                        needsUpdate = true;
+                                    }
+                                }
+                            }
+                        }
+
+                        var sourceNodes = newsDocument.DocumentNode.SelectNodes(".//source");
+                        if (sourceNodes != null)
+                        {
+                            foreach (var source in sourceNodes)
+                            {
+                                if (source.Attributes["src"] != null)
+                                {
+                                    string src = source.Attributes["src"].Value;
+                                    var match = Regex.Match(src, @"_\d+(\.mp4)", RegexOptions.IgnoreCase);
+                                    if (match.Success)
+                                    {
+                                        extFound.Add(".MP4");
+                                        needsUpdate = true;
+                                    }
+                                }
+                            }
+                        }
+
+                        if (needsUpdate)
+                        {
+                            previewList.Add(new PreviewUpdateItem
+                            {
+                                Id = item.Id?.ToString(),
+                                Title = item.Title,
+                                DetailUrlClone = item.DetailUrlClone
+                            });
+                            
+                            foreach(var ext in extFound)
+                            {
+                                if (!groupedUpdates.ContainsKey(ext)) groupedUpdates[ext] = new List<string>();
+                                groupedUpdates[ext].Add($"{groupedUpdates[ext].Count + 1}) Bài {item.Title}\r\n   Id: {item.Id}\r\n   Link: {item.DetailUrlClone}");
+                            }
+                            count++;
+                        }
+                    }
+
+                    dgvData.DataSource = null;
+                    dgvData.DataSource = previewList;
+                    lblStatus.Text = $"Hoàn tất! Tìm thấy {count} bản ghi cần cập nhật.";
+
+                    if (groupedUpdates.Count > 0)
+                    {
+                        string msg = "";
+                        foreach (var kvp in groupedUpdates)
+                        {
+                            msg += $"- Danh sách file định dạng {kvp.Key.Replace(".", "")}:\r\n";
+                            msg += string.Join("\r\n", kvp.Value) + "\r\n\r\n";
+                        }
+
+                        using (Form msgForm = new Form())
+                        {
+                            msgForm.Text = $"Kết quả tìm kiếm: {count} bản ghi cần cập nhật";
+                            msgForm.Size = new System.Drawing.Size(800, 600);
+                            msgForm.StartPosition = FormStartPosition.CenterScreen;
+
+                            TextBox txtMsg = new TextBox();
+                            txtMsg.Multiline = true;
+                            txtMsg.ReadOnly = true;
+                            txtMsg.ScrollBars = ScrollBars.Vertical;
+                            txtMsg.Dock = DockStyle.Fill;
+                            txtMsg.Text = msg;
+
+                            msgForm.Controls.Add(txtMsg);
+                            msgForm.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy bài viết nào cần cập nhật.", "Thông báo");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
+
+        private async void btnUpdateContent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblStatus.Text = "Đang cập nhật lại link bài viết...";
+                using (var dbNews = new Portal_Moet_NewsServicesEntities())
+                {
+                    var allNews = await dbNews.News
+                                        .Where(a => a.NewCategories.Any(c => c.CategoryId == "70a899"))
+                                        .ToListAsync();
+                    int updateCount = 0;
+                    
+                    foreach (var item in allNews)
+                    {
+                        if (string.IsNullOrEmpty(item.Content)) continue;
+                        
+                        bool isChanged = false;
+                        HtmlAgilityPack.HtmlDocument newsDocument = new HtmlAgilityPack.HtmlDocument();
+                        newsDocument.LoadHtml(item.Content);
+
+                        var aNodes = newsDocument.DocumentNode.SelectNodes(".//a");
+                        if (aNodes != null)
+                        {
+                            foreach (var a in aNodes)
+                            {
+                                if (a.Attributes["href"] != null)
+                                {
+                                    string href = a.Attributes["href"].Value;
+                                    string newHref = Regex.Replace(href, @"_\d+(\.mp4|\.mp3|\.pdf|\.docx|\.doc)", "$1", RegexOptions.IgnoreCase);
+                                    if (href != newHref)
+                                    {
+                                        a.Attributes["href"].Value = newHref;
+                                        isChanged = true;
+                                    }
+                                }
+                            }
+                        }
+
+                        var sourceNodes = newsDocument.DocumentNode.SelectNodes(".//source");
+                        if (sourceNodes != null)
+                        {
+                            foreach (var source in sourceNodes)
+                            {
+                                if (source.Attributes["src"] != null)
+                                {
+                                    string src = source.Attributes["src"].Value;
+                                    string newSrc = Regex.Replace(src, @"_\d+(\.mp4)", "$1", RegexOptions.IgnoreCase);
+                                    if (src != newSrc)
+                                    {
+                                        source.Attributes["src"].Value = newSrc;
+                                        isChanged = true;
+                                    }
+                                }
+                            }
+                        }
+
+                        if (isChanged)
+                        {
+                            item.Content = newsDocument.DocumentNode.OuterHtml;
+                            updateCount++;
+                        }
+                    }
+
+                    if (updateCount > 0)
+                    {
+                        await dbNews.SaveChangesAsync();
+                    }
+
+                    lblStatus.Text = $"Hoàn tất! Đã cập nhật {updateCount} bản ghi.";
+                    MessageBox.Show($"Đã cập nhật xong {updateCount} bài viết.", "Thông báo");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi cập nhật: " + ex.Message);
+            }
+        }
+    }
+
+    public class PreviewUpdateItem
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string DetailUrlClone { get; set; }
     }
 
     public class CategoryDisplayItem

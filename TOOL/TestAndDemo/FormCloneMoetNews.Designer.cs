@@ -43,6 +43,7 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtFolderChua = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnUpdateContent = new System.Windows.Forms.Button();
+            this.btnPreview = new System.Windows.Forms.Button();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.btnPreview);
             this.pnlClientArea.Controls.Add(this.btnUpdateContent);
             this.pnlClientArea.Controls.Add(this.label12);
             this.pnlClientArea.Controls.Add(this.txtFolderChua);
@@ -310,13 +312,23 @@ namespace RJCodeUI_M1.TestAndDemo
             // 
             // btnUpdateContent
             // 
-            this.btnUpdateContent.Location = new System.Drawing.Point(258, 637);
+            this.btnUpdateContent.Location = new System.Drawing.Point(644, 633);
             this.btnUpdateContent.Name = "btnUpdateContent";
             this.btnUpdateContent.Size = new System.Drawing.Size(240, 26);
             this.btnUpdateContent.TabIndex = 20;
             this.btnUpdateContent.Text = "Update Content";
             this.btnUpdateContent.UseVisualStyleBackColor = true;
             this.btnUpdateContent.Click += new System.EventHandler(this.btnUpdateContent_Click);
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Location = new System.Drawing.Point(446, 633);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(192, 30);
+            this.btnPreview.TabIndex = 21;
+            this.btnPreview.Text = "View Content";
+            this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // FormCloneMoetNews
             // 
@@ -365,5 +377,6 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtFolderChua;
         private System.Windows.Forms.Button btnUpdateContent;
+        private System.Windows.Forms.Button btnPreview;
     }
 }
