@@ -766,8 +766,14 @@ namespace RJCodeUI_M1.TestAndDemo
                                         .Where(a => a.NewCategories.Any(c => c.CategoryId == "70a899"))
                                         .ToListAsync();
                     int count = 0;
+                    int currentIndex = 0;
+                    int totalItems = allNews.Count;
                     foreach (var item in allNews)
                     {
+                        currentIndex++;
+                        lblStatus.Text = $"Đang duyệt bản ghi thứ {currentIndex}/{totalItems}...";
+                        Application.DoEvents();
+
                         if (string.IsNullOrEmpty(item.Content)) continue;
                         
                         bool needsUpdate = false;
@@ -882,9 +888,15 @@ namespace RJCodeUI_M1.TestAndDemo
                                         .Where(a => a.NewCategories.Any(c => c.CategoryId == "70a899"))
                                         .ToListAsync();
                     int updateCount = 0;
+                    int currentIndex = 0;
+                    int totalItems = allNews.Count;
                     
                     foreach (var item in allNews)
                     {
+                        currentIndex++;
+                        lblStatus.Text = $"Đang cập nhật bản ghi thứ {currentIndex}/{totalItems}...";
+                        Application.DoEvents();
+
                         if (string.IsNullOrEmpty(item.Content)) continue;
                         
                         bool isChanged = false;
