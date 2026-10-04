@@ -404,6 +404,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             // nếu tồn tại thì không lưu mà tiếp bản ghi khác
                             var findItem = await dbNews.News
                                                     .Where(a => a.DetailUrlClone.Equals(item.DetailUrl))
+                                                    .Include(a => a.NewCategories)
                                                     .FirstOrDefaultAsync();
                             if(findItem != null 
                                 && !string.IsNullOrWhiteSpace(findItem.Id))
@@ -763,7 +764,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 using (var dbNews = new Portal_Moet_NewsServicesEntities())
                 {
                     var allNews = await dbNews.News
-                                        .Where(a => a.NewCategories.Any(c => c.CategoryId == "70a899"))
+                                        .Where(a => a.NewCategories.Any(c => c.CategoryId == "8323dd"))
                                         .ToListAsync();
                     int count = 0;
                     int currentIndex = 0;
@@ -885,7 +886,7 @@ namespace RJCodeUI_M1.TestAndDemo
                 using (var dbNews = new Portal_Moet_NewsServicesEntities())
                 {
                     var allNews = await dbNews.News
-                                        .Where(a => a.NewCategories.Any(c => c.CategoryId == "70a899"))
+                                        .Where(a => a.NewCategories.Any(c => c.CategoryId == "8323dd"))
                                         .ToListAsync();
                     int updateCount = 0;
                     int currentIndex = 0;
