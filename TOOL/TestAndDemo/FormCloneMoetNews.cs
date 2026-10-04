@@ -203,7 +203,11 @@ namespace RJCodeUI_M1.TestAndDemo
                         string detailHref = titleNode.GetAttributeValue("href", "");
                         string detailUrl = ToAbsoluteUrl(pageUrl, detailHref);
 
-                        //if (!detailUrl.Equals("https://moet.gov.vn/tintuc/Pages/tin-tong-hop.aspx%3FItemID=7393?categoryId=101914884")) continue;
+                        if (!detailUrl.Equals("https://moet.gov.vn/tintuc/Pages/tin-tong-hop.aspx%3FItemID=4047?categoryId=101914884")
+                            && !detailUrl.Equals("https://moet.gov.vn/tintuc/Pages/tin-tong-hop.aspx%3FItemID=4058?categoryId=101914884"))
+                        {
+                            continue;
+                        }
 
                         var item = new BaiVietMoetItem();
                         item.DetailUrl = detailUrl;
@@ -409,7 +413,29 @@ namespace RJCodeUI_M1.TestAndDemo
                             if(findItem != null 
                                 && !string.IsNullOrWhiteSpace(findItem.Id))
                             {
-                                duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}");
+                                #region update Category
+                                try
+                                {
+                                    if (findItem.NewCategories != null
+                                        && findItem.NewCategories.Count > 0
+                                            && !findItem.NewCategories.All(a => a.CategoryId.Equals(categoryId)))
+                                    {
+                                        var newCategoryUpdate = new NewCategory()
+                                        {
+                                            CategoryId = categoryId,
+                                            Id = Guid.NewGuid(),
+                                            NewId = findItem.Id
+                                        };
+                                        dbNews.NewCategories.Add(newCategoryUpdate);
+                                        dbNews.SaveChanges();
+                                    }
+                                    duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}");
+                                }
+                                catch(Exception exxx)
+                                {
+                                    duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}. Lỗi {exxx.Message}");
+                                }
+                                #endregion
                                 continue;
                             }    
 
