@@ -42,6 +42,7 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtDenPage = new System.Windows.Forms.TextBox();
             this.txtFolderChua = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnUpdateContent = new System.Windows.Forms.Button();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.btnUpdateContent);
             this.pnlClientArea.Controls.Add(this.label12);
             this.pnlClientArea.Controls.Add(this.txtFolderChua);
             this.pnlClientArea.Controls.Add(this.txtDenPage);
@@ -77,7 +79,7 @@ namespace RJCodeUI_M1.TestAndDemo
             this.pnlClientArea.Controls.Add(this.txtWebUrl);
             this.pnlClientArea.Controls.Add(this.cboCategory);
             this.pnlClientArea.Location = new System.Drawing.Point(1, 41);
-            this.pnlClientArea.Size = new System.Drawing.Size(958, 692);
+            this.pnlClientArea.Size = new System.Drawing.Size(958, 755);
             this.pnlClientArea.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClientArea_Paint);
             // 
             // cboCategory
@@ -306,6 +308,16 @@ namespace RJCodeUI_M1.TestAndDemo
             this.label12.TabIndex = 19;
             this.label12.Text = "Folder chứa:";
             // 
+            // btnUpdateContent
+            // 
+            this.btnUpdateContent.Location = new System.Drawing.Point(258, 637);
+            this.btnUpdateContent.Name = "btnUpdateContent";
+            this.btnUpdateContent.Size = new System.Drawing.Size(240, 26);
+            this.btnUpdateContent.TabIndex = 20;
+            this.btnUpdateContent.Text = "Update Content";
+            this.btnUpdateContent.UseVisualStyleBackColor = true;
+            this.btnUpdateContent.Click += new System.EventHandler(this.btnUpdateContent_Click);
+            // 
             // FormCloneMoetNews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -313,7 +325,7 @@ namespace RJCodeUI_M1.TestAndDemo
             this.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(97)))), ((int)(((byte)(212)))));
             this.BorderSize = 1;
             this.Caption = "Clone Moet News";
-            this.ClientSize = new System.Drawing.Size(960, 734);
+            this.ClientSize = new System.Drawing.Size(960, 797);
             this.Name = "FormCloneMoetNews";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Text = "Clone Moet News";
@@ -352,5 +364,6 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtFolderChua;
+        private System.Windows.Forms.Button btnUpdateContent;
     }
 }

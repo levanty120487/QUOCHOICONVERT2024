@@ -751,6 +751,11 @@ namespace RJCodeUI_M1.TestAndDemo
             var slug = System.Text.RegularExpressions.Regex.Replace(withoutMarks, "[^a-z0-9]+", "-").Trim('-');
             return string.IsNullOrWhiteSpace(slug) ? "bai-viet" : slug;
         }
+
+        private void btnUpdateContent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class CategoryDisplayItem
