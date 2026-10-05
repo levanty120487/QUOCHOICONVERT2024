@@ -46,6 +46,8 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
+        public string Author { get; set; }
     
         public virtual CategoryVideo CategoryVideo { get; set; }
     }

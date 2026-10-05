@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Portal_Moet_HinhanhServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Portal_Moet_HinhanhServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CategoryGallerys">
           <Key>
             <PropertyRef Name="Id" />
@@ -133,6 +133,8 @@
           <Property Name="VideoIndex" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Language" Type="nvarchar(max)" />
           <Property Name="DetailLinkClone" Type="nvarchar" MaxLength="450" />
+          <Property Name="NgayTao" Type="datetime2" Precision="7" />
+          <Property Name="Author" Type="nvarchar" MaxLength="254" />
           <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
@@ -185,8 +187,7 @@
             <End Role="Videos" EntitySet="Videos" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Portal_Moet_HinhanhServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -331,6 +332,8 @@
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
           <NavigationProperty Name="CategoryVideo" Relationship="Self.FK_Videos_CategoryVideos_CategoryVideoId" FromRole="Videos" ToRole="CategoryVideos" />
+          <Property Name="NgayTao" Type="DateTime" Precision="7" />
+          <Property Name="Author" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Gallerys_CategoryGallerys_CategoryGalleryId">
           <End Role="CategoryGallerys" Type="Self.CategoryGallery" Multiplicity="1">
@@ -487,6 +490,8 @@
           <EntitySetMapping Name="Videos">
             <EntityTypeMapping TypeName="Portal_Moet_HinhanhServiceModel.Video">
               <MappingFragment StoreEntitySet="Videos">
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TenantId" ColumnName="TenantId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
