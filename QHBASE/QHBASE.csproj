@@ -137,6 +137,13 @@
     <None Include="Moet_Files.edmx.diagram">
       <DependentUpon>Moet_Files.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Moet_HinhAnh.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Moet_HinhAnh.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Moet_HinhAnh.edmx.diagram">
+      <DependentUpon>Moet_HinhAnh.edmx</DependentUpon>
+    </None>
     <None Include="Moet_News.edmx.diagram">
       <DependentUpon>Moet_News.edmx</DependentUpon>
     </None>
@@ -217,6 +224,12 @@
     </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryGallery.cs">
+      <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryVideo.cs">
+      <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
     </Compile>
     <Compile Include="CDKCommonService.Context.cs">
       <AutoGen>True</AutoGen>
@@ -335,6 +348,9 @@
     <Compile Include="FormSurveyQuestion.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
+    <Compile Include="Gallery.cs">
+      <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
+    </Compile>
     <Compile Include="Gopy.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
@@ -424,6 +440,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Moet_Files.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_HinhAnh.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_HinhAnh.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_HinhAnh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_HinhAnh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_HinhAnh.edmx</DependentUpon>
     </Compile>
     <Compile Include="Moet_News.Context.cs">
       <AutoGen>True</AutoGen>
@@ -600,6 +631,9 @@
     <Compile Include="VanKienTaiLieu.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
+    <Compile Include="Video.cs">
+      <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
+    </Compile>
     <Compile Include="VietLaw.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
@@ -699,6 +733,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Moet_Files.edmx</DependentUpon>
       <LastGenOutput>Moet_Files.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_HinhAnh.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_HinhAnh.edmx</DependentUpon>
+      <LastGenOutput>Moet_HinhAnh.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_HinhAnh.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_HinhAnh.edmx</DependentUpon>
+      <LastGenOutput>Moet_HinhAnh.cs</LastGenOutput>
     </Content>
     <Content Include="Moet_News.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

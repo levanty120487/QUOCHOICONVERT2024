@@ -378,7 +378,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                         var file = new CMSFile()
                                         {
                                             Id = Guid.NewGuid(),
-                                            FileType = 8,
+                                            FileType = 2,
                                             CreationTime = DateTime.Now,
                                             FileContainerName = "CMSContainerPublic",
                                             ConcurrencyStamp = Guid.NewGuid().ToString(),
@@ -400,7 +400,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                             ExtraProperties = "{}",
                                             ConcurrencyStamp = Guid.NewGuid().ToString(),
                                             CreationTime = DateTime.Now,
-                                            FileAttachmentType = 1
+                                            FileAttachmentType = 8
                                         };
                                         files.CMSFileAttachments.Add(fileAttach);
                                         files.SaveChanges();

@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Portal_Moet_HinhanhServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CategoryGallerys">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Order" Type="int" />
+          <Property Name="View" Type="int" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="Shared" Type="bit" Nullable="false" />
+          <Property Name="ParentID" Type="uniqueidentifier" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="nvarchar(max)" />
+          <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+          <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+          <Property Name="CategoryIndex" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="CategoryVideos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Order" Type="int" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="Shared" Type="bit" Nullable="false" />
+          <Property Name="ParentID" Type="uniqueidentifier" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CategoryIndex" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="nvarchar(max)" />
+          <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+          <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Gallerys">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CategoryGalleryId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CategoryGalleryTree" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CategoryGalleryTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+          <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+          <Property Name="GalleryIndex" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Language" Type="nvarchar(max)" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Videos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Order" Type="int" />
+          <Property Name="View" Type="int" />
+          <Property Name="Shared" Type="bit" />
+          <Property Name="Hot" Type="bit" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="File" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CategoryVideoId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CategoryVideoTree" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CategoryVideoTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="OrganizationUnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrganizationUnitId" Type="uniqueidentifier" />
+          <Property Name="OrganizationUnitName" Type="nvarchar" MaxLength="254" />
+          <Property Name="VideoIndex" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Language" Type="nvarchar(max)" />
+          <Property Name="DetailLinkClone" Type="nvarchar" MaxLength="450" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <Association Name="FK_Gallerys_CategoryGallerys_CategoryGalleryId">
+          <End Role="CategoryGallerys" Type="Self.CategoryGallerys" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Gallerys" Type="Self.Gallerys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryGallerys">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallerys">
+              <PropertyRef Name="CategoryGalleryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videos_CategoryVideos_CategoryVideoId">
+          <End Role="CategoryVideos" Type="Self.CategoryVideos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Videos" Type="Self.Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryVideos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Videos">
+              <PropertyRef Name="CategoryVideoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Portal_Moet_HinhanhServiceModelStoreContainer">
+          <EntitySet Name="CategoryGallerys" EntityType="Self.CategoryGallerys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoryVideos" EntityType="Self.CategoryVideos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gallerys" EntityType="Self.Gallerys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Videos" EntityType="Self.Videos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Gallerys_CategoryGallerys_CategoryGalleryId" Association="Self.FK_Gallerys_CategoryGallerys_CategoryGalleryId">
+            <End Role="CategoryGallerys" EntitySet="CategoryGallerys" />
+            <End Role="Gallerys" EntitySet="Gallerys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videos_CategoryVideos_CategoryVideoId" Association="Self.FK_Videos_CategoryVideos_CategoryVideoId">
+            <End Role="CategoryVideos" EntitySet="CategoryVideos" />
+            <End Role="Videos" EntitySet="Videos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Portal_Moet_HinhanhServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CategoryGallery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="View" Type="Int32" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="Shared" Type="Boolean" Nullable="false" />
+          <Property Name="ParentID" Type="Guid" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationUnitId" Type="Guid" />
+          <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryIndex" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TreeParentIds" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Gallerys" Relationship="Self.FK_Gallerys_CategoryGallerys_CategoryGalleryId" FromRole="CategoryGallerys" ToRole="Gallerys" />
+        </EntityType>
+        <EntityType Name="CategoryVideo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="Shared" Type="Boolean" Nullable="false" />
+          <Property Name="ParentID" Type="Guid" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryIndex" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TreeParentIds" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DetailCategoryRoot" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationUnitId" Type="Guid" />
+          <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Videos" Relationship="Self.FK_Videos_CategoryVideos_CategoryVideoId" FromRole="CategoryVideos" ToRole="Videos" />
+        </EntityType>
+        <EntityType Name="Gallery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryGalleryId" Type="Guid" Nullable="false" />
+          <Property Name="CategoryGalleryTree" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryGalleryTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationUnitId" Type="Guid" />
+          <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="GalleryIndex" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="CategoryGallery" Relationship="Self.FK_Gallerys_CategoryGallerys_CategoryGalleryId" FromRole="Gallerys" ToRole="CategoryGallerys" />
+        </EntityType>
+        <EntityType Name="Video">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="View" Type="Int32" />
+          <Property Name="Shared" Type="Boolean" />
+          <Property Name="Hot" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="File" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryVideoId" Type="Guid" Nullable="false" />
+          <Property Name="CategoryVideoTree" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryVideoTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrganizationUnitCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationUnitId" Type="Guid" />
+          <Property Name="OrganizationUnitName" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="VideoIndex" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DetailLinkClone" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="CategoryVideo" Relationship="Self.FK_Videos_CategoryVideos_CategoryVideoId" FromRole="Videos" ToRole="CategoryVideos" />
+        </EntityType>
+        <Association Name="FK_Gallerys_CategoryGallerys_CategoryGalleryId">
+          <End Role="CategoryGallerys" Type="Self.CategoryGallery" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Gallerys" Type="Self.Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryGallerys">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallerys">
+              <PropertyRef Name="CategoryGalleryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videos_CategoryVideos_CategoryVideoId">
+          <End Role="CategoryVideos" Type="Self.CategoryVideo" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Videos" Type="Self.Video" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryVideos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Videos">
+              <PropertyRef Name="CategoryVideoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Portal_Moet_HinhanhServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CategoryGallerys" EntityType="Self.CategoryGallery" />
+          <EntitySet Name="CategoryVideos" EntityType="Self.CategoryVideo" />
+          <EntitySet Name="Gallerys" EntityType="Self.Gallery" />
+          <EntitySet Name="Videos" EntityType="Self.Video" />
+          <AssociationSet Name="FK_Gallerys_CategoryGallerys_CategoryGalleryId" Association="Self.FK_Gallerys_CategoryGallerys_CategoryGalleryId">
+            <End Role="CategoryGallerys" EntitySet="CategoryGallerys" />
+            <End Role="Gallerys" EntitySet="Gallerys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videos_CategoryVideos_CategoryVideoId" Association="Self.FK_Videos_CategoryVideos_CategoryVideoId">
+            <End Role="CategoryVideos" EntitySet="CategoryVideos" />
+            <End Role="Videos" EntitySet="Videos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Portal_Moet_HinhanhServiceModelStoreContainer" CdmEntityContainer="Portal_Moet_HinhanhServiceEntities">
+          <EntitySetMapping Name="CategoryGallerys">
+            <EntityTypeMapping TypeName="Portal_Moet_HinhanhServiceModel.CategoryGallery">
+              <MappingFragment StoreEntitySet="CategoryGallerys">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="View" ColumnName="View" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Shared" ColumnName="Shared" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+                <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+                <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+                <ScalarProperty Name="CategoryIndex" ColumnName="CategoryIndex" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryVideos">
+            <EntityTypeMapping TypeName="Portal_Moet_HinhanhServiceModel.CategoryVideo">
+              <MappingFragment StoreEntitySet="CategoryVideos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Shared" ColumnName="Shared" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="CategoryIndex" ColumnName="CategoryIndex" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+                <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+                <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gallerys">
+            <EntityTypeMapping TypeName="Portal_Moet_HinhanhServiceModel.Gallery">
+              <MappingFragment StoreEntitySet="Gallerys">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="CategoryGalleryId" ColumnName="CategoryGalleryId" />
+                <ScalarProperty Name="CategoryGalleryTree" ColumnName="CategoryGalleryTree" />
+                <ScalarProperty Name="CategoryGalleryTitle" ColumnName="CategoryGalleryTitle" />
+                <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+                <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+                <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+                <ScalarProperty Name="GalleryIndex" ColumnName="GalleryIndex" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Videos">
+            <EntityTypeMapping TypeName="Portal_Moet_HinhanhServiceModel.Video">
+              <MappingFragment StoreEntitySet="Videos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="View" ColumnName="View" />
+                <ScalarProperty Name="Shared" ColumnName="Shared" />
+                <ScalarProperty Name="Hot" ColumnName="Hot" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="File" ColumnName="File" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="CategoryVideoId" ColumnName="CategoryVideoId" />
+                <ScalarProperty Name="CategoryVideoTree" ColumnName="CategoryVideoTree" />
+                <ScalarProperty Name="CategoryVideoTitle" ColumnName="CategoryVideoTitle" />
+                <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+                <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+                <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+                <ScalarProperty Name="VideoIndex" ColumnName="VideoIndex" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DetailLinkClone" ColumnName="DetailLinkClone" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
