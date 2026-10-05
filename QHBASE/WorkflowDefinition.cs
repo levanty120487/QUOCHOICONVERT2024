@@ -14,6 +14,12 @@ namespace QHBASE
     
     public partial class WorkflowDefinition
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public WorkflowDefinition()
+        {
+            this.WorkflowInstances = new HashSet<WorkflowInstance>();
+        }
+    
         public System.Guid Id { get; set; }
         public string WORKFLOW_NAME { get; set; }
         public string WORKFLOW_DATA { get; set; }
@@ -27,6 +33,7 @@ namespace QHBASE
         public string TYPE_WORKFLOW { get; set; }
         public string LST_WORKFLOW_CHILD { get; set; }
         public bool STATIC_STATUS { get; set; }
+        public Nullable<int> LoaiQuyTrinhId { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
@@ -36,5 +43,8 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WorkflowInstance> WorkflowInstances { get; set; }
     }
 }

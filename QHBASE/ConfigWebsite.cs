@@ -177,6 +177,7 @@ namespace QHBASE
         public Nullable<decimal> HeSoLuongCoBan { get; set; }
         public Nullable<int> CategoryVideoGalleryShow { get; set; }
         public Nullable<int> VideoGalleryShow { get; set; }
+        public Nullable<int> Top_AnhHoatDong { get; set; }
         public Nullable<int> QuestionList { get; set; }
         public Nullable<int> QuestionPageShow { get; set; }
         public Nullable<int> Top_CauHoiXemNhieu { get; set; }
@@ -184,6 +185,12 @@ namespace QHBASE
         public Nullable<int> Top_CauHoiQuanTam { get; set; }
         public Nullable<int> QuestionList_Substring_Question { get; set; }
         public Nullable<int> QuestionRelatedDetail { get; set; }
+        public Nullable<int> ProductList { get; set; }
+        public Nullable<int> ProductPageShow { get; set; }
+        public Nullable<int> ProductRelatedDetail { get; set; }
+        public Nullable<int> LawList { get; set; }
+        public Nullable<int> LawPageShow { get; set; }
+        public Nullable<int> LawRelatedDetail { get; set; }
         public Nullable<int> TinTucLimit { get; set; }
         public Nullable<int> DaoTaoLimit { get; set; }
         public string QuyTrinhVanBanId { get; set; }
@@ -198,8 +205,5 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
-        public Nullable<int> ProductList { get; set; }
-        public Nullable<int> ProductPageShow { get; set; }
-        public Nullable<int> ProductRelatedDetail { get; set; }
     }
 }

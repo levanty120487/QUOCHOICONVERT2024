@@ -14,6 +14,12 @@ namespace QHBASE
     
     public partial class WorkflowInstance
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public WorkflowInstance()
+        {
+            this.HistoryActionFlows = new HashSet<HistoryActionFlow>();
+        }
+    
         public System.Guid Id { get; set; }
         public string TARGET_OBJECT_ID { get; set; }
         public string TARGET_OBJECT_TABLE { get; set; }
@@ -33,6 +39,7 @@ namespace QHBASE
         public string LIST_RELATED_OBJECT_ORIGINAL { get; set; }
         public string TARGET_OBJECT_PARENT_ID { get; set; }
         public string TARGET_OBJECT_PARENT_TABLE { get; set; }
+        public string CreatedBy { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
@@ -42,5 +49,9 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistoryActionFlow> HistoryActionFlows { get; set; }
+        public virtual WorkflowDefinition WorkflowDefinition { get; set; }
     }
 }

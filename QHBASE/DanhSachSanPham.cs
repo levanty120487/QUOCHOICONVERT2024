@@ -27,6 +27,7 @@ namespace QHBASE
         public Nullable<System.DateTime> NgayTao { get; set; }
         public string NoiDung { get; set; }
         public string HinhAnh { get; set; }
+        public string HinhAnhList { get; set; }
         public string NguoiTao { get; set; }
         public string NguoiSua { get; set; }
         public string NguoiXoa { get; set; }
@@ -44,7 +45,6 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
-        public string HinhAnhList { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhanHoiSanPham> PhanHoiSanPhams { get; set; }

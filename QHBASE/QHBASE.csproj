@@ -127,6 +127,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Moet_Files.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Moet_Commons.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Moet_Commons.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Moet_Commons.edmx.diagram">
+      <DependentUpon>Moet_Commons.edmx</DependentUpon>
+    </None>
     <None Include="Moet_Files.edmx.diagram">
       <DependentUpon>Moet_Files.edmx</DependentUpon>
     </None>
@@ -275,13 +282,13 @@
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="ConfigWebsite.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="ContactInfo.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="CoQuanBanHanh.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="C__EFMigrationsHistory.cs">
       <DependentUpon>ApatitFiles.tt</DependentUpon>
@@ -290,13 +297,13 @@
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachSanPham.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachThongBao.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DataCloneService.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DMChuongTrinhLamViec.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
@@ -305,10 +312,13 @@
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
     <Compile Include="DoiTac.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="EmailDangKy.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplate.cs">
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Event.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
@@ -326,13 +336,13 @@
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
     <Compile Include="Gopy.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="HistoryActionFlow.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="HistoryVersion.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="HotNew.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
@@ -341,34 +351,34 @@
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="Language.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LanguageMapText.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LanguageText.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LienKetWebsite.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LinhVuc.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LinkVietLaw.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiThongBao.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiVanKien.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="MenuLanhDao.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -384,6 +394,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_Commons.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_Commons.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_Commons.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_Commons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_Commons.edmx</DependentUpon>
     </Compile>
     <Compile Include="Moet_Files.Context.cs">
       <AutoGen>True</AutoGen>
@@ -461,10 +486,10 @@
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="PhanHoiSanPham.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="QHCOMMON.Context.cs">
       <AutoGen>True</AutoGen>
@@ -513,13 +538,13 @@
       <DependentUpon>QHVN.edmx</DependentUpon>
     </Compile>
     <Compile Include="QuangCaoss.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Question.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
     <Compile Include="ReadCountLog.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="ReplyNew.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
@@ -528,22 +553,22 @@
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
     <Compile Include="RSSChannel.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="SettingSiteClone.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="SlideImage.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="SummaryNewss.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="TagInfo.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="TempCoQuanBanHanh.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
@@ -579,19 +604,19 @@
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
     <Compile Include="ViTriQuangCao.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="ViTriQuangCaoMapQuangCao.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkflowCategory.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkflowDefinition.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkflowInstance.cs">
-      <DependentUpon>ApatitCommons.tt</DependentUpon>
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -654,6 +679,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_Commons.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_Commons.edmx</DependentUpon>
+      <LastGenOutput>Moet_Commons.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_Commons.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_Commons.edmx</DependentUpon>
+      <LastGenOutput>Moet_Commons.cs</LastGenOutput>
     </Content>
     <Content Include="Moet_Files.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

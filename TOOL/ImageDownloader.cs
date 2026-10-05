@@ -133,8 +133,34 @@ namespace RJCodeUI_M1
                 {
                     relativePath = relativePath.Substring(0, relativePath.IndexOf("_RenditionID"));
                 }
+                
+                string dirName = string.Empty;
+                try
+                {
+                    dirName = Path.GetDirectoryName(relativePath) ?? string.Empty;
+                }
+                catch
+                {
+                    int lastSlash = relativePath.LastIndexOf('/');
+                    if (lastSlash < 0) lastSlash = relativePath.LastIndexOf('\\');
+                    if (lastSlash >= 0) dirName = relativePath.Substring(0, lastSlash);
+                }
+
+                if (dirName.Length > 100)
+                {
+                    dirName = dirName.Substring(0, 100);
+                }
+
+                if (fileName.Length > 80)
+                {
+                    string ext = "";
+                    try { ext = Path.GetExtension(fileName); } catch { }
+                    if (ext.Length > 10 || ext.Length == 0) ext = ".jpg"; // fallback extension if something goes wrong
+                    fileName = fileName.Substring(0, 80 - ext.Length) + ext;
+                }
+
                 // Tạo đường dẫn đầy đủ để lưu ảnh trên máy chủ
-                string fullDirectoryPath = Path.Combine(rootDirectory, Path.GetDirectoryName(relativePath) ?? string.Empty);
+                string fullDirectoryPath = Path.Combine(rootDirectory, dirName);
 
                 // Tạo thư mục nếu chưa tồn tại
                 if (!Directory.Exists(fullDirectoryPath))

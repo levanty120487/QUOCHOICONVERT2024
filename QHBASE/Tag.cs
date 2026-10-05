@@ -28,12 +28,12 @@ namespace QHBASE
         public bool Show { get; set; }
         public string Descriptions { get; set; }
         public Nullable<System.Guid> TenantId { get; set; }
+        public string ExtraProperties { get; set; }
+        public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
         public Nullable<System.Guid> CreatorId { get; set; }
         public Nullable<System.DateTime> LastModificationTime { get; set; }
         public Nullable<System.Guid> LastModifierId { get; set; }
-        public string ConcurrencyStamp { get; set; }
-        public string ExtraProperties { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TagInfo> TagInfos { get; set; }

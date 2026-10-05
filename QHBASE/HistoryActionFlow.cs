@@ -22,6 +22,7 @@ namespace QHBASE
         public Nullable<System.Guid> FROM_USER_ID { get; set; }
         public string LIST_TO_USER_ID { get; set; }
         public string LIST_TO_NODE_ID { get; set; }
+        public string LIST_TO_ROLE_ID { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
@@ -31,5 +32,7 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
+    
+        public virtual WorkflowInstance WorkflowInstance { get; set; }
     }
 }

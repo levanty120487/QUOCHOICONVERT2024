@@ -28,6 +28,9 @@ namespace QHBASE
         public Nullable<int> Order { get; set; }
         public bool IsShow { get; set; }
         public string Language { get; set; }
+        public string NamThanhLap { get; set; }
+        public string LinhVucHoatDong { get; set; }
+        public string ThiTruong { get; set; }
         public System.DateTime CreationTime { get; set; }
         public Nullable<System.Guid> CreatorId { get; set; }
         public Nullable<System.DateTime> LastModificationTime { get; set; }

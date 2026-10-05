@@ -29,10 +29,10 @@ namespace QHBASE
         public string TypeOfND { get; set; }
         public Nullable<System.DateTime> CreationTimeEntity { get; set; }
         public Nullable<System.Guid> TenantId { get; set; }
+        public string ExtraProperties { get; set; }
+        public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
         public Nullable<System.Guid> CreatorId { get; set; }
-        public string ConcurrencyStamp { get; set; }
-        public string ExtraProperties { get; set; }
     
         public virtual Tag Tag { get; set; }
     }

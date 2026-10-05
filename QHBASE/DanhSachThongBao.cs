@@ -28,6 +28,9 @@ namespace QHBASE
         public string Language { get; set; }
         public string TieuDeUnicode { get; set; }
         public string MoTaUnicode { get; set; }
+        public string Image { get; set; }
+        public Nullable<int> ViewCount { get; set; }
+        public string DetailLinkClone { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
@@ -37,7 +40,6 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
-        public string Image { get; set; }
     
         public virtual LoaiThongBao LoaiThongBao { get; set; }
     }

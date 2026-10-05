@@ -47,6 +47,7 @@ namespace QHBASE
         public string PhoneNumber2 { get; set; }
         public string BannerTuyenSinh { get; set; }
         public string LinkPageBanner { get; set; }
+        public string JsonFileCoCauToChuc { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
