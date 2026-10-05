@@ -292,7 +292,7 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtDenPage.Name = "txtDenPage";
             this.txtDenPage.Size = new System.Drawing.Size(74, 25);
             this.txtDenPage.TabIndex = 17;
-            this.txtDenPage.Text = "1";
+            this.txtDenPage.Text = "11";
             // 
             // txtFolderChua
             // 

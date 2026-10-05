@@ -270,7 +270,8 @@ namespace RJCodeUI_M1
 
         private void rjMenuButton1_Click(object sender, EventArgs e)
         {
-            this.OpenChildForm(() => new FormThongBao(), sender);
+            //this.OpenChildForm(() => new FormThongBao(), sender);
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetThongBao(), sender);
         }
 
         private void rjMenuButton1_Click_1(object sender, EventArgs e)
@@ -286,6 +287,11 @@ namespace RJCodeUI_M1
         private void rjMenuButton2_Click(object sender, EventArgs e)
         {
             this.OpenChildForm(() => new TestAndDemo.FormCloneMoetNews(), sender);
+        }
+
+        private void rjMenuButtonThongBaoMoet_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetThongBao(), sender);
         }
     }
 }
