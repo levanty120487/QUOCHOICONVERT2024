@@ -298,5 +298,10 @@ namespace RJCodeUI_M1
         {
             this.OpenChildForm(() => new TestAndDemo.FormCloneMoetVideo(), sender);
         }
+
+        private void btnCloneVanBanMoet_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetVanBan(), sender);
+        }
     }
 }
