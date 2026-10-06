@@ -2,7 +2,6 @@ using HtmlAgilityPack;
 using QHBASE;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
@@ -271,8 +270,9 @@ namespace RJCodeUI_M1.TestAndDemo
                     int currentIndex = 0;
                     int totalItems = parsedData.Count;
                     var errorList = new List<string>();
+                    var duplicateList = new List<string>();
 
-                    foreach (var item in parsedData)
+                    foreach (var item in parsedData.OrderByDescending(a=>a.CreateAt))
                     {
                         try
                         {
@@ -293,6 +293,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             var existingLaw = await dbVanBan.Laws.FirstOrDefaultAsync(l => l.DetailLinkClone == item.DetailUrl);
                             if (existingLaw != null)
                             {
+                                duplicateList.Add($"- Số KH: {item.SoKyHieu}\n  Link: {item.DetailUrl}");
                                 continue;
                             }
 
@@ -304,7 +305,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 if (effect == null)
                                 {
                                     effect = new EffectStatu { Id = QHCommons.GenAutoId(), Title = item.TinhTrangHieuLuc,
-                                        Language = "vi"
+                                        Language = "vi", IsShow = true
                                     };
                                     dbVanBan.EffectStatus.Add(effect);
                                     dbVanBan.SaveChanges();
@@ -318,7 +319,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 var type = dbVanBan.TypeOfDocuments.FirstOrDefault(x => x.Title == item.LoaiVanBan);
                                 if (type == null)
                                 {
-                                    type = new TypeOfDocument { Id = QHCommons.GenAutoId(), Title = item.LoaiVanBan , Language = "vi", CreatedBy = "admin" };
+                                    type = new TypeOfDocument { Id = QHCommons.GenAutoId(), Title = item.LoaiVanBan , Language = "vi", CreatedBy = "admin" , IsShow = true };
                                     dbVanBan.TypeOfDocuments.Add(type);
                                     dbVanBan.SaveChanges();
                                 }
@@ -332,10 +333,10 @@ namespace RJCodeUI_M1.TestAndDemo
                                 Title = item.LoaiVanBan + " " + item.SoKyHieu,
                                 Status = 1,
                                 OfficialNumber = item.SoKyHieu,
-                                PublishedDate = item.NgayBanHanh,
+                                PublishedDate = item.NgayBanHanh ?? DateTime.Now,
                                 EffectiveDate = item.NgayCoHieuLuc,
                                 ExpiryDate = item.NgayHetHieuLuc,
-                                PublicDate = DateTime.Now,
+                                PublicDate = item.NgayBanHanh ?? DateTime.Now,
                                 Source = item.TrichYeu,
                                 EffectiveArea = string.Empty,
                                 Content = string.Empty,
@@ -360,7 +361,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 var signer = dbVanBan.Signers.FirstOrDefault(x => x.Title == item.NguoiKy);
                                 if (signer == null)
                                 {
-                                    signer = new Signer { Id = QHCommons.GenAutoId(), Title = item.NguoiKy, CreatedBy = "admin" };
+                                    signer = new Signer { Id = QHCommons.GenAutoId(), Title = item.NguoiKy, CreatedBy = "admin" , IsShow = true};
                                     dbVanBan.Signers.Add(signer);
                                     dbVanBan.SaveChanges();
                                 }
@@ -373,7 +374,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 var promulgator = dbVanBan.Promulgators.FirstOrDefault(x => x.Title == item.CoQuanBanHanh);
                                 if (promulgator == null)
                                 {
-                                    promulgator = new Promulgator { Id = QHCommons.GenAutoId(), Title = item.CoQuanBanHanh, Language = "vi", CreatedBy = "admin" };
+                                    promulgator = new Promulgator { Id = QHCommons.GenAutoId(), Title = item.CoQuanBanHanh, Language = "vi", CreatedBy = "admin" , IsShow = true };
                                     dbVanBan.Promulgators.Add(promulgator);
                                     dbVanBan.SaveChanges();
                                 }
@@ -401,7 +402,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 var field = dbVanBan.Fields.FirstOrDefault(x => x.Title == item.LinhVuc);
                                 if (field == null)
                                 {
-                                    field = new Field { Id = QHCommons.GenAutoId(), Title = item.LinhVuc, Language = "vi", CreatedBy = "admin" };
+                                    field = new Field { Id = QHCommons.GenAutoId(), Title = item.LinhVuc, Language = "vi", CreatedBy = "admin", IsShow = true };
                                     dbVanBan.Fields.Add(field);
                                     dbVanBan.SaveChanges();
                                 }
@@ -466,9 +467,36 @@ namespace RJCodeUI_M1.TestAndDemo
                         }
                     }
 
-                    if (errorList.Count > 0)
+                    if (errorList.Count > 0 || duplicateList.Count > 0)
                     {
-                        MessageBox.Show($"Hoàn thành với {errorList.Count} lỗi.");
+                        string msg = "";
+                        if (errorList.Count > 0)
+                        {
+                            msg += $"--- DANH SÁCH LỖI ({errorList.Count} bản ghi) ---\r\n";
+                            msg += string.Join("\r\n\r\n", errorList) + "\r\n\r\n";
+                        }
+                        if (duplicateList.Count > 0)
+                        {
+                            msg += $"--- DANH SÁCH TRÙNG ({duplicateList.Count} bản ghi) ---\r\n";
+                            msg += string.Join("\r\n\r\n", duplicateList);
+                        }
+
+                        using (Form msgForm = new Form())
+                        {
+                            msgForm.Text = $"Kết quả lưu: {errorList.Count} lỗi, {duplicateList.Count} trùng";
+                            msgForm.Size = new System.Drawing.Size(800, 600);
+                            msgForm.StartPosition = FormStartPosition.CenterScreen;
+
+                            TextBox txtMsg = new TextBox();
+                            txtMsg.Multiline = true;
+                            txtMsg.ReadOnly = true;
+                            txtMsg.ScrollBars = ScrollBars.Vertical;
+                            txtMsg.Dock = DockStyle.Fill;
+                            txtMsg.Text = msg;
+
+                            msgForm.Controls.Add(txtMsg);
+                            msgForm.ShowDialog();
+                        }
                     }
                 }
 
@@ -605,5 +633,7 @@ namespace RJCodeUI_M1.TestAndDemo
         public DateTime? NgayHetHieuLuc { get; set; }
 
         public List<AttachmentFile> Attachments { get; set; } = new List<AttachmentFile>();
+
+        public DateTime CreateAt {  get; set; } = DateTime.Now;
     }
 }
