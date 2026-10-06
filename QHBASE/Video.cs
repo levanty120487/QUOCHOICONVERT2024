@@ -48,6 +48,7 @@ namespace QHBASE
         public Nullable<System.DateTime> DeletionTime { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }
         public string Author { get; set; }
+        public string Contents { get; set; }
     
         public virtual CategoryVideo CategoryVideo { get; set; }
     }
