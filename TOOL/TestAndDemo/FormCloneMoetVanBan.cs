@@ -356,6 +356,9 @@ namespace RJCodeUI_M1.TestAndDemo
 
                             // Tạo LawSigner
                             string idSigner = string.Empty;
+
+                            item.NguoiKy = string.IsNullOrWhiteSpace(item.NguoiKy) ? item.CoQuanBanHanh : item.NguoiKy;
+
                             if (!string.IsNullOrEmpty(item.NguoiKy))
                             {
                                 var signer = dbVanBan.Signers.FirstOrDefault(x => x.Title == item.NguoiKy);
@@ -381,7 +384,8 @@ namespace RJCodeUI_M1.TestAndDemo
                                 idPromulgator = promulgator.Id;
                             }
 
-                            if (!string.IsNullOrWhiteSpace(idSigner))
+                            if (!string.IsNullOrWhiteSpace(idSigner) 
+                                && !string.IsNullOrWhiteSpace(idPromulgator))
                             {
                                 var lawSigner = new LawSigner
                                 {
