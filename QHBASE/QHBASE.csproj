@@ -147,6 +147,13 @@
     <None Include="Moet_News.edmx.diagram">
       <DependentUpon>Moet_News.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Moet_VanBans.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Moet_VanBans.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Moet_VanBans.edmx.diagram">
+      <DependentUpon>Moet_VanBans.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <EntityDeploy Include="QHCOMMON.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -327,6 +334,9 @@
     <Compile Include="DoiTac.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
+    <Compile Include="EffectStatu.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
     <Compile Include="EmailDangKy.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
@@ -335,6 +345,9 @@
     </Compile>
     <Compile Include="Event.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Field.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="FormResult.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
@@ -353,6 +366,9 @@
     </Compile>
     <Compile Include="Gopy.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GopYVanBanDuThao.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="HistoryActionFlow.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
@@ -374,6 +390,15 @@
     </Compile>
     <Compile Include="LanguageText.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Law.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LawCategory.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LawSigner.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="LienKetWebsite.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
@@ -471,6 +496,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Moet_News.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Moet_VanBans.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_VanBans.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_VanBans.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_VanBans.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_VanBans.edmx</DependentUpon>
+    </Compile>
     <Compile Include="New.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
@@ -521,6 +561,9 @@
     </Compile>
     <Compile Include="PhanHoiSanPham.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Promulgator.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="QHCOMMON.Context.cs">
       <AutoGen>True</AutoGen>
@@ -589,6 +632,9 @@
     <Compile Include="SettingSiteClone.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
+    <Compile Include="Signer.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
     <Compile Include="SlideImage.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
@@ -613,11 +659,20 @@
     <Compile Include="TopicSurvey.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
+    <Compile Include="TuLieuAnPham.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
     <Compile Include="TypeNew.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
+    <Compile Include="TypeOfDocument.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserSurvey.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanBanDuThao.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="VanKien.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
@@ -753,6 +808,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Moet_News.edmx</DependentUpon>
       <LastGenOutput>Moet_News.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_VanBans.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_VanBans.edmx</DependentUpon>
+      <LastGenOutput>Moet_VanBans.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_VanBans.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_VanBans.edmx</DependentUpon>
+      <LastGenOutput>Moet_VanBans.cs</LastGenOutput>
     </Content>
     <Content Include="QHCOMMON.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
