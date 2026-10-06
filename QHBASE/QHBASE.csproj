@@ -397,6 +397,9 @@
     <Compile Include="LawCategory.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
+    <Compile Include="LawField.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
     <Compile Include="LawSigner.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>

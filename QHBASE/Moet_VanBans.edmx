@@ -131,6 +131,7 @@
           </Key>
           <Property Name="IdLaw" Type="varchar" MaxLength="36" Nullable="false" />
           <Property Name="IdField" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="LawSigner">
           <Key>
@@ -508,18 +509,76 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Portal_Moet_VanbanServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Portal_Moet_VanbanServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EffectStatus" EntityType="Portal_Moet_VanbanServiceModel.EffectStatu" />
+          <EntitySet Name="Fields" EntityType="Portal_Moet_VanbanServiceModel.Field" />
+          <EntitySet Name="GopYVanBanDuThaos" EntityType="Portal_Moet_VanbanServiceModel.GopYVanBanDuThao" />
+          <EntitySet Name="Laws" EntityType="Portal_Moet_VanbanServiceModel.Law" />
+          <EntitySet Name="LawCategories" EntityType="Portal_Moet_VanbanServiceModel.LawCategory" />
+          <EntitySet Name="LawFields" EntityType="Portal_Moet_VanbanServiceModel.LawField" />
+          <EntitySet Name="LawSigners" EntityType="Portal_Moet_VanbanServiceModel.LawSigner" />
+          <EntitySet Name="Promulgators" EntityType="Portal_Moet_VanbanServiceModel.Promulgator" />
+          <EntitySet Name="Signers" EntityType="Portal_Moet_VanbanServiceModel.Signer" />
+          <EntitySet Name="TuLieuAnPhams" EntityType="Portal_Moet_VanbanServiceModel.TuLieuAnPham" />
+          <EntitySet Name="TypeOfDocuments" EntityType="Portal_Moet_VanbanServiceModel.TypeOfDocument" />
+          <EntitySet Name="VanBanDuThaos" EntityType="Portal_Moet_VanbanServiceModel.VanBanDuThao" />
+          <AssociationSet Name="FK_Law_EffectStatus_IdEffectStatus" Association="Portal_Moet_VanbanServiceModel.FK_Law_EffectStatus_IdEffectStatus">
+            <End Role="EffectStatu" EntitySet="EffectStatus" />
+            <End Role="Law" EntitySet="Laws" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LawField_Field_IdField" Association="Portal_Moet_VanbanServiceModel.FK_LawField_Field_IdField">
+            <End Role="Field" EntitySet="Fields" />
+            <End Role="LawField" EntitySet="LawFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" Association="Portal_Moet_VanbanServiceModel.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
+            <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
+            <End Role="GopYVanBanDuThao" EntitySet="GopYVanBanDuThaos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Law_TypeOfDocument_IdTypeOfDocument" Association="Portal_Moet_VanbanServiceModel.FK_Law_TypeOfDocument_IdTypeOfDocument">
+            <End Role="TypeOfDocument" EntitySet="TypeOfDocuments" />
+            <End Role="Law" EntitySet="Laws" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LawCategories_Law_LawId" Association="Portal_Moet_VanbanServiceModel.FK_LawCategories_Law_LawId">
+            <End Role="Law" EntitySet="Laws" />
+            <End Role="LawCategory" EntitySet="LawCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LawField_Law_IdLaw" Association="Portal_Moet_VanbanServiceModel.FK_LawField_Law_IdLaw">
+            <End Role="Law" EntitySet="Laws" />
+            <End Role="LawField" EntitySet="LawFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LawSigner_Law_IdLaw" Association="Portal_Moet_VanbanServiceModel.FK_LawSigner_Law_IdLaw">
+            <End Role="Law" EntitySet="Laws" />
+            <End Role="LawSigner" EntitySet="LawSigners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LawSigner_Promulgator_IdPromulgator" Association="Portal_Moet_VanbanServiceModel.FK_LawSigner_Promulgator_IdPromulgator">
+            <End Role="Promulgator" EntitySet="Promulgators" />
+            <End Role="LawSigner" EntitySet="LawSigners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LawSigner_Signer_IdSigner" Association="Portal_Moet_VanbanServiceModel.FK_LawSigner_Signer_IdSigner">
+            <End Role="Signer" EntitySet="Signers" />
+            <End Role="LawSigner" EntitySet="LawSigners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" Association="Portal_Moet_VanbanServiceModel.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument">
+            <End Role="TypeOfDocument" EntitySet="TypeOfDocuments" />
+            <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
+          </AssociationSet>
+          <AssociationSet Name="VBDTField" Association="Portal_Moet_VanbanServiceModel.VBDTField">
+            <End Role="Field" EntitySet="Fields" />
+            <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="EffectStatu">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Order" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsShow" Type="Boolean" Nullable="false" />
           <Property Name="Color" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -530,19 +589,19 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="Laws" Relationship="Self.FK_Law_EffectStatus_IdEffectStatus" FromRole="EffectStatus" ToRole="Law" />
+          <NavigationProperty Name="Laws" Relationship="Portal_Moet_VanbanServiceModel.FK_Law_EffectStatus_IdEffectStatus" FromRole="EffectStatu" ToRole="Law" />
         </EntityType>
         <EntityType Name="Field">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Order" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsShow" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -554,35 +613,35 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="Laws" Relationship="Self.LawField" FromRole="Field" ToRole="Law" />
-          <NavigationProperty Name="VanBanDuThaos" Relationship="Self.VBDTField" FromRole="Field" ToRole="VanBanDuThao" />
+          <NavigationProperty Name="LawFields" Relationship="Portal_Moet_VanbanServiceModel.FK_LawField_Field_IdField" FromRole="Field" ToRole="LawField" />
+          <NavigationProperty Name="VanBanDuThaos" Relationship="Portal_Moet_VanbanServiceModel.VBDTField" FromRole="Field" ToRole="VanBanDuThao" />
         </EntityType>
         <EntityType Name="GopYVanBanDuThao">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SoDienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NoiDungGopY" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
-          <Property Name="IdVanBanDuThao" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdVanBanDuThao" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="IsShow" Type="Boolean" Nullable="false" />
           <Property Name="IsRead" Type="Boolean" Nullable="false" />
           <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="CreatorId" Type="Guid" />
-          <NavigationProperty Name="VanBanDuThao" Relationship="Self.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" FromRole="GopYVanBanDuThao" ToRole="VanBanDuThao" />
+          <NavigationProperty Name="VanBanDuThao" Relationship="Portal_Moet_VanbanServiceModel.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" FromRole="GopYVanBanDuThao" ToRole="VanBanDuThao" />
         </EntityType>
         <EntityType Name="Law">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Int32" />
-          <Property Name="OfficialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OfficialNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PublishedDate" Type="DateTime" Precision="7" />
           <Property Name="EffectiveDate" Type="DateTime" Precision="7" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="7" />
@@ -592,13 +651,13 @@
           <Property Name="Shared" Type="Boolean" />
           <Property Name="Tags" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="IdEffectStatus" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="EffectStatusTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IdTypeOfDocument" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TypeOfDocumentTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdTypeOfDocument" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TypeOfDocumentTitle" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="PageTitleSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="PageUrlSEO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -613,8 +672,8 @@
           <Property Name="QuyTrinhName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VanBanQCTC" Type="Int32" />
           <Property Name="DetailLinkClone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="CreatorId" Type="Guid" />
           <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
@@ -622,20 +681,31 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="EffectStatu" Relationship="Self.FK_Law_EffectStatus_IdEffectStatus" FromRole="Law" ToRole="EffectStatus" />
-          <NavigationProperty Name="TypeOfDocument" Relationship="Self.FK_Law_TypeOfDocument_IdTypeOfDocument" FromRole="Law" ToRole="TypeOfDocument" />
-          <NavigationProperty Name="LawCategories" Relationship="Self.FK_LawCategories_Law_LawId" FromRole="Law" ToRole="LawCategories" />
-          <NavigationProperty Name="LawSigners" Relationship="Self.FK_LawSigner_Law_IdLaw" FromRole="Law" ToRole="LawSigner" />
-          <NavigationProperty Name="Fields" Relationship="Self.LawField" FromRole="Law" ToRole="Field" />
+          <NavigationProperty Name="EffectStatu" Relationship="Portal_Moet_VanbanServiceModel.FK_Law_EffectStatus_IdEffectStatus" FromRole="Law" ToRole="EffectStatu" />
+          <NavigationProperty Name="TypeOfDocument" Relationship="Portal_Moet_VanbanServiceModel.FK_Law_TypeOfDocument_IdTypeOfDocument" FromRole="Law" ToRole="TypeOfDocument" />
+          <NavigationProperty Name="LawCategories" Relationship="Portal_Moet_VanbanServiceModel.FK_LawCategories_Law_LawId" FromRole="Law" ToRole="LawCategory" />
+          <NavigationProperty Name="LawFields" Relationship="Portal_Moet_VanbanServiceModel.FK_LawField_Law_IdLaw" FromRole="Law" ToRole="LawField" />
+          <NavigationProperty Name="LawSigners" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Law_IdLaw" FromRole="Law" ToRole="LawSigner" />
         </EntityType>
         <EntityType Name="LawCategory">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="LawId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CategoryId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Law" Relationship="Self.FK_LawCategories_Law_LawId" FromRole="LawCategories" ToRole="Law" />
+          <Property Name="LawId" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryId" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Law" Relationship="Portal_Moet_VanbanServiceModel.FK_LawCategories_Law_LawId" FromRole="LawCategory" ToRole="Law" />
+        </EntityType>
+        <EntityType Name="LawField">
+          <Key>
+            <PropertyRef Name="IdLaw" />
+            <PropertyRef Name="IdField" />
+          </Key>
+          <Property Name="IdLaw" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="IdField" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Field" Relationship="Portal_Moet_VanbanServiceModel.FK_LawField_Field_IdField" FromRole="LawField" ToRole="Field" />
+          <NavigationProperty Name="Law" Relationship="Portal_Moet_VanbanServiceModel.FK_LawField_Law_IdLaw" FromRole="LawField" ToRole="Law" />
         </EntityType>
         <EntityType Name="LawSigner">
           <Key>
@@ -643,26 +713,26 @@
             <PropertyRef Name="IdSigner" />
             <PropertyRef Name="IdPromulgator" />
           </Key>
-          <Property Name="IdLaw" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IdSigner" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IdPromulgator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdLaw" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="IdSigner" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="IdPromulgator" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <NavigationProperty Name="Law" Relationship="Self.FK_LawSigner_Law_IdLaw" FromRole="LawSigner" ToRole="Law" />
-          <NavigationProperty Name="Promulgator" Relationship="Self.FK_LawSigner_Promulgator_IdPromulgator" FromRole="LawSigner" ToRole="Promulgator" />
-          <NavigationProperty Name="Signer" Relationship="Self.FK_LawSigner_Signer_IdSigner" FromRole="LawSigner" ToRole="Signer" />
+          <NavigationProperty Name="Law" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Law_IdLaw" FromRole="LawSigner" ToRole="Law" />
+          <NavigationProperty Name="Promulgator" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Promulgator_IdPromulgator" FromRole="LawSigner" ToRole="Promulgator" />
+          <NavigationProperty Name="Signer" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Signer_IdSigner" FromRole="LawSigner" ToRole="Signer" />
         </EntityType>
         <EntityType Name="Promulgator">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Order" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsShow" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -674,19 +744,19 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="LawSigners" Relationship="Self.FK_LawSigner_Promulgator_IdPromulgator" FromRole="Promulgator" ToRole="LawSigner" />
+          <NavigationProperty Name="LawSigners" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Promulgator_IdPromulgator" FromRole="Promulgator" ToRole="LawSigner" />
         </EntityType>
         <EntityType Name="Signer">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Order" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsShow" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -697,15 +767,15 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="LawSigners" Relationship="Self.FK_LawSigner_Signer_IdSigner" FromRole="Signer" ToRole="LawSigner" />
+          <NavigationProperty Name="LawSigners" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Signer_IdSigner" FromRole="Signer" ToRole="LawSigner" />
         </EntityType>
         <EntityType Name="TuLieuAnPham">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CreatedBy" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
@@ -726,8 +796,8 @@
           <Property Name="KeyWordsSEO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Shared" Type="Boolean" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="CreatorId" Type="Guid" />
           <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
@@ -740,13 +810,13 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="TenantId" Type="Guid" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Order" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsShow" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -757,15 +827,15 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="Laws" Relationship="Self.FK_Law_TypeOfDocument_IdTypeOfDocument" FromRole="TypeOfDocument" ToRole="Law" />
-          <NavigationProperty Name="VanBanDuThaos" Relationship="Self.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" FromRole="TypeOfDocument" ToRole="VanBanDuThao" />
+          <NavigationProperty Name="Laws" Relationship="Portal_Moet_VanbanServiceModel.FK_Law_TypeOfDocument_IdTypeOfDocument" FromRole="TypeOfDocument" ToRole="Law" />
+          <NavigationProperty Name="VanBanDuThaos" Relationship="Portal_Moet_VanbanServiceModel.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" FromRole="TypeOfDocument" ToRole="VanBanDuThao" />
         </EntityType>
         <EntityType Name="VanBanDuThao">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SoKyHieu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="SoKyHieu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NgayBatDau" Type="DateTime" Precision="7" />
           <Property Name="NgayKetThuc" Type="DateTime" Precision="7" />
           <Property Name="TrichYeu" Type="String" MaxLength="3500" FixedLength="false" Unicode="true" />
@@ -774,10 +844,10 @@
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="IdTypeOfDocument" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdTypeOfDocument" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="Int32" Nullable="false" />
-          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="CreatorId" Type="Guid" />
           <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
@@ -785,16 +855,16 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="GopYVanBanDuThaos" Relationship="Self.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" FromRole="VanBanDuThao" ToRole="GopYVanBanDuThao" />
-          <NavigationProperty Name="TypeOfDocument" Relationship="Self.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" FromRole="VanBanDuThao" ToRole="TypeOfDocument" />
-          <NavigationProperty Name="Fields" Relationship="Self.VBDTField" FromRole="VanBanDuThao" ToRole="Field" />
           <Property Name="DetailLinkClone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GopYVanBanDuThaos" Relationship="Portal_Moet_VanbanServiceModel.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" FromRole="VanBanDuThao" ToRole="GopYVanBanDuThao" />
+          <NavigationProperty Name="TypeOfDocument" Relationship="Portal_Moet_VanbanServiceModel.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" FromRole="VanBanDuThao" ToRole="TypeOfDocument" />
+          <NavigationProperty Name="Fields" Relationship="Portal_Moet_VanbanServiceModel.VBDTField" FromRole="VanBanDuThao" ToRole="Field" />
         </EntityType>
         <Association Name="FK_Law_EffectStatus_IdEffectStatus">
-          <End Role="EffectStatus" Type="Self.EffectStatu" Multiplicity="0..1" />
-          <End Role="Law" Type="Self.Law" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.EffectStatu" Role="EffectStatu" Multiplicity="0..1" />
+          <End Type="Portal_Moet_VanbanServiceModel.Law" Role="Law" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="EffectStatus">
+            <Principal Role="EffectStatu">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Law">
@@ -802,11 +872,23 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_LawField_Field_IdField">
+          <End Type="Portal_Moet_VanbanServiceModel.Field" Role="Field" Multiplicity="1" />
+          <End Type="Portal_Moet_VanbanServiceModel.LawField" Role="LawField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Field">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LawField">
+              <PropertyRef Name="IdField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
-          <End Role="VanBanDuThao" Type="Self.VanBanDuThao" Multiplicity="1">
+          <End Type="Portal_Moet_VanbanServiceModel.VanBanDuThao" Role="VanBanDuThao" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="GopYVanBanDuThao" Type="Self.GopYVanBanDuThao" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.GopYVanBanDuThao" Role="GopYVanBanDuThao" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VanBanDuThao">
               <PropertyRef Name="Id" />
@@ -817,10 +899,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Law_TypeOfDocument_IdTypeOfDocument">
-          <End Role="TypeOfDocument" Type="Self.TypeOfDocument" Multiplicity="1">
+          <End Type="Portal_Moet_VanbanServiceModel.TypeOfDocument" Role="TypeOfDocument" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Law" Type="Self.Law" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.Law" Role="Law" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TypeOfDocument">
               <PropertyRef Name="Id" />
@@ -831,24 +913,38 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_LawCategories_Law_LawId">
-          <End Role="Law" Type="Self.Law" Multiplicity="1">
+          <End Type="Portal_Moet_VanbanServiceModel.Law" Role="Law" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="LawCategories" Type="Self.LawCategory" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.LawCategory" Role="LawCategory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Law">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="LawCategories">
+            <Dependent Role="LawCategory">
               <PropertyRef Name="LawId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LawSigner_Law_IdLaw">
-          <End Role="Law" Type="Self.Law" Multiplicity="1">
+        <Association Name="FK_LawField_Law_IdLaw">
+          <End Type="Portal_Moet_VanbanServiceModel.Law" Role="Law" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="LawSigner" Type="Self.LawSigner" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.LawField" Role="LawField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LawField">
+              <PropertyRef Name="IdLaw" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LawSigner_Law_IdLaw">
+          <End Type="Portal_Moet_VanbanServiceModel.Law" Role="Law" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Portal_Moet_VanbanServiceModel.LawSigner" Role="LawSigner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Law">
               <PropertyRef Name="Id" />
@@ -859,8 +955,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_LawSigner_Promulgator_IdPromulgator">
-          <End Role="Promulgator" Type="Self.Promulgator" Multiplicity="1" />
-          <End Role="LawSigner" Type="Self.LawSigner" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.Promulgator" Role="Promulgator" Multiplicity="1" />
+          <End Type="Portal_Moet_VanbanServiceModel.LawSigner" Role="LawSigner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Promulgator">
               <PropertyRef Name="Id" />
@@ -871,8 +967,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_LawSigner_Signer_IdSigner">
-          <End Role="Signer" Type="Self.Signer" Multiplicity="1" />
-          <End Role="LawSigner" Type="Self.LawSigner" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.Signer" Role="Signer" Multiplicity="1" />
+          <End Type="Portal_Moet_VanbanServiceModel.LawSigner" Role="LawSigner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Signer">
               <PropertyRef Name="Id" />
@@ -883,10 +979,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument">
-          <End Role="TypeOfDocument" Type="Self.TypeOfDocument" Multiplicity="1">
+          <End Type="Portal_Moet_VanbanServiceModel.TypeOfDocument" Role="TypeOfDocument" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="VanBanDuThao" Type="Self.VanBanDuThao" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.VanBanDuThao" Role="VanBanDuThao" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TypeOfDocument">
               <PropertyRef Name="Id" />
@@ -896,67 +992,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="LawField">
-          <End Role="Field" Type="Self.Field" Multiplicity="*" />
-          <End Role="Law" Type="Self.Law" Multiplicity="*" />
-        </Association>
         <Association Name="VBDTField">
-          <End Role="Field" Type="Self.Field" Multiplicity="*" />
-          <End Role="VanBanDuThao" Type="Self.VanBanDuThao" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.Field" Role="Field" Multiplicity="*" />
+          <End Type="Portal_Moet_VanbanServiceModel.VanBanDuThao" Role="VanBanDuThao" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="Portal_Moet_VanbanServiceEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="EffectStatus" EntityType="Self.EffectStatu" />
-          <EntitySet Name="Fields" EntityType="Self.Field" />
-          <EntitySet Name="GopYVanBanDuThaos" EntityType="Self.GopYVanBanDuThao" />
-          <EntitySet Name="Laws" EntityType="Self.Law" />
-          <EntitySet Name="LawCategories" EntityType="Self.LawCategory" />
-          <EntitySet Name="LawSigners" EntityType="Self.LawSigner" />
-          <EntitySet Name="Promulgators" EntityType="Self.Promulgator" />
-          <EntitySet Name="Signers" EntityType="Self.Signer" />
-          <EntitySet Name="TuLieuAnPhams" EntityType="Self.TuLieuAnPham" />
-          <EntitySet Name="TypeOfDocuments" EntityType="Self.TypeOfDocument" />
-          <EntitySet Name="VanBanDuThaos" EntityType="Self.VanBanDuThao" />
-          <AssociationSet Name="FK_Law_EffectStatus_IdEffectStatus" Association="Self.FK_Law_EffectStatus_IdEffectStatus">
-            <End Role="EffectStatus" EntitySet="EffectStatus" />
-            <End Role="Law" EntitySet="Laws" />
-          </AssociationSet>
-          <AssociationSet Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" Association="Self.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
-            <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
-            <End Role="GopYVanBanDuThao" EntitySet="GopYVanBanDuThaos" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Law_TypeOfDocument_IdTypeOfDocument" Association="Self.FK_Law_TypeOfDocument_IdTypeOfDocument">
-            <End Role="TypeOfDocument" EntitySet="TypeOfDocuments" />
-            <End Role="Law" EntitySet="Laws" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LawCategories_Law_LawId" Association="Self.FK_LawCategories_Law_LawId">
-            <End Role="Law" EntitySet="Laws" />
-            <End Role="LawCategories" EntitySet="LawCategories" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LawSigner_Law_IdLaw" Association="Self.FK_LawSigner_Law_IdLaw">
-            <End Role="Law" EntitySet="Laws" />
-            <End Role="LawSigner" EntitySet="LawSigners" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LawSigner_Promulgator_IdPromulgator" Association="Self.FK_LawSigner_Promulgator_IdPromulgator">
-            <End Role="Promulgator" EntitySet="Promulgators" />
-            <End Role="LawSigner" EntitySet="LawSigners" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LawSigner_Signer_IdSigner" Association="Self.FK_LawSigner_Signer_IdSigner">
-            <End Role="Signer" EntitySet="Signers" />
-            <End Role="LawSigner" EntitySet="LawSigners" />
-          </AssociationSet>
-          <AssociationSet Name="FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" Association="Self.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument">
-            <End Role="TypeOfDocument" EntitySet="TypeOfDocuments" />
-            <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
-          </AssociationSet>
-          <AssociationSet Name="LawField" Association="Self.LawField">
-            <End Role="Field" EntitySet="Fields" />
-            <End Role="Law" EntitySet="Laws" />
-          </AssociationSet>
-          <AssociationSet Name="VBDTField" Association="Self.VBDTField">
-            <End Role="Field" EntitySet="Fields" />
-            <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -966,243 +1005,252 @@
           <EntitySetMapping Name="EffectStatus">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.EffectStatu">
               <MappingFragment StoreEntitySet="EffectStatus">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Order" ColumnName="Order" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
-                <ScalarProperty Name="Color" ColumnName="Color" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Fields">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.Field">
               <MappingFragment StoreEntitySet="Field">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Order" ColumnName="Order" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GopYVanBanDuThaos">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.GopYVanBanDuThao">
               <MappingFragment StoreEntitySet="GopYVanBanDuThao">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="NoiDungGopY" ColumnName="NoiDungGopY" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="IdVanBanDuThao" ColumnName="IdVanBanDuThao" />
-                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
-                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
                 <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="IdVanBanDuThao" ColumnName="IdVanBanDuThao" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="NoiDungGopY" ColumnName="NoiDungGopY" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Laws">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.Law">
               <MappingFragment StoreEntitySet="Law">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="OfficialNumber" ColumnName="OfficialNumber" />
-                <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
-                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
-                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
-                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
-                <ScalarProperty Name="Source" ColumnName="Source" />
-                <ScalarProperty Name="EffectiveArea" ColumnName="EffectiveArea" />
-                <ScalarProperty Name="Shared" ColumnName="Shared" />
-                <ScalarProperty Name="Tags" ColumnName="Tags" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="IdEffectStatus" ColumnName="IdEffectStatus" />
-                <ScalarProperty Name="EffectStatusTitle" ColumnName="EffectStatusTitle" />
-                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
-                <ScalarProperty Name="TypeOfDocumentTitle" ColumnName="TypeOfDocumentTitle" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
-                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
-                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
-                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
-                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
-                <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
-                <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
-                <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
-                <ScalarProperty Name="IsMinistry" ColumnName="IsMinistry" />
-                <ScalarProperty Name="QuyTrinhId" ColumnName="QuyTrinhId" />
-                <ScalarProperty Name="QuyTrinhName" ColumnName="QuyTrinhName" />
-                <ScalarProperty Name="VanBanQCTC" ColumnName="VanBanQCTC" />
-                <ScalarProperty Name="DetailLinkClone" ColumnName="DetailLinkClone" />
-                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
-                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="DetailLinkClone" ColumnName="DetailLinkClone" />
+                <ScalarProperty Name="VanBanQCTC" ColumnName="VanBanQCTC" />
+                <ScalarProperty Name="QuyTrinhName" ColumnName="QuyTrinhName" />
+                <ScalarProperty Name="QuyTrinhId" ColumnName="QuyTrinhId" />
+                <ScalarProperty Name="IsMinistry" ColumnName="IsMinistry" />
+                <ScalarProperty Name="OrganizationUnitName" ColumnName="OrganizationUnitName" />
+                <ScalarProperty Name="OrganizationUnitId" ColumnName="OrganizationUnitId" />
+                <ScalarProperty Name="OrganizationUnitCode" ColumnName="OrganizationUnitCode" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TypeOfDocumentTitle" ColumnName="TypeOfDocumentTitle" />
+                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+                <ScalarProperty Name="EffectStatusTitle" ColumnName="EffectStatusTitle" />
+                <ScalarProperty Name="IdEffectStatus" ColumnName="IdEffectStatus" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Shared" ColumnName="Shared" />
+                <ScalarProperty Name="EffectiveArea" ColumnName="EffectiveArea" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
+                <ScalarProperty Name="OfficialNumber" ColumnName="OfficialNumber" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LawCategories">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.LawCategory">
               <MappingFragment StoreEntitySet="LawCategories">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="LawId" ColumnName="LawId" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="LawId" ColumnName="LawId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LawFields">
+            <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.LawField">
+              <MappingFragment StoreEntitySet="LawField">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdField" ColumnName="IdField" />
+                <ScalarProperty Name="IdLaw" ColumnName="IdLaw" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LawSigners">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.LawSigner">
               <MappingFragment StoreEntitySet="LawSigner">
-                <ScalarProperty Name="IdLaw" ColumnName="IdLaw" />
-                <ScalarProperty Name="IdSigner" ColumnName="IdSigner" />
-                <ScalarProperty Name="IdPromulgator" ColumnName="IdPromulgator" />
-                <ScalarProperty Name="Position" ColumnName="Position" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="IdPromulgator" ColumnName="IdPromulgator" />
+                <ScalarProperty Name="IdSigner" ColumnName="IdSigner" />
+                <ScalarProperty Name="IdLaw" ColumnName="IdLaw" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Promulgators">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.Promulgator">
               <MappingFragment StoreEntitySet="Promulgator">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Order" ColumnName="Order" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Signers">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.Signer">
               <MappingFragment StoreEntitySet="Signer">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Order" ColumnName="Order" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TuLieuAnPhams">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.TuLieuAnPham">
               <MappingFragment StoreEntitySet="TuLieuAnPham">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Author" ColumnName="Author" />
-                <ScalarProperty Name="Source" ColumnName="Source" />
-                <ScalarProperty Name="Image" ColumnName="Image" />
-                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
-                <ScalarProperty Name="LoaiTuLieuAnPhamId" ColumnName="LoaiTuLieuAnPhamId" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="SoTrang" ColumnName="SoTrang" />
-                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
-                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
-                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
-                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
-                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
-                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
-                <ScalarProperty Name="Shared" ColumnName="Shared" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
-                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Shared" ColumnName="Shared" />
+                <ScalarProperty Name="KeyWordsSEO" ColumnName="KeyWordsSEO" />
+                <ScalarProperty Name="KeyMainSEO" ColumnName="KeyMainSEO" />
+                <ScalarProperty Name="DescriptionSEO" ColumnName="DescriptionSEO" />
+                <ScalarProperty Name="PageUrlSEO" ColumnName="PageUrlSEO" />
+                <ScalarProperty Name="PageTitleSEO" ColumnName="PageTitleSEO" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="SoTrang" ColumnName="SoTrang" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LoaiTuLieuAnPhamId" ColumnName="LoaiTuLieuAnPhamId" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TypeOfDocuments">
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.TypeOfDocument">
               <MappingFragment StoreEntitySet="TypeOfDocument">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Order" ColumnName="Order" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1210,44 +1258,36 @@
             <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.VanBanDuThao">
               <MappingFragment StoreEntitySet="VanBanDuThao">
                 <ScalarProperty Name="DetailLinkClone" ColumnName="DetailLinkClone" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="SoKyHieu" ColumnName="SoKyHieu" />
-                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
-                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
-                <ScalarProperty Name="TrichYeu" ColumnName="TrichYeu" />
-                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
-                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
-                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
-                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
-                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
-                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="TrichYeu" ColumnName="TrichYeu" />
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+                <ScalarProperty Name="SoKyHieu" ColumnName="SoKyHieu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="LawField" TypeName="Portal_Moet_VanbanServiceModel.LawField" StoreEntitySet="LawField">
-            <EndProperty Name="Field">
-              <ScalarProperty Name="Id" ColumnName="IdField" />
-            </EndProperty>
-            <EndProperty Name="Law">
-              <ScalarProperty Name="Id" ColumnName="IdLaw" />
-            </EndProperty>
-          </AssociationSetMapping>
           <AssociationSetMapping Name="VBDTField" TypeName="Portal_Moet_VanbanServiceModel.VBDTField" StoreEntitySet="VBDTField">
-            <EndProperty Name="Field">
-              <ScalarProperty Name="Id" ColumnName="IdField" />
-            </EndProperty>
             <EndProperty Name="VanBanDuThao">
               <ScalarProperty Name="Id" ColumnName="IdLaw" />
+            </EndProperty>
+            <EndProperty Name="Field">
+              <ScalarProperty Name="Id" ColumnName="IdField" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

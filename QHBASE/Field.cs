@@ -17,7 +17,7 @@ namespace QHBASE
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Field()
         {
-            this.Laws = new HashSet<Law>();
+            this.LawFields = new HashSet<LawField>();
             this.VanBanDuThaos = new HashSet<VanBanDuThao>();
         }
     
@@ -41,7 +41,7 @@ namespace QHBASE
         public Nullable<System.DateTime> DeletionTime { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Law> Laws { get; set; }
+        public virtual ICollection<LawField> LawFields { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VanBanDuThao> VanBanDuThaos { get; set; }
     }

@@ -18,8 +18,8 @@ namespace QHBASE
         public Law()
         {
             this.LawCategories = new HashSet<LawCategory>();
+            this.LawFields = new HashSet<LawField>();
             this.LawSigners = new HashSet<LawSigner>();
-            this.Fields = new HashSet<Field>();
         }
     
         public string Id { get; set; }
@@ -72,8 +72,8 @@ namespace QHBASE
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LawCategory> LawCategories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LawSigner> LawSigners { get; set; }
+        public virtual ICollection<LawField> LawFields { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Field> Fields { get; set; }
+        public virtual ICollection<LawSigner> LawSigners { get; set; }
     }
 }

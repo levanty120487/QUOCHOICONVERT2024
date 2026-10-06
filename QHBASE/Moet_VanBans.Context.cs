@@ -30,6 +30,7 @@ namespace QHBASE
         public virtual DbSet<GopYVanBanDuThao> GopYVanBanDuThaos { get; set; }
         public virtual DbSet<Law> Laws { get; set; }
         public virtual DbSet<LawCategory> LawCategories { get; set; }
+        public virtual DbSet<LawField> LawFields { get; set; }
         public virtual DbSet<LawSigner> LawSigners { get; set; }
         public virtual DbSet<Promulgator> Promulgators { get; set; }
         public virtual DbSet<Signer> Signers { get; set; }
