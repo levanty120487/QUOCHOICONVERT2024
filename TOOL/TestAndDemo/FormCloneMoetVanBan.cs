@@ -314,23 +314,31 @@ namespace RJCodeUI_M1.TestAndDemo
                             }
 
                             string idTypeOfDocument = string.Empty;
-                            if (!string.IsNullOrEmpty(item.LoaiVanBan))
+                            if (string.IsNullOrEmpty(item.LoaiVanBan))
                             {
-                                var type = dbVanBan.TypeOfDocuments.FirstOrDefault(x => x.Title == item.LoaiVanBan);
-                                if (type == null)
-                                {
-                                    type = new TypeOfDocument { Id = QHCommons.GenAutoId(), Title = item.LoaiVanBan , Language = "vi", CreatedBy = "admin" , IsShow = true };
-                                    dbVanBan.TypeOfDocuments.Add(type);
-                                    dbVanBan.SaveChanges();
-                                }
+                                item.LoaiVanBan = "Khác";
+                            }
+                            var type = dbVanBan.TypeOfDocuments.FirstOrDefault(x => x.Title == item.LoaiVanBan);
+                            if (type == null)
+                            {
+                                var typeID = QHCommons.GenAutoId();
+                                type = new TypeOfDocument { Id = typeID, Title = item.LoaiVanBan, Language = "vi", CreatedBy = "admin", IsShow = true };
+                                dbVanBan.TypeOfDocuments.Add(type);
+                                dbVanBan.SaveChanges();
+                                idTypeOfDocument = typeID;
+                            }
+                            else
+                            {
                                 idTypeOfDocument = type.Id;
                             }
+
+                            if (string.IsNullOrWhiteSpace(idTypeOfDocument)) continue;
 
                             // Tạo Law
                             var law = new Law
                             {
                                 Id = QHCommons.GenAutoId(),
-                                Title = item.LoaiVanBan + " " + item.SoKyHieu,
+                                Title = item.SoKyHieu,
                                 Status = 1,
                                 OfficialNumber = item.SoKyHieu,
                                 PublishedDate = item.NgayBanHanh ?? DateTime.Now,
@@ -349,7 +357,8 @@ namespace RJCodeUI_M1.TestAndDemo
                                 Language = "vi",
                                 CreationTime = DateTime.Now,
                                 DetailLinkClone = item.DetailUrl,
-                                TypeOfDocumentTitle = item.LoaiVanBan
+                                TypeOfDocumentTitle = item.LoaiVanBan,
+                                IsDeleted = false
                             };
                             dbVanBan.Laws.Add(law);
                             dbVanBan.SaveChanges();
