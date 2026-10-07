@@ -1,0 +1,2923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Portal_Moet_CoCauToChucServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AcademicRank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DaiBieuChuyenTrach">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SurName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="TenThuongGoi" Type="nvarchar" MaxLength="255" />
+          <Property Name="GioiTinhId" Type="uniqueidentifier" />
+          <Property Name="NgaySinh" Type="datetime2" Precision="7" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="500" />
+          <Property Name="NoiCuTru" Type="nvarchar" MaxLength="500" />
+          <Property Name="DanTocId" Type="uniqueidentifier" />
+          <Property Name="TonGiaoId" Type="uniqueidentifier" />
+          <Property Name="TrinhDoVanHoa" Type="nvarchar" MaxLength="500" />
+          <Property Name="TrinhDoHocVanId" Type="uniqueidentifier" />
+          <Property Name="TrinhDoChuyenMon" Type="nvarchar" MaxLength="500" />
+          <Property Name="TrinhDoChinhTriId" Type="uniqueidentifier" />
+          <Property Name="IsDangVien" Type="bit" />
+          <Property Name="NgayVaoDang" Type="datetime2" Precision="7" />
+          <Property Name="NgayVaoDangChinhThuc" Type="datetime2" Precision="7" />
+          <Property Name="NoiUngCuId" Type="uniqueidentifier" />
+          <Property Name="NoiLamViec" Type="nvarchar" MaxLength="500" />
+          <Property Name="NgheNghiepChucVu" Type="nvarchar(max)" />
+          <Property Name="DaiBieuChuyenTrachId" Type="uniqueidentifier" />
+          <Property Name="DaiBieuHoiDongNhanDan" Type="nvarchar" MaxLength="500" />
+          <Property Name="DienThoaiNhaRieng" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoaiCoQuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoaiDiDong" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="150" />
+          <Property Name="KhenThuong" Type="nvarchar(max)" />
+          <Property Name="KyLuat" Type="nvarchar(max)" />
+          <Property Name="PhuChu" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="BannerBackgroud" Type="nvarchar" MaxLength="350" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="HienThiThongTinChiTiet" Type="bit" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoiMapDmChucDanh">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="ChucDanhId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="ChucDanhId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="CoQuanQuocHoiId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="CoQuanQuocHoiId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="KhoaQuocHoiId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="KhoaQuocHoiId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Degrees">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageUrl" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="Website" Type="nvarchar" MaxLength="255" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="ParentId" Type="nvarchar" MaxLength="255" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DmChucDanh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar(max)" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar(max)" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DmCoQuanQuocHoi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TreeParentIds" Type="nvarchar(max)" />
+          <Property Name="DetailCategoryRoot" Type="nvarchar(max)" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="WebLink" Type="nvarchar" MaxLength="255" />
+          <Property Name="CodeOrg" Type="varchar" MaxLength="20" />
+          <Property Name="NoteTitle" Type="nvarchar" MaxLength="500" />
+          <Property Name="HiddenInMap" Type="bit" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="HiddenInTree" Type="bit" />
+          <Property Name="IsKiemSoatVienCongTy" Type="bit" />
+          <Property Name="GroupLevel" Type="int" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DmDanToc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DmKhoaQuocHoi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DmLichLamViecs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="450" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Workday" Type="datetime2" Precision="7" />
+          <Property Name="Title" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="TypeLich" Type="int" Nullable="false" />
+          <Property Name="PublicDate" Type="datetime2" Precision="7" />
+          <Property Name="ShareSocial" Type="bit" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="int" />
+          <Property Name="OldId" Type="int" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DmTonGiao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="DonViMapChucVu">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="DonViId" />
+            <PropertyRef Name="ChucVuId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="DonViId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChucVuId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DmChucDanhId" Type="uniqueidentifier" />
+          <Property Name="DmCoQuanQuocHoiId" Type="uniqueidentifier" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GioiTinh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="LichLamViecs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="450" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="DMLichLamViecId" Type="nvarchar" MaxLength="450" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Content" Type="nvarchar" MaxLength="255" />
+          <Property Name="Author" Type="nvarchar" MaxLength="256" />
+          <Property Name="PublicDate" Type="datetime2" Precision="7" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastModifierName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="StartDate" Type="datetimeoffset" Precision="7" />
+          <Property Name="EndDate" Type="datetimeoffset" Precision="7" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ThanhPhan" Type="nvarchar" MaxLength="500" />
+          <Property Name="DiaDiem" Type="nvarchar" MaxLength="500" />
+          <Property Name="NguoiChuTri" Type="nvarchar" MaxLength="500" />
+          <Property Name="CaNgay" Type="bit" Nullable="false" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Nations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="NoiUngCu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="OfficerMapperPossitions">
+          <Key>
+            <PropertyRef Name="OfficerId" />
+            <PropertyRef Name="PositionId" />
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="OfficerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PositionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DepartmentId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Officers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="Birthday" Type="datetime2" Precision="7" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="PlaceOfOrigin" Type="nvarchar" MaxLength="500" />
+          <Property Name="NationId" Type="nvarchar" MaxLength="50" />
+          <Property Name="NationName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="AcademicRankId" Type="uniqueidentifier" />
+          <Property Name="AcademicRankName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DegreeId" Type="uniqueidentifier" />
+          <Property Name="DegreeName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Detail" Type="nvarchar(max)" />
+          <Property Name="IsShowPage" Type="bit" Nullable="false" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="QuocHoiHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Banner" Type="nvarchar(max)" />
+          <Property Name="TimeLine" Type="nvarchar" MaxLength="255" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="Contents" Type="nvarchar(max)" />
+          <Property Name="CreatorName" Type="nvarchar(max)" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="255" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="ThongTinCanBo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="SurName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="NgaySinh" Type="datetime2" Precision="7" />
+          <Property Name="NgheNghiepChucVu" Type="nvarchar(max)" />
+          <Property Name="NoiLamViec" Type="nvarchar" MaxLength="255" />
+          <Property Name="DienThoaiCoQuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoaiNhaRieng" Type="nvarchar" MaxLength="50" />
+          <Property Name="DienThoaiDiDong" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="NoiDung" Type="nvarchar(max)" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="150" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="GioiTinhId" Type="uniqueidentifier" />
+          <Property Name="CoQuanQuocHoiId" Type="uniqueidentifier" />
+          <Property Name="ChucVuId" Type="uniqueidentifier" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="20" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="TimeLineDBQHs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="254" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="254" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="DaiBieuQuocHoiId" Type="varchar" MaxLength="36" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="TrinhDoChinhTri">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="TrinhDoHocVan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
+        <Association Name="FK_DaiBieuQuocHoi_DmDanToc_DanTocId">
+          <End Role="DmDanToc" Type="Self.DmDanToc" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmDanToc">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="DanTocId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId">
+          <End Role="DmTonGiao" Type="Self.DmTonGiao" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmTonGiao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="TonGiaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId">
+          <End Role="GioiTinh" Type="Self.GioiTinh" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GioiTinh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="GioiTinhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId">
+          <End Role="TrinhDoChinhTri" Type="Self.TrinhDoChinhTri" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrinhDoChinhTri">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="TrinhDoChinhTriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId">
+          <End Role="TrinhDoHocVan" Type="Self.TrinhDoHocVan" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrinhDoHocVan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="TrinhDoHocVanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmChucDanh" Type="Self.DaiBieuQuocHoiMapDmChucDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmChucDanh">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmChucDanh" Type="Self.DaiBieuQuocHoiMapDmChucDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmChucDanh">
+              <PropertyRef Name="ChucDanhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" Type="Self.DaiBieuQuocHoiMapDmCoQuanQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" Type="Self.DaiBieuQuocHoiMapDmCoQuanQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+              <PropertyRef Name="CoQuanQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" Type="Self.DaiBieuQuocHoiMapDmKhoaQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId">
+          <End Role="DmKhoaQuocHoi" Type="Self.DmKhoaQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" Type="Self.DaiBieuQuocHoiMapDmKhoaQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmKhoaQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+              <PropertyRef Name="KhoaQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmChucDanh_ChucVuId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="ChucVuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmChucDanh_DmChucDanhId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="0..1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DmChucDanhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="0..1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DmCoQuanQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DonViId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId">
+          <End Role="DmLichLamViecs" Type="Self.DmLichLamViecs" Multiplicity="0..1" />
+          <End Role="LichLamViecs" Type="Self.LichLamViecs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmLichLamViecs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LichLamViecs">
+              <PropertyRef Name="DMLichLamViecId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OfficerMapperPossitions_Departments_DepartmentId">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OfficerMapperPossitions" Type="Self.OfficerMapperPossitions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OfficerMapperPossitions">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OfficerMapperPossitions_Officers_OfficerId">
+          <End Role="Officers" Type="Self.Officers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OfficerMapperPossitions" Type="Self.OfficerMapperPossitions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Officers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OfficerMapperPossitions">
+              <PropertyRef Name="OfficerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OfficerMapperPossitions_Position_PositionId">
+          <End Role="Position" Type="Self.Position" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OfficerMapperPossitions" Type="Self.OfficerMapperPossitions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OfficerMapperPossitions">
+              <PropertyRef Name="PositionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTinCanBo_DmChucDanh_ChucVuId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="0..1" />
+          <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThongTinCanBo">
+              <PropertyRef Name="ChucVuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="0..1" />
+          <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThongTinCanBo">
+              <PropertyRef Name="CoQuanQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTinCanBo_GioiTinh_GioiTinhId">
+          <End Role="GioiTinh" Type="Self.GioiTinh" Multiplicity="0..1" />
+          <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GioiTinh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThongTinCanBo">
+              <PropertyRef Name="GioiTinhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="0..1" />
+          <End Role="TimeLineDBQHs" Type="Self.TimeLineDBQHs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TimeLineDBQHs">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Portal_Moet_CoCauToChucServiceModelStoreContainer">
+          <EntitySet Name="AcademicRank" EntityType="Self.AcademicRank" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DaiBieuChuyenTrach" EntityType="Self.DaiBieuChuyenTrach" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DaiBieuQuocHoi" EntityType="Self.DaiBieuQuocHoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DaiBieuQuocHoiMapDmChucDanh" EntityType="Self.DaiBieuQuocHoiMapDmChucDanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DaiBieuQuocHoiMapDmCoQuanQuocHoi" EntityType="Self.DaiBieuQuocHoiMapDmCoQuanQuocHoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DaiBieuQuocHoiMapDmKhoaQuocHoi" EntityType="Self.DaiBieuQuocHoiMapDmKhoaQuocHoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Degrees" EntityType="Self.Degrees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DmChucDanh" EntityType="Self.DmChucDanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DmCoQuanQuocHoi" EntityType="Self.DmCoQuanQuocHoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DmDanToc" EntityType="Self.DmDanToc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DmKhoaQuocHoi" EntityType="Self.DmKhoaQuocHoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DmLichLamViecs" EntityType="Self.DmLichLamViecs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DmTonGiao" EntityType="Self.DmTonGiao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DonViMapChucVu" EntityType="Self.DonViMapChucVu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GioiTinh" EntityType="Self.GioiTinh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LichLamViecs" EntityType="Self.LichLamViecs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nations" EntityType="Self.Nations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NoiUngCu" EntityType="Self.NoiUngCu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OfficerMapperPossitions" EntityType="Self.OfficerMapperPossitions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Officers" EntityType="Self.Officers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuocHoiHistory" EntityType="Self.QuocHoiHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThongTinCanBo" EntityType="Self.ThongTinCanBo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TimeLineDBQHs" EntityType="Self.TimeLineDBQHs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrinhDoChinhTri" EntityType="Self.TrinhDoChinhTri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrinhDoHocVan" EntityType="Self.TrinhDoHocVan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DaiBieuQuocHoi_DmDanToc_DanTocId" Association="Self.FK_DaiBieuQuocHoi_DmDanToc_DanTocId">
+            <End Role="DmDanToc" EntitySet="DmDanToc" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId" Association="Self.FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId">
+            <End Role="DmTonGiao" EntitySet="DmTonGiao" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId" Association="Self.FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId">
+            <End Role="GioiTinh" EntitySet="GioiTinh" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId" Association="Self.FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId">
+            <End Role="TrinhDoChinhTri" EntitySet="TrinhDoChinhTri" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId" Association="Self.FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId">
+            <End Role="TrinhDoHocVan" EntitySet="TrinhDoHocVan" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+            <End Role="DaiBieuQuocHoiMapDmChucDanh" EntitySet="DaiBieuQuocHoiMapDmChucDanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId" Association="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanh" />
+            <End Role="DaiBieuQuocHoiMapDmChucDanh" EntitySet="DaiBieuQuocHoiMapDmChucDanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+            <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" EntitySet="DaiBieuQuocHoiMapDmCoQuanQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHoi" />
+            <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" EntitySet="DaiBieuQuocHoiMapDmCoQuanQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+            <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" EntitySet="DaiBieuQuocHoiMapDmKhoaQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId">
+            <End Role="DmKhoaQuocHoi" EntitySet="DmKhoaQuocHoi" />
+            <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" EntitySet="DaiBieuQuocHoiMapDmKhoaQuocHoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmChucDanh_ChucVuId" Association="Self.FK_DonViMapChucVu_DmChucDanh_ChucVuId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanh" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmChucDanh_DmChucDanhId" Association="Self.FK_DonViMapChucVu_DmChucDanh_DmChucDanhId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanh" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId" Association="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHoi" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId" Association="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHoi" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId" Association="Self.FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId">
+            <End Role="DmLichLamViecs" EntitySet="DmLichLamViecs" />
+            <End Role="LichLamViecs" EntitySet="LichLamViecs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OfficerMapperPossitions_Departments_DepartmentId" Association="Self.FK_OfficerMapperPossitions_Departments_DepartmentId">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="OfficerMapperPossitions" EntitySet="OfficerMapperPossitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OfficerMapperPossitions_Officers_OfficerId" Association="Self.FK_OfficerMapperPossitions_Officers_OfficerId">
+            <End Role="Officers" EntitySet="Officers" />
+            <End Role="OfficerMapperPossitions" EntitySet="OfficerMapperPossitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OfficerMapperPossitions_Position_PositionId" Association="Self.FK_OfficerMapperPossitions_Position_PositionId">
+            <End Role="Position" EntitySet="Position" />
+            <End Role="OfficerMapperPossitions" EntitySet="OfficerMapperPossitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTinCanBo_DmChucDanh_ChucVuId" Association="Self.FK_ThongTinCanBo_DmChucDanh_ChucVuId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanh" />
+            <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId" Association="Self.FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHoi" />
+            <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTinCanBo_GioiTinh_GioiTinhId" Association="Self.FK_ThongTinCanBo_GioiTinh_GioiTinhId">
+            <End Role="GioiTinh" EntitySet="GioiTinh" />
+            <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHoi" />
+            <End Role="TimeLineDBQHs" EntitySet="TimeLineDBQHs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Portal_Moet_CoCauToChucServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AcademicRank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="DaiBieuChuyenTrach">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SurName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TenThuongGoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinhId" Type="Guid" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="7" />
+          <Property Name="QueQuan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NoiCuTru" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DanTocId" Type="Guid" />
+          <Property Name="TonGiaoId" Type="Guid" />
+          <Property Name="TrinhDoVanHoa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TrinhDoHocVanId" Type="Guid" />
+          <Property Name="TrinhDoChuyenMon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TrinhDoChinhTriId" Type="Guid" />
+          <Property Name="IsDangVien" Type="Boolean" />
+          <Property Name="NgayVaoDang" Type="DateTime" Precision="7" />
+          <Property Name="NgayVaoDangChinhThuc" Type="DateTime" Precision="7" />
+          <Property Name="NoiUngCuId" Type="Guid" />
+          <Property Name="NoiLamViec" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NgheNghiepChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DaiBieuChuyenTrachId" Type="Guid" />
+          <Property Name="DaiBieuHoiDongNhanDan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoaiNhaRieng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoaiCoQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoaiDiDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="KhenThuong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KyLuat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhuChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BannerBackgroud" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HienThiThongTinChiTiet" Type="Boolean" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DmDanToc" Relationship="Self.FK_DaiBieuQuocHoi_DmDanToc_DanTocId" FromRole="DaiBieuQuocHoi" ToRole="DmDanToc" />
+          <NavigationProperty Name="DmTonGiao" Relationship="Self.FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId" FromRole="DaiBieuQuocHoi" ToRole="DmTonGiao" />
+          <NavigationProperty Name="GioiTinh" Relationship="Self.FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId" FromRole="DaiBieuQuocHoi" ToRole="GioiTinh" />
+          <NavigationProperty Name="TrinhDoChinhTri" Relationship="Self.FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId" FromRole="DaiBieuQuocHoi" ToRole="TrinhDoChinhTri" />
+          <NavigationProperty Name="TrinhDoHocVan" Relationship="Self.FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId" FromRole="DaiBieuQuocHoi" ToRole="TrinhDoHocVan" />
+          <NavigationProperty Name="DaiBieuQuocHoiMapDmChucDanhs" Relationship="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoi" ToRole="DaiBieuQuocHoiMapDmChucDanh" />
+          <NavigationProperty Name="DaiBieuQuocHoiMapDmCoQuanQuocHois" Relationship="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoi" ToRole="DaiBieuQuocHoiMapDmCoQuanQuocHoi" />
+          <NavigationProperty Name="DaiBieuQuocHoiMapDmKhoaQuocHois" Relationship="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoi" ToRole="DaiBieuQuocHoiMapDmKhoaQuocHoi" />
+          <NavigationProperty Name="DonViMapChucVus" Relationship="Self.FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoi" ToRole="DonViMapChucVu" />
+          <NavigationProperty Name="TimeLineDBQHs" Relationship="Self.FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoi" ToRole="TimeLineDBQHs" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoiMapDmChucDanh">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="ChucDanhId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ChucDanhId" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <NavigationProperty Name="DaiBieuQuocHoi" Relationship="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoiMapDmChucDanh" ToRole="DaiBieuQuocHoi" />
+          <NavigationProperty Name="DmChucDanh" Relationship="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId" FromRole="DaiBieuQuocHoiMapDmChucDanh" ToRole="DmChucDanh" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="CoQuanQuocHoiId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CoQuanQuocHoiId" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <NavigationProperty Name="DaiBieuQuocHoi" Relationship="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoiMapDmCoQuanQuocHoi" ToRole="DaiBieuQuocHoi" />
+          <NavigationProperty Name="DmCoQuanQuocHoi" Relationship="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId" FromRole="DaiBieuQuocHoiMapDmCoQuanQuocHoi" ToRole="DmCoQuanQuocHoi" />
+        </EntityType>
+        <EntityType Name="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="KhoaQuocHoiId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KhoaQuocHoiId" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <NavigationProperty Name="DaiBieuQuocHoi" Relationship="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DaiBieuQuocHoiMapDmKhoaQuocHoi" ToRole="DaiBieuQuocHoi" />
+          <NavigationProperty Name="DmKhoaQuocHoi" Relationship="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId" FromRole="DaiBieuQuocHoiMapDmKhoaQuocHoi" ToRole="DmKhoaQuocHoi" />
+        </EntityType>
+        <EntityType Name="Degree">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PageUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="ParentId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="OfficerMapperPossitions" Relationship="Self.FK_OfficerMapperPossitions_Departments_DepartmentId" FromRole="Departments" ToRole="OfficerMapperPossitions" />
+        </EntityType>
+        <EntityType Name="DmChucDanh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TreeParentIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DetailCategoryRoot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHoiMapDmChucDanhs" Relationship="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId" FromRole="DmChucDanh" ToRole="DaiBieuQuocHoiMapDmChucDanh" />
+          <NavigationProperty Name="DonViMapChucVus" Relationship="Self.FK_DonViMapChucVu_DmChucDanh_ChucVuId" FromRole="DmChucDanh" ToRole="DonViMapChucVu" />
+          <NavigationProperty Name="DonViMapChucVus1" Relationship="Self.FK_DonViMapChucVu_DmChucDanh_DmChucDanhId" FromRole="DmChucDanh" ToRole="DonViMapChucVu" />
+          <NavigationProperty Name="ThongTinCanBoes" Relationship="Self.FK_ThongTinCanBo_DmChucDanh_ChucVuId" FromRole="DmChucDanh" ToRole="ThongTinCanBo" />
+        </EntityType>
+        <EntityType Name="DmCoQuanQuocHoi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TreeParentIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DetailCategoryRoot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WebLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CodeOrg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NoteTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HiddenInMap" Type="Boolean" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HiddenInTree" Type="Boolean" />
+          <Property Name="IsKiemSoatVienCongTy" Type="Boolean" />
+          <Property Name="GroupLevel" Type="Int32" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHoiMapDmCoQuanQuocHois" Relationship="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId" FromRole="DmCoQuanQuocHoi" ToRole="DaiBieuQuocHoiMapDmCoQuanQuocHoi" />
+          <NavigationProperty Name="DonViMapChucVus" Relationship="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId" FromRole="DmCoQuanQuocHoi" ToRole="DonViMapChucVu" />
+          <NavigationProperty Name="DonViMapChucVus1" Relationship="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId" FromRole="DmCoQuanQuocHoi" ToRole="DonViMapChucVu" />
+          <NavigationProperty Name="ThongTinCanBoes" Relationship="Self.FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId" FromRole="DmCoQuanQuocHoi" ToRole="ThongTinCanBo" />
+        </EntityType>
+        <EntityType Name="DmDanToc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHois" Relationship="Self.FK_DaiBieuQuocHoi_DmDanToc_DanTocId" FromRole="DmDanToc" ToRole="DaiBieuQuocHoi" />
+        </EntityType>
+        <EntityType Name="DmKhoaQuocHoi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHoiMapDmKhoaQuocHois" Relationship="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId" FromRole="DmKhoaQuocHoi" ToRole="DaiBieuQuocHoiMapDmKhoaQuocHoi" />
+        </EntityType>
+        <EntityType Name="DmLichLamViec">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Workday" Type="DateTime" Precision="7" />
+          <Property Name="Title" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="TypeLich" Type="Int32" Nullable="false" />
+          <Property Name="PublicDate" Type="DateTime" Precision="7" />
+          <Property Name="ShareSocial" Type="Boolean" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="OldId" Type="Int32" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="LichLamViecs" Relationship="Self.FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId" FromRole="DmLichLamViecs" ToRole="LichLamViecs" />
+        </EntityType>
+        <EntityType Name="DmTonGiao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHois" Relationship="Self.FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId" FromRole="DmTonGiao" ToRole="DaiBieuQuocHoi" />
+        </EntityType>
+        <EntityType Name="DonViMapChucVu">
+          <Key>
+            <PropertyRef Name="DaiBieuQuocHoiId" />
+            <PropertyRef Name="DonViId" />
+            <PropertyRef Name="ChucVuId" />
+          </Key>
+          <Property Name="DaiBieuQuocHoiId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DonViId" Type="Guid" Nullable="false" />
+          <Property Name="ChucVuId" Type="Guid" Nullable="false" />
+          <Property Name="DmChucDanhId" Type="Guid" />
+          <Property Name="DmCoQuanQuocHoiId" Type="Guid" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="DaiBieuQuocHoi" Relationship="Self.FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="DonViMapChucVu" ToRole="DaiBieuQuocHoi" />
+          <NavigationProperty Name="DmChucDanh" Relationship="Self.FK_DonViMapChucVu_DmChucDanh_ChucVuId" FromRole="DonViMapChucVu" ToRole="DmChucDanh" />
+          <NavigationProperty Name="DmChucDanh1" Relationship="Self.FK_DonViMapChucVu_DmChucDanh_DmChucDanhId" FromRole="DonViMapChucVu" ToRole="DmChucDanh" />
+          <NavigationProperty Name="DmCoQuanQuocHoi" Relationship="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId" FromRole="DonViMapChucVu" ToRole="DmCoQuanQuocHoi" />
+          <NavigationProperty Name="DmCoQuanQuocHoi1" Relationship="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId" FromRole="DonViMapChucVu" ToRole="DmCoQuanQuocHoi" />
+        </EntityType>
+        <EntityType Name="GioiTinh">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHois" Relationship="Self.FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId" FromRole="GioiTinh" ToRole="DaiBieuQuocHoi" />
+          <NavigationProperty Name="ThongTinCanBoes" Relationship="Self.FK_ThongTinCanBo_GioiTinh_GioiTinhId" FromRole="GioiTinh" ToRole="ThongTinCanBo" />
+        </EntityType>
+        <EntityType Name="LichLamViec">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="DMLichLamViecId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PublicDate" Type="DateTime" Precision="7" />
+          <Property Name="CreatorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTimeOffset" Precision="7" />
+          <Property Name="EndDate" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ThanhPhan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DiaDiem" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiChuTri" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CaNgay" Type="Boolean" Nullable="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DmLichLamViec" Relationship="Self.FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId" FromRole="LichLamViecs" ToRole="DmLichLamViecs" />
+        </EntityType>
+        <EntityType Name="Nation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="NoiUngCu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="OfficerMapperPossition">
+          <Key>
+            <PropertyRef Name="OfficerId" />
+            <PropertyRef Name="PositionId" />
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="OfficerId" Type="Guid" Nullable="false" />
+          <Property Name="PositionId" Type="Guid" Nullable="false" />
+          <Property Name="DepartmentId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Department" Relationship="Self.FK_OfficerMapperPossitions_Departments_DepartmentId" FromRole="OfficerMapperPossitions" ToRole="Departments" />
+          <NavigationProperty Name="Officer" Relationship="Self.FK_OfficerMapperPossitions_Officers_OfficerId" FromRole="OfficerMapperPossitions" ToRole="Officers" />
+          <NavigationProperty Name="Position" Relationship="Self.FK_OfficerMapperPossitions_Position_PositionId" FromRole="OfficerMapperPossitions" ToRole="Position" />
+        </EntityType>
+        <EntityType Name="Officer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="7" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="PlaceOfOrigin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NationId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NationName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AcademicRankId" Type="Guid" />
+          <Property Name="AcademicRankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DegreeId" Type="Guid" />
+          <Property Name="DegreeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsShowPage" Type="Boolean" Nullable="false" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="OfficerMapperPossitions" Relationship="Self.FK_OfficerMapperPossitions_Officers_OfficerId" FromRole="Officers" ToRole="OfficerMapperPossitions" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="OfficerMapperPossitions" Relationship="Self.FK_OfficerMapperPossitions_Position_PositionId" FromRole="Position" ToRole="OfficerMapperPossitions" />
+        </EntityType>
+        <EntityType Name="QuocHoiHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Banner" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TimeLine" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="ThongTinCanBo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SurName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="7" />
+          <Property Name="NgheNghiepChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NoiLamViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoaiCoQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoaiNhaRieng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoaiDiDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinhId" Type="Guid" />
+          <Property Name="CoQuanQuocHoiId" Type="Guid" />
+          <Property Name="ChucVuId" Type="Guid" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DmChucDanh" Relationship="Self.FK_ThongTinCanBo_DmChucDanh_ChucVuId" FromRole="ThongTinCanBo" ToRole="DmChucDanh" />
+          <NavigationProperty Name="DmCoQuanQuocHoi" Relationship="Self.FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId" FromRole="ThongTinCanBo" ToRole="DmCoQuanQuocHoi" />
+          <NavigationProperty Name="GioiTinh" Relationship="Self.FK_ThongTinCanBo_GioiTinh_GioiTinhId" FromRole="ThongTinCanBo" ToRole="GioiTinh" />
+        </EntityType>
+        <EntityType Name="TimeLineDBQH">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DaiBieuQuocHoiId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <NavigationProperty Name="DaiBieuQuocHoi" Relationship="Self.FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId" FromRole="TimeLineDBQHs" ToRole="DaiBieuQuocHoi" />
+        </EntityType>
+        <EntityType Name="TrinhDoChinhTri">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHois" Relationship="Self.FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId" FromRole="TrinhDoChinhTri" ToRole="DaiBieuQuocHoi" />
+        </EntityType>
+        <EntityType Name="TrinhDoHocVan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="DaiBieuQuocHois" Relationship="Self.FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId" FromRole="TrinhDoHocVan" ToRole="DaiBieuQuocHoi" />
+        </EntityType>
+        <Association Name="FK_DaiBieuQuocHoi_DmDanToc_DanTocId">
+          <End Role="DmDanToc" Type="Self.DmDanToc" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmDanToc">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="DanTocId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId">
+          <End Role="DmTonGiao" Type="Self.DmTonGiao" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmTonGiao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="TonGiaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId">
+          <End Role="GioiTinh" Type="Self.GioiTinh" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GioiTinh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="GioiTinhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId">
+          <End Role="TrinhDoChinhTri" Type="Self.TrinhDoChinhTri" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrinhDoChinhTri">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="TrinhDoChinhTriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId">
+          <End Role="TrinhDoHocVan" Type="Self.TrinhDoHocVan" Multiplicity="0..1" />
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrinhDoHocVan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoi">
+              <PropertyRef Name="TrinhDoHocVanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmChucDanh" Type="Self.DaiBieuQuocHoiMapDmChucDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmChucDanh">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" Type="Self.DaiBieuQuocHoiMapDmCoQuanQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" Type="Self.DaiBieuQuocHoiMapDmKhoaQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+          <End Role="DaiBieuQuocHoi" Type="Self.DaiBieuQuocHoi" Multiplicity="0..1" />
+          <End Role="TimeLineDBQHs" Type="Self.TimeLineDBQH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaiBieuQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TimeLineDBQHs">
+              <PropertyRef Name="DaiBieuQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmChucDanh" Type="Self.DaiBieuQuocHoiMapDmChucDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmChucDanh">
+              <PropertyRef Name="ChucDanhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" Type="Self.DaiBieuQuocHoiMapDmCoQuanQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+              <PropertyRef Name="CoQuanQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId">
+          <End Role="DmKhoaQuocHoi" Type="Self.DmKhoaQuocHoi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" Type="Self.DaiBieuQuocHoiMapDmKhoaQuocHoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmKhoaQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+              <PropertyRef Name="KhoaQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OfficerMapperPossitions_Departments_DepartmentId">
+          <End Role="Departments" Type="Self.Department" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OfficerMapperPossitions" Type="Self.OfficerMapperPossition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OfficerMapperPossitions">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmChucDanh_ChucVuId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="ChucVuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmChucDanh_DmChucDanhId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="0..1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DmChucDanhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTinCanBo_DmChucDanh_ChucVuId">
+          <End Role="DmChucDanh" Type="Self.DmChucDanh" Multiplicity="0..1" />
+          <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmChucDanh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThongTinCanBo">
+              <PropertyRef Name="ChucVuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="0..1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DmCoQuanQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="1" />
+          <End Role="DonViMapChucVu" Type="Self.DonViMapChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonViMapChucVu">
+              <PropertyRef Name="DonViId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+          <End Role="DmCoQuanQuocHoi" Type="Self.DmCoQuanQuocHoi" Multiplicity="0..1" />
+          <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmCoQuanQuocHoi">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThongTinCanBo">
+              <PropertyRef Name="CoQuanQuocHoiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId">
+          <End Role="DmLichLamViecs" Type="Self.DmLichLamViec" Multiplicity="0..1" />
+          <End Role="LichLamViecs" Type="Self.LichLamViec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DmLichLamViecs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LichLamViecs">
+              <PropertyRef Name="DMLichLamViecId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTinCanBo_GioiTinh_GioiTinhId">
+          <End Role="GioiTinh" Type="Self.GioiTinh" Multiplicity="0..1" />
+          <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GioiTinh">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThongTinCanBo">
+              <PropertyRef Name="GioiTinhId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OfficerMapperPossitions_Officers_OfficerId">
+          <End Role="Officers" Type="Self.Officer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OfficerMapperPossitions" Type="Self.OfficerMapperPossition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Officers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OfficerMapperPossitions">
+              <PropertyRef Name="OfficerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OfficerMapperPossitions_Position_PositionId">
+          <End Role="Position" Type="Self.Position" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OfficerMapperPossitions" Type="Self.OfficerMapperPossition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OfficerMapperPossitions">
+              <PropertyRef Name="PositionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Portal_Moet_CoCauToChucServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AcademicRanks" EntityType="Self.AcademicRank" />
+          <EntitySet Name="DaiBieuChuyenTraches" EntityType="Self.DaiBieuChuyenTrach" />
+          <EntitySet Name="DaiBieuQuocHois" EntityType="Self.DaiBieuQuocHoi" />
+          <EntitySet Name="DaiBieuQuocHoiMapDmChucDanhs" EntityType="Self.DaiBieuQuocHoiMapDmChucDanh" />
+          <EntitySet Name="DaiBieuQuocHoiMapDmCoQuanQuocHois" EntityType="Self.DaiBieuQuocHoiMapDmCoQuanQuocHoi" />
+          <EntitySet Name="DaiBieuQuocHoiMapDmKhoaQuocHois" EntityType="Self.DaiBieuQuocHoiMapDmKhoaQuocHoi" />
+          <EntitySet Name="Degrees" EntityType="Self.Degree" />
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="DmChucDanhs" EntityType="Self.DmChucDanh" />
+          <EntitySet Name="DmCoQuanQuocHois" EntityType="Self.DmCoQuanQuocHoi" />
+          <EntitySet Name="DmDanTocs" EntityType="Self.DmDanToc" />
+          <EntitySet Name="DmKhoaQuocHois" EntityType="Self.DmKhoaQuocHoi" />
+          <EntitySet Name="DmLichLamViecs" EntityType="Self.DmLichLamViec" />
+          <EntitySet Name="DmTonGiaos" EntityType="Self.DmTonGiao" />
+          <EntitySet Name="DonViMapChucVus" EntityType="Self.DonViMapChucVu" />
+          <EntitySet Name="GioiTinhs" EntityType="Self.GioiTinh" />
+          <EntitySet Name="LichLamViecs" EntityType="Self.LichLamViec" />
+          <EntitySet Name="Nations" EntityType="Self.Nation" />
+          <EntitySet Name="NoiUngCus" EntityType="Self.NoiUngCu" />
+          <EntitySet Name="OfficerMapperPossitions" EntityType="Self.OfficerMapperPossition" />
+          <EntitySet Name="Officers" EntityType="Self.Officer" />
+          <EntitySet Name="Positions" EntityType="Self.Position" />
+          <EntitySet Name="QuocHoiHistories" EntityType="Self.QuocHoiHistory" />
+          <EntitySet Name="ThongTinCanBoes" EntityType="Self.ThongTinCanBo" />
+          <EntitySet Name="TimeLineDBQHs" EntityType="Self.TimeLineDBQH" />
+          <EntitySet Name="TrinhDoChinhTris" EntityType="Self.TrinhDoChinhTri" />
+          <EntitySet Name="TrinhDoHocVans" EntityType="Self.TrinhDoHocVan" />
+          <AssociationSet Name="FK_DaiBieuQuocHoi_DmDanToc_DanTocId" Association="Self.FK_DaiBieuQuocHoi_DmDanToc_DanTocId">
+            <End Role="DmDanToc" EntitySet="DmDanTocs" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId" Association="Self.FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId">
+            <End Role="DmTonGiao" EntitySet="DmTonGiaos" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId" Association="Self.FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId">
+            <End Role="GioiTinh" EntitySet="GioiTinhs" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId" Association="Self.FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId">
+            <End Role="TrinhDoChinhTri" EntitySet="TrinhDoChinhTris" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId" Association="Self.FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId">
+            <End Role="TrinhDoHocVan" EntitySet="TrinhDoHocVans" />
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+            <End Role="DaiBieuQuocHoiMapDmChucDanh" EntitySet="DaiBieuQuocHoiMapDmChucDanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+            <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" EntitySet="DaiBieuQuocHoiMapDmCoQuanQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+            <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" EntitySet="DaiBieuQuocHoiMapDmKhoaQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId" Association="Self.FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId">
+            <End Role="DaiBieuQuocHoi" EntitySet="DaiBieuQuocHois" />
+            <End Role="TimeLineDBQHs" EntitySet="TimeLineDBQHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId" Association="Self.FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanhs" />
+            <End Role="DaiBieuQuocHoiMapDmChucDanh" EntitySet="DaiBieuQuocHoiMapDmChucDanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHois" />
+            <End Role="DaiBieuQuocHoiMapDmCoQuanQuocHoi" EntitySet="DaiBieuQuocHoiMapDmCoQuanQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId" Association="Self.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId">
+            <End Role="DmKhoaQuocHoi" EntitySet="DmKhoaQuocHois" />
+            <End Role="DaiBieuQuocHoiMapDmKhoaQuocHoi" EntitySet="DaiBieuQuocHoiMapDmKhoaQuocHois" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OfficerMapperPossitions_Departments_DepartmentId" Association="Self.FK_OfficerMapperPossitions_Departments_DepartmentId">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="OfficerMapperPossitions" EntitySet="OfficerMapperPossitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmChucDanh_ChucVuId" Association="Self.FK_DonViMapChucVu_DmChucDanh_ChucVuId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanhs" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmChucDanh_DmChucDanhId" Association="Self.FK_DonViMapChucVu_DmChucDanh_DmChucDanhId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanhs" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTinCanBo_DmChucDanh_ChucVuId" Association="Self.FK_ThongTinCanBo_DmChucDanh_ChucVuId">
+            <End Role="DmChucDanh" EntitySet="DmChucDanhs" />
+            <End Role="ThongTinCanBo" EntitySet="ThongTinCanBoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId" Association="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHois" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId" Association="Self.FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHois" />
+            <End Role="DonViMapChucVu" EntitySet="DonViMapChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId" Association="Self.FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId">
+            <End Role="DmCoQuanQuocHoi" EntitySet="DmCoQuanQuocHois" />
+            <End Role="ThongTinCanBo" EntitySet="ThongTinCanBoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId" Association="Self.FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId">
+            <End Role="DmLichLamViecs" EntitySet="DmLichLamViecs" />
+            <End Role="LichLamViecs" EntitySet="LichLamViecs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTinCanBo_GioiTinh_GioiTinhId" Association="Self.FK_ThongTinCanBo_GioiTinh_GioiTinhId">
+            <End Role="GioiTinh" EntitySet="GioiTinhs" />
+            <End Role="ThongTinCanBo" EntitySet="ThongTinCanBoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OfficerMapperPossitions_Officers_OfficerId" Association="Self.FK_OfficerMapperPossitions_Officers_OfficerId">
+            <End Role="Officers" EntitySet="Officers" />
+            <End Role="OfficerMapperPossitions" EntitySet="OfficerMapperPossitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OfficerMapperPossitions_Position_PositionId" Association="Self.FK_OfficerMapperPossitions_Position_PositionId">
+            <End Role="Position" EntitySet="Positions" />
+            <End Role="OfficerMapperPossitions" EntitySet="OfficerMapperPossitions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Portal_Moet_CoCauToChucServiceModelStoreContainer" CdmEntityContainer="Portal_Moet_CoCauToChucServiceEntities">
+          <EntitySetMapping Name="AcademicRanks">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.AcademicRank">
+              <MappingFragment StoreEntitySet="AcademicRank">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaiBieuChuyenTraches">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DaiBieuChuyenTrach">
+              <MappingFragment StoreEntitySet="DaiBieuChuyenTrach">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaiBieuQuocHois">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoi">
+              <MappingFragment StoreEntitySet="DaiBieuQuocHoi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="SurName" ColumnName="SurName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TenThuongGoi" ColumnName="TenThuongGoi" />
+                <ScalarProperty Name="GioiTinhId" ColumnName="GioiTinhId" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+                <ScalarProperty Name="NoiCuTru" ColumnName="NoiCuTru" />
+                <ScalarProperty Name="DanTocId" ColumnName="DanTocId" />
+                <ScalarProperty Name="TonGiaoId" ColumnName="TonGiaoId" />
+                <ScalarProperty Name="TrinhDoVanHoa" ColumnName="TrinhDoVanHoa" />
+                <ScalarProperty Name="TrinhDoHocVanId" ColumnName="TrinhDoHocVanId" />
+                <ScalarProperty Name="TrinhDoChuyenMon" ColumnName="TrinhDoChuyenMon" />
+                <ScalarProperty Name="TrinhDoChinhTriId" ColumnName="TrinhDoChinhTriId" />
+                <ScalarProperty Name="IsDangVien" ColumnName="IsDangVien" />
+                <ScalarProperty Name="NgayVaoDang" ColumnName="NgayVaoDang" />
+                <ScalarProperty Name="NgayVaoDangChinhThuc" ColumnName="NgayVaoDangChinhThuc" />
+                <ScalarProperty Name="NoiUngCuId" ColumnName="NoiUngCuId" />
+                <ScalarProperty Name="NoiLamViec" ColumnName="NoiLamViec" />
+                <ScalarProperty Name="NgheNghiepChucVu" ColumnName="NgheNghiepChucVu" />
+                <ScalarProperty Name="DaiBieuChuyenTrachId" ColumnName="DaiBieuChuyenTrachId" />
+                <ScalarProperty Name="DaiBieuHoiDongNhanDan" ColumnName="DaiBieuHoiDongNhanDan" />
+                <ScalarProperty Name="DienThoaiNhaRieng" ColumnName="DienThoaiNhaRieng" />
+                <ScalarProperty Name="DienThoaiCoQuan" ColumnName="DienThoaiCoQuan" />
+                <ScalarProperty Name="DienThoaiDiDong" ColumnName="DienThoaiDiDong" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="KhenThuong" ColumnName="KhenThuong" />
+                <ScalarProperty Name="KyLuat" ColumnName="KyLuat" />
+                <ScalarProperty Name="PhuChu" ColumnName="PhuChu" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="BannerBackgroud" ColumnName="BannerBackgroud" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="HienThiThongTinChiTiet" ColumnName="HienThiThongTinChiTiet" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaiBieuQuocHoiMapDmChucDanhs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoiMapDmChucDanh">
+              <MappingFragment StoreEntitySet="DaiBieuQuocHoiMapDmChucDanh">
+                <ScalarProperty Name="DaiBieuQuocHoiId" ColumnName="DaiBieuQuocHoiId" />
+                <ScalarProperty Name="ChucDanhId" ColumnName="ChucDanhId" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaiBieuQuocHoiMapDmCoQuanQuocHois">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+              <MappingFragment StoreEntitySet="DaiBieuQuocHoiMapDmCoQuanQuocHoi">
+                <ScalarProperty Name="DaiBieuQuocHoiId" ColumnName="DaiBieuQuocHoiId" />
+                <ScalarProperty Name="CoQuanQuocHoiId" ColumnName="CoQuanQuocHoiId" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaiBieuQuocHoiMapDmKhoaQuocHois">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoiMapDmKhoaQuocHoi">
+              <MappingFragment StoreEntitySet="DaiBieuQuocHoiMapDmKhoaQuocHoi">
+                <ScalarProperty Name="DaiBieuQuocHoiId" ColumnName="DaiBieuQuocHoiId" />
+                <ScalarProperty Name="KhoaQuocHoiId" ColumnName="KhoaQuocHoiId" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Degrees">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.Degree">
+              <MappingFragment StoreEntitySet="Degrees">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.Department">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DmChucDanhs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DmChucDanh">
+              <MappingFragment StoreEntitySet="DmChucDanh">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DmCoQuanQuocHois">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DmCoQuanQuocHoi">
+              <MappingFragment StoreEntitySet="DmCoQuanQuocHoi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="TreeParentIds" ColumnName="TreeParentIds" />
+                <ScalarProperty Name="DetailCategoryRoot" ColumnName="DetailCategoryRoot" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="WebLink" ColumnName="WebLink" />
+                <ScalarProperty Name="CodeOrg" ColumnName="CodeOrg" />
+                <ScalarProperty Name="NoteTitle" ColumnName="NoteTitle" />
+                <ScalarProperty Name="HiddenInMap" ColumnName="HiddenInMap" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="HiddenInTree" ColumnName="HiddenInTree" />
+                <ScalarProperty Name="IsKiemSoatVienCongTy" ColumnName="IsKiemSoatVienCongTy" />
+                <ScalarProperty Name="GroupLevel" ColumnName="GroupLevel" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DmDanTocs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DmDanToc">
+              <MappingFragment StoreEntitySet="DmDanToc">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DmKhoaQuocHois">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DmKhoaQuocHoi">
+              <MappingFragment StoreEntitySet="DmKhoaQuocHoi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DmLichLamViecs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DmLichLamViec">
+              <MappingFragment StoreEntitySet="DmLichLamViecs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Workday" ColumnName="Workday" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TypeLich" ColumnName="TypeLich" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="ShareSocial" ColumnName="ShareSocial" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DmTonGiaos">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DmTonGiao">
+              <MappingFragment StoreEntitySet="DmTonGiao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DonViMapChucVus">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.DonViMapChucVu">
+              <MappingFragment StoreEntitySet="DonViMapChucVu">
+                <ScalarProperty Name="DaiBieuQuocHoiId" ColumnName="DaiBieuQuocHoiId" />
+                <ScalarProperty Name="DonViId" ColumnName="DonViId" />
+                <ScalarProperty Name="ChucVuId" ColumnName="ChucVuId" />
+                <ScalarProperty Name="DmChucDanhId" ColumnName="DmChucDanhId" />
+                <ScalarProperty Name="DmCoQuanQuocHoiId" ColumnName="DmCoQuanQuocHoiId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GioiTinhs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.GioiTinh">
+              <MappingFragment StoreEntitySet="GioiTinh">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LichLamViecs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.LichLamViec">
+              <MappingFragment StoreEntitySet="LichLamViecs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="DMLichLamViecId" ColumnName="DMLichLamViecId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="PublicDate" ColumnName="PublicDate" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="LastModifierName" ColumnName="LastModifierName" />
+                <ScalarProperty Name="DeletionName" ColumnName="DeletionName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ThanhPhan" ColumnName="ThanhPhan" />
+                <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+                <ScalarProperty Name="NguoiChuTri" ColumnName="NguoiChuTri" />
+                <ScalarProperty Name="CaNgay" ColumnName="CaNgay" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nations">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.Nation">
+              <MappingFragment StoreEntitySet="Nations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoiUngCus">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.NoiUngCu">
+              <MappingFragment StoreEntitySet="NoiUngCu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OfficerMapperPossitions">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.OfficerMapperPossition">
+              <MappingFragment StoreEntitySet="OfficerMapperPossitions">
+                <ScalarProperty Name="OfficerId" ColumnName="OfficerId" />
+                <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Officers">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.Officer">
+              <MappingFragment StoreEntitySet="Officers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="PlaceOfOrigin" ColumnName="PlaceOfOrigin" />
+                <ScalarProperty Name="NationId" ColumnName="NationId" />
+                <ScalarProperty Name="NationName" ColumnName="NationName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="AcademicRankId" ColumnName="AcademicRankId" />
+                <ScalarProperty Name="AcademicRankName" ColumnName="AcademicRankName" />
+                <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+                <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="IsShowPage" ColumnName="IsShowPage" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Positions">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.Position">
+              <MappingFragment StoreEntitySet="Position">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuocHoiHistories">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.QuocHoiHistory">
+              <MappingFragment StoreEntitySet="QuocHoiHistory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Banner" ColumnName="Banner" />
+                <ScalarProperty Name="TimeLine" ColumnName="TimeLine" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThongTinCanBoes">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.ThongTinCanBo">
+              <MappingFragment StoreEntitySet="ThongTinCanBo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="SurName" ColumnName="SurName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="NgheNghiepChucVu" ColumnName="NgheNghiepChucVu" />
+                <ScalarProperty Name="NoiLamViec" ColumnName="NoiLamViec" />
+                <ScalarProperty Name="DienThoaiCoQuan" ColumnName="DienThoaiCoQuan" />
+                <ScalarProperty Name="DienThoaiNhaRieng" ColumnName="DienThoaiNhaRieng" />
+                <ScalarProperty Name="DienThoaiDiDong" ColumnName="DienThoaiDiDong" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="GioiTinhId" ColumnName="GioiTinhId" />
+                <ScalarProperty Name="CoQuanQuocHoiId" ColumnName="CoQuanQuocHoiId" />
+                <ScalarProperty Name="ChucVuId" ColumnName="ChucVuId" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeLineDBQHs">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.TimeLineDBQH">
+              <MappingFragment StoreEntitySet="TimeLineDBQHs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="DaiBieuQuocHoiId" ColumnName="DaiBieuQuocHoiId" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrinhDoChinhTris">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.TrinhDoChinhTri">
+              <MappingFragment StoreEntitySet="TrinhDoChinhTri">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrinhDoHocVans">
+            <EntityTypeMapping TypeName="Portal_Moet_CoCauToChucServiceModel.TrinhDoHocVan">
+              <MappingFragment StoreEntitySet="TrinhDoHocVan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

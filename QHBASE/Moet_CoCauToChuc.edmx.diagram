@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="570ec0334fc0489eb5102c7a17384cec" Name="Diagram1">
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.AcademicRank" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DaiBieuChuyenTrach" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoi" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoiMapDmChucDanh" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoiMapDmCoQuanQuocHoi" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DaiBieuQuocHoiMapDmKhoaQuocHoi" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.Degree" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.Department" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DmChucDanh" Width="1.5" PointX="6" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DmCoQuanQuocHoi" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DmDanToc" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DmKhoaQuocHoi" Width="1.5" PointX="6" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DmLichLamViec" Width="1.5" PointX="13.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DmTonGiao" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.DonViMapChucVu" Width="1.5" PointX="11.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.GioiTinh" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.LichLamViec" Width="1.5" PointX="16" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.Nation" Width="1.5" PointX="13.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.NoiUngCu" Width="1.5" PointX="15.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.OfficerMapperPossition" Width="1.5" PointX="11" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.Officer" Width="1.5" PointX="8.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.Position" Width="1.5" PointX="8.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.QuocHoiHistory" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.ThongTinCanBo" Width="1.5" PointX="6" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.TimeLineDBQH" Width="1.5" PointX="5.25" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.TrinhDoChinhTri" Width="1.5" PointX="0.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal_Moet_CoCauToChucServiceModel.TrinhDoHocVan" Width="1.5" PointX="0.75" PointY="29.125" IsExpanded="true" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoi_DmDanToc_DanTocId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoi_DmTonGiao_TonGiaoId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoi_GioiTinh_GioiTinhId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoi_TrinhDoChinhTri_TrinhDoChinhTriId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoi_TrinhDoHocVan_TrinhDoHocVanId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoiMapDmChucDanh_DaiBieuQuocHoi_DaiBieuQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DaiBieuQuocHoi_DaiBieuQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DonViMapChucVu_DaiBieuQuocHoi_DaiBieuQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_TimeLineDBQHs_DaiBieuQuocHoi_DaiBieuQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoiMapDmChucDanh_DmChucDanh_ChucDanhId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoiMapDmCoQuanQuocHoi_DmCoQuanQuocHoi_CoQuanQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DaiBieuQuocHoiMapDmKhoaQuocHoi_DmKhoaQuocHoi_KhoaQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_OfficerMapperPossitions_Departments_DepartmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DonViMapChucVu_DmChucDanh_ChucVuId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DonViMapChucVu_DmChucDanh_DmChucDanhId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_ThongTinCanBo_DmChucDanh_ChucVuId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DonViMapChucVu_DmCoQuanQuocHoi_DmCoQuanQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_DonViMapChucVu_DmCoQuanQuocHoi_DonViId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_ThongTinCanBo_DmCoQuanQuocHoi_CoQuanQuocHoiId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_LichLamViecs_DmLichLamViecs_DMLichLamViecId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_ThongTinCanBo_GioiTinh_GioiTinhId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_OfficerMapperPossitions_Officers_OfficerId" ManuallyRouted="false" />
+        <AssociationConnector Association="Portal_Moet_CoCauToChucServiceModel.FK_OfficerMapperPossitions_Position_PositionId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

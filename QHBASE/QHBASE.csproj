@@ -131,6 +131,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Moet_Commons.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Moet_CoCauToChuc.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Moet_CoCauToChuc.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Moet_CoCauToChuc.edmx.diagram">
+      <DependentUpon>Moet_CoCauToChuc.edmx</DependentUpon>
+    </None>
     <None Include="Moet_Commons.edmx.diagram">
       <DependentUpon>Moet_Commons.edmx</DependentUpon>
     </None>
@@ -196,6 +203,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcademicRank.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="Answer.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
@@ -313,8 +323,23 @@
     <Compile Include="C__EFMigrationsHistory.cs">
       <DependentUpon>ApatitFiles.tt</DependentUpon>
     </Compile>
+    <Compile Include="DaiBieuChuyenTrach.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="DaiBieuQH.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DaiBieuQuocHoi.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DaiBieuQuocHoiMapDmChucDanh.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DaiBieuQuocHoiMapDmCoQuanQuocHoi.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DaiBieuQuocHoiMapDmKhoaQuocHoi.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachSanPham.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
@@ -325,14 +350,41 @@
     <Compile Include="DataCloneService.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
+    <Compile Include="Degree.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DmChucDanh.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="DMChuongTrinhLamViec.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DmCoQuanQuocHoi.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DmDanToc.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DmKhoaQuocHoi.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="DMKyHop.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
+    <Compile Include="DmLichLamViec.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DmTonGiao.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="DoiTac.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DonViMapChucVu.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="EffectStatu.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
@@ -363,6 +415,9 @@
     </Compile>
     <Compile Include="Gallery.cs">
       <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GioiTinh.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="Gopy.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
@@ -403,6 +458,9 @@
     <Compile Include="LawSigner.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
+    <Compile Include="LichLamViec.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="LienKetWebsite.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
@@ -438,6 +496,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_CoCauToChuc.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_CoCauToChuc.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_CoCauToChuc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Moet_CoCauToChuc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Moet_CoCauToChuc.edmx</DependentUpon>
     </Compile>
     <Compile Include="Moet_Commons.Context.cs">
       <AutoGen>True</AutoGen>
@@ -514,6 +587,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Moet_VanBans.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Nation.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="New.cs">
       <DependentUpon>Moet_News.tt</DependentUpon>
     </Compile>
@@ -559,11 +635,23 @@
     <Compile Include="NoiDung.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
+    <Compile Include="NoiUngCu.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="Notification.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
+    <Compile Include="Officer.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficerMapperPossition.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="PhanHoiSanPham.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Position.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="Promulgator.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
@@ -620,6 +708,9 @@
     <Compile Include="Question.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
+    <Compile Include="QuocHoiHistory.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="ReadCountLog.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>
@@ -656,11 +747,23 @@
     <Compile Include="TempLinhVuc.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinCanBo.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeLineDBQH.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="Topic.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
     </Compile>
     <Compile Include="TopicSurvey.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrinhDoChinhTri.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrinhDoHocVan.cs">
+      <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="TuLieuAnPham.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
@@ -774,6 +877,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_CoCauToChuc.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_CoCauToChuc.edmx</DependentUpon>
+      <LastGenOutput>Moet_CoCauToChuc.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Moet_CoCauToChuc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Moet_CoCauToChuc.edmx</DependentUpon>
+      <LastGenOutput>Moet_CoCauToChuc.cs</LastGenOutput>
     </Content>
     <Content Include="Moet_Commons.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
