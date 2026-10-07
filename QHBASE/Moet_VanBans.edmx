@@ -254,10 +254,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
-          <Property Name="SoKyHieu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SoKyHieu" Type="nvarchar(max)" Nullable="false" />
           <Property Name="NgayBatDau" Type="datetime2" Precision="7" />
           <Property Name="NgayKetThuc" Type="datetime2" Precision="7" />
-          <Property Name="TrichYeu" Type="nvarchar" MaxLength="3500" />
+          <Property Name="TrichYeu" Type="nvarchar(max)" />
           <Property Name="NoiDung" Type="nvarchar(max)" />
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
           <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
@@ -835,10 +835,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
-          <Property Name="SoKyHieu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SoKyHieu" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NgayBatDau" Type="DateTime" Precision="7" />
           <Property Name="NgayKetThuc" Type="DateTime" Precision="7" />
-          <Property Name="TrichYeu" Type="String" MaxLength="3500" FixedLength="false" Unicode="true" />
+          <Property Name="TrichYeu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
