@@ -287,6 +287,12 @@
     <Compile Include="TestAndDemo\FormCloneMoetThongBao.Designer.cs">
       <DependentUpon>FormCloneMoetThongBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetVanBanDuThao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetVanBanDuThao.Designer.cs">
+      <DependentUpon>FormCloneMoetVanBanDuThao.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestAndDemo\FormCloneMoetVideo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -472,6 +478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetVanBan.resx">
       <DependentUpon>FormCloneMoetVanBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestAndDemo\FormCloneMoetVanBanDuThao.resx">
+      <DependentUpon>FormCloneMoetVanBanDuThao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormConvertVanKienSP.resx">
       <DependentUpon>FormConvertVanKienSP.cs</DependentUpon>
