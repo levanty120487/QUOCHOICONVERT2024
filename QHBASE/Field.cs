@@ -18,7 +18,7 @@ namespace QHBASE
         public Field()
         {
             this.LawFields = new HashSet<LawField>();
-            this.VanBanDuThaos = new HashSet<VanBanDuThao>();
+            this.VBDTFields = new HashSet<VBDTField>();
         }
     
         public string Id { get; set; }
@@ -43,6 +43,6 @@ namespace QHBASE
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LawField> LawFields { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VanBanDuThao> VanBanDuThaos { get; set; }
+        public virtual ICollection<VBDTField> VBDTFields { get; set; }
     }
 }

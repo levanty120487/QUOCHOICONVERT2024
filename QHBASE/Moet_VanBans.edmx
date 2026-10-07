@@ -283,6 +283,7 @@
           </Key>
           <Property Name="IdLaw" Type="varchar" MaxLength="36" Nullable="false" />
           <Property Name="IdField" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <Association Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
           <End Role="VanBanDuThao" Type="Self.VanBanDuThao" Multiplicity="1">
@@ -522,6 +523,7 @@
           <EntitySet Name="TuLieuAnPhams" EntityType="Portal_Moet_VanbanServiceModel.TuLieuAnPham" />
           <EntitySet Name="TypeOfDocuments" EntityType="Portal_Moet_VanbanServiceModel.TypeOfDocument" />
           <EntitySet Name="VanBanDuThaos" EntityType="Portal_Moet_VanbanServiceModel.VanBanDuThao" />
+          <EntitySet Name="VBDTFields" EntityType="Portal_Moet_VanbanServiceModel.VBDTField" />
           <AssociationSet Name="FK_Law_EffectStatus_IdEffectStatus" Association="Portal_Moet_VanbanServiceModel.FK_Law_EffectStatus_IdEffectStatus">
             <End Role="EffectStatu" EntitySet="EffectStatus" />
             <End Role="Law" EntitySet="Laws" />
@@ -529,6 +531,10 @@
           <AssociationSet Name="FK_LawField_Field_IdField" Association="Portal_Moet_VanbanServiceModel.FK_LawField_Field_IdField">
             <End Role="Field" EntitySet="Fields" />
             <End Role="LawField" EntitySet="LawFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VBDTField_Field_IdField" Association="Portal_Moet_VanbanServiceModel.FK_VBDTField_Field_IdField">
+            <End Role="Field" EntitySet="Fields" />
+            <End Role="VBDTField" EntitySet="VBDTFields" />
           </AssociationSet>
           <AssociationSet Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" Association="Portal_Moet_VanbanServiceModel.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
             <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
@@ -562,9 +568,9 @@
             <End Role="TypeOfDocument" EntitySet="TypeOfDocuments" />
             <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
           </AssociationSet>
-          <AssociationSet Name="VBDTField" Association="Portal_Moet_VanbanServiceModel.VBDTField">
-            <End Role="Field" EntitySet="Fields" />
+          <AssociationSet Name="FK_VBDTField_VanBanDuThao_IdLaw" Association="Portal_Moet_VanbanServiceModel.FK_VBDTField_VanBanDuThao_IdLaw">
             <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
+            <End Role="VBDTField" EntitySet="VBDTFields" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="EffectStatu">
@@ -614,7 +620,7 @@
           <Property Name="DeleterId" Type="Guid" />
           <Property Name="DeletionTime" Type="DateTime" Precision="7" />
           <NavigationProperty Name="LawFields" Relationship="Portal_Moet_VanbanServiceModel.FK_LawField_Field_IdField" FromRole="Field" ToRole="LawField" />
-          <NavigationProperty Name="VanBanDuThaos" Relationship="Portal_Moet_VanbanServiceModel.VBDTField" FromRole="Field" ToRole="VanBanDuThao" />
+          <NavigationProperty Name="VBDTFields" Relationship="Portal_Moet_VanbanServiceModel.FK_VBDTField_Field_IdField" FromRole="Field" ToRole="VBDTField" />
         </EntityType>
         <EntityType Name="GopYVanBanDuThao">
           <Key>
@@ -858,7 +864,18 @@
           <Property Name="DetailLinkClone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="GopYVanBanDuThaos" Relationship="Portal_Moet_VanbanServiceModel.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" FromRole="VanBanDuThao" ToRole="GopYVanBanDuThao" />
           <NavigationProperty Name="TypeOfDocument" Relationship="Portal_Moet_VanbanServiceModel.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" FromRole="VanBanDuThao" ToRole="TypeOfDocument" />
-          <NavigationProperty Name="Fields" Relationship="Portal_Moet_VanbanServiceModel.VBDTField" FromRole="VanBanDuThao" ToRole="Field" />
+          <NavigationProperty Name="VBDTFields" Relationship="Portal_Moet_VanbanServiceModel.FK_VBDTField_VanBanDuThao_IdLaw" FromRole="VanBanDuThao" ToRole="VBDTField" />
+        </EntityType>
+        <EntityType Name="VBDTField">
+          <Key>
+            <PropertyRef Name="IdLaw" />
+            <PropertyRef Name="IdField" />
+          </Key>
+          <Property Name="IdLaw" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="IdField" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Field" Relationship="Portal_Moet_VanbanServiceModel.FK_VBDTField_Field_IdField" FromRole="VBDTField" ToRole="Field" />
+          <NavigationProperty Name="VanBanDuThao" Relationship="Portal_Moet_VanbanServiceModel.FK_VBDTField_VanBanDuThao_IdLaw" FromRole="VBDTField" ToRole="VanBanDuThao" />
         </EntityType>
         <Association Name="FK_Law_EffectStatus_IdEffectStatus">
           <End Type="Portal_Moet_VanbanServiceModel.EffectStatu" Role="EffectStatu" Multiplicity="0..1" />
@@ -880,6 +897,18 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="LawField">
+              <PropertyRef Name="IdField" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VBDTField_Field_IdField">
+          <End Type="Portal_Moet_VanbanServiceModel.Field" Role="Field" Multiplicity="1" />
+          <End Type="Portal_Moet_VanbanServiceModel.VBDTField" Role="VBDTField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Field">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VBDTField">
               <PropertyRef Name="IdField" />
             </Dependent>
           </ReferentialConstraint>
@@ -992,11 +1021,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="VBDTField">
-          <End Type="Portal_Moet_VanbanServiceModel.Field" Role="Field" Multiplicity="*" />
-          <End Type="Portal_Moet_VanbanServiceModel.VanBanDuThao" Role="VanBanDuThao" Multiplicity="*" />
+        <Association Name="FK_VBDTField_VanBanDuThao_IdLaw">
+          <End Type="Portal_Moet_VanbanServiceModel.VanBanDuThao" Role="VanBanDuThao" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Portal_Moet_VanbanServiceModel.VBDTField" Role="VBDTField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VanBanDuThao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VBDTField">
+              <PropertyRef Name="IdLaw" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1282,14 +1321,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="VBDTField" TypeName="Portal_Moet_VanbanServiceModel.VBDTField" StoreEntitySet="VBDTField">
-            <EndProperty Name="VanBanDuThao">
-              <ScalarProperty Name="Id" ColumnName="IdLaw" />
-            </EndProperty>
-            <EndProperty Name="Field">
-              <ScalarProperty Name="Id" ColumnName="IdField" />
-            </EndProperty>
-          </AssociationSetMapping>
+          <EntitySetMapping Name="VBDTFields">
+            <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.VBDTField">
+              <MappingFragment StoreEntitySet="VBDTField">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdField" ColumnName="IdField" />
+                <ScalarProperty Name="IdLaw" ColumnName="IdLaw" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

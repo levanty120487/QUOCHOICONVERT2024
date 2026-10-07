@@ -18,7 +18,7 @@ namespace QHBASE
         public VanBanDuThao()
         {
             this.GopYVanBanDuThaos = new HashSet<GopYVanBanDuThao>();
-            this.Fields = new HashSet<Field>();
+            this.VBDTFields = new HashSet<VBDTField>();
         }
     
         public string Id { get; set; }
@@ -48,6 +48,6 @@ namespace QHBASE
         public virtual ICollection<GopYVanBanDuThao> GopYVanBanDuThaos { get; set; }
         public virtual TypeOfDocument TypeOfDocument { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Field> Fields { get; set; }
+        public virtual ICollection<VBDTField> VBDTFields { get; set; }
     }
 }

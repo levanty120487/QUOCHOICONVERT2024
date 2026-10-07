@@ -689,6 +689,9 @@
     <Compile Include="VanKienTaiLieu.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
+    <Compile Include="VBDTField.cs">
+      <DependentUpon>Moet_VanBans.tt</DependentUpon>
+    </Compile>
     <Compile Include="Video.cs">
       <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
     </Compile>

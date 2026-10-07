@@ -37,5 +37,6 @@ namespace QHBASE
         public virtual DbSet<TuLieuAnPham> TuLieuAnPhams { get; set; }
         public virtual DbSet<TypeOfDocument> TypeOfDocuments { get; set; }
         public virtual DbSet<VanBanDuThao> VanBanDuThaos { get; set; }
+        public virtual DbSet<VBDTField> VBDTFields { get; set; }
     }
 }
