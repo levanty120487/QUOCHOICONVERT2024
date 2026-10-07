@@ -272,8 +272,14 @@
     <Compile Include="TestAndDemo\FormCloneMoetNews.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TestAndDemo\FormCloneMoetNews.Designer.cs">
       <DependentUpon>FormCloneMoetNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetCanBo.Designer.cs">
+      <DependentUpon>FormCloneMoetCanBo.cs</DependentUpon>
     </Compile>
     <Compile Include="TestAndDemo\FormCloneMoetVanBan.cs">
       <SubType>Form</SubType>
@@ -475,6 +481,9 @@
     </Compile>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetNews.resx">
       <DependentUpon>FormCloneMoetNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestAndDemo\FormCloneMoetCanBo.resx">
+      <DependentUpon>FormCloneMoetCanBo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetVanBan.resx">
       <DependentUpon>FormCloneMoetVanBan.cs</DependentUpon>

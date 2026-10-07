@@ -308,5 +308,10 @@ namespace RJCodeUI_M1
         {
             this.OpenChildForm(() => new TestAndDemo.FormCloneMoetVanBanDuThao(), sender);
         }
+
+        private void btnCloneCanBoMoet_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetCanBo(), sender);
+        }
     }
 }

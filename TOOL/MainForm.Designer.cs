@@ -76,6 +76,7 @@ namespace RJCodeUI_M1
             this.rjMenuButtonVideoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneVanBanMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneVanBanDuThaoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
+            this.btnCloneCanBoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.pnlSideMenu.SuspendLayout();
             this.pnlSideMenuHeader.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -91,6 +92,7 @@ namespace RJCodeUI_M1
             // pnlSideMenu
             // 
             this.pnlSideMenu.Controls.Add(this.rjMenuButton2);
+            this.pnlSideMenu.Controls.Add(this.btnCloneCanBoMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneVanBanDuThaoMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneVanBanMoet);
             this.pnlSideMenu.Controls.Add(this.rjMenuButtonVideoMoet);
@@ -719,6 +721,32 @@ namespace RJCodeUI_M1
             this.rjMenuButtonVideoMoet.Click += new System.EventHandler(this.rjMenuButtonVideoMoet_Click);
             // 
                         // 
+            // 
+            // btnCloneCanBoMoet
+            // 
+            this.btnCloneCanBoMoet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
+            this.btnCloneCanBoMoet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCloneCanBoMoet.DropdownMenu = null;
+            this.btnCloneCanBoMoet.FlatAppearance.BorderSize = 0;
+            this.btnCloneCanBoMoet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloneCanBoMoet.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloneCanBoMoet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneCanBoMoet.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.btnCloneCanBoMoet.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneCanBoMoet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloneCanBoMoet.IconSize = 28;
+            this.btnCloneCanBoMoet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneCanBoMoet.Location = new System.Drawing.Point(0, 780);
+            this.btnCloneCanBoMoet.Name = "btnCloneCanBoMoet";
+            this.btnCloneCanBoMoet.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnCloneCanBoMoet.Size = new System.Drawing.Size(220, 55);
+            this.btnCloneCanBoMoet.TabIndex = 19;
+            this.btnCloneCanBoMoet.Text = "   Clone Cán Bộ";
+            this.btnCloneCanBoMoet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneCanBoMoet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCloneCanBoMoet.UseVisualStyleBackColor = false;
+            this.btnCloneCanBoMoet.Click += new System.EventHandler(this.btnCloneCanBoMoet_Click);
+            // 
             // btnCloneVanBanDuThaoMoet
             // 
             this.btnCloneVanBanDuThaoMoet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
@@ -874,6 +902,7 @@ namespace RJCodeUI_M1
         private RJControls.RJMenuButton rjMenuButtonVideoMoet;
         private RJControls.RJMenuButton btnCloneVanBanMoet;
         private RJControls.RJMenuButton btnCloneVanBanDuThaoMoet;
+        private RJControls.RJMenuButton btnCloneCanBoMoet;
     }
 }
 

@@ -72,7 +72,7 @@ namespace RJCodeUI_M1
             try
             {
                 string hosturl = "https://moet.gov.vn";
-                string rootDirectory = "C:\\uploadFckFiles\\news";
+                string rootDirectory = "C:\\uploadFckFiles\\cocautochucns";
                 if(!string.IsNullOrWhiteSpace(folder))
                 {
                     rootDirectory = string.Concat(rootDirectory, "\\", folder.Trim());
