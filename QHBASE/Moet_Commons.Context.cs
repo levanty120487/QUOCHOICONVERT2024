@@ -12,19 +12,19 @@ namespace QHBASE
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class Portal_Moet_CommonsServicesEntities : DbContext
     {
         public Portal_Moet_CommonsServicesEntities()
             : base("name=Portal_Moet_CommonsServicesEntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<ConfigWebsite> ConfigWebsites { get; set; }
         public virtual DbSet<ContactInfo> ContactInfos { get; set; }
         public virtual DbSet<CoQuanBanHanh> CoQuanBanHanhs { get; set; }
