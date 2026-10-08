@@ -5,48 +5,53 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="ae5ce202041d4c8da9ad87825e8076da" Name="Diagram1">
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ConfigWebsite" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ContactInfo" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.CoQuanBanHanh" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DanhSachSanPham" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DanhSachThongBao" Width="1.5" PointX="15" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DataCloneService" Width="1.5" PointX="6.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DoiTac" Width="1.5" PointX="8.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.EmailDangKy" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.EmailTemplate" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Gopy" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.HistoryActionFlow" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.HistoryVersion" Width="1.5" PointX="13.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Language" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LanguageMapText" Width="1.5" PointX="14" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LanguageText" Width="1.5" PointX="11.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LienKetWebsite" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LinhVuc" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LoaiThongBao" Width="1.5" PointX="12.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LoaiVanKien" Width="1.5" PointX="18.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Menu" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.MenuLanhDao" Width="1.5" PointX="15.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Notification" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.PhanHoiSanPham" Width="1.5" PointX="12" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.QuangCaoss" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ReadCountLog" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.RSSChannel" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.SlideImage" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.TagInfo" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Tag" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ViTriQuangCao" Width="1.5" PointX="7.75" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ViTriQuangCaoMapQuangCao" Width="1.5" PointX="10" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.WorkflowCategory" Width="1.5" PointX="20.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.WorkflowDefinition" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.WorkflowInstance" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_HistoryActionFlows_WorkflowInstances_WORKFLOW_INSTANCE_ID" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_LanguageMapText_LanguageText_LanguageTextId" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_TagInfos_Tags_TagId" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" ManuallyRouted="false" />
-        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_WorkflowInstances_WorkflowDefinitions_WORKFLOW_DEFINITION_ID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ConfigWebsite" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ContactInfo" Width="1.5" PointX="4.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.CoQuanBanHanh" Width="1.5" PointX="6.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DanhMucChung" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DanhSachCacCoSoGiaoDuc" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DanhSachSanPham" Width="1.5" PointX="10.75" PointY="9.125" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DanhSachThongBao" Width="1.5" PointX="15" PointY="1.125" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DataCloneService" Width="1.5" PointX="15.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.DoiTac" Width="1.5" PointX="8.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.EmailDangKy" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.EmailTemplate" Width="1.5" PointX="17.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Gopy" Width="1.5" PointX="17.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.HistoryActionFlow" Width="1.5" PointX="10.25" PointY="2.375" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.HistoryVersion" Width="1.5" PointX="17.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Language" Width="1.5" PointX="14.75" PointY="18.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LanguageMapText" Width="1.5" PointX="15" PointY="16" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LanguageText" Width="1.5" PointX="12.75" PointY="15" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LienKetWebsite" Width="1.5" PointX="19.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LinhVuc" Width="1.5" PointX="19.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LoaiThongBao" Width="1.5" PointX="12.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.LoaiVanKien" Width="1.5" PointX="10.75" PointY="19.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Menu" Width="1.5" PointX="19.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.MenuLanhDao" Width="1.5" PointX="16.75" PointY="19.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Notification" Width="1.5" PointX="18.75" PointY="20.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.PhanHoiSanPham" Width="1.5" PointX="13" PointY="10.625" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.QuangCaoss" Width="1.5" PointX="0.75" PointY="9.125" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ReadCountLog" Width="1.5" PointX="20.75" PointY="20.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.RSSChannel" Width="1.5" PointX="21.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.SlideImage" Width="1.5" PointX="21.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.TagInfo" Width="1.5" PointX="8" PointY="10.125" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.Tag" Width="1.5" PointX="5.75" PointY="10.5" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ViTriQuangCao" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.ViTriQuangCaoMapQuangCao" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.WorkflowCategory" Width="1.5" PointX="21.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.WorkflowDefinition" Width="1.5" PointX="5.75" PointY="1.875" />
+        <EntityTypeShape EntityType="Portal_Moet_CommonsServicesModel.WorkflowInstance" Width="1.5" PointX="8" PointY="1.125" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_DanhSachCacCoSoGiaoDuc_DanhMucChung_LoaiHinhCoSoDaoTaoId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_DanhSachCacCoSoGiaoDuc_DanhMucChung_LoaiTruongId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_DanhSachCacCoSoGiaoDuc_DanhMucChung_TinhThanhPhoId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_PhanHoiSanPham_DanhSachSanPham_IdSanPham" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_DanhSachThongBao_LoaiThongBao_IdLoaiThongBao" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_HistoryActionFlows_WorkflowInstances_WORKFLOW_INSTANCE_ID" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_LanguageMapText_LanguageText_LanguageTextId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_ViTriQuangCaoMapQuangCao_QuangCaoss_QuangCaoId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_TagInfos_Tags_TagId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_ViTriQuangCaoMapQuangCao_ViTriQuangCao_ViTriQuangCaoId" />
+        <AssociationConnector Association="Portal_Moet_CommonsServicesModel.FK_WorkflowInstances_WorkflowDefinitions_WORKFLOW_DEFINITION_ID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -341,6 +341,12 @@
     <Compile Include="DaiBieuQuocHoiMapDmKhoaQuocHoi.cs">
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="DanhMucChung.cs">
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachCacCoSoGiaoDuc.cs">
+      <DependentUpon>Moet_Commons.tt</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachSanPham.cs">
       <DependentUpon>Moet_Commons.tt</DependentUpon>
     </Compile>

@@ -28,6 +28,8 @@ namespace QHBASE
         public virtual DbSet<ConfigWebsite> ConfigWebsites { get; set; }
         public virtual DbSet<ContactInfo> ContactInfos { get; set; }
         public virtual DbSet<CoQuanBanHanh> CoQuanBanHanhs { get; set; }
+        public virtual DbSet<DanhMucChung> DanhMucChungs { get; set; }
+        public virtual DbSet<DanhSachCacCoSoGiaoDuc> DanhSachCacCoSoGiaoDucs { get; set; }
         public virtual DbSet<DanhSachSanPham> DanhSachSanPhams { get; set; }
         public virtual DbSet<DanhSachThongBao> DanhSachThongBaos { get; set; }
         public virtual DbSet<DataCloneService> DataCloneServices { get; set; }
