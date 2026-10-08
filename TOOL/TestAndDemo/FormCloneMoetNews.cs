@@ -375,7 +375,7 @@ namespace RJCodeUI_M1.TestAndDemo
             }
 
 
-            string downloadFolderImg = @"C:\uploadFckFiles\news";
+            string downloadFolderImg = @"C:\uploadFckFiles\updatenews";
             if(!string.IsNullOrWhiteSpace(txtFolderChua.Text))
             {
                 downloadFolderImg = string.Concat(downloadFolderImg, "\\", txtFolderChua.Text.Trim());
@@ -407,7 +407,8 @@ namespace RJCodeUI_M1.TestAndDemo
 
                             // nếu tồn tại thì không lưu mà tiếp bản ghi khác
                             var findItem = await dbNews.News
-                                                    .Where(a => a.DetailUrlClone.Equals(item.DetailUrl))
+                                                    //=> .Where(a => a.DetailUrlClone.Equals(item.DetailUrl))
+                                                    .Where(a => a.Title.Equals(item.Title))
                                                     .Include(a => a.NewCategories)
                                                     .FirstOrDefaultAsync();
                             if(findItem != null 
@@ -417,19 +418,33 @@ namespace RJCodeUI_M1.TestAndDemo
                                 try
                                 {
                                     if (findItem.NewCategories != null
-                                        && findItem.NewCategories.Count > 0
-                                            && !findItem.NewCategories.All(a => a.CategoryId.Equals(categoryId)))
+                                        && findItem.NewCategories.Count > 0)
                                     {
-                                        var newCategoryUpdate = new NewCategory()
+                                        var findCategorys = findItem.NewCategories.Where(a => a.CategoryId.Equals(categoryId)).ToList();
+                                        if (findCategorys != null 
+                                            && findCategorys.Count > 0)
                                         {
-                                            CategoryId = categoryId,
-                                            Id = Guid.NewGuid(),
-                                            NewId = findItem.Id
-                                        };
-                                        dbNews.NewCategories.Add(newCategoryUpdate);
-                                        dbNews.SaveChanges();
+                                            duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}");
+                                            continue;
+                                        }
+                                        else
+                                        {
+                                            var newCategoryUpdate = new NewCategory()
+                                            {
+                                                CategoryId = categoryId,
+                                                Id = Guid.NewGuid(),
+                                                NewId = findItem.Id
+                                            };
+                                            dbNews.NewCategories.Add(newCategoryUpdate);
+                                            dbNews.SaveChanges();
+
+                                            duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}. Add thành công danh mục tin tức.");
+                                        }
                                     }
-                                    duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}");
+                                    else
+                                    {
+                                        duplicateList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}");
+                                    }
                                 }
                                 catch(Exception exxx)
                                 {
