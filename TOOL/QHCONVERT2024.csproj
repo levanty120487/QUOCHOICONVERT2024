@@ -269,6 +269,12 @@
     <Compile Include="Settings\RJColors.cs" />
     <Compile Include="Settings\UIStyle.cs" />
     <Compile Include="Settings\UITheme.cs" />
+    <Compile Include="TestAndDemo\FormCloneCongKhaiNganSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAndDemo\FormCloneCongKhaiNganSach.Designer.cs">
+      <DependentUpon>FormCloneCongKhaiNganSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestAndDemo\FormCloneMoetNews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -488,6 +494,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestAndDemo\FormCloneCongKhaiNganSach.resx">
+      <DependentUpon>FormCloneCongKhaiNganSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetCacCoSoGiaoDuc.resx">
       <DependentUpon>FormCloneMoetCacCoSoGiaoDuc.cs</DependentUpon>
     </EmbeddedResource>

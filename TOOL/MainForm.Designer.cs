@@ -78,6 +78,7 @@ namespace RJCodeUI_M1
             this.btnCloneVanBanDuThaoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneCanBoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneCacCoSoGiaoDucMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
+            this.btnCloneCongKhaiNganSach = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.pnlSideMenu.SuspendLayout();
             this.pnlSideMenuHeader.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -94,6 +95,7 @@ namespace RJCodeUI_M1
             // 
             this.pnlSideMenu.Controls.Add(this.rjMenuButton2);
             this.pnlSideMenu.Controls.Add(this.btnCloneCacCoSoGiaoDucMoet);
+            this.pnlSideMenu.Controls.Add(this.btnCloneCongKhaiNganSach);
             this.pnlSideMenu.Controls.Add(this.btnCloneCanBoMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneVanBanDuThaoMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneVanBanMoet);
@@ -774,6 +776,31 @@ namespace RJCodeUI_M1
             this.btnCloneCacCoSoGiaoDucMoet.UseVisualStyleBackColor = false;
             this.btnCloneCacCoSoGiaoDucMoet.Click += new System.EventHandler(this.btnCloneCacCoSoGiaoDucMoet_Click);
             // 
+            // btnCloneCongKhaiNganSach
+            // 
+            this.btnCloneCongKhaiNganSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
+            this.btnCloneCongKhaiNganSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCloneCongKhaiNganSach.DropdownMenu = null;
+            this.btnCloneCongKhaiNganSach.FlatAppearance.BorderSize = 0;
+            this.btnCloneCongKhaiNganSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloneCongKhaiNganSach.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloneCongKhaiNganSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneCongKhaiNganSach.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.btnCloneCongKhaiNganSach.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneCongKhaiNganSach.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloneCongKhaiNganSach.IconSize = 28;
+            this.btnCloneCongKhaiNganSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneCongKhaiNganSach.Location = new System.Drawing.Point(0, 890);
+            this.btnCloneCongKhaiNganSach.Name = "btnCloneCongKhaiNganSach";
+            this.btnCloneCongKhaiNganSach.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnCloneCongKhaiNganSach.Size = new System.Drawing.Size(220, 55);
+            this.btnCloneCongKhaiNganSach.TabIndex = 21;
+            this.btnCloneCongKhaiNganSach.Text = "   Công khai NS";
+            this.btnCloneCongKhaiNganSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneCongKhaiNganSach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCloneCongKhaiNganSach.UseVisualStyleBackColor = false;
+            this.btnCloneCongKhaiNganSach.Click += new System.EventHandler(this.btnCloneCongKhaiNganSach_Click);
+            // 
             // btnCloneVanBanDuThaoMoet
             // 
             this.btnCloneVanBanDuThaoMoet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
@@ -931,6 +958,7 @@ namespace RJCodeUI_M1
         private RJControls.RJMenuButton btnCloneVanBanDuThaoMoet;
         private RJControls.RJMenuButton btnCloneCanBoMoet;
         private RJControls.RJMenuButton btnCloneCacCoSoGiaoDucMoet;
+        private RJControls.RJMenuButton btnCloneCongKhaiNganSach;
     }
 }
 
