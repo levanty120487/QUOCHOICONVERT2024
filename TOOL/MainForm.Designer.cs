@@ -77,6 +77,7 @@ namespace RJCodeUI_M1
             this.btnCloneVanBanMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneVanBanDuThaoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneCanBoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
+            this.btnCloneCacCoSoGiaoDucMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.pnlSideMenu.SuspendLayout();
             this.pnlSideMenuHeader.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -92,6 +93,7 @@ namespace RJCodeUI_M1
             // pnlSideMenu
             // 
             this.pnlSideMenu.Controls.Add(this.rjMenuButton2);
+            this.pnlSideMenu.Controls.Add(this.btnCloneCacCoSoGiaoDucMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneCanBoMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneVanBanDuThaoMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneVanBanMoet);
@@ -747,6 +749,31 @@ namespace RJCodeUI_M1
             this.btnCloneCanBoMoet.UseVisualStyleBackColor = false;
             this.btnCloneCanBoMoet.Click += new System.EventHandler(this.btnCloneCanBoMoet_Click);
             // 
+            // btnCloneCacCoSoGiaoDucMoet
+            // 
+            this.btnCloneCacCoSoGiaoDucMoet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
+            this.btnCloneCacCoSoGiaoDucMoet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCloneCacCoSoGiaoDucMoet.DropdownMenu = null;
+            this.btnCloneCacCoSoGiaoDucMoet.FlatAppearance.BorderSize = 0;
+            this.btnCloneCacCoSoGiaoDucMoet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloneCacCoSoGiaoDucMoet.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloneCacCoSoGiaoDucMoet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneCacCoSoGiaoDucMoet.IconChar = FontAwesome.Sharp.IconChar.University;
+            this.btnCloneCacCoSoGiaoDucMoet.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneCacCoSoGiaoDucMoet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloneCacCoSoGiaoDucMoet.IconSize = 28;
+            this.btnCloneCacCoSoGiaoDucMoet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneCacCoSoGiaoDucMoet.Location = new System.Drawing.Point(0, 835);
+            this.btnCloneCacCoSoGiaoDucMoet.Name = "btnCloneCacCoSoGiaoDucMoet";
+            this.btnCloneCacCoSoGiaoDucMoet.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnCloneCacCoSoGiaoDucMoet.Size = new System.Drawing.Size(220, 55);
+            this.btnCloneCacCoSoGiaoDucMoet.TabIndex = 20;
+            this.btnCloneCacCoSoGiaoDucMoet.Text = "   Clone Cơ sở GD";
+            this.btnCloneCacCoSoGiaoDucMoet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneCacCoSoGiaoDucMoet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCloneCacCoSoGiaoDucMoet.UseVisualStyleBackColor = false;
+            this.btnCloneCacCoSoGiaoDucMoet.Click += new System.EventHandler(this.btnCloneCacCoSoGiaoDucMoet_Click);
+            // 
             // btnCloneVanBanDuThaoMoet
             // 
             this.btnCloneVanBanDuThaoMoet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
@@ -903,6 +930,7 @@ namespace RJCodeUI_M1
         private RJControls.RJMenuButton btnCloneVanBanMoet;
         private RJControls.RJMenuButton btnCloneVanBanDuThaoMoet;
         private RJControls.RJMenuButton btnCloneCanBoMoet;
+        private RJControls.RJMenuButton btnCloneCacCoSoGiaoDucMoet;
     }
 }
 

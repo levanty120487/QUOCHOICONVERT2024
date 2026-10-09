@@ -12,24 +12,24 @@ namespace QHBASE
     using System;
     using System.Collections.Generic;
     
-    public partial class DanhSachCacCoSoGiaoDuc
+    public partial class DanhSachCongKhaiNganSach
     {
         public string Id { get; set; }
         public string Title { get; set; }
-        public string LoaiHinhCoSoDaoTaoId { get; set; }
-        public string LoaiTruongId { get; set; }
-        public string TinhThanhPhoId { get; set; }
-        public string KyHieu { get; set; }
-        public string TenTiengAnh { get; set; }
-        public string Website { get; set; }
-        public Nullable<System.DateTime> NgayCapGiayChungNhan { get; set; }
-        public Nullable<System.DateTime> NgayHetHanGiayChungNhan { get; set; }
+        public string NamKyBaoCao { get; set; }
+        public string BieuMau { get; set; }
+        public string LawId { get; set; }
+        public string DMCongKhaiNganSachId { get; set; }
+        public string TitleUnicode { get; set; }
+        public string SoQuyetDinhCongBo { get; set; }
+        public Nullable<System.DateTime> NgayCongBo { get; set; }
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
         public string DeletedBy { get; set; }
         public bool IsShow { get; set; }
         public string Language { get; set; }
-        public Nullable<int> Order { get; set; }
+        public string ExtraProperties { get; set; }
+        public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
         public Nullable<System.Guid> CreatorId { get; set; }
         public Nullable<System.DateTime> LastModificationTime { get; set; }
@@ -37,10 +37,7 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
-        public string ToChucKiemDinhChatLuongGD { get; set; }
     
-        public virtual DanhMucChung DanhMucChung { get; set; }
-        public virtual DanhMucChung DanhMucChung1 { get; set; }
-        public virtual DanhMucChung DanhMucChung2 { get; set; }
+        public virtual Law Law { get; set; }
     }
 }

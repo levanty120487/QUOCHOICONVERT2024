@@ -275,6 +275,15 @@
     <Compile Include="TestAndDemo\FormCloneMoetCanBo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetCacCoSoGiaoDuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetCacCoSoGiaoDuc.Designer.cs">
+      <DependentUpon>FormCloneMoetCacCoSoGiaoDuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestAndDemo\FormCloneMoetCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TestAndDemo\FormCloneMoetNews.Designer.cs">
       <DependentUpon>FormCloneMoetNews.cs</DependentUpon>
     </Compile>
@@ -479,6 +488,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestAndDemo\FormCloneMoetCacCoSoGiaoDuc.resx">
+      <DependentUpon>FormCloneMoetCacCoSoGiaoDuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetNews.resx">
       <DependentUpon>FormCloneMoetNews.cs</DependentUpon>
     </EmbeddedResource>

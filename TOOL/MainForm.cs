@@ -313,5 +313,10 @@ namespace RJCodeUI_M1
         {
             this.OpenChildForm(() => new TestAndDemo.FormCloneMoetCanBo(), sender);
         }
+
+        private void btnCloneCacCoSoGiaoDucMoet_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneMoetCacCoSoGiaoDuc(), sender);
+        }
     }
 }

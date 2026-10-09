@@ -30,6 +30,8 @@
         <AssociationConnector Association="Portal_Moet_VanbanServiceModel.FK_LawSigner_Signer_IdSigner" />
         <AssociationConnector Association="Portal_Moet_VanbanServiceModel.FK_VanBanDuThao_TypeOfDocument_IdTypeOfDocument" />
         <AssociationConnector Association="Portal_Moet_VanbanServiceModel.FK_VBDTField_VanBanDuThao_IdLaw" />
+        <EntityTypeShape EntityType="Portal_Moet_VanbanServiceModel.DanhSachCongKhaiNganSach" Width="1.5" PointX="10.25" PointY="1.5" />
+        <AssociationConnector Association="Portal_Moet_VanbanServiceModel.FK_DanhSachCongKhaiNganSach_Law_LawId" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

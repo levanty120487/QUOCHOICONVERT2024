@@ -322,6 +322,7 @@
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="DeleterId" Type="uniqueidentifier" />
           <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+          <Property Name="ToChucKiemDinhChatLuongGD" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="DanhSachSanPham">
           <Key>
@@ -1695,6 +1696,7 @@
           <NavigationProperty Name="DanhMucChung" Relationship="Portal_Moet_CommonsServicesModel.FK_DanhSachCacCoSoGiaoDuc_DanhMucChung_LoaiHinhCoSoDaoTaoId" FromRole="DanhSachCacCoSoGiaoDuc" ToRole="DanhMucChung" />
           <NavigationProperty Name="DanhMucChung1" Relationship="Portal_Moet_CommonsServicesModel.FK_DanhSachCacCoSoGiaoDuc_DanhMucChung_LoaiTruongId" FromRole="DanhSachCacCoSoGiaoDuc" ToRole="DanhMucChung" />
           <NavigationProperty Name="DanhMucChung2" Relationship="Portal_Moet_CommonsServicesModel.FK_DanhSachCacCoSoGiaoDuc_DanhMucChung_TinhThanhPhoId" FromRole="DanhSachCacCoSoGiaoDuc" ToRole="DanhMucChung" />
+          <Property Name="ToChucKiemDinhChatLuongGD" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="DanhSachSanPham">
           <Key>
@@ -2896,6 +2898,7 @@
           <EntitySetMapping Name="DanhSachCacCoSoGiaoDucs">
             <EntityTypeMapping TypeName="Portal_Moet_CommonsServicesModel.DanhSachCacCoSoGiaoDuc">
               <MappingFragment StoreEntitySet="DanhSachCacCoSoGiaoDuc">
+                <ScalarProperty Name="ToChucKiemDinhChatLuongGD" ColumnName="ToChucKiemDinhChatLuongGD" />
                 <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
                 <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />

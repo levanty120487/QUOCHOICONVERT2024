@@ -5,6 +5,34 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Portal_Moet_VanbanServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DanhSachCongKhaiNganSach">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="2500" Nullable="false" />
+          <Property Name="NamKyBaoCao" Type="nvarchar" MaxLength="350" />
+          <Property Name="BieuMau" Type="nvarchar" MaxLength="350" />
+          <Property Name="LawId" Type="varchar" MaxLength="36" />
+          <Property Name="DMCongKhaiNganSachId" Type="varchar" MaxLength="36" />
+          <Property Name="TitleUnicode" Type="varchar" MaxLength="2500" />
+          <Property Name="SoQuyetDinhCongBo" Type="nvarchar" MaxLength="350" />
+          <Property Name="NgayCongBo" Type="datetime2" Precision="7" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeletedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsShow" Type="bit" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="10" />
+          <Property Name="ExtraProperties" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ConcurrencyStamp" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreatorId" Type="uniqueidentifier" />
+          <Property Name="LastModificationTime" Type="datetime2" Precision="7" />
+          <Property Name="LastModifierId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeleterId" Type="uniqueidentifier" />
+          <Property Name="DeletionTime" Type="datetime2" Precision="7" />
+        </EntityType>
         <EntityType Name="EffectStatus">
           <Key>
             <PropertyRef Name="Id" />
@@ -285,6 +313,18 @@
           <Property Name="IdField" Type="varchar" MaxLength="36" Nullable="false" />
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
+        <Association Name="FK_DanhSachCongKhaiNganSach_Law_LawId">
+          <End Role="Law" Type="Self.Law" Multiplicity="0..1" />
+          <End Role="DanhSachCongKhaiNganSach" Type="Self.DanhSachCongKhaiNganSach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DanhSachCongKhaiNganSach">
+              <PropertyRef Name="LawId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
           <End Role="VanBanDuThao" Type="Self.VanBanDuThao" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -444,6 +484,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Portal_Moet_VanbanServiceModelStoreContainer">
+          <EntitySet Name="DanhSachCongKhaiNganSach" EntityType="Self.DanhSachCongKhaiNganSach" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EffectStatus" EntityType="Self.EffectStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Field" EntityType="Self.Field" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GopYVanBanDuThao" EntityType="Self.GopYVanBanDuThao" Schema="dbo" store:Type="Tables" />
@@ -457,6 +498,10 @@
           <EntitySet Name="TypeOfDocument" EntityType="Self.TypeOfDocument" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VanBanDuThao" EntityType="Self.VanBanDuThao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VBDTField" EntityType="Self.VBDTField" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DanhSachCongKhaiNganSach_Law_LawId" Association="Self.FK_DanhSachCongKhaiNganSach_Law_LawId">
+            <End Role="Law" EntitySet="Law" />
+            <End Role="DanhSachCongKhaiNganSach" EntitySet="DanhSachCongKhaiNganSach" />
+          </AssociationSet>
           <AssociationSet Name="FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao" Association="Self.FK_GopYVanBanDuThao_VanBanDuThao_IdVanBanDuThao">
             <End Role="VanBanDuThao" EntitySet="VanBanDuThao" />
             <End Role="GopYVanBanDuThao" EntitySet="GopYVanBanDuThao" />
@@ -571,6 +616,11 @@
           <AssociationSet Name="FK_VBDTField_VanBanDuThao_IdLaw" Association="Portal_Moet_VanbanServiceModel.FK_VBDTField_VanBanDuThao_IdLaw">
             <End Role="VanBanDuThao" EntitySet="VanBanDuThaos" />
             <End Role="VBDTField" EntitySet="VBDTFields" />
+          </AssociationSet>
+          <EntitySet Name="DanhSachCongKhaiNganSaches" EntityType="Portal_Moet_VanbanServiceModel.DanhSachCongKhaiNganSach" />
+          <AssociationSet Name="FK_DanhSachCongKhaiNganSach_Law_LawId" Association="Portal_Moet_VanbanServiceModel.FK_DanhSachCongKhaiNganSach_Law_LawId">
+            <End Role="Law" EntitySet="Laws" />
+            <End Role="DanhSachCongKhaiNganSach" EntitySet="DanhSachCongKhaiNganSaches" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="EffectStatu">
@@ -692,6 +742,7 @@
           <NavigationProperty Name="LawCategories" Relationship="Portal_Moet_VanbanServiceModel.FK_LawCategories_Law_LawId" FromRole="Law" ToRole="LawCategory" />
           <NavigationProperty Name="LawFields" Relationship="Portal_Moet_VanbanServiceModel.FK_LawField_Law_IdLaw" FromRole="Law" ToRole="LawField" />
           <NavigationProperty Name="LawSigners" Relationship="Portal_Moet_VanbanServiceModel.FK_LawSigner_Law_IdLaw" FromRole="Law" ToRole="LawSigner" />
+          <NavigationProperty Name="DanhSachCongKhaiNganSaches" Relationship="Portal_Moet_VanbanServiceModel.FK_DanhSachCongKhaiNganSach_Law_LawId" FromRole="Law" ToRole="DanhSachCongKhaiNganSach" />
         </EntityType>
         <EntityType Name="LawCategory">
           <Key>
@@ -1035,6 +1086,47 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="DanhSachCongKhaiNganSach">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="2500" FixedLength="false" Unicode="true" />
+          <Property Name="NamKyBaoCao" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="BieuMau" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="LawId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="DMCongKhaiNganSachId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TitleUnicode" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="SoQuyetDinhCongBo" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="NgayCongBo" Type="DateTime" Precision="7" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsShow" Type="Boolean" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraProperties" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConcurrencyStamp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatorId" Type="Guid" />
+          <Property Name="LastModificationTime" Type="DateTime" Precision="7" />
+          <Property Name="LastModifierId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeleterId" Type="Guid" />
+          <Property Name="DeletionTime" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Law" Relationship="Portal_Moet_VanbanServiceModel.FK_DanhSachCongKhaiNganSach_Law_LawId" FromRole="DanhSachCongKhaiNganSach" ToRole="Law" />
+        </EntityType>
+        <Association Name="FK_DanhSachCongKhaiNganSach_Law_LawId">
+          <End Type="Portal_Moet_VanbanServiceModel.Law" Role="Law" Multiplicity="0..1" />
+          <End Type="Portal_Moet_VanbanServiceModel.DanhSachCongKhaiNganSach" Role="DanhSachCongKhaiNganSach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DanhSachCongKhaiNganSach">
+              <PropertyRef Name="LawId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1327,6 +1419,35 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdField" ColumnName="IdField" />
                 <ScalarProperty Name="IdLaw" ColumnName="IdLaw" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanhSachCongKhaiNganSaches">
+            <EntityTypeMapping TypeName="Portal_Moet_VanbanServiceModel.DanhSachCongKhaiNganSach">
+              <MappingFragment StoreEntitySet="DanhSachCongKhaiNganSach">
+                <ScalarProperty Name="DeletionTime" ColumnName="DeletionTime" />
+                <ScalarProperty Name="DeleterId" ColumnName="DeleterId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LastModifierId" ColumnName="LastModifierId" />
+                <ScalarProperty Name="LastModificationTime" ColumnName="LastModificationTime" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="ExtraProperties" ColumnName="ExtraProperties" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="NgayCongBo" ColumnName="NgayCongBo" />
+                <ScalarProperty Name="SoQuyetDinhCongBo" ColumnName="SoQuyetDinhCongBo" />
+                <ScalarProperty Name="TitleUnicode" ColumnName="TitleUnicode" />
+                <ScalarProperty Name="DMCongKhaiNganSachId" ColumnName="DMCongKhaiNganSachId" />
+                <ScalarProperty Name="LawId" ColumnName="LawId" />
+                <ScalarProperty Name="BieuMau" ColumnName="BieuMau" />
+                <ScalarProperty Name="NamKyBaoCao" ColumnName="NamKyBaoCao" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
