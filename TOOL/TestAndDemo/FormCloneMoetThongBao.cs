@@ -356,7 +356,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 CreatedBy = "admin",
                                 ViewCount = item.ViewCount,
                                 IdLoaiThongBao = categoryId,
-                                Status = 6,
+                                Status = 1,
                                 Language = "vi",
                                 ExtraProperties = "{}",
                                 DetailLinkClone = item.DetailUrl
