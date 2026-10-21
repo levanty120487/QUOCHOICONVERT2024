@@ -408,7 +408,7 @@ namespace RJCodeUI_M1.TestAndDemo
                             // nếu tồn tại thì không lưu mà tiếp bản ghi khác
                             var findItem = await dbNews.News
                                                     //=> .Where(a => a.DetailUrlClone.Equals(item.DetailUrl))
-                                                    .Where(a => a.Title.Equals(item.Title))
+                                                    .Where(a => a.Title.Equals(item.Title) && !a.IsDeleted)
                                                     .Include(a => a.NewCategories)
                                                     .FirstOrDefaultAsync();
                             if(findItem != null 
@@ -452,15 +452,15 @@ namespace RJCodeUI_M1.TestAndDemo
                                 }
                                 #endregion
                                 continue;
-                            }    
-
+                            }
+                            var datePublic = item.CreateDate.HasValue ? item.CreateDate.Value.AddMilliseconds(currentIndex) : DateTime.Now;
                             // Insert vào bảng New
                             var newEntity = new New()
                             {
                                 Id = QHCommons.GenAutoId(),
                                 Title = item.Title,
                                 ConcurrencyStamp = Guid.NewGuid().ToString(),
-                                DatePublic = item.CreateDate,
+                                DatePublic = datePublic,
                                 Status = 6,
                                 Author = item.Author,
                                 ReadCount = item.ViewCount,
