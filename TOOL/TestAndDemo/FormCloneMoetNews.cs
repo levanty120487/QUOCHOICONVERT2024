@@ -298,6 +298,71 @@ namespace RJCodeUI_M1.TestAndDemo
                         item.ViewCount = viewCount;
                 }
 
+                // Ngày xuất bản (kèm giờ phút từ trang chi tiết)
+                var dateNodeDetail = doc.DocumentNode.SelectSingleNode("//header[contains(@class, 'clearfix')]//span[contains(@class, 'post-date')]")
+                                    ?? doc.DocumentNode.SelectSingleNode("//span[contains(@class, 'post-date')]")
+                                    ?? doc.DocumentNode.SelectSingleNode("//*[contains(@class, 'post-date')]");
+                if (dateNodeDetail != null)
+                {
+                    string dateText = CleanText(dateNodeDetail.InnerText);
+                    // Format mẫu: "Thứ sáu, 23/10/2026 | 10:15"
+                    var dateMatch = Regex.Match(dateText, @"(?<day>\d{1,2})/(?<month>\d{1,2})/(?<year>\d{4})");
+                    var timeMatch = Regex.Match(dateText, @"(?<hour>\d{1,2}):(?<minute>\d{2})(?::(?<second>\d{2}))?");
+
+                    if (dateMatch.Success)
+                    {
+                        int day = int.Parse(dateMatch.Groups["day"].Value);
+                        int month = int.Parse(dateMatch.Groups["month"].Value);
+                        int year = int.Parse(dateMatch.Groups["year"].Value);
+
+                        int hour = 0, minute = 0, second = 0;
+                        if (timeMatch.Success)
+                        {
+                            int.TryParse(timeMatch.Groups["hour"].Value, out hour);
+                            int.TryParse(timeMatch.Groups["minute"].Value, out minute);
+                            if (timeMatch.Groups["second"].Success)
+                            {
+                                int.TryParse(timeMatch.Groups["second"].Value, out second);
+                            }
+                        }
+                        else if (item.CreateDate.HasValue)
+                        {
+                            hour = item.CreateDate.Value.Hour;
+                            minute = item.CreateDate.Value.Minute;
+                            second = item.CreateDate.Value.Second;
+                        }
+
+                        try
+                        {
+                            item.CreateDate = new DateTime(year, month, day, hour, minute, second);
+                        }
+                        catch
+                        {
+                        }
+                    }
+                    else if (timeMatch.Success && item.CreateDate.HasValue)
+                    {
+                        if (int.TryParse(timeMatch.Groups["hour"].Value, out int hour) &&
+                            int.TryParse(timeMatch.Groups["minute"].Value, out int minute))
+                        {
+                            int second = 0;
+                            if (timeMatch.Groups["second"].Success)
+                            {
+                                int.TryParse(timeMatch.Groups["second"].Value, out second);
+                            }
+
+                            var d = item.CreateDate.Value;
+                            try
+                            {
+                                item.CreateDate = new DateTime(d.Year, d.Month, d.Day, hour, minute, second);
+                            }
+                            catch
+                            {
+                            }
+                        }
+                    }
+                }
+
                 // File đính kèm
                 var fileAttachNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class, 'ul-fileattach')]");
                 if (fileAttachNode != null)
@@ -453,14 +518,14 @@ namespace RJCodeUI_M1.TestAndDemo
                                 #endregion
                                 continue;
                             }
-                            var datePublic = item.CreateDate.HasValue ? item.CreateDate.Value.AddMilliseconds(currentIndex) : DateTime.Now;
+                            //=> var datePublic = item.CreateDate.HasValue ? item.CreateDate.Value.AddMilliseconds(currentIndex) : DateTime.Now;
                             // Insert vào bảng New
                             var newEntity = new New()
                             {
                                 Id = QHCommons.GenAutoId(),
                                 Title = item.Title,
                                 ConcurrencyStamp = Guid.NewGuid().ToString(),
-                                DatePublic = datePublic,
+                                DatePublic = item.CreateDate,
                                 Status = 6,
                                 Author = item.Author,
                                 ReadCount = item.ViewCount,
@@ -480,7 +545,8 @@ namespace RJCodeUI_M1.TestAndDemo
                                 ShowDescription = true,
                                 AllowComment = false,
                                 PageUrlSEO = GenerateSlug(item.Title),
-                                DetailUrlClone = item.DetailUrl
+                                DetailUrlClone = item.DetailUrl,
+                                HienThiInSlide = true
                             };
                             // Tải ảnh bất đồng bộ
                             if (!string.IsNullOrEmpty(item.AvatarUrl))
