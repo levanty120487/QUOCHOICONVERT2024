@@ -153,7 +153,7 @@ namespace RJCodeUI_M1.TestAndDemo
                     {
                         item.DetailUrl = ToAbsoluteUrl(pageUrl, titleLinkNode.GetAttributeValue("href", ""));
                     }
-
+                     
                     if (!string.IsNullOrEmpty(item.DetailUrl))
                     {
                         await ParseDetailAsync(httpClient, item, item.DetailUrl);
@@ -193,7 +193,7 @@ namespace RJCodeUI_M1.TestAndDemo
                     }
                 }
 
-                var attachTableNode = doc.DocumentNode.SelectSingleNode("//div[@id='tabs-description-3-11']//table");
+                var attachTableNode = doc.DocumentNode.SelectSingleNode("//div[@id='file11']//table");
                 if (attachTableNode != null)
                 {
                     var aNodes = attachTableNode.SelectNodes(".//tr//td//a");
