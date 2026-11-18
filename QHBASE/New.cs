@@ -65,6 +65,7 @@ namespace QHBASE
         public Nullable<System.Guid> TypeNewId { get; set; }
         public Nullable<System.Guid> QuyTrinhId { get; set; }
         public Nullable<bool> HienThiInSlide { get; set; }
+        public string DetailUrlClone { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
@@ -74,7 +75,7 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
-        public string DetailUrlClone { get; set; }
+        public string Site { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CommentNew> CommentNews { get; set; }

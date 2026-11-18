@@ -183,6 +183,27 @@
     <None Include="QHVN.edmx.diagram">
       <DependentUpon>QHVN.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Vioit_Commons.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Vioit_Commons.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Vioit_Commons.edmx.diagram">
+      <DependentUpon>Vioit_Commons.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Vioit_news.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Vioit_news.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Vioit_files.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Vioit_files.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Vioit_files.edmx.diagram">
+      <DependentUpon>Vioit_files.edmx</DependentUpon>
+    </None>
+    <None Include="Vioit_news.edmx.diagram">
+      <DependentUpon>Vioit_news.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -240,7 +261,7 @@
       <DependentUpon>ApatitFiles.edmx</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryGallery.cs">
       <DependentUpon>Moet_HinhAnh.tt</DependentUpon>
@@ -297,28 +318,28 @@
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSFile.cs">
-      <DependentUpon>Moet_Files.tt</DependentUpon>
+      <DependentUpon>Vioit_files.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSFileAttachment.cs">
-      <DependentUpon>Moet_Files.tt</DependentUpon>
+      <DependentUpon>Vioit_files.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSFileShared.cs">
-      <DependentUpon>Moet_Files.tt</DependentUpon>
+      <DependentUpon>Vioit_files.tt</DependentUpon>
     </Compile>
     <Compile Include="CMSInforUserByShared.cs">
-      <DependentUpon>Moet_Files.tt</DependentUpon>
+      <DependentUpon>Vioit_files.tt</DependentUpon>
     </Compile>
     <Compile Include="CommentNew.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="ConfigWebsite.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="ContactInfo.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="CoQuanBanHanh.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="C__EFMigrationsHistory.cs">
       <DependentUpon>ApatitFiles.tt</DependentUpon>
@@ -342,22 +363,22 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhMucChung.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachCacCoSoGiaoDuc.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachCongKhaiNganSach.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachSanPham.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhSachThongBao.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DataCloneService.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Degree.cs">
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
@@ -390,7 +411,7 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="DoiTac.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="DonViMapChucVu.cs">
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
@@ -399,13 +420,13 @@
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="EmailDangKy.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="EmailTemplate.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Event.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="Field.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
@@ -429,31 +450,31 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="Gopy.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="GopYVanBanDuThao.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="HistoryActionFlow.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="HistoryVersion.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="HotNew.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="HotNewLanhDao.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="Language.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LanguageMapText.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LanguageText.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Law.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
@@ -471,25 +492,25 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="LienKetWebsite.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LinhVuc.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LinkVietLaw.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiThongBao.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiVanKien.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="MenuLanhDao.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -600,25 +621,25 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="New.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewCategory.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewCoQuan.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewDBQH.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewKyHop.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewPhienHop.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewRelate.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="News.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
@@ -630,16 +651,16 @@
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
     <Compile Include="NewTypeNew.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NewVersion.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NhuanBut.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NhuanButConfig.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="NoiDung.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
@@ -648,7 +669,7 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Officer.cs">
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
@@ -656,8 +677,11 @@
     <Compile Include="OfficerMapperPossition.cs">
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="PageTemplate.cs">
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
+    </Compile>
     <Compile Include="PhanHoiSanPham.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Position.cs">
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
@@ -712,7 +736,7 @@
       <DependentUpon>QHVN.edmx</DependentUpon>
     </Compile>
     <Compile Include="QuangCaoss.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Question.cs">
       <DependentUpon>CDKHoiDap.tt</DependentUpon>
@@ -721,34 +745,37 @@
       <DependentUpon>Moet_CoCauToChuc.tt</DependentUpon>
     </Compile>
     <Compile Include="ReadCountLog.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="ReplyNew.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="ReplyNoiDung.cs">
       <DependentUpon>QHKYHOP.tt</DependentUpon>
     </Compile>
     <Compile Include="RSSChannel.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="SettingSiteClone.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SharedLayout.cs">
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="Signer.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="SlideImage.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="SummaryNewss.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="TagInfo.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="TempCoQuanBanHanh.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
@@ -778,7 +805,7 @@
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
     </Compile>
     <Compile Include="TypeNew.cs">
-      <DependentUpon>Moet_News.tt</DependentUpon>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
     </Compile>
     <Compile Include="TypeOfDocument.cs">
       <DependentUpon>Moet_VanBans.tt</DependentUpon>
@@ -810,20 +837,65 @@
     <Compile Include="VietLaw.cs">
       <DependentUpon>QHVN.tt</DependentUpon>
     </Compile>
+    <Compile Include="Vioit_Commons.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_Commons.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_Commons.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_Commons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_Commons.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_files.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_files.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_files.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_files.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_files.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_files.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_news.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_news.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_news.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_news.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vioit_news.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vioit_news.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ViTriQuangCao.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="ViTriQuangCaoMapQuangCao.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkflowCategory.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkflowDefinition.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkflowInstance.cs">
-      <DependentUpon>Moet_Commons.tt</DependentUpon>
+      <DependentUpon>Vioit_Commons.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -976,6 +1048,36 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QHVN.edmx</DependentUpon>
       <LastGenOutput>QHVN.cs</LastGenOutput>
+    </Content>
+    <Content Include="Vioit_Commons.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vioit_Commons.edmx</DependentUpon>
+      <LastGenOutput>Vioit_Commons.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Vioit_Commons.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vioit_Commons.edmx</DependentUpon>
+      <LastGenOutput>Vioit_Commons.cs</LastGenOutput>
+    </Content>
+    <Content Include="Vioit_files.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vioit_files.edmx</DependentUpon>
+      <LastGenOutput>Vioit_files.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Vioit_files.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vioit_files.edmx</DependentUpon>
+      <LastGenOutput>Vioit_files.cs</LastGenOutput>
+    </Content>
+    <Content Include="Vioit_news.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vioit_news.edmx</DependentUpon>
+      <LastGenOutput>Vioit_news.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Vioit_news.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vioit_news.edmx</DependentUpon>
+      <LastGenOutput>Vioit_news.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

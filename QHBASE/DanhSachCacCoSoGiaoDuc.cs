@@ -30,6 +30,7 @@ namespace QHBASE
         public bool IsShow { get; set; }
         public string Language { get; set; }
         public Nullable<int> Order { get; set; }
+        public string ToChucKiemDinhChatLuongGD { get; set; }
         public System.DateTime CreationTime { get; set; }
         public Nullable<System.Guid> CreatorId { get; set; }
         public Nullable<System.DateTime> LastModificationTime { get; set; }
@@ -37,7 +38,6 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
-        public string ToChucKiemDinhChatLuongGD { get; set; }
     
         public virtual DanhMucChung DanhMucChung { get; set; }
         public virtual DanhMucChung DanhMucChung1 { get; set; }

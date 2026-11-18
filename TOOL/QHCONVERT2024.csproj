@@ -494,6 +494,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Content Include="Plans\Vioits\chi_tiet_tin.html" />
+    <Content Include="Plans\Vioits\danh_sach_tin_tuc.html" />
     <EmbeddedResource Include="TestAndDemo\FormCloneCongKhaiNganSach.resx">
       <DependentUpon>FormCloneCongKhaiNganSach.cs</DependentUpon>
     </EmbeddedResource>

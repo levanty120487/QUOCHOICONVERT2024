@@ -29,14 +29,26 @@ namespace QHBASE
         public bool MenuRight { get; set; }
         public int Type { get; set; }
         public string PageUrl { get; set; }
+        public Nullable<System.Guid> TemplateId { get; set; }
+        public string DraftLayoutJson { get; set; }
+        public Nullable<System.Guid> PublishedTemplateId { get; set; }
+        public string PublishedTitle { get; set; }
+        public string PublishedLayoutJson { get; set; }
+        public bool IsPublished { get; set; }
+        public Nullable<System.DateTime> PublishedAt { get; set; }
         public string Language { get; set; }
         public string TreeParentIds { get; set; }
         public string DetailMenuRoot { get; set; }
         public string TextClass { get; set; }
         public Nullable<bool> LinkTaget { get; set; }
+        public string Description { get; set; }
         public System.DateTime CreationTime { get; set; }
         public Nullable<System.Guid> CreatorId { get; set; }
         public Nullable<System.DateTime> LastModificationTime { get; set; }
         public Nullable<System.Guid> LastModifierId { get; set; }
+        public string Site { get; set; }
+    
+        public virtual PageTemplate PageTemplate { get; set; }
+        public virtual PageTemplate PageTemplate1 { get; set; }
     }
 }

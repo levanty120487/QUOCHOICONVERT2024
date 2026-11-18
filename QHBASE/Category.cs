@@ -39,6 +39,7 @@ namespace QHBASE
         public string DetailCategoryRoot { get; set; }
         public string Language { get; set; }
         public string CategoryOldId { get; set; }
+        public Nullable<int> CategoryViewBy { get; set; }
         public string ExtraProperties { get; set; }
         public string ConcurrencyStamp { get; set; }
         public System.DateTime CreationTime { get; set; }
@@ -48,6 +49,7 @@ namespace QHBASE
         public bool IsDeleted { get; set; }
         public Nullable<System.Guid> DeleterId { get; set; }
         public Nullable<System.DateTime> DeletionTime { get; set; }
+        public string Site { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NewCategory> NewCategories { get; set; }
