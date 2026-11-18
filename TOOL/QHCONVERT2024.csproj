@@ -278,6 +278,12 @@
     <Compile Include="TestAndDemo\FormCloneMoetNews.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TestAndDemo\FormCloneVioitNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAndDemo\FormCloneVioitNews.Designer.cs">
+      <DependentUpon>FormCloneVioitNews.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestAndDemo\FormCloneMoetCanBo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -504,6 +510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetNews.resx">
       <DependentUpon>FormCloneMoetNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestAndDemo\FormCloneVioitNews.resx">
+      <DependentUpon>FormCloneVioitNews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestAndDemo\FormCloneMoetCanBo.resx">
       <DependentUpon>FormCloneMoetCanBo.cs</DependentUpon>

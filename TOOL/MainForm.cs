@@ -322,5 +322,9 @@ namespace RJCodeUI_M1
         {
             this.OpenChildForm(() => new TestAndDemo.FormCloneCongKhaiNganSach(), sender);
         }
+        private void btnCloneVioitNews_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(() => new TestAndDemo.FormCloneVioitNews(), sender);
+        }
     }
 }

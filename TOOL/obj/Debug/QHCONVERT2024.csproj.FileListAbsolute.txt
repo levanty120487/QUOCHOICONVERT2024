@@ -130,6 +130,7 @@ d:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneMoet
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneMoetVanBan.resources
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneMoetVanBanDuThao.resources
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneMoetCanBo.resources
-D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.exe.config
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneMoetCacCoSoGiaoDuc.resources
 D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneCongKhaiNganSach.resources
+d:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.TestAndDemo.FormCloneVioitNews.resources
+D:\Tools\QUOCHOICONVERT2024\TOOL\obj\Debug\RJCodeUI_M1.exe.config

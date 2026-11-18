@@ -72,6 +72,7 @@ namespace RJCodeUI_M1
             this.rptMenuThongBao = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.rjMenuButton1 = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.rjMenuButton2 = new RJCodeUI_M1.RJControls.RJMenuButton();
+            this.btnCloneVioitNews = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.rjMenuButtonThongBaoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.rjMenuButtonVideoMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
             this.btnCloneVanBanMoet = new RJCodeUI_M1.RJControls.RJMenuButton();
@@ -93,6 +94,7 @@ namespace RJCodeUI_M1
             // 
             // pnlSideMenu
             // 
+            this.pnlSideMenu.Controls.Add(this.btnCloneVioitNews);
             this.pnlSideMenu.Controls.Add(this.rjMenuButton2);
             this.pnlSideMenu.Controls.Add(this.btnCloneCacCoSoGiaoDucMoet);
             this.pnlSideMenu.Controls.Add(this.btnCloneCongKhaiNganSach);
@@ -699,6 +701,31 @@ namespace RJCodeUI_M1
             this.rjMenuButton2.UseVisualStyleBackColor = false;
             this.rjMenuButton2.Click += new System.EventHandler(this.rjMenuButton2_Click);
             // 
+            // btnCloneVioitNews
+            // 
+            this.btnCloneVioitNews.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
+            this.btnCloneVioitNews.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCloneVioitNews.DropdownMenu = null;
+            this.btnCloneVioitNews.FlatAppearance.BorderSize = 0;
+            this.btnCloneVioitNews.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloneVioitNews.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloneVioitNews.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneVioitNews.IconChar = FontAwesome.Sharp.IconChar.Globe;
+            this.btnCloneVioitNews.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(119)))), ((int)(((byte)(170)))));
+            this.btnCloneVioitNews.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloneVioitNews.IconSize = 28;
+            this.btnCloneVioitNews.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneVioitNews.Location = new System.Drawing.Point(0, 670);
+            this.btnCloneVioitNews.Name = "btnCloneVioitNews";
+            this.btnCloneVioitNews.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnCloneVioitNews.Size = new System.Drawing.Size(220, 55);
+            this.btnCloneVioitNews.TabIndex = 16;
+            this.btnCloneVioitNews.Text = "   Clone Tin Tức VIOIT";
+            this.btnCloneVioitNews.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneVioitNews.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCloneVioitNews.UseVisualStyleBackColor = false;
+            this.btnCloneVioitNews.Click += new System.EventHandler(this.btnCloneVioitNews_Click);
+            // 
             // rjMenuButtonVideoMoet
             // 
             this.rjMenuButtonVideoMoet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(81)))));
@@ -952,6 +979,7 @@ namespace RJCodeUI_M1
         private RJControls.RJMenuButton rptMenuThongBao;
         private RJControls.RJMenuButton rjMenuButton1;
         private RJControls.RJMenuButton rjMenuButton2;
+        private RJControls.RJMenuButton btnCloneVioitNews;
         private RJControls.RJMenuButton rjMenuButtonThongBaoMoet;
         private RJControls.RJMenuButton rjMenuButtonVideoMoet;
         private RJControls.RJMenuButton btnCloneVanBanMoet;
