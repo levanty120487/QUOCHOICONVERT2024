@@ -440,7 +440,7 @@ namespace RJCodeUI_M1.TestAndDemo
             string originalBtnText = btnSaveData.Text;
             btnSaveData.Enabled = false;
             lblStatus.Text = "Bắt đầu lưu dữ liệu VIOIT...";
-
+            var temp = new New();
             try
             {
                 using (var dbNews = new Portal_Vioit_NewsServicesEntities())
@@ -526,7 +526,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 Hot = false,
                                 Source = "VIOIT",
                                 Shared = true,
-                                Language = "vi",
+                                Language = string.IsNullOrWhiteSpace(txtLanguage.Text) ? "vi" : txtLanguage.Text.Trim(),
                                 ExtraProperties = "{}",
                                 OldId = string.IsNullOrEmpty(item.OldId) ? string.Empty : item.OldId,
                                 TypeNewContent = 3,
@@ -537,7 +537,7 @@ namespace RJCodeUI_M1.TestAndDemo
                                 PageUrlSEO = GenerateSlug(item.Title),
                                 DetailUrlClone = item.DetailUrl,
                                 HienThiInSlide = true,
-                                Site = string.Empty
+                                Site = txtSite.Text
                             };
 
                             // Tải ảnh đại diện
@@ -606,6 +606,8 @@ namespace RJCodeUI_M1.TestAndDemo
                                 newEntity.Content = newsDocument.DocumentNode.OuterHtml;
                             }
 
+                            temp = newEntity;
+
                             dbNews.News.Add(newEntity);
                             await dbNews.SaveChangesAsync();
 
@@ -661,6 +663,7 @@ namespace RJCodeUI_M1.TestAndDemo
                         }
                         catch (Exception ex)
                         {
+                            var resultss = temp;
                             errorList.Add($"- Tên (Title): {item.Title}\r\n  Link (DetailUrl): {item.DetailUrl}\r\n  Lỗi: {ex.Message}");
                         }
                     }

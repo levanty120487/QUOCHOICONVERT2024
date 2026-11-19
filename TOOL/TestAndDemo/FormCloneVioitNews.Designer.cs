@@ -44,6 +44,10 @@ namespace RJCodeUI_M1.TestAndDemo
             this.label12 = new System.Windows.Forms.Label();
             this.btnUpdateContent = new System.Windows.Forms.Button();
             this.btnPreview = new System.Windows.Forms.Button();
+            this.txtLanguage = new System.Windows.Forms.TextBox();
+            this.txtSite = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +55,10 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.label14);
+            this.pnlClientArea.Controls.Add(this.label13);
+            this.pnlClientArea.Controls.Add(this.txtSite);
+            this.pnlClientArea.Controls.Add(this.txtLanguage);
             this.pnlClientArea.Controls.Add(this.btnPreview);
             this.pnlClientArea.Controls.Add(this.btnUpdateContent);
             this.pnlClientArea.Controls.Add(this.label12);
@@ -337,6 +345,38 @@ namespace RJCodeUI_M1.TestAndDemo
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
+            // txtLanguage
+            // 
+            this.txtLanguage.Location = new System.Drawing.Point(153, 685);
+            this.txtLanguage.Name = "txtLanguage";
+            this.txtLanguage.Size = new System.Drawing.Size(143, 25);
+            this.txtLanguage.TabIndex = 22;
+            // 
+            // txtSite
+            // 
+            this.txtSite.Location = new System.Drawing.Point(644, 683);
+            this.txtSite.Name = "txtSite";
+            this.txtSite.Size = new System.Drawing.Size(240, 25);
+            this.txtSite.TabIndex = 23;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(23, 688);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(124, 20);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Language code:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(442, 683);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 20);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Site:";
+            // 
             // FormCloneVioitNews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -385,5 +425,9 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.TextBox txtFolderChua;
         private System.Windows.Forms.Button btnUpdateContent;
         private System.Windows.Forms.Button btnPreview;
+        private System.Windows.Forms.TextBox txtLanguage;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtSite;
     }
 }
