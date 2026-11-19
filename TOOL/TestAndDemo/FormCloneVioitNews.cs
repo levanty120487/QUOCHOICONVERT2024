@@ -61,6 +61,10 @@ namespace RJCodeUI_M1.TestAndDemo
                 using (var db = new Portal_Vioit_NewsServicesEntities())
                 {
                     var categories = db.Categories.ToList();
+                    if (!string.IsNullOrWhiteSpace(txtSite.Text))
+                    {
+                        categories = categories.Where(a => !string.IsNullOrWhiteSpace(a.Site) && a.Site.Equals(txtSite.Text.Trim())).ToList();
+                    }                
                     var flatList = new List<CategoryDisplayItem>();
                     BuildCategoryTree(categories, "", "", flatList);
 
@@ -878,6 +882,11 @@ namespace RJCodeUI_M1.TestAndDemo
             {
                 MessageBox.Show("Lỗi cập nhật: " + ex.Message);
             }
+        }
+
+        private void btnfresh_Click(object sender, EventArgs e)
+        {
+            LoadCategories();
         }
     }
 

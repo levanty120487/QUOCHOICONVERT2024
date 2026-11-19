@@ -48,6 +48,7 @@ namespace RJCodeUI_M1.TestAndDemo
             this.txtSite = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnfresh = new System.Windows.Forms.Button();
             this.pnlClientArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@ namespace RJCodeUI_M1.TestAndDemo
             // pnlClientArea
             // 
             this.pnlClientArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.pnlClientArea.Controls.Add(this.btnfresh);
             this.pnlClientArea.Controls.Add(this.label14);
             this.pnlClientArea.Controls.Add(this.label13);
             this.pnlClientArea.Controls.Add(this.txtSite);
@@ -377,6 +379,16 @@ namespace RJCodeUI_M1.TestAndDemo
             this.label14.TabIndex = 25;
             this.label14.Text = "Site:";
             // 
+            // btnfresh
+            // 
+            this.btnfresh.Location = new System.Drawing.Point(644, 715);
+            this.btnfresh.Name = "btnfresh";
+            this.btnfresh.Size = new System.Drawing.Size(240, 27);
+            this.btnfresh.TabIndex = 26;
+            this.btnfresh.Text = "Làm mới danh mục tin tức";
+            this.btnfresh.UseVisualStyleBackColor = true;
+            this.btnfresh.Click += new System.EventHandler(this.btnfresh_Click);
+            // 
             // FormCloneVioitNews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -429,5 +441,6 @@ namespace RJCodeUI_M1.TestAndDemo
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtSite;
+        private System.Windows.Forms.Button btnfresh;
     }
 }
