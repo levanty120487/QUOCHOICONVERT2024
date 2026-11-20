@@ -64,7 +64,11 @@ namespace RJCodeUI_M1.TestAndDemo
                     if (!string.IsNullOrWhiteSpace(txtSite.Text))
                     {
                         categories = categories.Where(a => !string.IsNullOrWhiteSpace(a.Site) && a.Site.Equals(txtSite.Text.Trim())).ToList();
-                    }                
+                    }
+                    if (!string.IsNullOrWhiteSpace(txtLanguage.Text))
+                    {
+                        categories = categories.Where(a => !string.IsNullOrWhiteSpace(a.Language) && a.Language.Equals(txtLanguage.Text.Trim())).ToList();
+                    }
                     var flatList = new List<CategoryDisplayItem>();
                     BuildCategoryTree(categories, "", "", flatList);
 
